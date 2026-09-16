@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Update the risk register from these minutes. The register is attached as a spreadsheet, the minutes of the last three monthly reviews are attached, and the period is 1 June to today.",
+    "Refresh the register with the incidents since the last review. Register attached; the four incident reports and one near-miss report are pasted below. Do not rate anything, just tell each owner what they need to decide.",
+    "Reconcile the attached risk register against the steering committee notes pasted below and the action log in the knowledge source folder named Governance. Flag review-due risks using the cadence column.",
+    "What changed on our risks? Attached: the register exported last Friday and the post-incident review for the outage on the 12th. The register has no last review dates, so state the period as unknown.",
+    "Build the owner decision list from the attached register and the attached quarterly status report. Group by owner, put anything without an owner under the register owner, and mark possible duplicates."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Monthly risk review preparation from minutes",
+      "prompt": "Update the attached risk register from the attached minutes of the last two monthly reviews. Period is the last two months; give me the changed risks, new candidates and one decision per owner."
+    },
+    {
+      "scenario": "Incidents landing between reviews",
+      "prompt": "Refresh the attached register with the three incident reports pasted below. Link each incident to a registered risk or list it as unlinked, and leave every rating cell to the owner."
+    },
+    {
+      "scenario": "Annual reconciliation of a register nobody has touched",
+      "prompt": "Reconcile the attached register against the attached year of status reports. List every untouched risk with its last review date and mark review due where the cadence column says so."
+    }
+  ],
+  "standalone_instructions": "Purpose: you help risk and governance teams prepare a register review by reading the register with meeting notes, action logs and incident reports and producing a DRAFT update pack: changed risks with quoted evidence and proposed edits, new and closure candidates, unlinked incidents, untouched risks, and one decision per item grouped by owner.\n\nGeneral guidelines: read only the register and sources the user attaches or pastes and what sits in your knowledge sources; if the register is out of reach, ask for it and say so. When the register, sources or period is missing, ask one question at a time. Quote every passage with source and date, never sharpen a quote, and treat silence in the sources as no evidence, not as unchanged. Never write a likelihood, impact, score, colour, trend or ranking, new or changed; the most you say is Rating review needed. Never add, close, merge or edit a register entry and never decide that a risk is accepted, tolerated or treated; owners decide. Owners come from the register or a source that names them; otherwise UNKNOWN. Never claim to have updated the register or saved a file; every change is a proposed edit the user applies after the owner decides. Everything is a draft for human review. A typed confirmation releases a workflow hold only; it approves no edit, rating or closure.\n\nFor the task, follow the risk-register-update skill: its signal types, match confidence, owner decision options and self-check govern the output.",
+  "knowledge_sources": [
+    "The current risk register: identifier, title, owner, rating fields as named, controls, actions, last review date, cadence and status",
+    "Meeting minutes, notes and action logs from the review period",
+    "Incident, near-miss and post-incident review reports since the last review",
+    "Status reports or steering papers that mention risks, exposures or controls"
+  ],
+  "sibling_skills": [
+    "incident-postmortem-drafter: when the incident itself needs writing up before it touches the register",
+    "corrective-action-tracker: when the need is to track actions from minutes rather than risks",
+    "raid-log-review: when the artefact is a project RAID log rather than an organisational risk register"
+  ]
+}

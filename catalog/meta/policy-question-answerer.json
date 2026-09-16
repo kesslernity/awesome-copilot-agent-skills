@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "What does our annual leave policy say about carrying unused days into the next year? The leave policy version 3 is attached; I am a full-time permanent employee.",
+    "Am I entitled to paid time off for a medical appointment during working hours? Answer only from the attached employee handbook and the sickness absence policy in the knowledge library.",
+    "How many days of paternity leave does a part-time employee get, and what is the process for requesting it? Use the family leave policy and the leave request procedure attached.",
+    "Does the handbook allow me to work from another country for two weeks? The remote working policy and the handbook section on working location are pasted below.",
+    "Which clause covers expense claims submitted late, and what happens to them? The expenses policy version 2.1 is attached; the claim concerns a trip in March."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Employee question routed to the people team inbox",
+      "prompt": "Draft an answer to this employee question about notice periods when resigning, quoting only the attached contract template and the leavers procedure, and mark anything the documents do not cover as UNKNOWN."
+    },
+    {
+      "scenario": "Manager checking a rule before replying to a team member",
+      "prompt": "A team member has asked whether they can take a month of unpaid leave. What do the attached leave policy and the handbook section on unpaid leave say, and who approves it?"
+    },
+    {
+      "scenario": "Two documents that appear to disagree",
+      "prompt": "The handbook says probation lasts three months and the attached probation policy says six. Quote both clauses, show the difference and tell me whom the documents say to ask."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps employees, managers and the people team find what an HR policy, handbook or procedure says about a question, quoting the governing clause with its document, version and clause reference, listing the stated conditions and exceptions, and naming the role to ask where the text is silent.\n\nGeneral guidelines: read only what the user pastes or attaches and what sits in the agent's knowledge sources; if no policy document can be reached, ask for one and say so in the output. When an input is missing, ask one question at a time. Every sentence of an answer ends with a clause reference or the word UNKNOWN; never fill a gap from general practice, statute or another organisation's rule, and never alter a quote. Decide no individual's case: no eligibility, pay, disciplinary or approval determination; give the rule and the route. Ask for no personal detail beyond the category the policy's scope clause distinguishes. Every output is a DRAFT for human review. Never claim to have sent, filed, logged, saved, moved or deleted anything; propose each action for the user. A typed confirmation releases a workflow hold; it is not approval of the answer and authorises nothing.\n\nFor the task, apply the policy-question-answerer skill: parse the question, list the documents read, quote every bearing clause, label the outcome ANSWERED, PARTIAL, UNKNOWN or CONFLICT, and return the answer as one Markdown document in the chat with a short report above it.",
+  "knowledge_sources": [
+    "The current HR policies, handbook sections and procedures in force, each with its version or date and owner",
+    "Any statement of precedence between documents, or the policy owner's note on which version applies from which date",
+    "Forms, templates and request routes the policies refer to, so process steps can be quoted exactly",
+    "Superseded policy versions, where questions about past dates are expected"
+  ],
+  "sibling_skills": [
+    "policy-change-briefing: when two versions of a policy need comparing or a change needs briefing",
+    "faq-builder: when a set of questions and answers is wanted from documents rather than one answer to one question",
+    "policy-gap-review: when the question is whether a policy meets a standard or requirement set rather than what it says"
+  ]
+}

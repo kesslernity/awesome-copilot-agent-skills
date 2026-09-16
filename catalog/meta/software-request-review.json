@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Review this software request. The request form for a browser-based diagramming tool is pasted below, our approved-tools list is attached as a spreadsheet, and the acceptable use and data classification policies are in the knowledge source folder named IT Policies.",
+    "Is this tool on the approved list? The requester wants the team edition of a note-taking app for 12 people in finance; the approved-tools list export is attached. Quote the row if you find it and tell me whether the edition differs.",
+    "Check this request against our software policy. Ticket REQ-4471 for a cloud transcription service is attached, the third-party risk policy and the procurement threshold policy are attached, and the data handled is described as customer call recordings.",
+    "Do we already have something approved that does this? The request pasted below asks for a project scheduling tool; use the category column of the attached approved-tools list to find alternatives and grade whether each covers the stated need.",
+    "Prepare the decision note for this tool request. The request email, the approved-tools list and the licence inventory are attached; the request is marked urgent, so record that but do not let it change the suggestion."
+  ],
+  "use_cases": [
+    {
+      "scenario": "One request held against the approved list",
+      "prompt": "Review the attached request for a data visualisation tool against the attached approved-tools list and the attached acceptable use policy. Quote the matching row, run the policy checks and give me one suggested decision with its basis."
+    },
+    {
+      "scenario": "Free tier on a personal account",
+      "prompt": "Review the request pasted below, where a marketing analyst wants the free tier of an online survey tool on a personal account. Approved-tools list attached; run the personal-account check against the attached acceptable use policy and quote the clause."
+    },
+    {
+      "scenario": "Redirect to an approved alternative",
+      "prompt": "Check the attached request for a new file transfer tool against the attached approved-tools list. If an approved tool in the same category covers the need, suggest redirect and list the questions the requester must answer about the gap."
+    }
+  ],
+  "standalone_instructions": "Purpose: you help an IT reviewer hold one software request against the approved-tools list and the policies the organisation supplies and produce a draft review: request as stated, list match with the row quoted, approved alternatives the list describes, policy checks with quoted clauses, questions for requester and reviewer, one suggested decision with its basis and a draft reply.\n\nGeneral guidelines: read only the request, list, policies and inventory the user attaches or pastes and what sits in your knowledge sources; if a named item is out of reach, ask for a paste or export and say so in the output. When an input is missing, ask one question at a time, starting with the request. Register every field as stated and write UNKNOWN where it is silent; never infer purpose, data classification or user count. Quote the list row and policy clause behind every match and check. An edition the list does not name is never approved by extension. Approved, compliant, secure and meets belong to the reviewer, never to your own check states or suggestion. Urgency changes nothing. Never approve, decline, procure, install or change a list row, and never claim to have done so; every action is proposed for the user. All output is a draft for human review. A typed confirmation releases a workflow hold only; it authorises nothing.\n\nFor the task, follow the software-request-review skill: its match states, check codes, decision options and self-check govern the output.",
+  "knowledge_sources": [
+    "The approved-tools list: tool, vendor, approved editions, status, conditions, owner, category or capability and approved data classification",
+    "Policies that bear on tool requests: acceptable use, data classification, third-party risk, procurement thresholds, cloud service baseline and artificial intelligence tool rules",
+    "The software request itself: form, ticket, email or chat message with requester role, tool, edition, purpose, user count, data handled, deployment type, cost and urgency",
+    "Optional: licence inventory, earlier requests for the same tool and the decision route as the policy states it"
+  ],
+  "sibling_skills": [
+    "vendor-risk-screening-brief: when the vendor's own security material needs a full third-party screening",
+    "request-intake-triage: when a pile of mixed requests needs sorting into intake records first",
+    "service-catalogue-entry: when an approved tool needs a catalogue entry rather than a request review"
+  ]
+}

@@ -1,0 +1,7 @@
+.DS_Store
+source/
+batches.json
+NEW-SKILLS.json
+__pycache__/
+catalog/meta-pass-list.json
+catalog/meta-pass-batches.json

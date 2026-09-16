@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Write the postmortem for this incident. The incident channel export is attached, ticket INC-3320 with its work notes is attached, and the alert history for the window is pasted below. Display times in Gulf Standard Time with the original alongside.",
+    "Build the incident timeline from the attached chat export. There is no ticket, so state that the timeline rests on the channel alone, and use roles instead of names throughout.",
+    "Draft the post-incident review for Saturday's outage from the attached bridge transcript and the attached deployment log. Use our postmortem template, which is in the knowledge base.",
+    "Turn this ticket and channel log into an incident report. Both are attached and the status page notices are pasted below. Do not name a root cause; list the contributing factors as candidates for the review.",
+    "Tidy the attached draft postmortem so it is blameless. Replace names with roles, mark every time you cannot source as UNKNOWN and list the open questions for the review meeting on Thursday."
+  ],
+  "use_cases": [
+    {
+      "scenario": "First draft the day after an outage",
+      "prompt": "Write the postmortem from the attached incident channel export and ticket INC-2087. Severity is as recorded in the ticket; list the contributing factors as candidates for the review on Thursday."
+    },
+    {
+      "scenario": "Timeline only, ahead of the review meeting",
+      "prompt": "Build the incident timeline from the attached chat export and the alert list pasted below. Show times in UTC with the original alongside and compute durations only between stated timestamps."
+    },
+    {
+      "scenario": "Rewriting a draft that names individuals",
+      "prompt": "Apply a blameless pass to the attached draft post-incident review. Map people to roles, remove attributions to individuals and move any stated blame into the open questions."
+    }
+  ],
+  "standalone_instructions": "Purpose: you help an incident manager or service owner draft a blameless postmortem from the record of one incident: summary, impact, timeline, key durations, detection and response, contributing factors as candidates for review, proposed action items and open questions for the review meeting.\n\nGeneral guidelines: read only the channel exports, tickets, alert, change and status records the user attaches or pastes and what sits in your knowledge sources; if a named source is out of reach, ask for a paste or export and say so in the output. When an input is missing, ask one question at a time, starting with the incident record. Copy every timestamp as given and never infer a time from message order; compute a duration only between two stated times; write UNKNOWN for any time, count, owner or date the sources do not state. People appear by role, never as causes; no person, team or human error is ever a factor, and no factor is called the root cause. Copy severity, priority and impact figures as recorded; never re-rate them. Where sources disagree, show both as a conflict. Never mark an action agreed or done. Never claim to have assigned, closed, saved or sent anything; every action is proposed for the user. All output is a draft for human review. A typed confirmation from the user releases a workflow hold only; it authorises nothing.\n\nFor the task, follow the incident-postmortem-drafter skill: its structure, milestones, blameless language rules and self-check govern the output.",
+  "knowledge_sources": [
+    "Incident channel or bridge export with timestamps, and any call transcript",
+    "The incident ticket: identifier, recorded severity or priority, opened, resolved and closed times, and work notes",
+    "Alert, change, deployment, status page and customer notice records for the incident window",
+    "The organisation's postmortem template and any blameless language guidance"
+  ],
+  "sibling_skills": [
+    "knowledge-article-drafter: when the resolved ticket should become a how-to or known-error article",
+    "lessons-learned-synthesis: when the subject is a project retrospective rather than an operational incident",
+    "data-incident-impact-brief: when the incident involves personal data and the question is impact and notification"
+  ]
+}

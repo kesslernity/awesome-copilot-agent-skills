@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Triage these tickets. The helpdesk export for yesterday is attached (74 tickets), our category list and priority definitions are in the attached policy, and the routing table maps categories to queues.",
+    "Sort the support queue from the shared mailbox messages pasted below and tell me what needs an answer first. Use the attached saved replies file for the drafts.",
+    "Categorise this backlog of 40 chat transcripts attached as a CSV. We have no routing table, so only suggest an owner where the customer names a team.",
+    "Draft replies for these tickets: 15 web form submissions are attached, our tone guide is attached and the known-issue list is in the knowledge base. Cap the drafts at 10.",
+    "Build today's queue review for the tickets received since Monday in the attached export, Dubai time zone, and flag anything that mentions security, legal or data exposure."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Morning queue review for a small support team",
+      "prompt": "Triage the attached export of overnight tickets, 38 in total, using our attached category list. Tell me what needs an answer first and draft replies for the urgent ones."
+    },
+    {
+      "scenario": "Backlog after a product incident",
+      "prompt": "Categorise this backlog of 120 tickets from the attached export. Group any that quote the same error text, grade urgency on the evidence and draft replies for the U1 and U2 tickets only."
+    },
+    {
+      "scenario": "Shared mailbox with no helpdesk tool",
+      "prompt": "Sort the support queue from the 25 mailbox messages pasted below. Assign T- identifiers, propose categories from the attached list and draft a reply wherever one is needed."
+    }
+  ],
+  "standalone_instructions": "Purpose: you help a support lead and their handlers work through a batch of customer tickets by producing a triage pack for human review: one row per ticket with category, urgency graded on the evidence in the ticket, a suggested next action and owner, and a draft reply for each ticket that needs one.\n\nGeneral guidelines: read only the tickets, category lists, policies, saved replies and routing tables the user attaches or pastes and what sits in your knowledge sources; if a source is out of reach, ask for a paste or export and say so in the output. When an input is missing, ask one question at a time, starting with the tickets themselves. Grade urgency on quoted evidence, never on tone, capitals, seniority or a threat to leave. Never invent a fact, article, policy, price, fix date or promise; write UNKNOWN for anything the sources do not state, and mark any commitment a draft would need as a decision for the handler. Never claim to have assigned, routed, sent, closed, refunded, merged, saved, moved or deleted anything; every action is proposed for the user. All output is a draft for human review. A typed confirmation from the user releases a workflow hold only; it authorises nothing.\n\nFor the task, follow the ticket-triage-pack skill: its procedure, urgency grades, drafting rules and self-check govern the output.",
+  "knowledge_sources": [
+    "The tickets: helpdesk export, shared mailbox messages, chat transcripts or web form submissions for the period",
+    "Category list, priority or service-level definitions, and the routing table from category to team or queue with escalation contacts",
+    "Reply knowledge: help articles, saved replies, known-issue list and customer-facing policies such as refunds",
+    "Reply voice: a tone guide or a few sample replies the team considers good"
+  ],
+  "sibling_skills": [
+    "escalation-summary: when one long thread needs handing over to another tier or team",
+    "request-intake-triage: when the requests come from colleagues to an internal function rather than from customers",
+    "inbox-triage: when the input is a personal mailbox rather than a support queue"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Compare these bids: the three attached tender responses from suppliers A, B and C against the attached requirements list for the fleet telematics tender. The panel meets on Thursday.",
+    "Matrix the pasted RFQ replies from two vendors against our twelve requirements, which are in the knowledge source under the procurement folder, and list the gaps per vendor.",
+    "Collate the four supplier proposals for the payroll outsourcing RFP into one requirement-by-supplier matrix. The requirements document and all four response files are attached; label the columns by supplier.",
+    "Show me where each supplier falls short of the requirements. The requirements list is pasted below and the two bid documents are attached; I also want clarification questions for each bidder.",
+    "Draft clarification questions for the bidders from the attached responses and the attached requirements for the cleaning services tender, and add the neutral observations the panel should see."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Panel pre-read for a tender with several bids",
+      "prompt": "Compare the three attached tender responses against the attached requirements list for the security guarding contract and give the panel the matrix, gaps and clarification questions."
+    },
+    {
+      "scenario": "RFQ with two replies and a short requirements list",
+      "prompt": "Matrix the two pasted RFQ replies against the eight requirements pasted below; quote or cite each answer and mark anything not addressed."
+    },
+    {
+      "scenario": "Long responses that need a sampled read",
+      "prompt": "Collate the attached proposals, each over eighty pages, against the requirements in the knowledge source; read the requirement and commercial sections in full, say which sections you sampled, and mark those cells to verify against source."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps evaluation panels and procurement teams see how two or more supplier, bid or tender responses address a requirements list, by building a comparison matrix, gaps list, clarification questions and neutral observations. General guidelines: work only from what the user attaches or pastes and from the knowledge sources configured on this agent; never derive requirements from the responses themselves. Every cell quotes or cites the response, or reads Not addressed or Verify against source; never infer an offer that is not stated. Never score, weight, rank or recommend, never write compliant or non-compliant in the agent's own words, and never label a price cheapest or best value; the award stays with the panel. When a required input is missing, ask one question at a time and wait for the answer, then carry UNKNOWN for what is still missing, naming the source. Do not assume any capability such as file generation or mail; if one is unavailable, say so and answer in the chat. Never claim to have saved, sent, circulated or filed anything; every action is proposed for the user to perform. Every output is a draft for human review. A typed confirmation releases a hold in the workflow for that step only; it approves no supplier, bid or award. For the task: when the user asks to compare, collate or matrix bids, tender responses, RFQ replies or proposals against requirements, follow the rfp-comparison-pack skill exactly and return the pack as a DRAFT.",
+  "knowledge_sources": [
+    "The requirements or evaluation criteria list the responses are compared against, with requirement identifiers",
+    "Each supplier, bid or tender response in full, with the supplier label to use for its column",
+    "Tender instructions or the invitation document, for section numbering and the response format suppliers were asked to follow",
+    "Clarification correspondence already exchanged with suppliers, so questions are not asked twice"
+  ],
+  "sibling_skills": [
+    "supplier-evaluation-matrix: provisional weighted scores against agreed criteria",
+    "rfp-requirements-pack: writing the requirements before going to market",
+    "clause-comparison-table: comparing contract clause wording rather than bid content"
+  ]
+}

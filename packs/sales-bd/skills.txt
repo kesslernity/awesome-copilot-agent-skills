@@ -1,0 +1,7 @@
+discovery-call-prep
+account-plan-builder
+lead-qualification-scorer
+proposal-skeleton
+rfp-response-drafter
+estimate-to-sow
+deal-risk-review

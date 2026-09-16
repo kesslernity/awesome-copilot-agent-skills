@@ -1,0 +1,8 @@
+cdo-reviewer
+cpo-reviewer
+general-counsel-reviewer
+investor-reviewer
+procurement-reviewer
+works-council-reviewer
+customer-advocate-reviewer
+frontline-skeptic-reviewer

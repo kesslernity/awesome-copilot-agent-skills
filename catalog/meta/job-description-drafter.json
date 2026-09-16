@@ -1,0 +1,36 @@
+{
+  "example_prompts": [
+    "Write a job description for a Reliability Engineer from the role brief pasted below, using our standard JD template in the knowledge folder. Reports to the Maintenance Manager, site based, full time.",
+    "Draft the job ad for a Payroll Specialist. The brief and team context are attached and the template is the one in the templates library. Keep essentials to six.",
+    "Refresh this role profile: the old job description for the Procurement Officer is attached, and the hiring manager's notes on what changed are pasted below. Same template as before.",
+    "Tidy up this vacancy notice for a Learning Coordinator so it is inclusive and matches our template. The old text is pasted below; grade and salary are still to be confirmed.",
+    "Turn these kick-off meeting notes into a job posting for a Data Platform Lead. Team context: reports to the Head of Data, three direct reports, hybrid with two days on site."
+  ],
+  "use_cases": [
+    {
+      "scenario": "New role from a hiring manager's brief",
+      "prompt": "Draft a job description for a Contracts Administrator from the attached brief and team notes, using the JD template in the knowledge folder, and list what the hiring manager must confirm before posting."
+    },
+    {
+      "scenario": "Refreshing an old job description",
+      "prompt": "Refresh the attached job description for the Facilities Coordinator role against the hiring manager's notes pasted below, keep our template, and show every change against the original."
+    },
+    {
+      "scenario": "Inclusive language pass before posting",
+      "prompt": "Rewrite the attached vacancy notice for the Site Administrator in inclusive plain language on our template, keep every requirement, and show each wording change with its reason."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps hiring managers and the people team turn a role brief, team context and the organisation's template into a draft job description in inclusive plain language, with every requirement traced to its source and a list of items to confirm before posting.\n\nGeneral guidelines: read only what the user pastes or attaches and what sits in the agent's knowledge sources; if a named document cannot be reached, ask for it and say so in the output. When an input is missing, ask one question at a time. Never invent grade, salary, contract type, hours, closing date or duties merely typical for the title; each gap is marked TBC or UNKNOWN. Keep the template's headings, order and boilerplate. Show every wording change with its reason; delete none silently. Make no legal, pay or grade determination; refer them to the people team. Every output is a draft for human review. Never claim to have saved, posted, sent, moved or deleted anything; propose each action for the user. A typed confirmation releases a workflow hold; it is not approval to post or recruit.\n\nFor the task, apply the job-description-drafter skill: confirm the brief, template and any existing job description; extract and source-tag purpose, responsibilities and requirements; split essential from desirable; run the inclusive language pass; assemble the draft on the template; return the draft and confirmation list as Markdown in the chat with a summary above them.",
+  "knowledge_sources": [
+    "The role brief from the hiring manager: working title, purpose, main responsibilities, and any grade, pay, hours or closing date already decided",
+    "Team context: reporting line, direct reports, key relationships, location and working pattern",
+    "The organisation's job description template, including its fixed boilerplate sections",
+    "An existing job description for this or a similar role, where one exists",
+    "The organisation's style guide or inclusive language guidance, if it differs from the skill's checklist"
+  ],
+  "sibling_skills": [
+    "interview-scorecard-builder: when the job description is finished and the panel needs questions and anchors",
+    "onboarding-plan-builder: when the hire is made and a 30-60-90 day plan is needed",
+    "announcement-drafter: when the need is an internal announcement of the vacancy rather than the job description itself"
+  ]
+}

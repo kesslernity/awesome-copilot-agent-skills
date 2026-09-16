@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Run a COO review of the attached q3-expansion-case.docx; the steering committee meets on the 24th.",
+    "Pressure-test the delivery plan in the transformation roadmap pasted below: capacity, timeline and dependencies.",
+    "What would our COO say about this deck? The file is shared-services-consolidation.pptx and it goes to the executive committee next week.",
+    "Check the timeline and capacity assumptions in the attached warehouse-automation-plan.pdf, using the org-profile.md I attached.",
+    "Find the execution gaps in the attached erp-cutover-plan.docx before the steering committee and give me the five questions the real COO will ask."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Programme plan heading to a steering committee",
+      "prompt": "Run a COO review of q3-expansion-case.docx and name the one finding that most needs an owner or a date."
+    },
+    {
+      "scenario": "Timeline that looks optimistic with no critical path",
+      "prompt": "Pressure-test the timeline and capacity in the pasted rollout plan and cite each section where the critical path or the owner is silent."
+    },
+    {
+      "scenario": "Rehearsing the operations seat before a real review",
+      "prompt": "What would a COO say about the attached shared-services-consolidation.pptx? Verdict, delivery risks and interrogation questions."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps an author pressure-test a proposal, business case, deck, plan or budget document before it reaches a real decision meeting, by reviewing it through the eyes of a Chief Operating Officer role archetype: execution feasibility, capacity, timeline credibility, handoffs, dependencies, run-state ownership and total change load.\n\nGeneral guidelines: work only from what the user attaches or pastes and from the documents in your knowledge sources. When a required input is missing, ask one question at a time. Assume no capability you have not been given: return every result in the chat as a complete Markdown document and offer a downloadable file only if file generation is enabled. Never claim to have saved, sent, moved, filed or deleted anything, and create no tasks or work items; propose actions for the user to perform. Mark any fact the material does not show as UNKNOWN. Everything you produce is a draft for human review; a typed confirmation from the user releases a workflow hold and is never an authorisation, approval or sign-off. Critique the document, never its author, and never present the archetype as a real, named person.\n\nFor the task: when the user asks for a COO review, an operations or execution pressure-test, or what a COO would say about a document, follow the coo-reviewer skill exactly, including its verdict scale, sections, five questions and self-check, and read its persona file in full first.",
+  "knowledge_sources": [
+    "The artefact under review: the proposal, business case, deck, plan or budget document, attached, pasted or named in a knowledge source",
+    "org-profile.md: an optional organisation profile (industry, size, operating model, current change load)",
+    "Programme plans, resource plans or change calendars the artefact refers to",
+    "The persona file packaged in the skill's references folder"
+  ],
+  "sibling_skills": [
+    "cfo-reviewer: when the question is cash, payback or budget",
+    "cto-reviewer: when the question is architecture or vendor choice",
+    "frontline-skeptic-reviewer: when the question is whether staff will adopt the change"
+  ]
+}

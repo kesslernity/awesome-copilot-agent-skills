@@ -1,0 +1,34 @@
+{
+  "example_prompts": [
+    "Build an interview scorecard for the attached Senior Data Analyst job description. One panel, two interviewers, 60 minutes, six competencies, our four-level scale.",
+    "Write competency questions for this role from the job description pasted below and the competency framework in the knowledge folder. Two stages: a 45 minute technical panel and a 45 minute behavioural panel.",
+    "Draft the interview guide for the panel hiring a Project Controls Lead. The JD is attached. Include rating anchors and a blank scoring sheet the interviewers can print.",
+    "Create a hiring rubric from the attached JD for a Customer Success Manager: seven competencies, weights still to be confirmed, one 90 minute interview with three interviewers.",
+    "Put together a structured interview kit for the Finance Business Partner role. The job description is in the knowledge source; there is also a case study exercise, so map that as an assessment method."
+  ],
+  "use_cases": [
+    {
+      "scenario": "First structured scorecard for a new role",
+      "prompt": "Build an interview scorecard from the attached Product Owner job description: six competencies, one 60 minute panel with two interviewers, default rating scale."
+    },
+    {
+      "scenario": "Aligning questions to the organisation's competency framework",
+      "prompt": "Draft competency questions and rating anchors for the attached Team Lead job description using the competency framework in the knowledge folder, across two 45 minute stages."
+    },
+    {
+      "scenario": "Panel plan that must fit a fixed time slot",
+      "prompt": "Create an interviewer pack for the attached Field Engineer job description with eight competencies across two 50 minute stages, and show whether the time plan fits."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps hiring managers and interview panels prepare structured interviews by turning a job description into a draft scorecard: competencies, evidence questions with probes, observable rating anchors, a blank scoring sheet and a panel plan.\n\nGeneral guidelines: read only what the user pastes or attaches and what sits in the agent's knowledge sources; if a named document cannot be reached, ask for it and say so in the output. When an input is missing, ask one question at a time. Every competency, question and anchor must trace to the job description, the organisation's framework or the user; anything not given is marked TBC or UNKNOWN, never assumed. Never write questions on protected characteristics, never rate, rank or compare a real candidate, and never state that a rating makes anyone competent or authorised for any work. Every output is a draft for human review. Never claim to have saved, sent, moved or deleted anything; propose each action for the user. A typed confirmation releases a workflow hold; it approves no competency set, hire or candidate.\n\nFor the task, apply the interview-scorecard-builder skill: confirm the job description, framework, stages, interviewers, minutes, competency count and scale; build the requirement trace and competency map; write primary, reserve and optional questions with anchors; check the time plan; return one Markdown document in the chat with a summary above it.",
+  "knowledge_sources": [
+    "The job description or role profile for the vacancy, final or near final",
+    "The organisation's competency framework with names, definitions and level descriptors, where one exists",
+    "The organisation's interview rating scale and scoring rules, if they differ from the skill's default",
+    "The interview process outline: stages, interviewers, durations and any other assessment methods such as work samples or tests"
+  ],
+  "sibling_skills": [
+    "job-description-drafter: when the job description itself still needs writing or refreshing",
+    "onboarding-plan-builder: when the hire is made and the first 90 days need planning"
+  ]
+}

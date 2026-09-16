@@ -1,0 +1,264 @@
+{
+ "engineering-pfd-to-pid": {
+  "title": "PFD to P&ID drafting assistant (analysis-only)",
+  "skills": [
+   "pfd-intake-and-extraction",
+   "process-model-check",
+   "piping-enrichment",
+   "instrumentation-and-control-enrichment",
+   "process-safety-flags",
+   "tagging-and-numbering",
+   "pid-tool-readiness-mapping",
+   "validation-and-review-package"
+  ]
+ },
+ "engineering-document-control": {
+  "title": "Engineering document control",
+  "skills": [
+   "transmittal-drafter",
+   "master-document-register-check",
+   "interface-register-builder",
+   "management-of-change-intake"
+  ]
+ },
+ "executive-review-c-suite": {
+  "title": "Executive review board, C-suite",
+  "skills": [
+   "cfo-reviewer",
+   "coo-reviewer",
+   "cto-reviewer",
+   "cmo-reviewer",
+   "cro-reviewer",
+   "cbo-reviewer",
+   "ciso-reviewer",
+   "chro-reviewer"
+  ]
+ },
+ "executive-review-bench": {
+  "title": "Executive review board, the bench",
+  "skills": [
+   "cdo-reviewer",
+   "cpo-reviewer",
+   "general-counsel-reviewer",
+   "investor-reviewer",
+   "procurement-reviewer",
+   "works-council-reviewer",
+   "customer-advocate-reviewer",
+   "frontline-skeptic-reviewer"
+  ]
+ },
+ "executive-office": {
+  "title": "Executive office",
+  "skills": [
+   "executive-briefing-pack",
+   "board-paper-skeleton",
+   "decision-memo-builder",
+   "architecture-decision-record"
+  ]
+ },
+ "personal-productivity": {
+  "title": "Personal productivity: inbox, meetings, briefings",
+  "skills": [
+   "inbox-triage",
+   "custom-daily-brief",
+   "commitment-catcher",
+   "meeting-prep-onepager",
+   "transcript-to-actions",
+   "meeting-minutes-writer",
+   "project-dashboard-builder"
+  ]
+ },
+ "finance": {
+  "title": "Finance",
+  "skills": [
+   "month-end-close-checklist",
+   "budget-variance-explainer",
+   "capex-request-pack",
+   "invoice-exception-review",
+   "cash-forecast-assumptions-sheet",
+   "expense-policy-precheck"
+  ]
+ },
+ "hr-talent": {
+  "title": "HR: talent",
+  "skills": [
+   "job-description-drafter",
+   "interview-scorecard-builder",
+   "onboarding-plan-builder",
+   "performance-review-drafter",
+   "impact-log-builder"
+  ]
+ },
+ "hr-people-operations": {
+  "title": "HR: people operations",
+  "skills": [
+   "policy-question-answerer",
+   "policy-change-briefing",
+   "change-communication-plan",
+   "exit-interview-synthesis"
+  ]
+ },
+ "procurement": {
+  "title": "Procurement",
+  "skills": [
+   "rfp-requirements-pack",
+   "rfp-comparison-pack",
+   "supplier-evaluation-matrix",
+   "purchase-order-anomaly-review",
+   "contract-renewal-radar"
+  ]
+ },
+ "sales-bd": {
+  "title": "Sales and business development",
+  "skills": [
+   "discovery-call-prep",
+   "account-plan-builder",
+   "lead-qualification-scorer",
+   "proposal-skeleton",
+   "rfp-response-drafter",
+   "estimate-to-sow",
+   "deal-risk-review"
+  ]
+ },
+ "marketing-communications": {
+  "title": "Marketing and communications",
+  "skills": [
+   "campaign-brief-builder",
+   "message-house-builder",
+   "content-calendar-planner",
+   "announcement-drafter",
+   "internal-newsletter-drafter",
+   "faq-builder",
+   "case-study-drafter",
+   "communication-pretest-panel"
+  ]
+ },
+ "writing-communication": {
+  "title": "Writing and communication",
+  "skills": [
+   "write-like-me",
+   "branded-deck-builder",
+   "weekly-status-update-writer",
+   "claims-evidence-map",
+   "document-accessibility-check"
+  ]
+ },
+ "legal-contracts": {
+  "title": "Legal and contracts",
+  "skills": [
+   "nda-triage",
+   "contract-review-pack",
+   "clause-comparison-table",
+   "regulatory-change-impact-note"
+  ]
+ },
+ "it-service-management": {
+  "title": "IT service management",
+  "skills": [
+   "incident-postmortem-drafter",
+   "change-request-pack",
+   "runbook-drafter",
+   "knowledge-article-drafter",
+   "knowledge-base-hygiene-review",
+   "service-catalogue-entry",
+   "software-request-review",
+   "request-intake-triage"
+  ]
+ },
+ "access-and-sharepoint-governance": {
+  "title": "Access and SharePoint governance",
+  "skills": [
+   "access-review-pack",
+   "sharepoint-review-sweeper"
+  ]
+ },
+ "security-grc": {
+  "title": "Security, risk and compliance",
+  "skills": [
+   "control-evidence-request-pack",
+   "risk-register-update",
+   "policy-gap-review",
+   "vendor-security-questionnaire-prefill",
+   "vendor-risk-screening-brief",
+   "data-incident-impact-brief"
+  ]
+ },
+ "compliance-and-privacy": {
+  "title": "Compliance, ethics and privacy",
+  "skills": [
+   "controls-gap-pack",
+   "dpia-draft-pack",
+   "document-deidentification-pass",
+   "export-review-pack",
+   "green-claims-review",
+   "esg-report-question-pack"
+  ]
+ },
+ "reporting-and-data": {
+  "title": "Reporting and data",
+  "skills": [
+   "report-attachment-analyzer",
+   "news-monitor-digest",
+   "kpi-weekly-report-writer",
+   "dataset-insight-pack",
+   "data-dictionary-builder",
+   "kpi-definition-sheet",
+   "data-quality-issue-log"
+  ]
+ },
+ "project-management": {
+  "title": "Project management",
+  "skills": [
+   "project-status-tracker",
+   "raid-log-review",
+   "stakeholder-map-builder",
+   "schedule-slip-explainer",
+   "lessons-learned-synthesis",
+   "sprint-review-summary"
+  ]
+ },
+ "operations-and-quality": {
+  "title": "Operations and quality",
+  "skills": [
+   "sop-drafter",
+   "nonconformance-report-drafter",
+   "audit-prep-pack",
+   "corrective-action-tracker"
+  ]
+ },
+ "product-management": {
+  "title": "Product management",
+  "skills": [
+   "product-requirements-draft",
+   "user-personas-builder",
+   "release-notes-writer"
+  ]
+ },
+ "customer-support": {
+  "title": "Customer support",
+  "skills": [
+   "ticket-triage-pack",
+   "escalation-summary",
+   "customer-feedback-theme-synthesis"
+  ]
+ },
+ "learning-development": {
+  "title": "Learning and development",
+  "skills": [
+   "course-outline-builder",
+   "training-needs-synthesis",
+   "training-quiz-builder"
+  ]
+ },
+ "agent-building": {
+  "title": "Building and governing agents (meta skills)",
+  "skills": [
+   "agent-instructions-drafter",
+   "skill-file-reviewer",
+   "agent-instructions-red-team",
+   "agent-evaluation-plan",
+   "skills-backup-keeper",
+   "no-delete-guardrail"
+  ]
+ }
+}

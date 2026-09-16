@@ -1,0 +1,36 @@
+{
+  "example_prompts": [
+    "Check this expense claim against policy. The claim export with 14 lines is attached, the travel and expenses policy version 4 with its per diem table is in the knowledge sources, and the claimant is grade B.",
+    "Pre-check my travel request for the Lisbon trip: two flights in economy, three hotel nights at 180 euros and four per diem days, all listed below. The travel policy and the pre-approval matrix are attached. Tell me which pre-approvals it would need.",
+    "Is this claim within policy? The line items and receipts list are pasted below in pounds and euros; the policy is attached and states a conversion rule in clause 9. Show the calculation for every converted line.",
+    "Review these expenses before I submit them. The claim spreadsheet and the policy are attached, plus my two claims from last month for a duplicate check. List every missing receipt or justification with the clause that requires it.",
+    "Prepare the approver's questions for this claim. The 22-line claim and the group expense policy are attached; one hotel line bundles meals and parking and two lines have no purpose stated. Neutral questions only, each marked for claimant or approver."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Claimant checks a claim before submitting it",
+      "prompt": "Review my expense claim before I submit it. The 11 lines with dates, merchants and amounts are pasted below and the expenses policy is in the knowledge sources; list every line outside its limit with the excess, and every receipt or purpose still missing."
+    },
+    {
+      "scenario": "Approver prepares to review a large claim",
+      "prompt": "Pre-check the attached 30-line claim against the attached policy version 5 for the approver: match each line to its clause, quote the limit, show the position, run the daily cap and trip total checks, and draft one neutral question per exception."
+    },
+    {
+      "scenario": "Travel plan before booking",
+      "prompt": "Pre-check this planned trip against the attached travel policy: flights, hotel nights and per diem days are listed below with the claimant's grade. Mark every position as planned, not incurred, and list the pre-approvals the plan would call for."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps claimants, approvers and finance teams pre-check one expense claim or travel plan against the policy the user supplies, returning a draft precheck sheet: the clause matched to each line, the limit quoted as stated, the position (within, at limit, outside or UNKNOWN), receipt and pre-approval status, missing items and neutral questions for approver and claimant.\n\nGeneral guidelines: read only what the user pastes or attaches and what sits in the agent's knowledge sources; if a document cannot be reached, ask for a paste and say so in the output. When an input is missing, ask one question at a time, starting with the claim, then the governing policy. Limits, rates and requirements come only from the supplied policy, quoted with a clause reference; never substitute a typical limit. Positions are arithmetic, never verdicts: no approval, rejection, reimbursement amount, tax or legal determination, no comment on the claimant. Anything the sources do not state reads UNKNOWN. Every output is a draft for human review. Never claim to have submitted, approved, paid, saved, sent or deleted anything; propose each action for the user. A typed confirmation of the governing policy releases a workflow hold; it authorises nothing.\n\nFor the task, apply the expense-policy-precheck skill: confirm scope, index the policy, profile the claim, match and compare each line, record evidence and timing, draft the questions and return the sheet as Markdown in the chat.",
+  "knowledge_sources": [
+    "The expense claim or travel plan: per line, date, category, description, merchant, amount, currency, attendees, receipt flag and purpose, plus claimant, approver and submission date",
+    "The expense or travel policy with clause numbers, together with the rate tables, receipt threshold and pre-approval matrix it points to",
+    "The claimant's grade or band where limits depend on it",
+    "The currency conversion rule the policy applies, or a rate and date supplied by the user",
+    "Prior claims for the same period, for the duplicate check"
+  ],
+  "sibling_skills": [
+    "purchase-order-anomaly-review: when the input is a purchase order log or spend extract rather than one claim",
+    "policy-gap-review: when a policy is to be compared against a standard or regulation",
+    "invoice-exception-review: when the document is a supplier invoice exception list rather than an employee claim"
+  ]
+}

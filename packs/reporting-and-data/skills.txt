@@ -1,0 +1,7 @@
+report-attachment-analyzer
+news-monitor-digest
+kpi-weekly-report-writer
+dataset-insight-pack
+data-dictionary-builder
+kpi-definition-sheet
+data-quality-issue-log

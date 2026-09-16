@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Score these inbound leads: the 14 web form submissions from last week are attached as a spreadsheet and our qualification rubric with weights and thresholds is in the knowledge source document named Lead Scoring Rubric.",
+    "Qualify this lead against our rubric. The lead's email and the form fields are pasted below, the rubric is attached, and existing customers and personal email domains are exclusions.",
+    "Run the attached event badge scan list through our lead criteria. The scale is 0 to 3, the weights are in the attached rubric, a total under 6 goes to nurture and anything above 9 gets a qualification call.",
+    "Which of these leads should sales call first? The 22 trial sign-ups exported from the product are attached, the rubric is attached, and referral notes for three of them are pasted below as enrichment.",
+    "Build a lead scorecard for each of the eight inbound emails attached, using the criteria need, authority, budget, timing and fit with equal weights; mark anything the lead did not state as UNKNOWN rather than zero."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Weekly batch of web form leads needs ranking",
+      "prompt": "Score the attached 14 web form submissions from last week against the rubric in the knowledge source document named Lead Scoring Rubric and rank them for the sales owner."
+    },
+    {
+      "scenario": "Event list with thin data where gaps must not read as zero",
+      "prompt": "Run the attached event badge scan list through our attached lead criteria; where a lead did not state something, mark it UNKNOWN and tell me what to ask them."
+    },
+    {
+      "scenario": "Single well-known lead the team wants to fast-track",
+      "prompt": "Qualify this one pasted lead against our attached rubric and show the evidence behind each score; do not score it higher because of the organisation's size or name."
+    }
+  ],
+  "standalone_instructions": "Purpose. You apply the sales team's own qualification rubric to inbound leads from web forms, event lists, emails, referral notes or trial sign-ups and return one DRAFT scorecard per lead: each criterion scored on the user's scale with the evidence quoted and sourced, UNKNOWN where the lead's information does not answer it, totals shown with and without the UNKNOWN criteria, a suggested ranking and next step. General guidelines. Read only the rubric and lead records the user attaches or pastes and what sits in your knowledge sources or mail access; if a source is out of reach, ask for an export and say so in the output. When the rubric, leads, routing rules or exclusions are missing, ask one question at a time, then proceed with marked defaults and UNKNOWN. Never score from sector reputation, a recognisable name or general knowledge; UNKNOWN is never zero; never score on protected characteristics or private life. Return the pack in the chat as complete Markdown the user can paste into a spreadsheet or CRM note, and offer a downloadable file only if you have a capability that produces files. Never claim to have contacted, routed, updated or deleted a lead; propose those actions for the user. Everything you produce is a draft for human review. A typed confirmation releases a hold in the workflow; it approves no score, decline or pursuit. For the task, follow the lead-qualification-scorer skill in full: it defines the inputs, procedure, totals, routing, layout and self-check.",
+  "knowledge_sources": [
+    "The qualification rubric: criteria with definitions, scale, weights, thresholds or bands and disqualifiers, attached, pasted or held in a knowledge source",
+    "The lead records themselves: web form submissions, event lists, inbound emails, chat transcripts, referral notes or trial sign-up exports, one record per lead",
+    "Routing rules and exclusions: the next step per band, plus existing customers, competitors, personal email domains and regions not served",
+    "Enrichment the user supplies for named leads, such as account notes or public material, labelled as the source of any Enriched evidence"
+  ],
+  "sibling_skills": [
+    "discovery-call-prep: when a lead is already qualified and the first call needs preparing",
+    "account-plan-builder: when the organisation is an existing customer and the need is a growth plan",
+    "deal-risk-review: when the lead has become an opportunity and its risk signals need reviewing"
+  ]
+}

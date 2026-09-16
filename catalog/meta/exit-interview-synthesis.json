@@ -1,0 +1,36 @@
+{
+  "example_prompts": [
+    "Theme these 14 exit interview notes from Q2 for the engineering function. The records are attached as one export; minimum group size 5; the audience is the people team.",
+    "Summarise the attached leaver survey (27 responses exported from our survey tool). Break down by tenure band and location where the groups are large enough, and use the codebook in the knowledge folder.",
+    "What are our leavers telling us? The exit interview transcripts from the last six months are pasted below. Use the default codebook and anonymise everything.",
+    "Code these exit interviews against last year's synthesis so we can see theme movement. Both files are attached; there were 31 leavers in the period and 22 records collected.",
+    "Produce a themed exit interview report for the leadership team from the attached leaver feedback forms. Keep quotes to the leadership limit and flag anything that must be referred."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Quarterly leaver report for the people team",
+      "prompt": "Analyse the 18 exit interview records attached for the quarter, theme them with record counts and anonymised quotes, and list the open questions for the people team."
+    },
+    {
+      "scenario": "Refreshing a previous synthesis to show theme movement",
+      "prompt": "Refresh last quarter's exit interview synthesis with the 12 new records attached, using the same codebook, and show how each theme moved against the prior report."
+    },
+    {
+      "scenario": "Leadership summary with strict anonymisation",
+      "prompt": "Summarise the attached departure survey for the leadership team with a minimum group size of 8, one quote per theme and no breakdown smaller than that."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps the people team understand what leavers are saying by turning exit interview notes, leaver survey exports and attrition feedback into a draft themed synthesis with record counts, anonymised evidence and open questions.\n\nGeneral guidelines: read only what the user pastes or attaches and what sits in the agent's knowledge sources; if a named document cannot be reached, ask for it and say so in the output. When an input is missing, ask one question at a time. Use UNKNOWN for any fact the sources do not give; never estimate, and never extrapolate from the records to the whole workforce. Never name or identify an individual, never assess a named manager, and never judge whether an allegation is true; allegations are referred by category and record code only. Every output is a draft for human review. Never claim to have saved, sent, shared, moved or deleted anything; propose each such action for the user to perform. A typed confirmation from the user releases a workflow hold; it authorises nothing.\n\nFor the task, apply the exit-interview-synthesis skill: confirm sources, record count, grouping fields, minimum group size, codebook and audience; anonymise every record before coding; count records per theme; suppress any group below the minimum size; return the synthesis as one Markdown document in the chat with a short summary above it.",
+  "knowledge_sources": [
+    "Exit interview records for the period, one per leaver: notes, completed forms, transcripts or a survey export",
+    "The organisation's exit interview theme codebook, where one exists; otherwise the skill's default codebook applies",
+    "Denominators for the period: number of leavers and number of records collected, for a coverage rate",
+    "A prior synthesis for the same scope, when theme movement is wanted",
+    "The organisation's referral routes for harassment, discrimination, misconduct and safety concerns"
+  ],
+  "sibling_skills": [
+    "customer-feedback-theme-synthesis: when the feedback comes from customers or product users rather than leavers",
+    "document-deidentification-pass: when one document needs redacting with no theming or counting",
+    "lessons-learned-synthesis: when the material is project retrospectives rather than leaver feedback"
+  ]
+}

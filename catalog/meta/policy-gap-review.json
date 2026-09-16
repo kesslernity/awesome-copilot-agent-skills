@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Gap our information security policy, attached as version 3.2, against the attached extract of the standard, clauses 5 to 8 only. Terminology rule: a term matches only when the policy defines it or uses the same word.",
+    "Map the pasted data retention policy to the customer's contract schedule, also pasted, clause by clause. Scope is the retail entity only; the policy scope statement covers the whole group, so flag that.",
+    "Check our acceptable use policy in the knowledge source folder named Policies against the attached regulation extract for the jurisdiction named in the extract. Return every gap as a question for the policy owner.",
+    "Compare our supplier management policy with the new edition of the standard, both attached, and list what the new edition asks for that the current policy does not mention. No suggested wording yet.",
+    "Where does our incident response procedure fall short of the customer security requirements? Both documents are attached; the procedure has no clause numbering, so number the paragraphs in reading order."
+  ],
+  "use_cases": [
+    {
+      "scenario": "New edition of a standard against the current policy",
+      "prompt": "Gap our attached access control policy against the attached new edition of the standard, all clauses, and list every element the policy does not address as a question for the owner."
+    },
+    {
+      "scenario": "Customer contract schedule with security obligations",
+      "prompt": "Map the attached security policy to the customer's security schedule pasted below, clause by clause, and quote the policy text beside each match state."
+    },
+    {
+      "scenario": "Group policy adopted by a subsidiary in another jurisdiction",
+      "prompt": "Check the subsidiary's attached data protection policy against the attached group policy. Scope is the subsidiary's country only; flag every term the two documents use differently."
+    }
+  ],
+  "standalone_instructions": "Purpose: you help policy owners, compliance and security teams see how one policy lines up against one requirement set by producing a DRAFT gap review: every requirement element with its clause reference, the policy clause that appears to address it quoted, an apparent match state, and every gap as a question for the policy owner.\n\nGeneral guidelines: read only the policy and requirement set the user attaches or pastes and what sits in your knowledge sources; never work from memory of a standard or law, and if a document is out of reach, ask for it and say so. When the policy, requirement set, scope or edition is missing, ask one question at a time. Break clauses into elements without adding anything the text does not contain, quote the policy for every match, and treat silence as Not found with a question, never as a finding of breach. Never write that the policy complies, meets, satisfies or covers the requirement, or that it is adequate or sufficient; never decide which text prevails in a conflict, and give no legal advice. Missing facts are UNKNOWN. Never claim to have edited a policy or saved a file; both documents are read only and every action is proposed for the user. Everything is a draft for human review. A typed confirmation releases a workflow hold only; it approves no match state, gap or wording.\n\nFor the task, follow the policy-gap-review skill: its element decomposition, match states, gap question form, section order and self-check govern the output.",
+  "knowledge_sources": [
+    "The policy under review: title, version, effective date, owner, scope statement, definitions and clause numbering",
+    "The requirement set: standard, regulation, contract schedule or customer requirement, with edition, date and jurisdiction",
+    "Documents the policy delegates to (procedures, standards, annexes), so Delegated elements can be closed on a later pass",
+    "The organisation's glossary or defined terms, for the terminology rule"
+  ],
+  "sibling_skills": [
+    "controls-gap-pack: when the requirement must be mapped to operating controls rather than to policy text",
+    "regulatory-change-impact-note: when the need is a briefing on what a regulatory change means for the organisation",
+    "policy-change-briefing: when a changed people policy needs an employee briefing rather than a gap review"
+  ]
+}

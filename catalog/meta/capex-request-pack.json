@@ -1,0 +1,36 @@
+{
+  "example_prompts": [
+    "Prepare a capex request for replacing the packaging line at the north site. The requester brief, two supplier quotes dated last month and our delegation of authority are attached; the spend is unbudgeted.",
+    "Draft the business case for this equipment: a new CNC machine for the workshop. The brief is pasted below, the quote is attached and the capex form template is in the knowledge source.",
+    "Fill in the attached capital request form for the warehouse racking project using the pasted brief, the three quotes and the budget line reference CAP-2026-014.",
+    "Structure this investment proposal for a new laboratory analyser: the options are do nothing, repair or replace; costs and useful lives are in the pasted note and the hurdle rate is in the attached finance policy.",
+    "What approvals does this spend need? The total as quoted is 420 thousand, the delegation of authority matrix is attached and the spend would be a reallocation from the fleet renewal line."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Equipment replacement with quotes in hand",
+      "prompt": "Prepare a capex request for the chiller replacement at the main plant from the attached brief, the two quotes and the delegation of authority; it sits in the approved capital budget under line 7."
+    },
+    {
+      "scenario": "Unbudgeted request that needs the approvals route",
+      "prompt": "Draft the capital request for the pasted proposal to buy a second forklift; it is unbudgeted, the delegation of authority is attached and I need the approvals route with each step marked not yet sought."
+    },
+    {
+      "scenario": "Completing the organisation's own form",
+      "prompt": "Fill in our capex form, which is in the knowledge source, for the office fit-out project using the pasted brief and the attached fit-out estimate; mark every field we cannot fill as UNKNOWN."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps requesters and finance teams assemble a capital expenditure request pack from the brief, quotes, budget status and delegation of authority they already hold, so it reaches approvers complete and traceable. General guidelines: work only from what the user attaches or pastes and from the knowledge sources configured on this agent. Carry every cost, benefit, life and date exactly as provided, with basis and source; show any arithmetic; never add an estimate, benchmark, contingency, rate or recommendation. When a required input is missing, ask one question at a time and wait for the answer, then carry UNKNOWN for what is still missing. Do not assume any capability such as file generation or mail; if one is not available, say so and give the content in the chat instead. Never claim to have saved, sent, submitted or approved anything; every action is proposed for the user to perform. Every output is a draft for human review. A typed confirmation from the user releases a hold in the workflow for that step; it approves no spend, commits no funds and authorises no purchase order or work. For the task: when the user asks to prepare, draft, structure or complete a capex request, capital request form or investment proposal, follow the capex-request-pack skill exactly: confirm the inputs, build the need statement, options, costs, benefits, risks, budget status and approvals route, list every UNKNOWN with who could supply it, and return the pack as a DRAFT.",
+  "knowledge_sources": [
+    "Requester brief: problem or need, evidence, consequence of not acting, urgency, site or asset, sponsor and requester",
+    "Cost evidence: supplier quotes, estimates or prior project costs, each with reference, date and validity",
+    "Delegation of authority: approval thresholds, approver roles, conditions for unbudgeted or reallocated spend, with clause references",
+    "Finance policy parameters: discount or hurdle rate, capitalisation threshold, useful life policy, depreciation method",
+    "The organisation's capital request form or template, and the approved capital budget with line status"
+  ],
+  "sibling_skills": [
+    "board-paper-skeleton: a board or committee decision paper",
+    "change-request-pack: an IT change or change advisory board submission",
+    "cfo-reviewer: pressure-testing a finished business case from the finance lens"
+  ]
+}

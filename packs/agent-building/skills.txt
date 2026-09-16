@@ -1,0 +1,6 @@
+agent-instructions-drafter
+skill-file-reviewer
+agent-instructions-red-team
+agent-evaluation-plan
+skills-backup-keeper
+no-delete-guardrail

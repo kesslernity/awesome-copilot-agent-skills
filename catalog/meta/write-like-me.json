@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Build my voice profile from my sent mail over the last 90 days. The export is attached; skip meeting transcripts for now and tell me how many messages you could use.",
+    "Write this like me: an email to the project sponsor explaining the two-week slip and the recovery plan. My voice profile is in the knowledge folder and the schedule note is pasted below.",
+    "Draft this in my tone: a one-page note to my team about the new on-call rota, based on the attached rota and the three points pasted below. Keep it to my usual length.",
+    "Refresh my voice profile using the attached sent-mail export and the attached transcripts of my internal meetings from the last quarter; external meetings excluded.",
+    "Match my voice for a reply to the pasted customer email, declining the discount request but offering the extended payment term. Use the voice profile attached."
+  ],
+  "use_cases": [
+    {
+      "scenario": "First-time voice profile build",
+      "prompt": "Build my voice profile from the attached 90-day sent-mail export, mail only, and return the profile with its metadata block and instructions on where to keep it and when to rebuild."
+    },
+    {
+      "scenario": "Email in the user's own voice",
+      "prompt": "Write this like me: an email to the finance team asking for the revised budget by Friday, using the attached voice profile and the two points pasted below."
+    },
+    {
+      "scenario": "Document drafted to match the user's style",
+      "prompt": "Draft this in my tone: a two-page decision note for my manager on the vendor choice, from the attached comparison and my voice profile in the knowledge sources, with DRAFT on the title line."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps a person produce emails and documents that read as if they wrote them, in two modes: BUILD creates a reusable voice profile from the user's own sent messages and their own speech turns in meeting transcripts; DRAFT applies that profile to a requested email or document.\n\nGeneral guidelines: read only what the user attaches or pastes and what sits in the agent's knowledge sources or mail and meeting access; if the sent mail, transcripts or a named source cannot be reached, ask for an export and say so. When an input is missing, ask one question at a time. Analyse only the user's own words; strip quoted messages, signatures and other participants' speech. The profile records stylistic features only and never carries third-party names, client identifiers, deal terms or message subjects. Never invent a fact, date, figure or commitment; gaps read UNKNOWN and unstated decisions read DECIDE. Every email and document is a DRAFT for human review; the user pastes and sends it. Never claim to have saved, sent, moved or deleted anything. A typed confirmation releases a workflow hold; it is not approval of the content.\n\nFor the task, apply the write-like-me skill: select mode, confirm scope and the transcript decision, build or load the profile, draft to the recorded greeting, sign-off, sentence length, vocabulary and structure habits, run the self-check, and return the profile or the draft as Markdown in the chat with the profile build date.",
+  "knowledge_sources": [
+    "The user's own sent messages from the last 90 days, exported with date, internal or external recipient and body",
+    "Meeting transcripts with speaker labels where the user spoke, internal meetings only unless the user opts in to external ones",
+    "The saved voice profile document, titled voice-profile, once BUILD has run",
+    "Source material for a requested draft: notes, prior threads, documents or key points the draft must cover"
+  ],
+  "sibling_skills": [
+    "announcement-drafter: when the message must speak in the organisation's voice rather than the user's own",
+    "weekly-status-update-writer: when the email is a periodic status update built from notes and trackers",
+    "transcript-to-actions: when the need is owner emails and actions after a meeting rather than a personal-voice draft"
+  ]
+}

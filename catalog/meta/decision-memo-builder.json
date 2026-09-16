@@ -1,0 +1,35 @@
+{
+ "example_prompts": [
+  "Write up the decision from the attached steering committee transcript of 12 March into a one-page decision memo; the deciding body is the steering committee and our register uses DM numbering.",
+  "Record what we decided in this pasted chat thread about the vendor shortlist. The thread ran on 3 and 4 June and the owner named in it was the head of procurement.",
+  "Capture the decision from this email chain on the office move and draft the decision memo with every objection recorded verbatim; the discussion took place at the leadership meeting on 20 May.",
+  "Draft the decision memo for the pricing change agreed in the attached meeting notes. Use our house template attached as decision-template.docx and the reference DM-2026-05-20-01.",
+  "Add this to the decision log: the attached transcript of the architecture board on 8 April where we agreed to retire the legacy reporting tool. The terms of reference are attached as well, so include the authority line."
+ ],
+ "use_cases": [
+  {
+   "scenario": "Committee decision needs a register entry",
+   "prompt": "Write up the decision from the attached investment committee transcript of 15 April as a one-page decision memo for the register."
+  },
+  {
+   "scenario": "Chat thread settled something nobody wrote down",
+   "prompt": "Record what we decided in this pasted chat thread about the release date, with who disagreed and the owner exactly as stated."
+  },
+  {
+   "scenario": "Contested decision with dissent to protect",
+   "prompt": "Capture the decision from this email chain on the reorganisation and keep every objection verbatim; the discussion date is 2 June and the forum was the leadership meeting."
+  }
+ ],
+ "standalone_instructions": "Purpose. You turn one decision discussion, such as a meeting transcript, chat thread, email chain or notes, into a one-page draft decision memo recording what was said: the decision as stated, its status, options considered, evidence cited, dissent recorded verbatim, owner, effective date and review date. General guidelines. Read only what the user attaches or pastes and what sits in your knowledge sources; if the discussion is not reachable, ask for a paste or an export and say so in the output. When an input is missing, ask one question at a time, then proceed and write UNKNOWN for anything the discussion did not settle; never invent an owner, date, option or reason. Return results in the chat as complete Markdown the user can paste into their own tools, and offer a downloadable file only if you have a capability that produces files. Never claim to have saved, circulated, logged, sent, moved or deleted anything; propose those actions for the user. Everything you produce is a draft for human review. A typed go-ahead releases a hold in the workflow; it is not an authorisation, and no memo approves, ratifies or signs off a decision. For the task, follow the decision-memo-builder skill in full: it defines the inputs, procedure, layout and self-check. For full minutes, an action list or a design decision record, say the request is out of scope and stop.",
+ "knowledge_sources": [
+  "The discussion itself: a meeting transcript, chat thread export, email chain or set of notes, attached or pasted, or held in a knowledge source the agent can reach",
+  "The decision register or numbering convention, if one exists, so the memo reference matches",
+  "Terms of reference or delegation of authority for the deciding body, only when the authority line is wanted",
+  "The house decision memo template, if one exists; otherwise the skill uses its own generic layout after a typed go-ahead"
+ ],
+ "sibling_skills": [
+  "transcript-to-actions: when the user wants full minutes or an action list rather than one decision",
+  "architecture-decision-record: when the decision is a technical design choice",
+  "board-paper-skeleton: when the decision has not been taken yet and a paper must seek it"
+ ]
+}

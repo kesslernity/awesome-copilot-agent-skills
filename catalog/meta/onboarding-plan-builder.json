@@ -1,0 +1,36 @@
+{
+  "example_prompts": [
+    "Build an onboarding plan for our new Marketing Analyst starting on 6 October. The job description is attached, team context is pasted below and the systems list is in the knowledge folder. The manager is the Head of Marketing; no buddy assigned yet.",
+    "Draft the induction plan for this role: a Maintenance Planner joining a site team. The JD and our onboarding policy are attached; the systems list is pasted below with owners and request routes.",
+    "Write a first 90 days plan for the new hire in the finance team. Role brief attached, start date 3 November, part time four days a week. Mandatory training is in the onboarding checklist in the knowledge source.",
+    "Put together a new starter plan with owners for a Customer Support Team Lead. Team context, recurring meetings and the systems list are in the attached notes; no start date yet, so use relative days.",
+    "Plan the integration of an internal mover into the Data Governance team. The current and new role descriptions are attached; they already hold most systems, so treat access as changes."
+  ],
+  "use_cases": [
+    {
+      "scenario": "External hire with a confirmed start date",
+      "prompt": "Build a 30-60-90 day onboarding plan for the new Business Analyst starting 13 October from the attached job description, team notes and systems list, with owners, due windows and checkpoints."
+    },
+    {
+      "scenario": "Manager has a job description but no systems list",
+      "prompt": "Draft an induction plan for the attached Operations Coordinator role; we have no systems list yet, so give me the questions to answer for the access section."
+    },
+    {
+      "scenario": "Internal mover changing teams",
+      "prompt": "Create a ramp plan for a colleague moving into the attached Product Analyst role; team context is pasted below; treat access as change requests and keep the induction items our policy requires."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps managers prepare a new hire's first 90 days by turning a job description, team context and a systems list into a draft 30-60-90 day plan with phase outcomes, owned activities, access requests, learning and checkpoints.\n\nGeneral guidelines: read only what the user pastes or attaches and what sits in the agent's knowledge sources; if a named document cannot be reached, ask for it and say so. When an input is missing, ask one question at a time. Every outcome, activity, system, person and date must trace to an input or be marked UNKNOWN or default, confirm; add nothing similar roles usually have. Assign work only to people the inputs name. Never rate or grade the hire, and never state that anyone is inducted, cleared or authorised for any system, site or task. Record no personal data beyond the name the user gives. Every output is a draft for human review. Never claim to have raised a request, granted access, saved, sent, moved or deleted anything; propose each action for the user. A typed confirmation releases a workflow hold; it approves no access or probation terms.\n\nFor the task, apply the onboarding-plan-builder skill: confirm role, team context, systems list, start date and policy; derive phase outcomes; build the access, people and learning tables; lay out weekly activities with owners; write the checkpoints; run the load check; return one Markdown document in the chat with a summary above it.",
+  "knowledge_sources": [
+    "The job description or role brief for the position",
+    "Team context: manager, buddy, key colleagues and stakeholders with roles, recurring meetings, location and current priorities",
+    "The systems list: each system with its purpose, owner or approver and request route",
+    "The organisation's onboarding checklist or policy: mandatory training, probation length and review points",
+    "The start date and working pattern of the new hire"
+  ],
+  "sibling_skills": [
+    "job-description-drafter: when the job description still needs writing or refreshing",
+    "interview-scorecard-builder: when the role is still being interviewed for",
+    "training-quiz-builder: when a mandatory training item needs a knowledge check rather than a plan"
+  ]
+}

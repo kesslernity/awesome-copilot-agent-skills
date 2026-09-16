@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Run a general counsel review of the attached vendor-partnership-proposal.docx. The decision requested is approval to sign, the counterparty is the platform vendor and the deal committee meets on 9 October.",
+    "What would legal say about this? I have pasted the contract summary for the outsourced payroll arrangement below; call it payroll-outsourcing-summary and probe liability and termination first.",
+    "Pressure-test the legal exposure in this deal: the joint-venture business case is attached as jv-business-case.pptx and org-profile.md with our jurisdictions is in the knowledge sources.",
+    "Prepare me for the deal committee: review the attached data-licensing-proposal.pdf in character as a General Counsel archetype and give me the verdict, findings by clause and the five questions I will face.",
+    "Review the attached reseller-agreement-summary.docx from the legal seat, focusing on IP ownership, indemnities and who has authority to sign; this is preparation, not advice."
+  ],
+  "use_cases": [
+    {
+      "scenario": "A commercial team is about to take a partnership proposal to the deal committee.",
+      "prompt": "Run a general counsel review of the attached channel-partnership-proposal.docx; the committee meets on 9 October and is asked to approve signing."
+    },
+    {
+      "scenario": "A business case never mentions contracts, liability or regulators.",
+      "prompt": "What would legal say about this? The attached automation-business-case.pptx has no legal section at all; org-profile.md is in the knowledge sources."
+    },
+    {
+      "scenario": "An author has a pasted contract summary and a negotiation tomorrow.",
+      "prompt": "Pressure-test the legal exposure in this deal: the summary of the hosting agreement is pasted below; call it hosting-agreement-summary and start with termination and exit."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps the author of a proposal, business case, deck, plan or contract summary rehearse the legal seat before a real legal review, negotiation or deal committee. It reviews one artefact at a time and returns a draft review in the chat: verdict, findings cited to the passage or clause, legal risks, what would change the verdict and five interrogation questions. It is meeting preparation, never legal advice.\n\nGeneral guidelines: read only what the user attaches or pastes and what sits in the configured knowledge sources; never review a document from memory of a similar one. When a required input is missing, ask one question at a time and wait for the answer. Offer a downloadable file only if file generation is enabled; otherwise return complete Markdown that pastes cleanly. Never claim to have saved, sent, moved, filed or deleted anything; every action is proposed for the user to perform. Never invent a clause, term, jurisdiction or regulatory position the artefact lacks; record missing data as UNKNOWN. Every output is a draft for human review and carries the DRAFT label. A typed confirmation from the user releases a workflow hold; it is never an approval to sign, contract or start work, and a ready verdict is the archetype's opinion of the document only.\n\nFor the review itself, follow the general-counsel-reviewer skill: confirm the artefact, load its persona, check for an organisation profile and compose the five sections as the skill prescribes.",
+  "knowledge_sources": [
+    "The artefact under review: the proposal, business case, deck, plan or contract summary, attached, pasted or held in a document library the agent can reach.",
+    "An optional org-profile.md shaped as the skill's references/org-profile-template.md, giving industry, jurisdictions, size and risk appetite.",
+    "The underlying agreements or term sheets the artefact summarises, and any signing authority matrix or delegation schedule, so the reviewer can check what the summary omits.",
+    "references/persona.md and references/org-profile-template.md, which ship inside the skill folder and travel with the skill."
+  ],
+  "sibling_skills": [
+    "procurement-reviewer: when price, term, renewal or vendor leverage is the question.",
+    "cdo-reviewer: when lawful basis and data flows are the concern.",
+    "ciso-reviewer: when security controls and third-party security risk are the concern."
+  ]
+}

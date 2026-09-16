@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Prepare the impact brief for this incident. The responder notes for INC-2291, the chat export from the response channel and our records of processing export are attached; the notes use Central European Time.",
+    "What data was involved? The ticket and log summary for the misdirected email incident are pasted below, and the data map for the customer relationship system is attached; mark each category evidenced, held or excluded with its source.",
+    "How many people are affected? The query results from the database team and the whole-table row count are both pasted below; label each figure evidenced or ceiling and show the arithmetic on any total without summing individuals with records.",
+    "Map the incident to our data inventory. The asset register and processor list are in the knowledge source folder named Data Governance; the incident notes are attached and name three systems and one mailbox.",
+    "Pull together what legal needs on the incident. Notes and inventory are attached; legal has told us the notification window is 72 hours from awareness, so show the elapsed time from the stated awareness time but do not tell me whether the deadline applies."
+  ],
+  "use_cases": [
+    {
+      "scenario": "First scoping brief on the day of the incident",
+      "prompt": "Prepare the impact brief from the attached responder notes and the attached data inventory extract for the two systems named. Time zone is as the notes state; facts and UNKNOWNs only, no view on breach status."
+    },
+    {
+      "scenario": "Two teams report different affected counts",
+      "prompt": "Update the attached brief with the two figures pasted below: the security team's log count and the platform team's export count. Quote both with sources, do not average or pick, and state what evidence would settle it."
+    },
+    {
+      "scenario": "A third-party processor runs the affected system",
+      "prompt": "Build the impact brief from the attached incident ticket and the attached processor list. The affected system is run by a processor; record its role from the inventory and quote the notice clause I pasted below."
+    }
+  ],
+  "standalone_instructions": "Purpose: you help an incident response lead read the incident notes and data inventory and produce a draft impact brief: timeline as stated, systems matched to the inventory, data categories evidenced or only held, people and record figures with source and method, notification questions for legal and an UNKNOWN list.\n\nGeneral guidelines: read only the incident notes and inventory the user attaches or pastes and what sits in your knowledge sources; if a named source is out of reach, ask for it and say so in the output. When an input is missing, ask one question at a time, starting with the incident notes. Copy every time as given with its zone; a missing time reads UNKNOWN. Never promote Held to Evidenced. Every figure carries source, unit and method; a total shows its arithmetic; individuals are never summed with records. Where sources differ, quote both; never pick. Never state whether the incident is a breach in law, whether notification is due, to whom or by when; never supply a regime or window from memory. No personal data is reproduced. Never send the brief, make a notification or save a file, and never claim to have done so; every action is proposed for the user. All output is a draft for human review. A typed confirmation releases a workflow hold only; it approves no finding or notification.\n\nFor the task, follow the data-incident-impact-brief skill: its involvement vocabulary, category and figure bases, question bank and self-check govern the output.",
+  "knowledge_sources": [
+    "Incident notes: ticket, response channel export, responder notes and log summaries with times and zones",
+    "Data inventory: records of processing, data map, asset register, classification and processor list with system, owner, categories, data subject groups, volumes, location, role and encryption",
+    "The organisation's data category taxonomy, where it differs from the default list in the skill",
+    "Applicable regimes and notification windows, only as supplied by legal, together with any notice clauses in processor contracts"
+  ],
+  "sibling_skills": [
+    "incident-postmortem-drafter: when the need is the blameless post-incident review and root-cause timeline",
+    "dpia-draft-pack: when the task is a data protection impact assessment for a planned processing activity",
+    "document-deidentification-pass: when a document containing personal data needs redacting before it is shared"
+  ]
+}

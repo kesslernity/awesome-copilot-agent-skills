@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Turn the attached estimate workbook into an SOW using our attached SOW template. Use the Pricing sheet; the client is the regional water utility, the project is Billing Migration, start date 3 November, payment terms net 30, currency euros.",
+    "Build the statement of work from the pricing workbook I attached. It has three tabs; use the one called Final. The template is in the knowledge source folder named Templates. Client and project names are in row 2 of the sheet.",
+    "Convert the quote pasted below into a scope document with the SOW template attached. There is no start date yet, so leave schedule dates as TBC. Currency is pounds sterling.",
+    "Populate our SOW template from the attached estimate spreadsheet. Check every line and subtotal first and stop if anything does not add up. Client is the hospital trust, project is the records archive, and this is version 2 because a v1 already exists.",
+    "Draft the engagement document from the attached rate card and hours breakdown. We have no SOW template, so use the generic structure and label it as such. Client is the logistics group; payment terms are 50 percent on signature and 50 percent on acceptance."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Turning an approved internal estimate into the client-facing SOW",
+      "prompt": "Turn the attached approved estimate into an SOW using the attached template. Sheet is Summary, client is the insurance broker, project is Claims Portal, start date 1 December, net 45 in euros."
+    },
+    {
+      "scenario": "Catching arithmetic errors before the SOW goes to the client",
+      "prompt": "Validate the attached estimate and then populate our SOW template, also attached. If any line, subtotal or grand total does not reconcile, list every discrepancy with cell references and wait for my choice before drafting."
+    },
+    {
+      "scenario": "Producing a revised SOW after the estimate changed",
+      "prompt": "The client cut two phases; the revised estimate is attached. Build the statement of work again from the same template as version 2 and flag every scope item that no longer traces to a row."
+    }
+  ],
+  "standalone_instructions": "Purpose: you help delivery, sales and commercial teams turn one priced estimate spreadsheet into one DRAFT statement of work built from the organisation's own SOW template, after validating that every line, phase subtotal and grand total adds up. You return the populated SOW and a validation report as Markdown for a human to compare against the template before any signature.\n\nGeneral guidelines: read only the estimate and template the user attaches or pastes and what sits in your knowledge sources; if several files match, list them and wait for the user to choose; if a file is out of reach, say so and ask for it. When the estimate, sheet, template, client name, start date or payment terms are missing, ask one question at a time. Run every arithmetic check before drafting and never proceed silently past a discrepancy; present it and let the user choose a route. Never invent scope items, deliverables, dates, rates or terms; anything the template needs that the estimate lacks becomes a TBC field, and unreachable data is UNKNOWN. Copy legal and boilerplate wording verbatim. Never claim to have saved, sent, moved or deleted anything; propose actions for the user. Every document is labelled DRAFT. A typed go-ahead releases a workflow hold only; it approves no fees, scope or engagement.\n\nFor the task, follow the estimate-to-sow skill: its column mapping, validation checks, placeholder rules, output titles and self-check govern the output.",
+  "knowledge_sources": [
+    "The priced estimate spreadsheet: line items, phases, roles, hours, rates, amounts, subtotals and grand total, with the sheet to use",
+    "The organisation's SOW template with its placeholders or headings, and any standard legal and boilerplate wording",
+    "Client name, project name, start date, payment terms and currency where the estimate does not state them",
+    "Earlier SOW drafts for the same client and date, so a new draft takes the next version number"
+  ],
+  "sibling_skills": [
+    "proposal-skeleton: when the deal is at proposal stage and pricing is not yet fixed",
+    "rfp-response-drafter: when the document to produce answers a buyer's RFP or tender",
+    "contract-review-pack: when an existing SOW or agreement needs reviewing against standard positions"
+  ]
+}

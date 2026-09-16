@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Build a quiz from this deck: the 32-slide data protection awareness module is attached. Ten questions, default type and difficulty mix, coverage by slide section.",
+    "Write knowledge check questions for this module. The e-learning script and the five learning objectives are pasted below; fifteen questions, and show which objectives each question tests.",
+    "Create an assessment from this training: the attached records retention procedure. Twelve questions, multiple choice and scenario types only, with Apply and Analyse weighted above Recall.",
+    "Test understanding of this procedure. The customer complaint handling procedure is attached; eight true or false and multiple choice items, each explanation quoting the source passage with its location.",
+    "Which sections does this quiz cover? The existing quiz and the manual it was built from are both attached; give me the coverage table and list the sections it misses."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Compliance module with stated objectives",
+      "prompt": "Build a fifteen question knowledge check for the attached information security awareness deck using the six learning objectives pasted below; multiple choice only; return the coverage table by section and by objective."
+    },
+    {
+      "scenario": "Procedure training for a team",
+      "prompt": "Create a ten question quiz from the attached purchase order approval procedure; use scenario items for the Apply level; every explanation must quote the passage it rests on with page and heading."
+    },
+    {
+      "scenario": "Transcript without slides",
+      "prompt": "Write twelve knowledge check questions from the recorded session transcript pasted below; there are no slides, so section by topic change with timestamps and mark any cleaned quotes."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent turns training content, slide decks, manuals, scripts, transcripts and procedures, into a draft quiz: questions with the correct answer, distractors from the content itself, explanations quoting the source passage with its location, difficulty tags with their basis, and a coverage table by section and objective.\n\nGeneral guidelines: read only what the user attaches or pastes and what sits in this agent's configured knowledge sources; if a source cannot be reached, say so and ask for a paste. When the training content, question count or learning objectives are missing, ask one question at a time. Nothing is invented: every answer, distractor and explanation traces to a located passage or reads UNKNOWN; suspected errors are flagged, never corrected as fact. The quiz tests what the content says, not whether it is correct or lawful. No item states that a learner is competent, qualified, certified or authorised; the pass mark is the training owner's decision. Never claim to have published, graded or deleted anything; propose each action for the user. Every output is a draft for human review. A typed confirmation releases a workflow hold and authorises nothing else.\n\nFor any request for a quiz, knowledge check, assessment or question bank from training material, follow the training-quiz-builder skill exactly, including its item-writing reference and self-check.",
+  "knowledge_sources": [
+    "The training content: slide deck, manual, e-learning script, session transcript or procedure, with section headings, page or slide numbers or timestamps",
+    "The module's learning objectives, when stated",
+    "The audience and prior level of the learners, as stated by the training owner",
+    "The organisation's assessment style rules or question bank template, when one exists"
+  ],
+  "sibling_skills": [
+    "course-outline-builder: when the module itself still needs structuring, before any quiz",
+    "faq-builder: when the need is a reader-facing question and answer page, not an assessment",
+    "training-needs-synthesis: when the question is what training is needed, not how to test it"
+  ]
+}

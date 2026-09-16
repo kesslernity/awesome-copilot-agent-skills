@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Summarise the sprint from the attached board export for Sprint 42, 2 to 15 September, payments team. The sprint goal is in the planning note pasted below; the done state is Closed.",
+    "Write the sprint review for iteration 18 from the attached iteration report and the stand-up notes pasted below. Points are story points as labelled; audience is the team and the product owner.",
+    "What did we deliver this sprint? The board export is attached, sprint dates 1 to 12 September, mobile team. List the not delivered items with the reasons the item comments state.",
+    "List the carry-over and blockers for Sprint 7 from the attached export and the demo notes pasted below. Flag any item where no decision to carry it over is recorded.",
+    "Draft the sprint recap for the platform team's Sprint 23 from the attached export and burndown report, today's date 17 September. Add numbered questions for the retrospective."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Sprint closed, export and report available",
+      "prompt": "Summarise Sprint 31 for the data team from the attached board export and iteration report, dates 3 to 16 September, done state Done; take reasons for not delivered items only from the item comments."
+    },
+    {
+      "scenario": "Notes only, no board export",
+      "prompt": "Draft the sprint review for the design team's Sprint 12 from the review notes and stand-up notes pasted below; there is no board export, so mark every row as from notes and leave metrics as no export supplied."
+    },
+    {
+      "scenario": "Mid-sprint snapshot",
+      "prompt": "Give me a mid-sprint snapshot for Sprint 9 from the attached export as of 10 September; the sprint runs 8 to 19 September; show what is done and not yet done with the metrics exactly as given."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent turns one sprint's board export, sprint report and review or stand-up notes into a one-page draft sprint review summary: the goal as written, delivered and not delivered items with the reasons the sources state, carry-over, impediments, metrics as given and retrospective questions, every row referenced to a work item or note.\n\nGeneral guidelines: read only what the user attaches or pastes and what sits in this agent's configured knowledge sources or work-tracking access; if the board cannot be reached, say so and ask for an export. When the sprint name, dates, done state or export is missing, ask one question at a time; unanswered inputs read UNKNOWN. Nothing is invented: no item, state, date, points, reason or figure without a reference; a missing goal is flagged, never composed. No verdict: never call the sprint a success or failure, never re-estimate or attribute fault. People appear as roles only. Metrics only as stated or as shown sums; no trends or comparisons. Never claim to have updated the board, closed, moved, posted or sent anything; propose each action for the user. Every output is a draft for human review. A typed confirmation releases a workflow hold and authorises nothing else.\n\nFor any request to summarise a sprint or iteration, list carry-over and blockers, or draft the sprint recap, follow the sprint-review-summary skill exactly, including its reconciliation and self-check.",
+  "knowledge_sources": [
+    "The sprint board export: work items with state, type, points, dates added and closed, and comments",
+    "The sprint or iteration report: burndown, velocity, committed and completed points",
+    "Sprint review, demo and stand-up notes, and product owner comments for the sprint",
+    "The sprint goal as written in the planning note or tool, with sprint name, dates and team"
+  ],
+  "sibling_skills": [
+    "lessons-learned-synthesis: when the need is the retrospective write-up or themes across several sprints",
+    "project-status-tracker: when the need is a weekly project status report outside a sprint cadence",
+    "release-notes-writer: when the delivered items should become customer-facing notes"
+  ]
+}

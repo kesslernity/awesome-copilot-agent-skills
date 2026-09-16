@@ -1,0 +1,1377 @@
+{
+ "repository": "kesslernity/awesome-copilot-agent-skills",
+ "format": "Agent Skills (SKILL.md, name + description front matter)",
+ "runtime": "Microsoft 365 Copilot declarative agents (preview); the same folders read in Copilot Cowork",
+ "skills": [
+  {
+   "name": "customer-feedback-theme-synthesis",
+   "category": "customer-support",
+   "title": "Customer feedback theme synthesis",
+   "description": "Synthesises a batch of customer feedback (survey answers, reviews, ticket and chat comments, feedback forms) into a DRAFT themed report: coded themes with record counts and shares, feedback type per theme as the customer's own words evidence it, anonymised verbatim quotes cited to record codes, contradictions and unverified customer claims, referred items and the follow-up questions to answer next. Produces no sentiment score or percentage positive as fact; customer-recorded ratings appear only as distributions with n. Use when the user asks to \"theme this feedback\", \"what are customers saying\", \"summarise these survey answers\", \"analyse these reviews\", \"find the top complaints in these comments\" or \"code this voice of the customer data\". Do not use for exit interviews, use exit-interview-synthesis instead; for sorting a live queue and drafting replies, use ticket-triage-pack; for project retrospectives, use lessons-learned-synthesis. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/customer-support/customer-feedback-theme-synthesis",
+   "zip": "dist/zips/customer-feedback-theme-synthesis.zip",
+   "guide": "docs/skills/customer-support/customer-feedback-theme-synthesis.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "escalation-summary",
+   "category": "customer-support",
+   "title": "Escalation summary",
+   "description": "Turns one long support ticket thread (helpdesk history, email chain, chat transcript, call notes) into a one-page DRAFT escalation summary: the customer's ask in their own words, account context as stated, a dated history, what was tried and the stated result of each attempt, the current state, and what is needed from whom by when, every line referenced to a message and every missing fact marked UNKNOWN. Use when the user asks to \"escalate this ticket\", \"summarise this thread for tier two\", \"write the hand-over for this case\", \"what has been tried so far\", \"brief engineering on this customer issue\" or \"prepare the escalation note\". Do not use for a batch of tickets, use ticket-triage-pack instead; for the review after an outage, use incident-postmortem-drafter. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/customer-support/escalation-summary",
+   "zip": "dist/zips/escalation-summary.zip",
+   "guide": "docs/skills/customer-support/escalation-summary.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "ticket-triage-pack",
+   "category": "customer-support",
+   "title": "Ticket triage pack",
+   "description": "Triages a batch of customer support tickets (helpdesk export, shared mailbox, chat transcripts, web forms) into one row per ticket with category, urgency graded on the evidence in the ticket, suggested next action and owner, plus a DRAFT customer reply for every ticket that needs one, returned as one Markdown pack. Use when the user asks to \"triage these tickets\", \"sort the support queue\", \"what needs an answer first\", \"categorise this backlog\", \"draft replies for these tickets\" or \"build today's queue review\". Do not use for internal requests from colleagues, use request-intake-triage instead; for one long thread that needs handing over, use escalation-summary; for a personal mailbox, use inbox-triage. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/customer-support/ticket-triage-pack",
+   "zip": "dist/zips/ticket-triage-pack.zip",
+   "guide": "docs/skills/customer-support/ticket-triage-pack.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "commitment-catcher",
+   "category": "daily-briefings",
+   "title": "Commitment Catcher",
+   "description": "Sweeps the last 24 hours of email, chat messages and meeting transcripts for commitments in both directions, what the user promised others and what others promised the user, reconciles them against a running commitments ledger (open, done, overdue), lists overdue items first and returns the updated ledger plus a proposed task list as Markdown for the user to save. Use when the user asks to \"check my commitments\", \"what did I promise\", \"what am I owed\", \"did anything slip\" or \"run the commitment sweep\". Do not use for a general morning summary of mail, calendar and mentions, use custom-daily-brief instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/daily-briefings/commitment-catcher",
+   "zip": "dist/zips/commitment-catcher.zip",
+   "guide": "docs/skills/daily-briefings/commitment-catcher.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "custom-daily-brief",
+   "category": "daily-briefings",
+   "title": "Custom Daily Brief",
+   "description": "Builds a role-tuned morning brief as a dated Markdown document covering emails that need replies, today's calendar with conflicts flagged, chat mentions and upcoming deadlines, in the section order set by a preset (project manager, executive assistant, IT admin, sales or custom) read from an editable config. Use when the user asks to \"run my brief\", \"give me my morning brief\", \"start-of-day summary\", \"switch my brief to the sales preset\" or \"change what my brief covers\". Do not use for tracking promises made or owed across days, use commitment-catcher instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/daily-briefings/custom-daily-brief",
+   "zip": "dist/zips/custom-daily-brief.zip",
+   "guide": "docs/skills/daily-briefings/custom-daily-brief.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "project-dashboard-builder",
+   "category": "dashboards-microapps",
+   "title": "Project dashboard builder",
+   "description": "Builds a self-contained single-file HTML project dashboard (status banner, milestones table, risks heat list, decisions log, links) from the project tracker files the user attaches, pastes or holds in configured knowledge sources, and returns the complete HTML source in chat ready to save as dashboard-project-date.html. Use when the user asks to \"build a dashboard for this project\", \"make a status page I can pin in the team channel\", \"give me an HTML overview of milestones, risks and decisions\", \"refresh the project dashboard from the tracker\" or \"turn these tracker files into a one-page visual summary\". Do not use for creating or updating the tracker files or for the written weekly status report, use project-status-tracker instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/dashboards-microapps/project-dashboard-builder",
+   "zip": "dist/zips/project-dashboard-builder.zip",
+   "guide": "docs/skills/dashboards-microapps/project-dashboard-builder.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "data-dictionary-builder",
+   "category": "data-analytics",
+   "title": "Data dictionary builder",
+   "description": "Builds a DRAFT data dictionary from a schema export, table definition, sample rows or a partial existing dictionary: one row per field with the name as stated, type as stated or observed, meaning quoted from the documentation supplied, owner, allowed values, and UNKNOWN wherever no source defines the field, plus a gap list for the data owner. Never infers a definition from a column name. Use when the user asks to \"build a data dictionary for this table\", \"document these columns\", \"what does each field mean\", \"turn this schema export into a dictionary\" or \"fill in the field definitions from these documents\". Do not use to profile values or find patterns in the data, use dataset-insight-pack instead; for metric definitions, use kpi-definition-sheet; for logging data defects, use data-quality-issue-log. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/data-analytics/data-dictionary-builder",
+   "zip": "dist/zips/data-dictionary-builder.zip",
+   "guide": "docs/skills/data-analytics/data-dictionary-builder.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "data-quality-issue-log",
+   "category": "data-analytics",
+   "title": "Data quality issue log",
+   "description": "Turns reported data problems (messages, tickets, meeting notes, a spreadsheet of complaints) into one DRAFT data quality issue log: one row per issue with the symptom as reported, dataset and fields named, reproduction steps taken from the report, affected reports as stated, first seen date, reporters, a suggested owner with its basis, and blank severity, root cause and status cells for the owner, plus one question per gap. Never asserts a root cause, a severity or a fix. Use when the user asks to \"log these data issues\", \"turn these complaints about the numbers into an issue list\", \"build the data quality backlog\", \"which reports are hit by this data problem\" or \"write up the reproduction steps for this data bug\". Do not use to explore or profile a dataset, use dataset-insight-pack instead; for an IT incident write-up, use incident-postmortem-drafter; for tracking fix actions once assigned, use corrective-action-tracker. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/data-analytics/data-quality-issue-log",
+   "zip": "dist/zips/data-quality-issue-log.zip",
+   "guide": "docs/skills/data-analytics/data-quality-issue-log.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "dataset-insight-pack",
+   "category": "data-analytics",
+   "title": "Dataset insight pack",
+   "description": "Reads one spreadsheet, CSV export or pasted table together with the user's question and drafts an insight pack: a data profile, observations cited to named columns and values and framed as leads, caveats, and suggested charts and follow-up analyses. Every figure carries the label \"as read, verify in source\"; correlation is never stated as causation. Use when the user asks to \"profile this spreadsheet\", \"what does this data say\", \"find anomalies in this extract\", \"give me a first read on this CSV\" or \"summarise this table\". Do not use for a purchase order log or spend extract, use purchase-order-anomaly-review instead; for actuals versus budget, use budget-variance-explainer instead; for a report that arrives by email on a schedule, use report-attachment-analyzer instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/data-analytics/dataset-insight-pack",
+   "zip": "dist/zips/dataset-insight-pack.zip",
+   "guide": "docs/skills/data-analytics/dataset-insight-pack.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "kpi-definition-sheet",
+   "category": "data-analytics",
+   "title": "KPI definition sheet",
+   "description": "Turns a list of KPIs or metrics into a DRAFT definition sheet: one row per KPI with the name as stated, formula quoted from a source, source system, owner, refresh cadence, unit, filters and known caveats, with UNKNOWN in every cell no source fills and a gap list grouped by data owner. Never composes a formula, sets a target or names an owner the sources do not state. Use when the user asks to \"define these KPIs\", \"build a metrics definition sheet\", \"document how each KPI is calculated\", \"which of our KPIs have no owner or formula\" or \"reconcile the two KPI lists\". Do not use to write the weekly numbers report, use kpi-weekly-report-writer instead; for field-level definitions of a table, use data-dictionary-builder; for logging a wrong figure as a defect, use data-quality-issue-log. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/data-analytics/kpi-definition-sheet",
+   "zip": "dist/zips/kpi-definition-sheet.zip",
+   "guide": "docs/skills/data-analytics/kpi-definition-sheet.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "document-deidentification-pass",
+   "category": "data-privacy",
+   "title": "Document de-identification pass",
+   "description": "Proposes redactions of personal identifiers in pasted text or an attached document (names, contact details, identification and account numbers, dates that identify, quasi-identifiers) and returns a DRAFT redacted copy with consistent placeholder tokens plus a redaction table stating what was replaced, where and why, with a confidence level and a blank reviewer decision per row. Use when the user asks to \"redact the names in this document\", \"de-identify this transcript before we share it\", \"strip personal data from these notes\", \"anonymise this report for publication\" or \"what would need redacting here\". Do not use for assessing a planned processing activity, use dpia-draft-pack instead; do not use for working out what data an incident exposed, use data-incident-impact-brief instead. Never declares a document anonymised, safe to release or compliant. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/data-privacy/document-deidentification-pass",
+   "zip": "dist/zips/document-deidentification-pass.zip",
+   "guide": "docs/skills/data-privacy/document-deidentification-pass.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "dpia-draft-pack",
+   "category": "data-privacy",
+   "title": "DPIA draft pack",
+   "description": "Reads a project or processing description and returns a DRAFT data protection impact assessment pack: processing description, necessity and proportionality questions, a risk table with blank rating cells, mitigations to consider and open questions. Never rates risk, determines the lawful basis or judges adequacy; the DPO assesses and signs. Works from descriptions, never personal data. Use when the user asks to \"start a DPIA for the new monitoring tool\", \"draft a data protection impact assessment\", \"scaffold a DPIA from this processing description\" or \"what would the DPO need for a DPIA on this\". Do not use for redacting or de-identifying a document, use document-deidentification-pass instead; do not use for working out what data an incident exposed, use data-incident-impact-brief instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/data-privacy/dpia-draft-pack",
+   "zip": "dist/zips/dpia-draft-pack.zip",
+   "guide": "docs/skills/data-privacy/dpia-draft-pack.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "inbox-triage",
+   "category": "email-inbox",
+   "title": "Inbox triage",
+   "description": "Sorts a personal inbox backlog into five buckets (needs-reply-today, needs-reply-this-week, waiting-on-others, FYI, noise), writes DRAFT reply text for the messages that need an answer (up to 10 per run), and returns a dated triage report as one Markdown document. Lists moves or archives only as proposals for the user to perform, and only where a rule the user supplied says so; the agent changes nothing in the mailbox. Use when the user asks to \"triage my inbox\", \"sort my mail\", \"clean up my inbox\", \"catch up after leave\" or \"what needs a reply today or this week\". Do not use for a shared support queue or helpdesk export, use ticket-triage-pack instead; for what the user promised or is owed, use commitment-catcher; for one named thread, answer directly. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/email-inbox/inbox-triage",
+   "zip": "dist/zips/inbox-triage.zip",
+   "guide": "docs/skills/email-inbox/inbox-triage.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "interface-register-builder",
+   "category": "engineering-document-control",
+   "title": "Interface register builder",
+   "description": "Builds a DRAFT interface register between disciplines or parties from meeting notes, action lists and drawings or document lists: one row per interface with the requesting and providing party, the information needed, the related document number, the need-by date with its source, the status as minuted and a quoted source, plus UNKNOWN and questions where the notes are silent. Never sets a date, rates priority, assigns ownership beyond what the notes state or closes an interface. Use when the user asks to \"build an interface register from these minutes\", \"list the interfaces between piping and civil\", \"who owes what to whom on this package\", \"update the interface register from this week's meeting\" or \"turn these action items into an interface list\". Do not use for recording a design or document change raised in a meeting, use management-of-change-intake instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/engineering-document-control/interface-register-builder",
+   "zip": "dist/zips/interface-register-builder.zip",
+   "guide": "docs/skills/engineering-document-control/interface-register-builder.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "management-of-change-intake",
+   "category": "engineering-document-control",
+   "title": "Management of change intake",
+   "description": "Prepares a DRAFT management-of-change intake record from a change description (email, meeting note, marked-up drawing or request form): what changes from what to what and where, the identifiers named, the candidate affected documents matched against the register, the disciplines to consult with the reason for each, and the numbered questions reviewers must answer, with UNKNOWN wherever the description is silent. Prepares the record only: never approves, classifies the change, decides replacement in kind or makes any hazard or safety judgement. Use when the user asks to \"raise an MoC for this\", \"prepare the change request intake\", \"which documents does this change touch\", \"who needs to review this change\" or \"draft the MoC form from this email\". Do not use for tracking who owes information to whom across disciplines, use interface-register-builder instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/engineering-document-control/management-of-change-intake",
+   "zip": "dist/zips/management-of-change-intake.zip",
+   "guide": "docs/skills/engineering-document-control/management-of-change-intake.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "master-document-register-check",
+   "category": "engineering-document-control",
+   "title": "Master document register check",
+   "description": "Checks a master document register extract for gaps and returns a DRAFT question list for document control: missing or out-of-sequence revisions, overdue or slipping deliverables, numbering that breaks the project convention, duplicates and incomplete rows, each with row, test and quoted evidence. Never edits the register, re-baselines a date or marks a deliverable complete. Use when the user asks to \"check the MDR\", \"find the gaps in the deliverables list\" or \"prepare questions on the drawing register\". Do not use for drafting a transmittal from a document list, use transmittal-drafter instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/engineering-document-control/master-document-register-check",
+   "zip": "dist/zips/master-document-register-check.zip",
+   "guide": "docs/skills/engineering-document-control/master-document-register-check.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "transmittal-drafter",
+   "category": "engineering-document-control",
+   "title": "Transmittal drafter",
+   "description": "Drafts a document transmittal (header, one line per document with revision and purpose of issue, distribution with action required, blank acknowledgement block) from a document list and the project's transmittal template, with UNKNOWN for anything not stated and questions for document control. Never assigns a transmittal number, changes a revision or marks anything issued. Use when the user asks to \"draft a transmittal for these documents\", \"fill in the issue sheet\" or \"prepare the document issue note\". Do not use for checking a register or deliverables list, use master-document-register-check instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/engineering-document-control/transmittal-drafter",
+   "zip": "dist/zips/transmittal-drafter.zip",
+   "guide": "docs/skills/engineering-document-control/transmittal-drafter.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "instrumentation-and-control-enrichment",
+   "category": "engineering-pfd-to-pid",
+   "title": "Instrumentation and control enrichment",
+   "description": "Proposes the instrumentation and control content a P&ID adds to an accepted PFD process model: instruments drawn carried over as facts, measurement points and control loops the control philosophy requires, tag structure per the project instrument numbering procedure, system interfaces, and alarms, interlocks, trips and fail actions as quoted. Never assigns safety functions, ranges or setpoints. Use when the user asks to \"run the instrumentation and control enrichment\", \"add the instrument section to the P&ID draft\", \"list the control loops the philosophy requires\" or \"carry the PFD instruments into the P&ID\" after the piping section. Do not use for safety flags, SIL or trip classification, use process-safety-flags instead; do not use to assign tag numbers, use tagging-and-numbering. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/engineering-pfd-to-pid/instrumentation-and-control-enrichment",
+   "zip": "dist/zips/instrumentation-and-control-enrichment.zip",
+   "guide": "docs/skills/engineering-pfd-to-pid/instrumentation-and-control-enrichment.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "pfd-intake-and-extraction",
+   "category": "engineering-pfd-to-pid",
+   "title": "PFD intake and extraction",
+   "description": "Reads a process flow diagram (image, PDF or native export) with its job header and returns a provenance-tagged extraction register: equipment, streams, tags, connectivity, instruments already shown, notes and legends, connectivity findings and an explicit UNKNOWN list, then holds at gate G1. Extracts and records only; never enriches, tags or proposes. Use when the user asks to \"start a PFD to P&ID job\", \"read in the attached PFD\", \"extract the equipment and streams from this PFD\" or \"read this PFD into a register\". Do not use for checking the model, use process-model-check instead; do not use to propose lines, instruments or tags, use piping-enrichment or instrumentation-and-control-enrichment after gate G2. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/engineering-pfd-to-pid/pfd-intake-and-extraction",
+   "zip": "dist/zips/pfd-intake-and-extraction.zip",
+   "guide": "docs/skills/engineering-pfd-to-pid/pfd-intake-and-extraction.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "pid-tool-readiness-mapping",
+   "category": "engineering-pfd-to-pid",
+   "title": "P&ID tool readiness mapping",
+   "description": "Maps every proposed P&ID object to the class family and attributes the project's intelligent P&ID authoring tool catalogue would need, as a readiness table with UNKNOWN wherever the project catalogue is not provided, plus connectivity readiness and import blockers. Mapping only, it never writes to the tool and never claims a class exists in the catalogue. Use when the user asks for \"the readiness map\", \"how far is the draft from a sandbox import\" or \"what would block the import\" after gate G3. Do not use to validate the sections or assemble the review package, use validation-and-review-package instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/engineering-pfd-to-pid/pid-tool-readiness-mapping",
+   "zip": "dist/zips/pid-tool-readiness-mapping.zip",
+   "guide": "docs/skills/engineering-pfd-to-pid/pid-tool-readiness-mapping.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "piping-enrichment",
+   "category": "engineering-pfd-to-pid",
+   "title": "Piping enrichment",
+   "description": "Proposes the piping content a P&ID adds to an accepted PFD process model: line inventory with off-page continuity and required ancillary lines, line identification elements per the project line numbering procedure, connection items at nozzles matched to a quoted schedule, per quoted standards, specification break questions and observations. Every proposal cites its source and revision; no source, no proposal; never sizes a line or selects a class. Use when the user asks to \"run the piping enrichment\", \"start the discipline enrichment\", \"list the lines the P&ID adds to this PFD\" or \"fill the line identifiers from the numbering procedure\" after gate G2. Do not use for instruments, loops or instrument tags, use instrumentation-and-control-enrichment instead; do not use before gate G2, use process-model-check. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/engineering-pfd-to-pid/piping-enrichment",
+   "zip": "dist/zips/piping-enrichment.zip",
+   "guide": "docs/skills/engineering-pfd-to-pid/piping-enrichment.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "process-model-check",
+   "category": "engineering-pfd-to-pid",
+   "title": "Process model check",
+   "description": "Checks an extracted PFD register as a process model and returns findings and unknowns only: connectivity closure, stream numbering, presence of design conditions, equipment duty text, phase and service labels, package and off-sheet scope, boundaries, operating cases, and agreement between the drawing and attached process documents, then holds at gate G2. Creates no design values. Use when the user asks to \"check the process model\", \"verify connectivity\" or \"is the PFD ready for enrichment\" after gate G1 and before enrichment. Do not use for extraction from the drawing, use pfd-intake-and-extraction instead; do not use to propose lines or instruments, use piping-enrichment. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/engineering-pfd-to-pid/process-model-check",
+   "zip": "dist/zips/process-model-check.zip",
+   "guide": "docs/skills/engineering-pfd-to-pid/process-model-check.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "process-safety-flags",
+   "category": "engineering-pfd-to-pid",
+   "title": "Process safety flags",
+   "description": "Flags where a P&ID draft raises a process safety question and points to the candidate evidence an engineer would review (HAZOP register, relief study, SIL assessment, isolation philosophy), as questions and quoted evidence with UNKNOWN for missing documents. Never rates, sizes, classifies, resolves or declares protection adequate. Use when, inside a PFD to P&ID job after gate G2 with the piping and instrumentation sections written, the user asks for \"process safety flags\", \"the process safety section of the P&ID enrichment\" or \"which protection questions does this P&ID raise\". Do not use to propose loops, alarms or trips from the control philosophy, use instrumentation-and-control-enrichment instead; do not use to check identifiers, use tagging-and-numbering. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/engineering-pfd-to-pid/process-safety-flags",
+   "zip": "dist/zips/process-safety-flags.zip",
+   "guide": "docs/skills/engineering-pfd-to-pid/process-safety-flags.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "tagging-and-numbering",
+   "category": "engineering-pfd-to-pid",
+   "title": "Tagging and numbering",
+   "description": "Proposes tag and number structures for equipment, lines and instruments according to the project's numbering procedures, checks the tags extracted from the PFD against those procedures, and lists the registry checks a human must run. Never invents a numbering convention and never assigns a sequence number the procedure reserves for the registry. Use when the user asks for \"tagging and numbering\", \"check the tags against the procedure\" or \"what tag structure do the new lines and instruments get\" after the process safety flags. Do not use to validate the sections, use validation-and-review-package instead; do not use for instrument content, use instrumentation-and-control-enrichment. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/engineering-pfd-to-pid/tagging-and-numbering",
+   "zip": "dist/zips/tagging-and-numbering.zip",
+   "guide": "docs/skills/engineering-pfd-to-pid/tagging-and-numbering.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "validation-and-review-package",
+   "category": "engineering-pfd-to-pid",
+   "title": "Validation and review package",
+   "description": "Runs twice in a PFD to P&ID job. Part 1, before gate G3, validates the discipline proposals for provenance, UNKNOWN handling, conflicts, prohibited content and cross-section consistency and returns results and blocking items. Part 2, before gate G5, assembles the review package, with job header, gate record, every register and proposal, consolidated UNKNOWN list, feedback log and closing statement. Use when the user asks to \"validate the enrichment\", \"run validation before G3\", \"assemble the review package\" or \"build the G5 package\". Do not use for the readiness map, use pid-tool-readiness-mapping instead; do not use to produce a missing discipline section, use the discipline skill that owns it. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/engineering-pfd-to-pid/validation-and-review-package",
+   "zip": "dist/zips/validation-and-review-package.zip",
+   "guide": "docs/skills/engineering-pfd-to-pid/validation-and-review-package.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "architecture-decision-record",
+   "category": "executive",
+   "title": "Architecture decision record",
+   "description": "Drafts an architecture or design decision record (ADR) from the discussion notes, design review minutes, chat threads and diagram descriptions the user provides: context, decision drivers, options considered with arguments as stated, the decision as the group worded it, consequences and a review date, with every factual claim tagged evidenced, asserted or UNKNOWN so unsupported claims are marked for the author to substantiate. Use when the user asks to \"write an ADR\", \"document the architecture decision\", \"record why we chose this design\", \"turn these design review notes into a decision record\" or \"draft the design decision log entry\". Do not use for a business or governance decision with no technical design, use decision-memo-builder instead; for the change ticket that implements the decision, use change-request-pack. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive/architecture-decision-record",
+   "zip": "dist/zips/architecture-decision-record.zip",
+   "guide": "docs/skills/executive/architecture-decision-record.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "board-paper-skeleton",
+   "category": "executive",
+   "title": "Board paper skeleton",
+   "description": "Builds a DRAFT board paper skeleton from the sponsor's inputs: purpose, recommendation as the sponsor states it, options including do nothing, risks, financials exactly as provided, authority to decide and the decision sought, with every claim tagged evidenced, asserted or UNKNOWN so the sponsor sees what still needs support. Use when the user asks to \"draft a board paper\", \"structure the committee paper\", \"prepare the decision paper for the investment committee\", \"skeleton the board memo\" or \"what goes in the paper for the audit committee\". Do not use for a pre-read or briefing pack with no resolution sought, use executive-briefing-pack instead; to record a decision already taken in a discussion, use decision-memo-builder. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive/board-paper-skeleton",
+   "zip": "dist/zips/board-paper-skeleton.zip",
+   "guide": "docs/skills/executive/board-paper-skeleton.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "decision-memo-builder",
+   "category": "executive",
+   "title": "Decision memo builder",
+   "description": "Turns one decision discussion (meeting transcript, chat thread, email chain or notes) into a DRAFT one-page decision memo: the decision as stated, status, options considered, evidence cited, dissent recorded verbatim, owner, effective date and review date, with UNKNOWN for anything the discussion did not settle. Use when the user asks to \"write up the decision\", \"record what we decided\", \"capture the decision from this thread\", \"draft the decision memo\" or \"add this to the decision log\". Do not use for full minutes or action items, use transcript-to-actions instead; for a technical design decision, use architecture-decision-record; for a paper seeking a decision not yet taken, use board-paper-skeleton. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive/decision-memo-builder",
+   "zip": "dist/zips/decision-memo-builder.zip",
+   "guide": "docs/skills/executive/decision-memo-builder.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "executive-briefing-pack",
+   "category": "executive",
+   "title": "Executive briefing pack",
+   "description": "Prepares a DRAFT leadership-meeting briefing pack from the reports, meeting notes, emails and dashboard exports the user provides: one headline, metrics exactly as stated with period and source, decisions the meeting must take, risks as reported, talking points with anticipated questions, a source reference on every line and UNKNOWN where the material is silent. Use when the user asks to \"brief the leadership team\", \"prepare the exec pack\", \"pull together a briefing for the steering committee\", \"summarise these reports for the CEO\", \"what do I tell the board on Monday\" or \"build the pre-read for the management meeting\". Do not use for a formal board or committee paper seeking a resolution, use board-paper-skeleton instead; for a personal one-page prep drawn from the user's own calendar and inbox, use meeting-prep-onepager. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive/executive-briefing-pack",
+   "zip": "dist/zips/executive-briefing-pack.zip",
+   "guide": "docs/skills/executive/executive-briefing-pack.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "cbo-reviewer",
+   "category": "executive-review",
+   "title": "CBO Reviewer",
+   "description": "Reviews a proposal, business case, deck or plan in character as a Chief Business Officer archetype, covering commercial model, partnerships, deal structure, market positioning, strategic fit and opportunity cost, and returns a DRAFT review with a verdict, findings that cite the exact passage, commercial risks and five interrogation questions. Use when the user asks to \"run a CBO review\", \"pressure-test this partnership\", \"check the deal structure\" or \"what would a commercial executive say about this\". Do not use for pipeline, quota, sales-motion or forecast reviews, use cro-reviewer instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive-review/cbo-reviewer",
+   "zip": "dist/zips/cbo-reviewer.zip",
+   "guide": "docs/skills/executive-review/cbo-reviewer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "cdo-reviewer",
+   "category": "executive-review",
+   "title": "CDO Reviewer",
+   "description": "Reviews a proposal, business case, deck or plan in character as a Chief Data Officer archetype and returns a DRAFT review in the chat with a verdict, findings that cite the exact passage, data and AI governance risks, what would change the verdict and five interrogation questions. Use when the user asks to \"run a CDO review\", \"pressure-test the data governance in this plan\", \"what would a CDO say about this\", \"check the metric definitions and data sources\" or \"prepare this for the data governance board\". Do not use for security controls or third-party security risk, use ciso-reviewer instead; for contract, liability or regulatory terms, use general-counsel-reviewer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive-review/cdo-reviewer",
+   "zip": "dist/zips/cdo-reviewer.zip",
+   "guide": "docs/skills/executive-review/cdo-reviewer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "cfo-reviewer",
+   "category": "executive-review",
+   "title": "CFO Reviewer",
+   "description": "Reviews a proposal, business case, deck or plan in character as a Chief Financial Officer archetype and returns a DRAFT review in the chat with a verdict, findings that cite the exact passage, finance risks, what would change the verdict and five interrogation questions. Use when the user asks to \"run a CFO review\", \"pressure-test the numbers in this business case\", \"what would a CFO say about this\", \"challenge the payback and run costs\" or \"prepare this for the investment committee\". Do not use for delivery or capacity questions, use coo-reviewer instead; for architecture or vendor questions, use cto-reviewer; for positioning or demand, use cmo-reviewer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive-review/cfo-reviewer",
+   "zip": "dist/zips/cfo-reviewer.zip",
+   "guide": "docs/skills/executive-review/cfo-reviewer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "chro-reviewer",
+   "category": "executive-review",
+   "title": "CHRO Reviewer",
+   "description": "Reviews a proposal, business case, deck, plan or restructuring paper in character as a Chief Human Resources Officer archetype and returns a DRAFT review with a verdict, findings that cite the exact passage, people and organisation risks, what would change the verdict and five interrogation questions. Use when the user asks to \"run a CHRO review\", \"what would HR say about this\", \"pressure-test the people impact\" or \"prepare this for the people committee\". Do not use for the employee representatives' own view of a plan, use works-council-reviewer instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive-review/chro-reviewer",
+   "zip": "dist/zips/chro-reviewer.zip",
+   "guide": "docs/skills/executive-review/chro-reviewer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "ciso-reviewer",
+   "category": "executive-review",
+   "title": "CISO Reviewer",
+   "description": "Reviews a proposal, business case, deck or plan in character as a Chief Information Security Officer archetype and returns a DRAFT review with a verdict, findings cited to specific passages, security and compliance risks and the five interrogation questions a real CISO would ask. Use when the user asks to \"run a CISO review\", \"pressure-test the security of this plan\", \"what would our CISO say about this\" or \"check the privacy and third-party risk\". Do not use for contract, liability or regulatory-interpretation reviews, use general-counsel-reviewer instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive-review/ciso-reviewer",
+   "zip": "dist/zips/ciso-reviewer.zip",
+   "guide": "docs/skills/executive-review/ciso-reviewer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "cmo-reviewer",
+   "category": "executive-review",
+   "title": "CMO Reviewer",
+   "description": "Reviews a proposal, business case, deck or plan in character as a Chief Marketing Officer archetype and returns a DRAFT review in the chat with a verdict, findings cited to specific passages, marketing risks, what would change the verdict and five interrogation questions. Use when the user asks to \"run a CMO review\", \"pressure-test the positioning\", \"what would a CMO say about this\", \"challenge the launch plan\" or \"check the messaging and audience\". Do not use for price economics, margins or payback, use cfo-reviewer instead; for sales pipeline mechanics, use cro-reviewer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive-review/cmo-reviewer",
+   "zip": "dist/zips/cmo-reviewer.zip",
+   "guide": "docs/skills/executive-review/cmo-reviewer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "coo-reviewer",
+   "category": "executive-review",
+   "title": "COO Reviewer",
+   "description": "Reviews a proposal, business case, deck or plan in character as a Chief Operating Officer archetype and returns a DRAFT review in the chat with a verdict, findings cited to specific sections, delivery and operational risks, what would change the verdict and five interrogation questions. Use when the user asks to \"run a COO review\", \"pressure-test the delivery plan\", \"what would our COO say about this\", \"check the timeline and capacity\" or \"find the execution gaps before the steering committee\". Do not use for financial questions, use cfo-reviewer instead; for architecture or vendor questions, use cto-reviewer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive-review/coo-reviewer",
+   "zip": "dist/zips/coo-reviewer.zip",
+   "guide": "docs/skills/executive-review/coo-reviewer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "cpo-reviewer",
+   "category": "executive-review",
+   "title": "CPO Reviewer",
+   "description": "Reviews a proposal, business case, deck or product plan in character as a Chief Product Officer archetype and returns a DRAFT review in the chat with a verdict, findings that cite the exact passage, product and adoption risks, what would change the verdict and five interrogation questions. Use when the user asks to \"run a CPO review\", \"pressure-test this product plan\", \"what would a CPO say about this\", \"challenge the user evidence\" or \"check the roadmap opportunity cost\". Do not use for positioning, messaging or launch marketing, use cmo-reviewer instead; for internal staff adoption of a rollout, use frontline-skeptic-reviewer; for what a change asks of paying customers, use customer-advocate-reviewer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive-review/cpo-reviewer",
+   "zip": "dist/zips/cpo-reviewer.zip",
+   "guide": "docs/skills/executive-review/cpo-reviewer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "cro-reviewer",
+   "category": "executive-review",
+   "title": "CRO Reviewer",
+   "description": "Reviews a proposal, business case, deck, pricing plan, go-to-market plan or forecast in character as a Chief Revenue Officer archetype and returns a DRAFT review in the chat with a verdict, findings cited to exact passages, revenue risks, what would change the verdict and five interrogation questions. Use when the user asks to \"run a CRO review\", \"pressure-test the revenue plan\", \"what would sales leadership say about this\" or \"challenge this forecast\". Do not use for partnership, deal-structure or market-positioning reviews, use cbo-reviewer instead; for the finance seat use cfo-reviewer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive-review/cro-reviewer",
+   "zip": "dist/zips/cro-reviewer.zip",
+   "guide": "docs/skills/executive-review/cro-reviewer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "cto-reviewer",
+   "category": "executive-review",
+   "title": "CTO Reviewer",
+   "description": "Reviews a proposal, business case, deck or plan in character as a Chief Technology Officer archetype and returns a DRAFT review in the chat with a verdict, findings cited to the exact passage, technology risks (architecture, build versus buy, vendor lock-in, security of design, engineering capacity), what would change the verdict and five interrogation questions. Use when the user asks to \"run a CTO review\", \"pressure-test the technical side of this plan\", \"what would a CTO ask about this\" or \"rehearse the technology seat before the review\". Do not use for cash, payback or budget questions, use cfo-reviewer instead; for capacity and timeline questions, use coo-reviewer; for security controls, privacy or compliance, use ciso-reviewer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive-review/cto-reviewer",
+   "zip": "dist/zips/cto-reviewer.zip",
+   "guide": "docs/skills/executive-review/cto-reviewer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "customer-advocate-reviewer",
+   "category": "executive-review",
+   "title": "Customer Advocate Reviewer",
+   "description": "Reviews a proposal, business case, deck or plan in character as a Customer Advocate archetype, the seat for paying customers not in the room, and returns a DRAFT review in the chat with a verdict, findings that cite the exact passage, customer-side risks, what would change the verdict and five interrogation questions. Use when the user asks to \"run a customer advocate review\", \"do a voice-of-the-customer pressure-test\", \"what would our customers say about this\" or \"what does this plan really ask of paying customers\". Do not use for the product evidence or roadmap case, use cpo-reviewer instead; for revenue or pricing strategy, use cro-reviewer; for the staff who operate the change, use frontline-skeptic-reviewer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive-review/customer-advocate-reviewer",
+   "zip": "dist/zips/customer-advocate-reviewer.zip",
+   "guide": "docs/skills/executive-review/customer-advocate-reviewer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "frontline-skeptic-reviewer",
+   "category": "executive-review",
+   "title": "Frontline Sceptic Reviewer",
+   "description": "Reviews a proposal, business case, deck or rollout plan in character as a Frontline Sceptic archetype, the experienced staff member who will live with the change, and returns a DRAFT review in the chat with a verdict, findings that cite the exact passage, adoption risks, what would change the verdict and five interrogation questions. Use when the user asks to \"run a frontline review\", \"give me the shop-floor view of this rollout\", \"pressure-test adoption of this plan\" or \"what will the team actually say about this\". Do not use for employee consultation, monitoring or works council preparation, use works-council-reviewer instead; for people strategy or restructuring, use chro-reviewer; for product evidence, use cpo-reviewer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive-review/frontline-skeptic-reviewer",
+   "zip": "dist/zips/frontline-skeptic-reviewer.zip",
+   "guide": "docs/skills/executive-review/frontline-skeptic-reviewer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "general-counsel-reviewer",
+   "category": "executive-review",
+   "title": "General Counsel Reviewer",
+   "description": "Reviews a proposal, business case, deck, plan or contract summary in character as a General Counsel archetype and returns a DRAFT review in the chat with a verdict, findings that cite the exact passage or clause, legal risks, what would change the verdict and five interrogation questions. Meeting preparation, not legal advice. Use when the user asks to \"run a general counsel review\", \"what would legal say about this\", \"pressure-test the legal exposure in this deal\" or \"prepare me for the deal committee\". Do not use for price, term, renewal or vendor leverage, use procurement-reviewer instead; for lawful basis and data flows, use cdo-reviewer; for security controls, use ciso-reviewer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive-review/general-counsel-reviewer",
+   "zip": "dist/zips/general-counsel-reviewer.zip",
+   "guide": "docs/skills/executive-review/general-counsel-reviewer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "investor-reviewer",
+   "category": "executive-review",
+   "title": "Investor Reviewer",
+   "description": "Reviews a proposal, business case, deck or plan in character as an Investor archetype and returns a DRAFT review in the chat with a verdict whose conditions read as terms, findings that cite the exact passage, capital-allocation risks, what would change the verdict and five interrogation questions. Use when the user asks to \"run an investor review\", \"what would an investor say about this\", \"pressure-test the capital case\" or \"prepare me for the investment committee\". Do not use for internal budget, cost or finance-function review, use cfo-reviewer instead; for revenue forecast and pipeline, use cro-reviewer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive-review/investor-reviewer",
+   "zip": "dist/zips/investor-reviewer.zip",
+   "guide": "docs/skills/executive-review/investor-reviewer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "procurement-reviewer",
+   "category": "executive-review",
+   "title": "Procurement Reviewer",
+   "description": "Reviews a proposal, business case, deck or vendor contract in character as a Head of Procurement archetype and returns a DRAFT review in the chat with a verdict, findings that cite the exact passage or clause, commercial risks, what would change the verdict and five interrogation questions. Use when the user asks to \"review this from a procurement angle\", \"what would procurement say about this proposal\", \"pressure-test this vendor contract commercially\", \"find the holes before the sourcing committee\" or \"check the renewal terms like a Head of Procurement would\". Do not use for liability, IP, regulatory or signing-authority questions, use general-counsel-reviewer instead; for whether the spend fits the budget, use cfo-reviewer; for vendor security, use ciso-reviewer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive-review/procurement-reviewer",
+   "zip": "dist/zips/procurement-reviewer.zip",
+   "guide": "docs/skills/executive-review/procurement-reviewer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "works-council-reviewer",
+   "category": "executive-review",
+   "title": "Works Council Reviewer",
+   "description": "Reviews a proposal, business case, deck or rollout plan in character as a Works Council Representative archetype and returns a DRAFT review in the chat with a verdict, findings that cite the exact passage, employee-impact risks, what would change the verdict and five interrogation questions. Use when the user asks to \"review this as the works council would\", \"what would the works council say about this rollout\", \"prepare me for the staff council consultation\", \"find the employee-impact gaps in this plan\" or \"pressure-test this deck from the employee representative side\". Do not use for people strategy, restructuring or HR policy, use chro-reviewer instead; for whether frontline staff will adopt or work around the change, use frontline-skeptic-reviewer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/executive-review/works-council-reviewer",
+   "zip": "dist/zips/works-council-reviewer.zip",
+   "guide": "docs/skills/executive-review/works-council-reviewer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "budget-variance-explainer",
+   "category": "finance",
+   "title": "Budget variance explainer",
+   "description": "Turns an actuals-versus-budget extract (spreadsheet, export or pasted table) into a DRAFT variance table with absolute and percentage variances, favourable or adverse marking and a ranking by size, then drafts plain-language driver hypotheses for each material variance as questions to verify with a named owner, never as asserted causes. Use when the user asks to \"explain these variances\", \"why are we over budget on this line\", \"write the variance commentary for the management pack\", \"actuals versus budget analysis\" or \"which lines drive the variance\". Do not use for a dataset with no budget or comparison column, use dataset-insight-pack instead; for weekly operational figures against last week, use kpi-weekly-report-writer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/finance/budget-variance-explainer",
+   "zip": "dist/zips/budget-variance-explainer.zip",
+   "guide": "docs/skills/finance/budget-variance-explainer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "capex-request-pack",
+   "category": "finance",
+   "title": "Capex request pack",
+   "description": "Assembles a DRAFT capital expenditure request pack from the requester's inputs: business need, options including do nothing, costs exactly as provided, benefits as stated, risks, assumptions, budget status and the approvals route read from the organisation's own delegation of authority, with UNKNOWN for every missing figure, date or name. Use when the user asks to \"prepare a capex request\", \"draft the business case for this equipment\", \"fill in the capital request form\", \"structure this investment proposal\" or \"what approvals does this spend need\". Do not use for a board or committee decision paper, use board-paper-skeleton instead; for an IT change approval, use change-request-pack; to pressure-test a finished business case, use cfo-reviewer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/finance/capex-request-pack",
+   "zip": "dist/zips/capex-request-pack.zip",
+   "guide": "docs/skills/finance/capex-request-pack.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "cash-forecast-assumptions-sheet",
+   "category": "finance",
+   "title": "Cash forecast assumptions sheet",
+   "description": "Reads a cash forecast (spreadsheet, model export, pasted table or the narrative that accompanies it) and returns a DRAFT assumptions sheet: every assumption the forecast rests on, stated or implied by the figures, with its value as read, its location in the model, the cash lines it drives, its stated source or \"not stated\", the evidence that would test it, an owner, and one neutral challenge question, so a reviewer can work through the assumptions one by one. Use when the user asks to \"list the assumptions behind this cash forecast\", \"what is this cash flow forecast assuming\", \"prepare the challenge questions for the treasury review\", \"pull out the drivers of the 13-week cash forecast\" or \"build an assumptions register for the liquidity plan\". Do not use for actuals against budget by line, use budget-variance-explainer instead; do not use for the case behind a capital request, use capex-request-pack instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/finance/cash-forecast-assumptions-sheet",
+   "zip": "dist/zips/cash-forecast-assumptions-sheet.zip",
+   "guide": "docs/skills/finance/cash-forecast-assumptions-sheet.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "expense-policy-precheck",
+   "category": "finance",
+   "title": "Expense policy precheck",
+   "description": "Pre-checks one expense claim or travel plan, line by line, against the expense or travel policy the user supplies, and returns a DRAFT precheck sheet: the policy clause matched to each line, the limit quoted as the policy states it, whether the amount sits within, at or outside that limit, missing receipts, pre-approvals or justifications, and neutral questions for the approver and the claimant, with UNKNOWN wherever the policy or the claim is silent. Use when the user asks to \"check this expense claim against policy\", \"pre-check my travel request\", \"is this claim within policy\", \"review these expenses before I submit them\", \"what receipts or approvals are missing\" or \"prepare the approver's questions for this claim\". Do not use for a purchase order log or spend extract, use purchase-order-anomaly-review instead; do not use to compare a policy against a standard or regulation, use policy-gap-review instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/finance/expense-policy-precheck",
+   "zip": "dist/zips/expense-policy-precheck.zip",
+   "guide": "docs/skills/finance/expense-policy-precheck.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "invoice-exception-review",
+   "category": "finance",
+   "title": "Invoice exception review",
+   "description": "Reads an accounts payable exception list (mismatches, possible duplicates, missing or exhausted purchase orders, missing receipts, vendor or bank detail differences) with any invoice, purchase order and receipt data supplied, and returns a DRAFT action sheet: per line, the exception as stated, the facts as read, the difference where both sides exist, one proposed next action for the accounts payable clerk to perform, who or what it needs, and a draft query, with UNKNOWN wherever the data is silent. Use when the user asks to \"review these invoice exceptions\", \"work through the AP exception queue\", \"what should I do with these blocked invoices\", \"propose next steps for the three-way match failures\" or \"sort out the duplicate and missing PO invoices\". Do not use for a purchase order log screened for anomalies, use purchase-order-anomaly-review instead; for an expense claim against policy, use expense-policy-precheck. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/finance/invoice-exception-review",
+   "zip": "dist/zips/invoice-exception-review.zip",
+   "guide": "docs/skills/finance/invoice-exception-review.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "month-end-close-checklist",
+   "category": "finance",
+   "title": "Month-end close checklist",
+   "description": "Builds a DRAFT month-end, quarter-end or year-end close checklist and status table for a finance team from the close calendar, the open items list and last month's close issues that the user attaches, pastes or the agent can reach, marks every task on time, due, late, at risk or blocked, and flags dependency chains and repeat issues. Use when the user asks to \"build the close checklist\", \"where are we on the month-end close\", \"what is late or blocked in the close\", \"refresh the close tracker as of today\" or \"prepare the close status note\". Do not use for a project tracker or weekly project status, use project-status-tracker instead; for corrective actions from audits or NCRs, use corrective-action-tracker. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/finance/month-end-close-checklist",
+   "zip": "dist/zips/month-end-close-checklist.zip",
+   "guide": "docs/skills/finance/month-end-close-checklist.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "change-communication-plan",
+   "category": "hr-people",
+   "title": "Change communication plan",
+   "description": "Builds a DRAFT change-communication plan from a change description: audience map, key messages per audience traced to the description, channels, sequence with dates or day offsets, owners, feedback loop and open questions, plus drafts of the first messages for the sponsor to approve. Use when the user asks to \"plan the comms for this change\", \"who needs to hear about this and when\", \"draft the announcement sequence\", \"build a communication plan for the rollout\", \"write the first message to managers about this change\" or \"how do we tell people about this\". Do not use for a clause-by-clause comparison of a changed HR policy with its previous version, use policy-change-briefing instead; for a new hire's first weeks, use onboarding-plan-builder. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/hr-people/change-communication-plan",
+   "zip": "dist/zips/change-communication-plan.zip",
+   "guide": "docs/skills/hr-people/change-communication-plan.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "exit-interview-synthesis",
+   "category": "hr-people",
+   "title": "Exit interview synthesis",
+   "description": "Synthesises exit interview notes or leaver survey responses into a DRAFT themed report: coded themes with record counts and shares, anonymised verbatim evidence, breakdowns by broad group only for groups that meet a minimum group size, referred items and open questions for the people team, without naming or identifying any individual. Use when the user asks to analyse, summarise, code, theme or report on exit interviews, leaver feedback, attrition interviews or departure surveys, or says \"what are our leavers telling us\", \"theme these exit interviews\" or \"summarise the leaver survey\". Do not use for customer or product feedback, use customer-feedback-theme-synthesis instead; for redacting one document with no theming, use document-deidentification-pass. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/hr-people/exit-interview-synthesis",
+   "zip": "dist/zips/exit-interview-synthesis.zip",
+   "guide": "docs/skills/hr-people/exit-interview-synthesis.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "impact-log-builder",
+   "category": "hr-people",
+   "title": "Impact log builder",
+   "description": "Builds and maintains a DRAFT impact log from notes, messages, status updates and completed work: one row per outcome with its evidence and evidence level, date, who benefited and the source it traces to, plus a gap list of outcomes that still lack evidence, structured so a later review, appraisal or promotion case can draw on it. Use when the user asks to \"start an impact log\", \"add this to my impact log\", \"log what I achieved this quarter\", \"pull my wins out of these notes\", \"turn these messages into evidence for my review\" or \"what do I have evidence for so far\". Do not use for a performance rating, ranking, pay or promotion decision, the skill records evidence and never judges it; for the review narrative itself, use performance-review-drafter; for a role profile built from the work, use job-description-drafter instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/hr-people/impact-log-builder",
+   "zip": "dist/zips/impact-log-builder.zip",
+   "guide": "docs/skills/hr-people/impact-log-builder.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "interview-scorecard-builder",
+   "category": "hr-people",
+   "title": "Interview scorecard builder",
+   "description": "Builds a DRAFT structured interview scorecard from a job description: five to eight competencies traced to it, past-behaviour and situational evidence questions with probes, four-level rating anchors written as observable behaviours, a blank scoring sheet, a panel plan and the items the hiring manager must confirm. Use when the user asks to \"build an interview scorecard for this job description\", \"write competency questions for this role\", \"draft the interview guide for the panel\", \"set up a rating scale for the interviewers\", \"put together a structured interview kit\" or \"create a hiring rubric from the JD\". Do not use for writing or fixing the job description itself, use job-description-drafter instead; for the new hire's first 90 days, use onboarding-plan-builder. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/hr-people/interview-scorecard-builder",
+   "zip": "dist/zips/interview-scorecard-builder.zip",
+   "guide": "docs/skills/hr-people/interview-scorecard-builder.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "job-description-drafter",
+   "category": "hr-people",
+   "title": "Job description drafter",
+   "description": "Drafts a DRAFT job description from a role brief, team context and the organisation's own template, in inclusive plain language, with every requirement traced to its source, unconfirmed fields marked TBC and a numbered list of items the hiring manager must confirm before posting. Use when the user asks to \"write a job description\", \"draft the job ad\", \"refresh this role profile\", \"tidy up this vacancy notice\" or \"turn these notes into a job posting\" from a brief, notes or an old job description. Do not use for interview questions or a scorecard from the finished job description, use interview-scorecard-builder instead; for the new hire's first 90 days, use onboarding-plan-builder. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/hr-people/job-description-drafter",
+   "zip": "dist/zips/job-description-drafter.zip",
+   "guide": "docs/skills/hr-people/job-description-drafter.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "onboarding-plan-builder",
+   "category": "hr-people",
+   "title": "Onboarding plan builder",
+   "description": "Produces a DRAFT 30-60-90 day onboarding plan for a new hire from the role, the team context and the systems list: phase outcomes traced to the role, activities with a named owner and due window, an access and equipment request table, learning items, manager checkpoints and the items the manager must confirm. Use when the user asks to \"build an onboarding plan for our new hire\", \"draft the induction plan for this role\", \"write a first 90 days plan\", \"put together a new starter plan with owners\", \"create a ramp plan from this job description\" or \"plan the integration of an internal mover\". Do not use for writing the job description itself, use job-description-drafter instead; for interview questions or a scorecard, use interview-scorecard-builder. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/hr-people/onboarding-plan-builder",
+   "zip": "dist/zips/onboarding-plan-builder.zip",
+   "guide": "docs/skills/hr-people/onboarding-plan-builder.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "performance-review-drafter",
+   "category": "hr-people",
+   "title": "Performance review drafter",
+   "description": "Drafts a DRAFT self-assessment, peer feedback note or manager review narrative from the evidence the writer supplies (goals, examples, metrics, feedback notes), in the organisation's review template where given: every sentence tied to a numbered evidence item, each goal labelled by what the evidence records (outcome, activity only, or no item), unsupported claims removed and logged, and a gaps list the writer must complete before submitting. Never assigns, suggests or implies a rating, score, ranking, pay or promotion outcome. Use when the user asks to \"write my self-assessment\", \"draft peer feedback for a colleague\", \"turn these notes into a performance review\", \"help me write the year-end review for my report\", \"summarise my achievements against my goals\" or \"draft the mid-year review\". Do not use for a job description or role profile, use job-description-drafter instead; for a new hire's first 90 days, use onboarding-plan-builder. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/hr-people/performance-review-drafter",
+   "zip": "dist/zips/performance-review-drafter.zip",
+   "guide": "docs/skills/hr-people/performance-review-drafter.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "policy-change-briefing",
+   "category": "hr-people",
+   "title": "Policy change briefing",
+   "description": "Compares a changed HR policy with the version it replaces and drafts a clause-by-clause change log, a plain-language DRAFT employee briefing, a manager FAQ answered only from the policy text with clause references, and a list of open questions the people team must settle before release. Use when the user asks to explain, announce, summarise or brief a policy change, a new policy version or an updated handbook section, or says \"what changed in the leave policy\", \"brief managers on the new handbook section\" or \"compare the old and new versions of this policy\". Do not use for a single announcement with no version comparison, use announcement-drafter instead; for an FAQ from documents that are not a policy change, use faq-builder; for contract clauses, use clause-comparison-table. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/hr-people/policy-change-briefing",
+   "zip": "dist/zips/policy-change-briefing.zip",
+   "guide": "docs/skills/hr-people/policy-change-briefing.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "policy-question-answerer",
+   "category": "hr-people",
+   "title": "Policy question answerer",
+   "description": "Answers an employee's or manager's HR policy question strictly from the policy documents the user supplies or the agent can reach as knowledge: a DRAFT answer that quotes the governing clause with its document, version and clause reference, lists the conditions and exceptions the text states, returns UNKNOWN where the documents are silent and names the role to ask. Never invents a rule, fills a gap from general practice or decides an individual's case. Use when the user asks to check a policy, for example \"what does the policy say about\", \"am I entitled to\", \"how many days of leave do I get\", \"what is the process for requesting\", \"does the handbook allow\" or \"which clause covers\". Do not use for comparing two policy versions or briefing a change, use policy-change-briefing instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/hr-people/policy-question-answerer",
+   "zip": "dist/zips/policy-question-answerer.zip",
+   "guide": "docs/skills/hr-people/policy-question-answerer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "access-review-pack",
+   "category": "it-operations",
+   "title": "Access review pack",
+   "description": "Turns an access export (accounts, entitlements, grant and last-used dates per system) into a draft access review pack, one section per system owner: who has what, since when, anomalies to confirm and the decision each line needs, with a blank column for the owner's decision. Never decides, revokes or rates access. Use when the user asks to \"prepare the access review pack\", \"split this entitlement export by system owner\", \"who has access to what in this system\", \"build the recertification pack from this export\" or \"draft the access attestation for the owners\". Do not use for a single request for a tool or access, use software-request-review instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/it-operations/access-review-pack",
+   "zip": "dist/zips/access-review-pack.zip",
+   "guide": "docs/skills/it-operations/access-review-pack.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "change-request-pack",
+   "category": "it-operations",
+   "title": "Change request pack",
+   "description": "Prepares a change request pack (description and justification, scope, schedule, implementation plan, risk as stated, rollback, test evidence as provided, communications, approvals route) from an engineer's notes, ticket or pull request description, with UNKNOWN for anything not provided and a question list for the engineer. Never rates risk or marks a change tested or approved. Use when the user asks to \"write the change request for this\", \"fill in the change ticket from my notes\", \"prepare the CAB submission\" or \"turn this pull request into an RFC\". Do not use for the step-by-step procedure with commands and rollback, use runbook-drafter instead; for release notes describing what shipped, use release-notes-writer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/it-operations/change-request-pack",
+   "zip": "dist/zips/change-request-pack.zip",
+   "guide": "docs/skills/it-operations/change-request-pack.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "incident-postmortem-drafter",
+   "category": "it-operations",
+   "title": "Incident postmortem drafter",
+   "description": "Drafts a blameless incident postmortem (summary, impact, timeline, detection and response, contributing factors as candidates for review, action items) from an incident channel export, ticket notes and any alert or change records, with UNKNOWN for every fact the inputs do not contain. Never assigns blame, names a root cause or re-rates severity. Use when the user asks to \"write the postmortem for this incident\", \"build the incident timeline from the chat export\", \"draft the post-incident review\" or \"turn this ticket and channel log into an incident report\". Do not use for a knowledge article from the resolved ticket, use knowledge-article-drafter instead; for project retrospectives, use lessons-learned-synthesis; for data-breach impact and notification questions, use data-incident-impact-brief. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/it-operations/incident-postmortem-drafter",
+   "zip": "dist/zips/incident-postmortem-drafter.zip",
+   "guide": "docs/skills/it-operations/incident-postmortem-drafter.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "knowledge-article-drafter",
+   "category": "it-operations",
+   "title": "Knowledge article drafter",
+   "description": "Drafts one knowledge article or known-error article from a resolved incident or ticket thread: symptoms as reported, environment, cause exactly as the resolver stated it, resolution steps as performed, workaround with its limits, verification, things tried without effect, related records, keywords and proposed metadata, every statement traced to a ticket note or marked UNKNOWN, with a redaction log and a question list for the knowledge owner. Never decides a root cause, adds a step or publishes. Use when the user asks to \"write a KB article from this ticket\", \"turn this resolved incident into a knowledge article\", \"draft a known error record for this\", \"document the fix we just did\" or \"make this thread into a how-to for the service desk\". Do not use for a procedure the team will execute (runbook, operating procedure, playbook), use runbook-drafter instead; for a post-incident review, use incident-postmortem-drafter. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/it-operations/knowledge-article-drafter",
+   "zip": "dist/zips/knowledge-article-drafter.zip",
+   "guide": "docs/skills/it-operations/knowledge-article-drafter.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "knowledge-base-hygiene-review",
+   "category": "it-operations",
+   "title": "Knowledge base hygiene review",
+   "description": "Reviews a set of knowledge files or a knowledge base listing and returns a draft hygiene table, one row per file: duplication signals with the matching file and overlap grade, staleness signals (review date past, update beyond threshold, retired systems mentioned), conflicts between files on the same topic with both passages quoted, missing or unverified owners, and one proposed action per file (Keep, Update, Merge into, Retire, Assign owner, Confirm with owner) for the knowledge owner to decide, plus one draft note per owner. Never edits, merges, moves or deletes a file. Use when the user asks to \"review our knowledge base for duplicates\", \"which KB articles are stale\", \"find conflicting articles\", \"which articles have no owner\" or \"run a hygiene check on these files\". Do not use for review-date sweeps of a document library with owner reminders, use sharepoint-review-sweeper instead; for writing one article, use knowledge-article-drafter. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/it-operations/knowledge-base-hygiene-review",
+   "zip": "dist/zips/knowledge-base-hygiene-review.zip",
+   "guide": "docs/skills/it-operations/knowledge-base-hygiene-review.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "runbook-drafter",
+   "category": "it-operations",
+   "title": "Runbook drafter",
+   "description": "Turns an engineer's notes, a ticket history or a chat thread into a draft step-by-step runbook with preconditions, stop conditions, numbered steps with checks, verification, rollback and escalation, for the team to validate before use. Commands verbatim, placeholders marked, every gap UNKNOWN; never executes a step or fills a gap from general knowledge. Use when the user asks to \"write a runbook from these notes\", \"turn this resolved ticket into a runbook\", \"document the steps we ran\" or \"check this runbook for gaps\". Do not use for a business process without commands, use sop-drafter instead; for a knowledge article or known-error record, use knowledge-article-drafter; for the post-incident review, use incident-postmortem-drafter. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/it-operations/runbook-drafter",
+   "zip": "dist/zips/runbook-drafter.zip",
+   "guide": "docs/skills/it-operations/runbook-drafter.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "service-catalogue-entry",
+   "category": "it-operations",
+   "title": "Service catalogue entry",
+   "description": "Drafts one service catalogue entry (description, scope in and out, owners and support groups, service levels exactly as provided, request path, dependencies, charging, lifecycle) from the service team's notes, questionnaire answers or existing documents, with UNKNOWN and a question list for every field the inputs do not cover. Never invents a service level, owner or price. Use when the user asks to \"write the catalogue entry for this service\", \"turn these questionnaire answers into a service description\", \"tidy this request catalogue item\" or \"check this draft entry for empty fields\". Do not use for a how-to or known-error article, use knowledge-article-drafter instead; for operating procedures, use runbook-drafter. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/it-operations/service-catalogue-entry",
+   "zip": "dist/zips/service-catalogue-entry.zip",
+   "guide": "docs/skills/it-operations/service-catalogue-entry.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "sharepoint-review-sweeper",
+   "category": "it-operations",
+   "title": "SharePoint review sweeper",
+   "description": "Sweeps a SharePoint library listing (an export or a listing the agent can reach, with file name, link, review-date column and owner column) for documents past their review date and returns a dated DRAFT review sweep report (Overdue, Due soon, No review date, Summary) plus one ready-to-paste reminder per document owner for the user to send. Never changes metadata, sends a message or invents a document, date or owner. Use when the user asks to \"find the documents past their review date\", \"run the review sweep on the policies library\", \"which documents are overdue for review\", \"audit the review dates in this library export\" or \"draft reminders to owners about stale documents\". Do not use for duplicate, conflict and ownership checks across knowledge files, use knowledge-base-hygiene-review instead; for gaps in an engineering deliverables register, use master-document-register-check. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/it-operations/sharepoint-review-sweeper",
+   "zip": "dist/zips/sharepoint-review-sweeper.zip",
+   "guide": "docs/skills/it-operations/sharepoint-review-sweeper.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "software-request-review",
+   "category": "it-operations",
+   "title": "Software request review",
+   "description": "Reviews one employee software request (tool, purpose, users, data handled, cost, urgency) against the approved-tools list and the policies the user provides and returns a draft review for the reviewer: match state on the list with the row quoted, approved tools the list itself describes as covering the same need, policy clauses that bear on the request with quoted text, questions for the requester and the reviewer, and one suggested decision with its basis. Never approves, procures, installs or adds a tool to the list. Use when the user asks to \"review this software request\", \"is this tool on the approved list\", \"check this request against our software policy\", \"do we already have something approved that does this\" or \"prepare the decision note for this tool request\". Do not use for a full vendor security assessment, use vendor-risk-screening-brief instead; for sorting mixed requests, use request-intake-triage. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/it-operations/software-request-review",
+   "zip": "dist/zips/software-request-review.zip",
+   "guide": "docs/skills/it-operations/software-request-review.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "course-outline-builder",
+   "category": "learning-development",
+   "title": "Course outline builder",
+   "description": "Builds a DRAFT course outline from a training need and an audience description: learning objectives with an observable verb, condition and quoted standard, modules in a stated order with a duration basis and content sources, activities in which the learner performs each objective, an assessment plan aligned objective by objective, and a coverage table showing which objectives lack a performing activity, an assessment or a source. Never sets a pass mark, declares learners competent or invents subject content. Use when the user asks to \"build a course outline\", \"design a training programme for\", \"turn this need into modules and objectives\", \"draft the curriculum for this workshop\" or \"what should this training cover\". Do not use for quiz items from finished content, use training-quiz-builder instead; for needs from surveys and manager notes, use training-needs-synthesis; for a new starter's first weeks, use onboarding-plan-builder. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/learning-development/course-outline-builder",
+   "zip": "dist/zips/course-outline-builder.zip",
+   "guide": "docs/skills/learning-development/course-outline-builder.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "training-needs-synthesis",
+   "category": "learning-development",
+   "title": "Training needs synthesis",
+   "description": "Synthesises training survey responses and manager notes into a DRAFT training needs report by role: coded needs with record counts per role (n of N), the evidence type behind each count, anonymised quotes cited to record codes, disagreements between what staff report and what managers observe, gaps where a role is under-represented or a required skill has no evidence, and follow-up questions to settle before any course is designed. Never rates an individual, ranks a team or turns a count into a competence verdict. Use when the user asks to \"analyse this training survey\", \"what training do our teams need\", \"summarise the manager feedback on skills gaps\", \"build a training needs analysis by role\" or \"which roles have the biggest skill gaps\". Do not use for turning an agreed need into a course, use course-outline-builder instead; for exit interviews, use exit-interview-synthesis. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/learning-development/training-needs-synthesis",
+   "zip": "dist/zips/training-needs-synthesis.zip",
+   "guide": "docs/skills/learning-development/training-needs-synthesis.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "training-quiz-builder",
+   "category": "learning-development",
+   "title": "Training quiz builder",
+   "description": "Builds a DRAFT quiz from the training content the user supplies (slide deck, manual, e-learning script, session transcript, procedure): numbered questions with the correct answer, distractors drawn from the content itself, an explanation quoting the source passage with its location, a difficulty tag (Recall, Apply, Analyse) with its basis, and a coverage table showing which sections and objectives each question tests and which are left uncovered. Use when the user asks to \"build a quiz from this deck\", \"write knowledge check questions for this module\", \"create an assessment from this training\", \"test understanding of this procedure\" or \"which sections does this quiz cover\". Do not use for a reader-facing question and answer page built from documents, use faq-builder instead; for writing the procedure itself from notes or a walkthrough, use sop-drafter. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/learning-development/training-quiz-builder",
+   "zip": "dist/zips/training-quiz-builder.zip",
+   "guide": "docs/skills/learning-development/training-quiz-builder.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "clause-comparison-table",
+   "category": "legal-contracts",
+   "title": "Clause comparison table",
+   "description": "Compares one clause (liability, termination, confidentiality or any other) across several contracts, templates or successive versions and returns a DRAFT comparison table: verbatim clause text per document, the clause split into elements with every difference from the baseline highlighted and categorised, and neutral questions for counsel. Never says which wording is better or enforceable. Use when the user asks to \"compare the liability caps across these five supplier contracts\", \"line up the termination clause in these three drafts\", \"show how the confidentiality clause changed between versions\", \"contrast this clause with our template\" or \"benchmark the indemnity wording across our customer agreements\". Do not use for a whole-contract review, use contract-review-pack instead; for screening one NDA against standard positions, use nda-triage. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/legal-contracts/clause-comparison-table",
+   "zip": "dist/zips/clause-comparison-table.zip",
+   "guide": "docs/skills/legal-contracts/clause-comparison-table.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "contract-review-pack",
+   "category": "legal-contracts",
+   "title": "Contract review pack",
+   "description": "Abstracts one contract into a key-terms table with clause references, compares each term against the user's playbook of standard positions, and returns a DRAFT contract review pack: deviations and issues, open questions and a reviewer checklist. Flags governing law and never gives legal advice or enforceability or acceptability calls. Use when the user asks to \"review this contract\", \"abstract the key terms\", \"summarise this MSA\", \"pressure-test this SOW against our playbook\" or to compare an agreement with their standard positions. Do not use for a first pass on a stand-alone NDA, use nda-triage instead, or for one clause lined up across several documents, use clause-comparison-table instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/legal-contracts/contract-review-pack",
+   "zip": "dist/zips/contract-review-pack.zip",
+   "guide": "docs/skills/legal-contracts/contract-review-pack.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "nda-triage",
+   "category": "legal-contracts",
+   "title": "NDA triage",
+   "description": "Triages an incoming non-disclosure agreement against the organisation's written standard NDA positions and returns a DRAFT triage pack: a clause-by-clause deviations table with a severity band, a suggested response per clause quoted from the positions document, open questions and a governing-law flag, all for counsel to decide. Never gives legal advice or an acceptability call. Use when the user asks to \"triage this NDA against our standard positions\", \"screen this confidentiality agreement before it goes to legal\", \"red-flag this mutual NDA\", \"first-pass the counterparty's NDA\" or \"is this NDA standard or does it need counsel\". Do not use for a full review of an MSA, SOW, licence or any whole contract, use contract-review-pack instead; for one clause lined up across several documents, use clause-comparison-table. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/legal-contracts/nda-triage",
+   "zip": "dist/zips/nda-triage.zip",
+   "guide": "docs/skills/legal-contracts/nda-triage.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "regulatory-change-impact-note",
+   "category": "legal-contracts",
+   "title": "Regulatory change impact note",
+   "description": "Turns the text of a regulatory change (new regulation, amendment, rule, guidance or standard revision) into a DRAFT impact note: what changed against the prior text where supplied, who is affected as the text scopes it, an obligations table with dates and owners to confirm, and open interpretation questions for legal. States only what the text says; the rest is UNKNOWN. Use when the user asks to \"brief legal on this new regulation\", \"list what we must do by when under this amendment\", \"compare the new standard with the version it replaces\", \"turn this directive into an obligations table\" or \"what does this rule mean for us\". Do not use for assessing existing controls against a requirement set, use controls-gap-pack instead; for gapping a policy against a standard, use policy-gap-review. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/legal-contracts/regulatory-change-impact-note",
+   "zip": "dist/zips/regulatory-change-impact-note.zip",
+   "guide": "docs/skills/legal-contracts/regulatory-change-impact-note.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "announcement-drafter",
+   "category": "marketing-communications",
+   "title": "Announcement drafter",
+   "description": "Drafts one internal or external announcement (email, intranet post, town hall script, customer notice or press statement) in the organisation's voice from the facts, audience, sender and style guide the user provides, with a fact trace, reader-questions check, pre-send checks and an approvals checklist left blank for the named approvers. Use when the user asks to \"announce this change to all staff\", \"draft the customer notice\", \"write the town hall script\", \"prepare a holding statement\" or \"rewrite this in our voice\". Do not use for a digest of several items, use internal-newsletter-drafter instead; to pre-test a drafted message against personas, use communication-pretest-panel. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/marketing-communications/announcement-drafter",
+   "zip": "dist/zips/announcement-drafter.zip",
+   "guide": "docs/skills/marketing-communications/announcement-drafter.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "campaign-brief-builder",
+   "category": "marketing-communications",
+   "title": "Campaign brief builder",
+   "description": "Turns a campaign idea, its objectives and the supporting notes (audience material, offer facts, budget and dates, channel list) into one DRAFT one-page campaign brief: objectives, audience, one single-minded message with sourced proof points, channels and timeline, success measures with baselines, mandatories, risks and numbered open questions for the campaign owner. Use when the user asks to \"write a campaign brief\", \"draft a creative brief for this launch\", \"turn this idea into a one-page brief\", \"tighten this brief to one page\" or \"build the marketing brief from these notes\". Do not use for a message house, messaging pillars or a launch narrative on its own, use message-house-builder instead; for laying the campaign onto dated slots, use content-calendar-planner. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/marketing-communications/campaign-brief-builder",
+   "zip": "dist/zips/campaign-brief-builder.zip",
+   "guide": "docs/skills/marketing-communications/campaign-brief-builder.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "case-study-drafter",
+   "category": "marketing-communications",
+   "title": "Case study drafter",
+   "description": "Drafts one anonymised DRAFT case study (situation, approach, outcome as evidenced, optional lessons) from engagement notes, status reports, closing reports, emails and metrics extracts the user supplies, with a fact trace to the notes, an evidence grade on every result, quotes only where the user supplied them with speaker role and permission, an anonymisation log and a confidentiality checklist that must be completed before publication. Use when the user asks to \"write a case study from these notes\", \"turn this engagement into a customer story\", \"draft a success story for the website\", \"anonymise this project write-up\" or \"prepare a reference case for the proposal\". Do not use for redacting identifiers from an existing document, use document-deidentification-pass instead; for checking whether a document's claims are substantiated, use claims-evidence-map. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/marketing-communications/case-study-drafter",
+   "zip": "dist/zips/case-study-drafter.zip",
+   "guide": "docs/skills/marketing-communications/case-study-drafter.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "communication-pretest-panel",
+   "category": "marketing-communications",
+   "title": "Communication pre-test panel",
+   "description": "Pre-tests one message (email, announcement, intranet post, town hall script, customer notice or slide) against two to six role personas the user supplies and returns a DRAFT panel report: each persona's likely first reaction, objections, unanswered questions, misreadings and what they would do next, every point tied to the passage that triggers it, plus suggested edits that add no fact the message does not already hold. Use when the user asks to \"pre-test this message\", \"how will the team read this\", \"run this past the personas\", \"what objections will this raise\", \"find the holes before I send\" or \"check this lands with managers and field staff\". Do not use for an in-character review of a proposal or business case by one executive archetype, use the executive-review family (cfo-reviewer, frontline-skeptic-reviewer and siblings) instead; to write the message in the first place, use announcement-drafter. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/marketing-communications/communication-pretest-panel",
+   "zip": "dist/zips/communication-pretest-panel.zip",
+   "guide": "docs/skills/marketing-communications/communication-pretest-panel.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "content-calendar-planner",
+   "category": "marketing-communications",
+   "title": "Content calendar planner",
+   "description": "Builds a DRAFT content calendar for a stated period from the themes, channels, cadence rules, fixed dates and owners the user provides: one dated row per planned item with theme, channel, format, working title, owner, status and source, plus a cadence check with its arithmetic, theme balance, owner load and the slots left open. Use when the user asks to \"build the content calendar for Q4\", \"lay these themes onto dates\", \"plan a month of posts across our channels\", \"extend the editorial calendar\" or \"check this calendar against our cadence\". Do not use for deciding what the campaign says or why it runs, use campaign-brief-builder instead; for writing the items themselves, use announcement-drafter or internal-newsletter-drafter. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/marketing-communications/content-calendar-planner",
+   "zip": "dist/zips/content-calendar-planner.zip",
+   "guide": "docs/skills/marketing-communications/content-calendar-planner.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "faq-builder",
+   "category": "marketing-communications",
+   "title": "FAQ builder",
+   "description": "Turns a set of questions (form exports, helpdesk logs, meeting Q and A, chat threads, a plain list) plus the source documents the user supplies into a DRAFT FAQ grouped by theme: every answer quoted or paraphrased from a named source with a reference, verbatim quotes for dates, figures, eligibility and obligations, UNKNOWN where the sources are silent, a source register with precedence, a conflicts table and a routing list of unanswered questions to owners. Use when the user asks to \"build an FAQ from these documents\", \"answer these questions from the policy\", \"turn the Q and A into an FAQ page\", \"group these questions and answer them from the guide\" or \"what do our documents say about these questions\". Do not use for the manager FAQ of a changed HR policy, use policy-change-briefing instead; for checking whether a document's own claims are evidenced, use claims-evidence-map. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/marketing-communications/faq-builder",
+   "zip": "dist/zips/faq-builder.zip",
+   "guide": "docs/skills/marketing-communications/faq-builder.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "internal-newsletter-drafter",
+   "category": "marketing-communications",
+   "title": "Internal newsletter drafter",
+   "description": "Drafts one issue of an internal newsletter from the items the user provides (notes, messages, snippets, meeting outputs, contributor submissions): a running order with the reason for each position, a factual headline and one paragraph per item with its source line, one call to action per item with date and route, two subject-line options, an item register accounting for every item supplied, and a list of items that need an owner's confirmation before send. Use when the user asks to \"draft this month's newsletter\", \"turn these items into the team update\", \"write the staff bulletin from these notes\", \"order and headline these items\" or \"prepare the internal digest\". Do not use for one piece of news that needs its own send, use announcement-drafter instead; for a digest of external news, use news-monitor-digest; for a personal weekly status note, use weekly-status-update-writer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/marketing-communications/internal-newsletter-drafter",
+   "zip": "dist/zips/internal-newsletter-drafter.zip",
+   "guide": "docs/skills/marketing-communications/internal-newsletter-drafter.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "message-house-builder",
+   "category": "marketing-communications",
+   "title": "Message house builder",
+   "description": "Builds one DRAFT message house for a product, service, programme or initiative from the source material the user provides: an umbrella statement, two to four pillars and graded proof points under each, with every proof point that lacks a source flagged, a claim sensitivity table, an audience coverage check and open questions. Use when the user asks to \"build a message house\", \"write our messaging framework\", \"what are the key messages for this launch\", \"turn this research into messaging pillars\" or \"test our current messaging against the evidence\". Do not use for a campaign one-pager, use campaign-brief-builder instead; to check whether a written document's claims are substantiated, use claims-evidence-map. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/marketing-communications/message-house-builder",
+   "zip": "dist/zips/message-house-builder.zip",
+   "guide": "docs/skills/marketing-communications/message-house-builder.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "meeting-minutes-writer",
+   "category": "meetings",
+   "title": "Meeting minutes writer",
+   "description": "Turns one meeting transcript, recording recap or set of raw notes into concise DRAFT minutes returned in the chat as a single Markdown document: header metadata, attendance and apologies, agenda items each with a short neutral summary and outcome, numbered decisions with an owner, numbered action items with owner and due date, open questions, carried-over actions and the next-meeting line, every entry backed by a short verbatim source fragment and every missing fact marked UNKNOWN. Use when the user asks to \"write the minutes\", \"draft minutes from this transcript\", \"turn these notes into meeting minutes\", \"produce the minutes of meeting for today's call\", \"tidy my rough minutes into the standard format\" or \"prepare the minutes for circulation\". Do not use for extracting action items, task lists or per-owner follow-up emails alone, use transcript-to-actions instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/meetings/meeting-minutes-writer",
+   "zip": "dist/zips/meeting-minutes-writer.zip",
+   "guide": "docs/skills/meetings/meeting-minutes-writer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "meeting-prep-onepager",
+   "category": "meetings",
+   "title": "Meeting prep one-pager",
+   "description": "Builds a one-page meeting preparation brief from the calendar invite, recent mail threads with the attendees, chat messages and shared files: purpose, what each attendee likely wants, open threads, key files, talking points and risks. Returns it in the chat as a DRAFT Markdown document capped at 450 words. Use when the user asks to \"prep me for my next meeting\", \"what do I need to know before the vendor call\", \"one-pager for tomorrow's steering meeting\" or \"brief me on my 2pm\". Do not use for minutes or action items after a meeting, use meeting-minutes-writer or transcript-to-actions instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/meetings/meeting-prep-onepager",
+   "zip": "dist/zips/meeting-prep-onepager.zip",
+   "guide": "docs/skills/meetings/meeting-prep-onepager.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "transcript-to-actions",
+   "category": "meetings",
+   "title": "Transcript to actions",
+   "description": "Turns one meeting transcript or recap into a DRAFT action-items document (decisions, owned and dated action items with verbatim source quotes, open questions), a task list ready for the user to enter into their task tracker, and one DRAFT follow-up email per action owner, all returned in the chat for the user to store, create or send. Use when the user shares, names or points to a meeting transcript or recap and asks to \"pull the action items from this transcript\", \"who owns what after today's call\", \"draft follow-up emails to each owner\" or \"turn this recap into tasks\". Do not use for full minutes, use meeting-minutes-writer instead; a brief before a meeting is meeting-prep-onepager. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/meetings/transcript-to-actions",
+   "zip": "dist/zips/transcript-to-actions.zip",
+   "guide": "docs/skills/meetings/transcript-to-actions.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "agent-evaluation-plan",
+   "category": "meta-skills",
+   "title": "Agent evaluation plan",
+   "description": "Designs a pre-launch evaluation plan for a declarative agent from its instructions text, skills, capabilities, knowledge sources and sample requests: a behaviour contract of testable statements quoted from the text, test prompts by scenario family and tier with setup, expected behaviour, pass and fail criteria and red flags, a red-flag catalogue, a blank scoring sheet, a coverage table and a go or no-go checklist the owner completes and decides. Use when the user asks to \"write test cases for my agent\", \"how do I evaluate this agent before launch\", \"build a test plan for the agent\", \"what should I check before publishing this agent\" or \"give me a go no-go checklist\". Do not use for finding injection or leakage exposures in the instructions, use agent-instructions-red-team instead; do not use for reviewing one SKILL.md, use skill-file-reviewer instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/meta-skills/agent-evaluation-plan",
+   "zip": "dist/zips/agent-evaluation-plan.zip",
+   "guide": "docs/skills/meta-skills/agent-evaluation-plan.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "agent-instructions-drafter",
+   "category": "meta-skills",
+   "title": "Agent instructions drafter",
+   "description": "Drafts the instructions field of a declarative agent that orchestrates a set of custom skills, under a character cap (default 8,000), from the skills' names and descriptions: role and scope, one routing rule per skill, workflow order, gates written as workflow holds, global rules, output format and what the agent never does. Returns the text in a fenced block with its character count labelled counted or estimated, plus a skill inventory, routing table, gate table, rules trace and open questions for the owner. Use when the user asks to \"write the instructions for my agent\", \"draft a system prompt that ties these skills together\", \"tighten these agent instructions to fit the cap\", \"how should the agent route between these skills\" or \"revise my agent's orchestration text\". Do not use to review a single SKILL.md, use skill-file-reviewer instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/meta-skills/agent-instructions-drafter",
+   "zip": "dist/zips/agent-instructions-drafter.zip",
+   "guide": "docs/skills/meta-skills/agent-instructions-drafter.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "agent-instructions-red-team",
+   "category": "meta-skills",
+   "title": "Agent instructions red team",
+   "description": "Reviews the instructions text and skills of a declarative agent, with its stated capabilities, knowledge sources and audience, for prompt-injection exposure, data-leakage paths, over-broad permissions and missing refusals, and returns an attack-surface map, a findings table with severity, quoted evidence and attack path, one pasteable fix per finding, a probe pack the owner can run and a refusal-coverage table. Use when the user asks to \"red-team this agent\", \"check these instructions for prompt injection\", \"could this agent leak data\", \"review the permissions on my agent\" or \"what should this agent refuse\". Do not use for checking a SKILL.md against the format rules, use skill-file-reviewer instead; do not use for designing the launch test set, use agent-evaluation-plan instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/meta-skills/agent-instructions-red-team",
+   "zip": "dist/zips/agent-instructions-red-team.zip",
+   "guide": "docs/skills/meta-skills/agent-instructions-red-team.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "no-delete-guardrail",
+   "category": "meta-skills",
+   "title": "No-delete guardrail",
+   "description": "Applies a standing change-safety guardrail: lists every create, modify, move, rename, archive or delete before it is proposed, holds destructive items for typed approval, versions file names instead of overwriting, refuses bulk destructive operations and keeps an append-only change journal. Use when the user asks to \"clean up this folder\", \"delete the old versions\", \"reorganise these files\", \"archive everything older than a year\", \"rename and move these documents\" or \"make sure nothing gets overwritten while we work\", or when any task is about to create or modify files, emails or calendar items. Do not use for backing up, journalling or restoring a skills folder, use skills-backup-keeper instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/meta-skills/no-delete-guardrail",
+   "zip": "dist/zips/no-delete-guardrail.zip",
+   "guide": "docs/skills/meta-skills/no-delete-guardrail.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "skill-file-reviewer",
+   "category": "meta-skills",
+   "title": "Skill file reviewer",
+   "description": "Reviews one SKILL.md for a declarative agent custom skill against the format rules and returns a findings table: strict YAML front matter with exactly name and description, name equal to the folder, description as the trigger, the eight-heading skeleton, capability-neutral wording, safety boundaries, length band, style and reference paths. Each finding carries severity, rule identifier, location, quoted evidence and replacement text; the verdict READY, REVISE or BLOCKED is an apparent state read from the text and the skill owner decides. Use when the user asks to \"review this SKILL.md\", \"check my skill file before upload\", \"lint this skill description\", \"validate the front matter of this skill\" or \"score this skill folder\". Do not use to write an agent's instructions field, use agent-instructions-drafter instead; for injection or leakage exposures use agent-instructions-red-team; for launch tests use agent-evaluation-plan. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/meta-skills/skill-file-reviewer",
+   "zip": "dist/zips/skill-file-reviewer.zip",
+   "guide": "docs/skills/meta-skills/skill-file-reviewer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "skills-backup-keeper",
+   "category": "meta-skills",
+   "title": "Skills backup keeper",
+   "description": "Prepares dated backups of a custom skills folder and keeps an append-only session journal so work survives crashes, context loss and skills wipes. Returns the copy action list, backup manifest, journal entry, resume summary and an approval-gated restore plan for the user to carry out. Use when the user asks to \"back up my skills folder\", \"checkpoint this session\", \"write the session journal\", \"where did we leave off last time\", \"restore my skills from the last backup\" or \"take a safety copy before I edit this skill\". Do not use for holding individual file changes for approval during ordinary work, use no-delete-guardrail instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/meta-skills/skills-backup-keeper",
+   "zip": "dist/zips/skills-backup-keeper.zip",
+   "guide": "docs/skills/meta-skills/skills-backup-keeper.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "request-intake-triage",
+   "category": "operations",
+   "title": "Request intake triage",
+   "description": "Turns plain-language requests (emails, chat messages, form submissions, meeting asks, voicemail or call notes) into one intake record per request (what is asked, who asks and for whom, urgency as evidenced, category, suggested owner, missing information with draft clarifying questions) and a triage table sorted for the operations lead to act on. Use when the user asks to \"log these requests\", \"triage this pile of asks\", \"turn this message into an intake record\", \"who should own this request\", \"what is missing before we can start\" or \"build today's intake list\". Do not use for customer support tickets, use ticket-triage-pack instead; for clearing a personal mailbox by reply bucket, use inbox-triage. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/operations/request-intake-triage",
+   "zip": "dist/zips/request-intake-triage.zip",
+   "guide": "docs/skills/operations/request-intake-triage.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "sop-drafter",
+   "category": "operations",
+   "title": "SOP drafter",
+   "description": "Turns process notes, a walkthrough or interview transcript, a transcript of a meeting recording or a stale existing procedure into a draft standard operating procedure: purpose and trigger, scope, definitions, roles with a RACI table, numbered steps with the check that closes each one, records produced, controls as stated, and open questions for the process owner. Every step traces to the source or reads UNKNOWN. Use when the user asks to \"write an SOP from these notes\", \"turn this walkthrough into a procedure\", \"document how we do this\", \"draft the standard operating procedure for\", \"build a RACI for this process\" or \"tidy up this old procedure\". Do not use for technical runbooks with commands and rollback, use runbook-drafter instead; for meeting minutes and action lists, use transcript-to-actions. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/operations/sop-drafter",
+   "zip": "dist/zips/sop-drafter.zip",
+   "guide": "docs/skills/operations/sop-drafter.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "contract-renewal-radar",
+   "category": "procurement",
+   "title": "Contract renewal radar",
+   "description": "Reads a contract list (spreadsheet, CSV or pasted table) and returns a DRAFT renewal radar: each active contract's end date, notice deadline with its arithmetic, days remaining, renewal type, owner and the decision it needs as options, sorted by urgency, with owner action lists and a deadline calendar. Never renews, terminates, serves notice or recommends. Use when the user asks to \"build a renewal tracker\", \"tell me what comes up for renewal\", \"work out when notice is due\", \"show me which contracts auto-renew\" or \"run the quarterly contract review\". Do not use for reviewing one contract's full text or clauses, use contract-review-pack instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/procurement/contract-renewal-radar",
+   "zip": "dist/zips/contract-renewal-radar.zip",
+   "guide": "docs/skills/procurement/contract-renewal-radar.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "purchase-order-anomaly-review",
+   "category": "procurement",
+   "title": "Purchase order anomaly review",
+   "description": "Reads a purchase order extract (spreadsheet, CSV or pasted table) and returns a DRAFT question sheet for the buyer: possible split orders, round amounts, amounts just under an approval threshold, first-seen or near-duplicate vendors, duplicate orders and missing or self approvals, each a neutral question naming the PO numbers, never a finding. Use when the user asks to \"review these purchase orders\", \"screen the PO log\", \"spot anomalies in this spend extract\", \"sanity-check the PO register\" or \"prepare buyer questions before the audit\". Do not use for an expense claim or travel request checked against policy, use expense-policy-precheck instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/procurement/purchase-order-anomaly-review",
+   "zip": "dist/zips/purchase-order-anomaly-review.zip",
+   "guide": "docs/skills/procurement/purchase-order-anomaly-review.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "rfp-comparison-pack",
+   "category": "procurement",
+   "title": "RFP comparison pack",
+   "description": "Reads two or more supplier, bid or tender responses against a requirements list and returns a DRAFT comparison pack: a requirement-by-supplier matrix, gaps per supplier, clarification questions and neutral observations, for an evaluation panel. Never scores, weights, ranks or recommends a winner; the award stays with the panel. Use when the user asks to \"compare these bids\", \"matrix the tender responses against our requirements\", \"collate the RFQ replies\", \"show me where each supplier falls short\" or \"draft clarification questions for the bidders\". Do not use for scoring or weighting against agreed criteria, use supplier-evaluation-matrix instead, or for writing the requirements, use rfp-requirements-pack instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/procurement/rfp-comparison-pack",
+   "zip": "dist/zips/rfp-comparison-pack.zip",
+   "guide": "docs/skills/procurement/rfp-comparison-pack.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "rfp-requirements-pack",
+   "category": "procurement",
+   "title": "RFP requirements pack",
+   "description": "Turns a business need and its constraints into a DRAFT RFP requirements pack: traced functional and non-functional requirements with priorities, mandatory gates, evaluation criteria with weights left to the business owner, and fact-seeking supplier questions. Solution-neutral; never names a supplier or product. Use when the user asks to \"write the RFP requirements\", \"turn this business case into tender requirements\", \"draft the supplier questionnaire\", \"structure our RFQ from this brief\" or \"set up evaluation criteria before we go to market\". Do not use for responses already received, use rfp-comparison-pack to compare them or supplier-evaluation-matrix to score them instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/procurement/rfp-requirements-pack",
+   "zip": "dist/zips/rfp-requirements-pack.zip",
+   "guide": "docs/skills/procurement/rfp-requirements-pack.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "supplier-evaluation-matrix",
+   "category": "procurement",
+   "title": "Supplier evaluation matrix",
+   "description": "Builds a DRAFT weighted supplier evaluation matrix from supplier responses and the panel's agreed criteria, weights and scale: a provisional score per cell with the quoted evidence and anchor behind it, a register of every missing or partial answer, and calibration and sensitivity flags. Provisional for panel moderation; never recommends, awards or disqualifies. Use when the user asks to score, weight or rank supplier, bid or tender responses against agreed criteria, for example \"score these bids\", \"build the evaluation matrix\", \"weight the tender responses\" or \"rank the suppliers against our criteria\". Do not use for a side-by-side comparison without scores, use rfp-comparison-pack instead; for writing the criteria, use rfp-requirements-pack instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/procurement/supplier-evaluation-matrix",
+   "zip": "dist/zips/supplier-evaluation-matrix.zip",
+   "guide": "docs/skills/procurement/supplier-evaluation-matrix.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "product-requirements-draft",
+   "category": "product-management",
+   "title": "Product requirements draft",
+   "description": "Produces a DRAFT product requirements document from the discovery notes, interview summaries, support themes, analytics notes and stakeholder messages the user provides: problem statement, target users, goals with measures as stated, numbered requirements each with a testable acceptance criterion, non-goals, constraints, dependencies and open questions, with every statement tagged evidenced, assumed or UNKNOWN so each assumption is visible for the product owner to confirm. Use when the user asks to \"write a PRD\", \"draft the product requirements\", \"turn these discovery notes into requirements\", \"document what this feature needs to do\" or \"build the requirements doc for this epic\". Do not use for supplier-facing requirements in a tender, use rfp-requirements-pack instead; for a technical design decision, use architecture-decision-record; for the change ticket that ships the work, use change-request-pack. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/product-management/product-requirements-draft",
+   "zip": "dist/zips/product-requirements-draft.zip",
+   "guide": "docs/skills/product-management/product-requirements-draft.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "release-notes-writer",
+   "category": "product-management",
+   "title": "Release notes writer",
+   "description": "Turns a list of merged changes, closed work items or commit messages the user provides into DRAFT release notes under the version heading and date the user supplies, grouped as features, fixes and other, in the organisation's tone from the style guide or prior notes given, with every entry traced to its source item, breaking changes and required actions flagged first, and internal-only items held back for the release owner to confirm. Use when the user asks to \"write the release notes for this version\", \"turn these merged pull requests into a changelog\", \"summarise what shipped this sprint for customers\", \"draft the what's new for this release\" or \"group these closed tickets into release notes\". Do not use for an announcement email or intranet post about a launch, use announcement-drafter instead; for a change ticket, use change-request-pack; for a how-to article about one fix, use knowledge-article-drafter. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/product-management/release-notes-writer",
+   "zip": "dist/zips/release-notes-writer.zip",
+   "guide": "docs/skills/product-management/release-notes-writer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "user-personas-builder",
+   "category": "product-management",
+   "title": "User personas builder",
+   "description": "Builds DRAFT user personas from the research notes, interview summaries, survey free text and support themes the user provides: for each persona the goals, pains, jobs to be done, context of use, quotes exactly as supplied with their participant codes, and the evidence count behind every attribute, with names, demographics and any detail no participant stated left UNKNOWN rather than invented. Use when the user asks to \"build personas from these interviews\", \"who are our users based on this research\", \"draft user personas\", \"turn these research notes into personas\" or \"update our personas with the new interviews\". Do not use for theming a batch of customer feedback into counts, use customer-feedback-theme-synthesis instead; for exit interviews, use exit-interview-synthesis; for the requirements those personas imply, use product-requirements-draft. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/product-management/user-personas-builder",
+   "zip": "dist/zips/user-personas-builder.zip",
+   "guide": "docs/skills/product-management/user-personas-builder.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "lessons-learned-synthesis",
+   "category": "project-management",
+   "title": "Lessons learned synthesis",
+   "description": "Synthesises retrospective notes, closing reports and post-implementation reviews into a DRAFT lessons-learned document: themed lessons with source counts, anonymised quoted evidence graded by strength, repeats against a prior register, contradictions, and a recommended owner with a stated basis for each follow-up. Names no individual or vendor and assigns no blame. Use when the user asks to \"compile the lessons learned\", \"write up the retrospective\", \"theme the close-out notes\", \"what did we learn across these projects\" or \"refresh the lessons register\". Do not use for a single sprint's review, use sprint-review-summary instead; for an incident investigation, use incident-postmortem-drafter; for customer feedback themes, use customer-feedback-theme-synthesis. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/project-management/lessons-learned-synthesis",
+   "zip": "dist/zips/lessons-learned-synthesis.zip",
+   "guide": "docs/skills/project-management/lessons-learned-synthesis.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "project-status-tracker",
+   "category": "project-management",
+   "title": "Project status tracker",
+   "description": "Maintains four living project files (overview and progress log, decision log, RAID log, links) from the mail, channel posts, documents and meeting notes the user attaches or the agent can reach, returns each touched file complete in the chat for the user to save, and builds a weekly DRAFT status report from those files. Use when the user asks to \"set up tracking for project X\", \"catch the project files up\", \"log this decision against the project\", \"add this risk to the RAID log\", \"save this link to the project\" or \"write this week's status report\". Do not use for reviewing an existing RAID log for stale or ownerless entries, use raid-log-review instead; for an HTML status page, use project-dashboard-builder; for minutes of one meeting, use meeting-minutes-writer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/project-management/project-status-tracker",
+   "zip": "dist/zips/project-status-tracker.zip",
+   "guide": "docs/skills/project-management/project-status-tracker.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "raid-log-review",
+   "category": "project-management",
+   "title": "RAID log review",
+   "description": "Reviews a RAID log (risks, assumptions, issues, dependencies) line by line and returns a DRAFT review pack: which entries are stale, overdue, duplicated, ownerless, incomplete or misfiled, why, and a proposed update per line as current text against proposed text with the decision the project manager must take. Never re-rates, closes, merges or edits the log. Use when the user asks to \"review the RAID log\", \"clean up the risk log\", \"health-check the RAID log before the steering meeting\", \"which risks are stale\", \"find duplicate risks\" or \"refresh the issue log\". Do not use for setting up a new RAID log or logging a single new risk, issue or decision, use project-status-tracker instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/project-management/raid-log-review",
+   "zip": "dist/zips/raid-log-review.zip",
+   "guide": "docs/skills/project-management/raid-log-review.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "schedule-slip-explainer",
+   "category": "project-management",
+   "title": "Schedule slip explainer",
+   "description": "Turns a schedule extract (milestone list or planning tool export) and the period's status notes into a DRAFT plain-language slip explanation: which milestones and activities slipped and by how many working days, arithmetic shown, why per the notes as verbatim fragments with source and date, what each slip pushes next per the extract, and the decision each slip needs framed as a question with the options the notes propose and the owner the governance documents name, every missing fact marked UNKNOWN. Use when the user asks to \"explain the schedule slip\", \"what slipped this month and why\", \"write the schedule commentary for the steering pack\", \"put the delay in plain language for the sponsor\" or \"what decisions do these slips need\". Do not use for the weekly status report, use project-status-tracker instead; for cost variances, use budget-variance-explainer; for one sprint's carry-over, use sprint-review-summary. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/project-management/schedule-slip-explainer",
+   "zip": "dist/zips/schedule-slip-explainer.zip",
+   "guide": "docs/skills/project-management/schedule-slip-explainer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "sprint-review-summary",
+   "category": "project-management",
+   "title": "Sprint review summary",
+   "description": "Summarises one sprint from the board export, sprint report and review or stand-up notes the user provides into a one-page DRAFT sprint review summary: the sprint goal as written, items delivered, items not delivered with the reasons the sources state, carry-over, impediments, metrics exactly as given, and numbered questions for the retrospective, every row referenced to a work item or note fragment and every missing fact marked UNKNOWN. Use when the user asks to \"summarise the sprint\", \"write the sprint review\", \"what did we deliver this sprint\", \"list the carry-over and blockers\" or \"draft the sprint recap\". Do not use for the retrospective write-up or themed lessons across several sprints, use lessons-learned-synthesis instead; for a weekly project status report, use project-status-tracker. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/project-management/sprint-review-summary",
+   "zip": "dist/zips/sprint-review-summary.zip",
+   "guide": "docs/skills/project-management/sprint-review-summary.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "stakeholder-map-builder",
+   "category": "project-management",
+   "title": "Stakeholder map builder",
+   "description": "Builds a DRAFT stakeholder map for one project from the charter, organisation chart, RACI, governance terms, steering minutes, meeting notes and messages the user provides: a stakeholder register, interest and influence ratings each with its stated basis, stance as evidenced by a verbatim fragment with source and date, gaps, and a proposed engagement plan per stakeholder, every line traced to a source and every missing fact marked UNKNOWN. Use when the user asks to \"build the stakeholder map\", \"who are the stakeholders on this project\", \"map interest and influence\", \"where does each stakeholder stand\", \"draft the stakeholder engagement plan\" or \"refresh the stakeholder register\". Do not use for a customer account's stakeholders, use account-plan-builder instead; for a one-page brief before one meeting, use meeting-prep-onepager; for logging decisions and risks against the project, use project-status-tracker. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/project-management/stakeholder-map-builder",
+   "zip": "dist/zips/stakeholder-map-builder.zip",
+   "guide": "docs/skills/project-management/stakeholder-map-builder.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "audit-prep-pack",
+   "category": "quality-audit",
+   "title": "Audit prep pack",
+   "description": "Prepares a DRAFT internal audit pack from the audit plan: scope as stated, criteria with clauses quoted from the documents provided, document requests per auditee with due dates, open interview questions per process and role, previous findings to follow up and a readiness checklist. Never pre-judges conformity, writes findings or selects the sample; the lead auditor decides. Use when the user asks to \"prepare the internal audit\", \"build the audit pack from this plan\", \"draft the document requests and interview questions\" or \"get us ready for the supplier audit\". Do not use for evidence requests built from a control list, use control-evidence-request-pack instead; to chase actions from earlier audits, use corrective-action-tracker. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/quality-audit/audit-prep-pack",
+   "zip": "dist/zips/audit-prep-pack.zip",
+   "guide": "docs/skills/quality-audit/audit-prep-pack.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "corrective-action-tracker",
+   "category": "quality-audit",
+   "title": "Corrective action tracker",
+   "description": "Turns corrective and preventive actions from NCRs, audit reports, action forms, minutes or a tracker into one DRAFT tracker: action as stated, source, owner, due date, evidence expected and status, with flags for overdue, unowned, undated, stale and closed-without-evidence items and one question per flag. Never closes, verifies, reassigns or re-dates an action. Use when the user asks to \"build the CAPA tracker\", \"update the corrective action log from these audit reports\", \"which actions are overdue or have no owner\" or \"draft the chase notes for open actions\". Do not use for writing up the nonconformity itself, use nonconformance-report-drafter instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/quality-audit/corrective-action-tracker",
+   "zip": "dist/zips/corrective-action-tracker.zip",
+   "guide": "docs/skills/quality-audit/corrective-action-tracker.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "nonconformance-report-drafter",
+   "category": "quality-audit",
+   "title": "Nonconformance report drafter",
+   "description": "Drafts a nonconformance report from inspection notes, test results and the governing specification or procedure: what was observed, where, the evidence with references, the requirement cited quoted verbatim with the departure from it, and containment proposals for the quality lead to decide. Never classifies severity, dispositions the item, names a root cause or closes the report. Use when the user asks to \"write up this nonconformance\", \"draft an NCR from my inspection notes\", \"formalise this deviation\" or \"turn this snag into a defect report\". Do not use for tracking the actions an NCR raises, use corrective-action-tracker instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/quality-audit/nonconformance-report-drafter",
+   "zip": "dist/zips/nonconformance-report-drafter.zip",
+   "guide": "docs/skills/quality-audit/nonconformance-report-drafter.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "kpi-weekly-report-writer",
+   "category": "reporting-analysis",
+   "title": "KPI weekly report writer",
+   "description": "Writes a DRAFT weekly KPI report from the figures the user pastes or attaches (this week, last week, optionally target and earlier weeks): a metrics table with change versus last week computed only from the stated figures, plain-language notes per metric, and numbered questions on every figure that moved more than the agreed threshold, crossed its target or broke its run. Use when the user asks to \"write the weekly KPI report\", \"turn these numbers into this week's metrics report\", \"what changed versus last week\", \"draft the Monday numbers update\" or \"add commentary to this metrics table\". Do not use for a recurring emailed report with a maintained trend sheet, use report-attachment-analyzer instead; for actuals versus budget, use budget-variance-explainer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/reporting-analysis/kpi-weekly-report-writer",
+   "zip": "dist/zips/kpi-weekly-report-writer.zip",
+   "guide": "docs/skills/reporting-analysis/kpi-weekly-report-writer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "news-monitor-digest",
+   "category": "reporting-analysis",
+   "title": "News Monitor Digest",
+   "description": "Sweeps a named list of news sources and blogs for items relevant to the user's role and returns a dated digest of 5 to 8 items, each with a one-line so-what, a source URL and a publication date, as a Markdown document or a ready-to-paste email. Use when the user asks to \"run my news digest\", \"do my news sweep\", \"draft my morning news flash\", \"what happened in industry news this week\" or to monitor vendor or industry news for their role. Do not use for the user's own inbox, calendar and mentions brief, use custom-daily-brief instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/reporting-analysis/news-monitor-digest",
+   "zip": "dist/zips/news-monitor-digest.zip",
+   "guide": "docs/skills/reporting-analysis/news-monitor-digest.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "report-attachment-analyzer",
+   "category": "reporting-analysis",
+   "title": "Report Attachment Analyser",
+   "description": "Prepares the trend update for a recurring emailed report: identifies report emails not yet processed, extracts the configured metrics from their spreadsheet, CSV or PDF attachments, returns new rows for an append-only trends sheet and writes a DRAFT summary with period-on-period deltas and flagged anomalies. Use when the user asks to \"update the trends for the weekly report\", \"analyse the latest monthly report\", \"what changed in the latest report\", \"do the latest numbers look unusual\" or \"set up tracking for a report that arrives by email\". Do not use for a single file with no trend state, use dataset-insight-pack instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/reporting-analysis/report-attachment-analyzer",
+   "zip": "dist/zips/report-attachment-analyzer.zip",
+   "guide": "docs/skills/reporting-analysis/report-attachment-analyzer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "controls-gap-pack",
+   "category": "risk-ethics-compliance",
+   "title": "Controls gap pack",
+   "description": "Produces a draft controls and gap pack from a requirement, regulation, standard or policy and the organisation's control descriptions: obligations broken out of the source text, the controls that appear to address each, apparent coverage, gaps, questions for control owners and actions to assess. Never concludes compliance or that a control is effective; owners and audit assess. Use when the user asks to \"map this regulation to our controls\", \"run a controls gap analysis\", \"break this standard into obligations\" or \"where is our control coverage thin\". Do not use for comparing a policy document against a standard, use policy-gap-review instead; to draft evidence requests from the mapped controls, use control-evidence-request-pack. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/risk-ethics-compliance/controls-gap-pack",
+   "zip": "dist/zips/controls-gap-pack.zip",
+   "guide": "docs/skills/risk-ethics-compliance/controls-gap-pack.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "esg-report-question-pack",
+   "category": "risk-ethics-compliance",
+   "title": "ESG report question pack",
+   "description": "Turns one or more sustainability or ESG reports the user provides into a DRAFT question pack for reviewers: every quantitative disclosure as stated with unit, period, boundary and page reference, year-over-year changes computed only from the stated figures with the arithmetic shown, targets with stated and computed progress, restatements and inconsistencies between reports, gaps (missing units, baselines, boundaries, methods, non-reconciling totals) and specific questions to the report owner. No assurance, accuracy or conformance verdict. Use when the user asks to \"prepare review questions on our sustainability report\", \"what changed year on year in this ESG report\", \"check the figures in this report before it goes to the board\", \"find the gaps in this ESG disclosure\" or \"build a question pack for the report owner\". Do not use for reviewing marketing text against environmental-claim rules, use green-claims-review instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/risk-ethics-compliance/esg-report-question-pack",
+   "zip": "dist/zips/esg-report-question-pack.zip",
+   "guide": "docs/skills/risk-ethics-compliance/esg-report-question-pack.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "green-claims-review",
+   "category": "risk-ethics-compliance",
+   "title": "Green claims review",
+   "description": "Reviews marketing, packaging, web or sustainability text against the environmental-claim rules the user supplies (house policy, regulator guidance extract, industry code) and returns a DRAFT claims review: every environmental claim quoted verbatim with location and family, the evidence the text or evidence pack offers for it with date and scope, the supplied rule passages that bear on each claim, observations as read, and separate question lists for legal and for marketing. No compliance, greenwashing or substantiation verdict. Use when the user asks to \"review these green claims\", \"check this copy against our environmental claims policy\", \"what evidence do we have for carbon neutral here\", \"list the sustainability claims in this brochure\" or \"prepare questions for legal on this eco campaign\". Do not use for mapping general factual claims to evidence, use claims-evidence-map instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/risk-ethics-compliance/green-claims-review",
+   "zip": "dist/zips/green-claims-review.zip",
+   "guide": "docs/skills/risk-ethics-compliance/green-claims-review.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "account-plan-builder",
+   "category": "sales-bd",
+   "title": "Account plan builder",
+   "description": "Drafts an account plan from the CRM notes, emails, meeting notes and contracts the user provides: situation, stakeholder map, opportunities as recorded, risks, open commitments and proposed next actions, every line traced to a source and gaps marked UNKNOWN. Returns a DRAFT Markdown document in the chat. Use when the user asks to \"build an account plan\", \"refresh the key account plan\", \"what do we know about this account\", \"account review for <customer>\" or \"what should happen next on this account\". Do not use for preparing a first call with a prospect, use discovery-call-prep instead; for scoring inbound leads against a rubric use lead-qualification-scorer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/sales-bd/account-plan-builder",
+   "zip": "dist/zips/account-plan-builder.zip",
+   "guide": "docs/skills/sales-bd/account-plan-builder.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "deal-risk-review",
+   "category": "sales-bd",
+   "title": "Deal risk review",
+   "description": "Reviews one deal's notes and timeline (CRM opportunity record, activity log, emails, meeting notes, forecast entries) for risk signals such as a single contact thread, no identified budget owner, slipped or missing dates, silence after a proposal, an undefined decision process or a competitor named late, and returns a DRAFT risk register: each signal with the quoted evidence and its date, a severity on a stated scale, and one proposed next action with an owner role for the user to decide on. Use when the user asks to \"review the risks on this deal\", \"why is this opportunity stalling\", \"is this deal single-threaded\", \"deal health check before the forecast call\" or \"what should we do next on <opportunity>\". Do not use for a whole-account plan, use account-plan-builder instead; for scoring early leads against a rubric use lead-qualification-scorer. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/sales-bd/deal-risk-review",
+   "zip": "dist/zips/deal-risk-review.zip",
+   "guide": "docs/skills/sales-bd/deal-risk-review.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "discovery-call-prep",
+   "category": "sales-bd",
+   "title": "Discovery call prep",
+   "description": "Prepares a discovery call brief from what the user has on a prospect (CRM record, inbound form, emails, notes, public material the user supplies): what is known with sources, gaps against the qualification dimensions, hypotheses to test, questions in priority order and what to listen for. Returns a DRAFT Markdown brief in the chat. Use when the user asks to \"prep me for the discovery call with <prospect>\", \"what should I ask on this first call\", \"intro call brief\", \"questions for the qualification call\" or \"what do we know before we speak to them\". Do not use for scoring leads against a rubric, use lead-qualification-scorer instead; for an existing customer's account review use account-plan-builder. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/sales-bd/discovery-call-prep",
+   "zip": "dist/zips/discovery-call-prep.zip",
+   "guide": "docs/skills/sales-bd/discovery-call-prep.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "estimate-to-sow",
+   "category": "sales-bd",
+   "title": "Estimate to SOW",
+   "description": "Converts a priced estimate spreadsheet into a DRAFT statement of work populated from the user's own SOW template, after checking that line items, hours, rates, subtotals and the grand total add up. Returns the populated SOW and a validation report as Markdown, flags every discrepancy and marks missing fields TBC. Use when the user asks to \"turn this estimate into an SOW\", \"build the statement of work from the pricing workbook\", \"convert the quote into a scope document\", \"populate our SOW template from the estimate\" or \"draft the engagement document from the rate card\". Do not use for reviewing or editing an existing SOW, use contract-review-pack instead; for a proposal before pricing is fixed use proposal-skeleton; for RFP or tender answers use rfp-response-drafter. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/sales-bd/estimate-to-sow",
+   "zip": "dist/zips/estimate-to-sow.zip",
+   "guide": "docs/skills/sales-bd/estimate-to-sow.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "lead-qualification-scorer",
+   "category": "sales-bd",
+   "title": "Lead qualification scorer",
+   "description": "Scores inbound leads against the qualification rubric the user supplies (criteria, scale, weights, thresholds and disqualifiers as given): one DRAFT scorecard per lead with the evidence quoted per criterion, UNKNOWN wherever the lead's information is missing, totals shown with and without the UNKNOWN criteria, a ranked list and a suggested next step such as a qualification call, a request for missing details, nurture or a courteous decline. Use when the user asks to \"score these inbound leads\", \"qualify this lead against our rubric\", \"run the web form submissions through our lead criteria\", \"which of these leads should sales call first\" or \"build a lead scorecard\". Do not use for preparing the first call with a lead, use discovery-call-prep instead; for an existing account's growth plan use account-plan-builder. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/sales-bd/lead-qualification-scorer",
+   "zip": "dist/zips/lead-qualification-scorer.zip",
+   "guide": "docs/skills/sales-bd/lead-qualification-scorer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "proposal-skeleton",
+   "category": "sales-bd",
+   "title": "Proposal skeleton",
+   "description": "Builds a DRAFT proposal skeleton from a discovery summary (call notes, discovery brief, CRM record, emails) and the organisation's own proposal template: every template section in order, pre-filled only where the discovery material supports it with the source beside each line, and every section still needing a human input marked HUMAN INPUT with the owner role and the question to answer. Use when the user asks to \"start the proposal for <prospect>\", \"build the proposal skeleton from the discovery notes\", \"pre-fill our proposal template\", \"what do we already have for the proposal\" or \"first cut of the proposal\". Do not use for answering a formal RFP, RFQ or tender question set, use rfp-response-drafter instead; for turning a priced estimate into a statement of work use estimate-to-sow. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/sales-bd/proposal-skeleton",
+   "zip": "dist/zips/proposal-skeleton.zip",
+   "guide": "docs/skills/sales-bd/proposal-skeleton.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "rfp-response-drafter",
+   "category": "sales-bd",
+   "title": "RFP response drafter",
+   "description": "Drafts answers to the questions in a received RFP, RFQ or tender from the organisation's past responses, answer library, case studies, policies and other documents provided: one row per buyer question with a draft answer marked Reused, Adapted or Missing, its source and date, and a legal or pricing review flag on every answer touching terms, liability, warranties, insurance, data protection or price. Use when the user asks to \"draft our RFP response\", \"answer this tender from our past proposals\", \"pre-fill the bid questions\", \"first pass at the RFQ answers\" or \"reuse our previous bid content\". Do not use for writing the buyer's own RFP or requirements, use rfp-requirements-pack instead; for security or due diligence questionnaires use vendor-security-questionnaire-prefill; for scoring received supplier responses use rfp-comparison-pack. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/sales-bd/rfp-response-drafter",
+   "zip": "dist/zips/rfp-response-drafter.zip",
+   "guide": "docs/skills/sales-bd/rfp-response-drafter.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "control-evidence-request-pack",
+   "category": "security-grc",
+   "title": "Control evidence request pack",
+   "description": "Turns a control list and an audit scope into draft evidence requests grouped by control owner, each with the control as stated, the audit period, evidence examples (commonly requested) and a proposed due date derived from the fieldwork dates. Never judges whether evidence is sufficient, never selects the sample and never sends a request; the auditor decides. Use when the user asks to \"prepare the evidence requests\", \"draft the PBC list\", \"build the evidence request pack for the audit\" or \"what do we need to ask each control owner for\". Do not use for document requests and interview questions built from an audit plan, use audit-prep-pack instead; to check claims in a report against sources, use claims-evidence-map. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/security-grc/control-evidence-request-pack",
+   "zip": "dist/zips/control-evidence-request-pack.zip",
+   "guide": "docs/skills/security-grc/control-evidence-request-pack.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "data-incident-impact-brief",
+   "category": "security-grc",
+   "title": "Data incident impact brief",
+   "description": "Prepares a DRAFT data incident impact brief from the incident notes and data inventory the user provides: the timeline as stated, systems involved matched to the inventory, data categories held and evidenced as involved, people and record counts potentially affected with the source and method behind every figure, third parties, notification questions for legal and the data protection officer, and every UNKNOWN with the evidence that would settle it. No legal determination: it never states whether the incident is a reportable breach, whether notice is due, to whom or by when. Use when the user asks to \"prepare the impact brief for this incident\", \"what data was involved\", \"how many people are affected\", \"map the incident to our data inventory\" or \"pull together what legal needs on the incident\". Do not use for the blameless postmortem or root-cause timeline, use incident-postmortem-drafter instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/security-grc/data-incident-impact-brief",
+   "zip": "dist/zips/data-incident-impact-brief.zip",
+   "guide": "docs/skills/security-grc/data-incident-impact-brief.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "policy-gap-review",
+   "category": "security-grc",
+   "title": "Policy gap review",
+   "description": "Compares one policy against one requirement set (standard, regulation, contract schedule or customer requirement) clause by clause and returns a draft gap review: each requirement element, the policy clause that appears to address it, an apparent match state, and every gap as a question with the clause reference on both sides. Never concludes that the policy complies; the owner decides. Use when the user asks to \"gap our policy against the standard\", \"map this policy to the regulation clause by clause\", \"check the security policy against the customer's contract schedule\", \"compare our policy with the new edition\" or \"where does our policy fall short of the requirements\". Do not use for mapping a requirement to the operating controls that implement it, use controls-gap-pack instead; for what a regulatory change means for the organisation, use regulatory-change-impact-note. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/security-grc/policy-gap-review",
+   "zip": "dist/zips/policy-gap-review.zip",
+   "guide": "docs/skills/security-grc/policy-gap-review.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "risk-register-update",
+   "category": "security-grc",
+   "title": "Risk register update",
+   "description": "Reads a risk register together with meeting notes and incident reports and returns a draft update pack: existing risks whose exposure, controls, ownership or status the sources say have changed, new risk candidates, closure candidates, and the one owner decision each item needs. Never assigns or changes a likelihood, impact, score or colour and never edits the register; owners decide. Use when the user asks to \"update the risk register from these minutes\", \"refresh the register with the incidents since the last review\", \"reconcile the register against the notes\" or \"what changed on our risks\". Do not use for writing up an incident itself, use incident-postmortem-drafter or data-incident-impact-brief instead; to track actions from minutes, use corrective-action-tracker. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/security-grc/risk-register-update",
+   "zip": "dist/zips/risk-register-update.zip",
+   "guide": "docs/skills/security-grc/risk-register-update.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "vendor-risk-screening-brief",
+   "category": "security-grc",
+   "title": "Vendor risk screening brief",
+   "description": "Prepares a DRAFT vendor risk screening brief from the material the user provides on one vendor (questionnaire answers, certificates, assurance reports, policies, contract extracts): per screening topic, what a document evidences with reference, date and scope, what is only asserted, what is missing or contradicted, certificate and report details as stated, and ready-to-send questions for the vendor and the internal owners. No web research, no risk rating, tier, score or recommendation. Use when the user asks to \"screen this vendor\", \"review the vendor's questionnaire answers\", \"check what the vendor's certificate covers\", \"what is missing from this due diligence pack\" or \"draft the follow-up questions for the vendor\". Do not use for answering a customer's questionnaire about your own organisation, use vendor-security-questionnaire-prefill instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/security-grc/vendor-risk-screening-brief",
+   "zip": "dist/zips/vendor-risk-screening-brief.zip",
+   "guide": "docs/skills/security-grc/vendor-risk-screening-brief.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "vendor-security-questionnaire-prefill",
+   "category": "security-grc",
+   "title": "Vendor security questionnaire prefill",
+   "description": "Pre-fills a customer's or prospect's security, privacy, continuity or third-party risk questionnaire from the organisation's own answer sources (prior questionnaires, answer library, policies, certificates, attestation and audit reports), returning one row per question with a draft answer marked Reused, Adapted, Missing or Routed, its source, date, scope match and confirming owner, plus the Missing list grouped by owner. Never invents an answer, certification or control and never submits. Use when the user asks to \"pre-fill this security questionnaire\", \"take a first pass at the customer's due diligence form\", \"answer this vendor assessment from our previous responses\", \"populate the third-party risk questionnaire\" or \"which questions can we reuse answers for\". Do not use for screening a vendor's own answers or due diligence pack, use vendor-risk-screening-brief instead; for commercial RFP or tender answers use rfp-response-drafter. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/security-grc/vendor-security-questionnaire-prefill",
+   "zip": "dist/zips/vendor-security-questionnaire-prefill.zip",
+   "guide": "docs/skills/security-grc/vendor-security-questionnaire-prefill.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "export-review-pack",
+   "category": "trade-compliance",
+   "title": "Export review pack",
+   "description": "Reads one export transaction, order or shipment description and returns a DRAFT export review pack: parties to screen with a screening checklist, an item classification worksheet, a red-flag review, licence-determination questions and open items. Use when the user asks to \"prepare the export review for this order\", \"pre-check this shipment for export control\", \"who do we need to screen on this deal\", \"build the classification worksheet for this item\" or \"assemble the trade-compliance file for this technology transfer\". Do not use for vendor security or due-diligence screening of a supplier's questionnaire answers; use vendor-risk-screening-brief instead. Never classifies, screens, clears, decides licence need or releases a shipment; trade compliance does. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/trade-compliance/export-review-pack",
+   "zip": "dist/zips/export-review-pack.zip",
+   "guide": "docs/skills/trade-compliance/export-review-pack.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "branded-deck-builder",
+   "category": "writing-communication",
+   "title": "Branded deck builder",
+   "description": "Builds a slide-by-slide presentation draft on the user's own slide template and checks every slide against written brand rules (colours with hex codes, fonts, logo placement, slide archetypes, tone, banned visuals), returning the approved outline, the DRAFT deck content and a compliance report as Markdown. Use when the user asks to \"build this deck on our template\", \"make these slides on-brand\", \"check this presentation against our brand guidelines\", \"rebuild these slides to corporate identity (CI)\" or asks for a CI-compliant or corporate-template presentation. Do not use for an accessibility review of slides, use document-accessibility-check instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/writing-communication/branded-deck-builder",
+   "zip": "dist/zips/branded-deck-builder.zip",
+   "guide": "docs/skills/writing-communication/branded-deck-builder.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "claims-evidence-map",
+   "category": "writing-communication",
+   "title": "Claims evidence map",
+   "description": "Builds an evidence map for one document, section or contested claim: every factual claim extracted verbatim and numbered, its supporting passage in the supplied sources or UNKNOWN, the strength of that support as evidenced, contradictions between sources, and the specific question or document that would close each gap, returned in the chat as Markdown tables for the author or reviewer. Use when the user asks to \"check what this document actually proves\", \"map the evidence behind these claims\", \"which of these statements are supported\", \"build an evidence map\", \"what would we need to back this up\" or \"is this claim substantiated\". Do not use for requesting evidence of security controls from control owners, use control-evidence-request-pack instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/writing-communication/claims-evidence-map",
+   "zip": "dist/zips/claims-evidence-map.zip",
+   "guide": "docs/skills/writing-communication/claims-evidence-map.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "document-accessibility-check",
+   "category": "writing-communication",
+   "title": "Document accessibility check",
+   "description": "Reviews the text and structure of a document, slide deck or web page against the accessibility rules the user supplies, or a default set covering heading structure, image alternative text, colour used as the only cue, link text, reading order, tables and language, and returns numbered findings with location, rule, severity and a ready-to-apply fix for the author, plus proposed alt text and a list of checks that need a tool or a person. Use when the user asks to \"check this document for accessibility\", \"review the alt text in this deck\", \"is this page accessible\", \"run an accessibility check on these slides\", \"find accessibility issues before I publish\" or \"check my headings and link text\". Do not use for brand or template compliance of slides, use branded-deck-builder instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/writing-communication/document-accessibility-check",
+   "zip": "dist/zips/document-accessibility-check.zip",
+   "guide": "docs/skills/writing-communication/document-accessibility-check.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "weekly-status-update-writer",
+   "category": "writing-communication",
+   "title": "Weekly status update writer",
+   "description": "Drafts one weekly status update or team status email (done, in progress, blocked, next, asks) from the notes, task lists, tracker exports and messages the user attaches, pastes or makes reachable, every bullet traced to a source and every gap marked UNKNOWN, returned in the chat as Markdown for the user to review and send. Use when the user asks to \"write my weekly status update\", \"draft the team status email\", \"turn my notes into a status report\", \"what did we get done this week\", \"summarise this week for my manager\" or \"prepare Friday's update\". Do not use for maintaining a project's living logs or a project-level report built from them, use project-status-tracker instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/writing-communication/weekly-status-update-writer",
+   "zip": "dist/zips/weekly-status-update-writer.zip",
+   "guide": "docs/skills/writing-communication/weekly-status-update-writer.md",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "write-like-me",
+   "category": "writing-communication",
+   "title": "Write like me",
+   "description": "Builds a personal voice profile from roughly 90 days of the user's own sent messages and meeting speech, then drafts emails and documents that match how the user actually writes, returning the profile and every draft as Markdown for the user to keep, paste or send themselves. Use when the user asks to \"write this like me\", \"match my voice\", \"draft this in my tone\", \"build my voice profile\" or \"refresh my voice profile\". Do not use for an announcement in the organisation's voice, use announcement-drafter instead, nor for a weekly status email, use weekly-status-update-writer instead. Drafts for human review; never approves, authorises or signs off.",
+   "path": "skills/writing-communication/write-like-me",
+   "zip": "dist/zips/write-like-me.zip",
+   "guide": "docs/skills/writing-communication/write-like-me.md",
+   "license": "CC-BY-SA-4.0"
+  }
+ ]
+}

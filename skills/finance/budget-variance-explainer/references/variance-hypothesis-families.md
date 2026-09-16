@@ -1,0 +1,21 @@
+# Variance hypothesis families
+
+Use this table to draft driver hypotheses for each material variance. Pick two to four families that fit the line, write each as a question, and pair it with the evidence and the role from the table. The families are prompts for questions, never a list of causes. A hypothesis stays Open until the named owner confirms or rejects it outside the agent; the agent never closes one. Nothing here authorises any journal, budget change, operation, permit, isolation or work.
+
+| Family | Question shape | Evidence to check | Who could confirm | If true, expect |
+|---|---|---|---|---|
+| Volume | Did activity (units sold, orders, hours, transactions) differ from the plan? | Volume or units column in the extract; operational report for the period | Operations or sales lead for the line | Variance moves in proportion to the volume change; unit cost or unit price roughly unchanged |
+| Price or rate | Did the price charged or the rate paid differ from the plan? | Price list, tariff, contract rate, payroll rate table | Commercial or procurement owner; payroll for people costs | Volume in line with plan; variance equals volume times rate difference |
+| Mix | Did the blend of products, customers, grades or roles shift towards higher or lower margin or cost? | Line detail by product, customer or grade | Commercial or resourcing owner | Total volume near plan; variance concentrated in a sub-set of items |
+| Timing or phasing | Was the budget phased differently from when the spend or revenue lands? | Budget phasing method; year-to-date variance versus month variance | Budget owner; finance business partner | Month variance large, year-to-date variance small or reversing in later months |
+| One-off | Is a single non-recurring item (settlement, write-off, project, credit) inside the line? | Journal detail or transaction list for the line | Line owner; accountant who posted it | One or few transactions explain most of the variance; prior periods show no pattern |
+| Reclassification or mapping | Did a cost or revenue land in a different line or cost centre from the budget? | Account mapping table; offsetting variance in another line | Reporting accountant | An equal and opposite variance elsewhere; group total near plan |
+| Budget assumption | Was the budget itself built on an assumption that has since changed (headcount date, contract start, price index)? | Budget working papers or assumptions log | Budget owner; planning team | Variance recurs every month in the same direction and size |
+| Exchange rate | Did the currency rate used for actuals differ from the budget rate? | Budget rate table; actual rate applied | Treasury or reporting accountant | Variance appears across all lines in that currency in proportion to the rate move |
+| Accrual or cut-off | Is a cost accrued or released in the wrong period, or an invoice not yet received? | Accruals listing; goods received not invoiced; late invoices | Accounts payable or line accountant | Variance reverses next month; timing family also fits |
+| Headcount or vacancy | Did starters, leavers, vacancies or contractors differ from the plan? | Headcount report versus headcount plan | People team or hiring manager, at line level only | People cost variance tracks the headcount gap; recruitment or contractor lines move the other way |
+| Contract or scope | Did a contract start, end, scale or change scope against the plan? | Contract register; purchase order list | Procurement or contract owner | Step change from a dated month; recurring afterwards |
+| Efficiency or consumption | Did the quantity consumed per unit of output (energy, materials, hours) differ from the standard? | Consumption report; standard versus actual usage | Operations owner | Volume and price near plan; variance follows usage per unit |
+| Data or system | Is the extract itself incomplete, duplicated or mid-load? | Row counts; duplicate identifiers; source system close status | Reporting or systems owner | Variance concentrated on a load date; totals differ from the system report |
+
+Privacy note: keep headcount and pay hypotheses at line or role level. Never name an individual, and flag the extract for privacy review if it holds names with pay or personal data.

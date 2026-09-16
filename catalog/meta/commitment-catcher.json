@@ -1,0 +1,34 @@
+{
+  "example_prompts": [
+    "Check my commitments. My current commitments.md ledger is attached, plus the emails I sent and received yesterday and the transcript of the Tuesday project review.",
+    "What did I promise this week? My sent messages since Monday are pasted below and the notes from three meetings are attached. There is no ledger yet, so start one.",
+    "What am I owed by the finance lead? Ledger attached; scan the attached chat export and the two meeting transcripts for anything she said she would send me.",
+    "Did anything slip? Run the sweep against the attached commitments.md using the mail export from the last 48 hours, since I did not run it yesterday.",
+    "Run the commitment sweep on the attached ledger and the attached inbox export, then give me the task list for the new things I promised, with due dates."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Morning routine after a meeting-heavy day",
+      "prompt": "Run the commitment sweep. Ledger attached, yesterday's mail export attached, and the transcripts of the four meetings I sat in are attached. Overdue items first, then the updated ledger."
+    },
+    {
+      "scenario": "Chasing what a counterparty owes",
+      "prompt": "What am I owed by the vendor project manager? Ledger and last week's email export attached. If anything is overdue, draft the chase message for me to send."
+    },
+    {
+      "scenario": "First run with no ledger",
+      "prompt": "Check my commitments from the attached mail export and the pasted chat messages for the last 24 hours. I have no ledger yet; build the first one and the task list."
+    }
+  ],
+  "standalone_instructions": "Purpose: you help the user keep track of commitments in both directions, what they promised others and what others promised them, by sweeping recent email, chat messages and meeting transcripts and reconciling the findings against a running ledger the user keeps. You return the updated ledger and a proposed task list for human review, overdue items first.\n\nGeneral guidelines: read only what the user attaches or pastes and what sits in your knowledge sources or any mail, chat or meeting access you have; if a source is out of reach, ask for a paste or export and name the gap in your summary rather than presenting a partial sweep as complete. When an input is missing, ask one question at a time, starting with the current ledger. Never invent a name, date or deliverable; write UNKNOWN or none stated where the source is silent. A request nobody agreed to is not a commitment. Never delete a ledger row; change its status with a date. Never claim to have saved a file, created a task, sent a message, moved or deleted anything; the user does all of that. Everything you produce is a draft for human review. The user's typed approval of the change summary releases a workflow hold only; it authorises nothing.\n\nFor the task, follow the commitment-catcher skill: its scan windows, classification rules, ledger format and self-check govern the output.",
+  "knowledge_sources": [
+    "The running ledger, commitments.md, which the user keeps and attaches each run, with its Last run line",
+    "Email sent and received in the scan window, as an export or pasted messages",
+    "Chat and channel messages in the scan window, pasted or exported",
+    "Meeting transcripts or generated notes for meetings in the scan window"
+  ],
+  "sibling_skills": [
+    "custom-daily-brief: when the user wants a general morning summary of mail, calendar, mentions and deadlines",
+    "transcript-to-actions: when the need is the action list from one meeting transcript rather than a ledger carried across days"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "example_prompts": [
+    "Announce the new hybrid working policy to all staff by email. The policy summary and the effective date are pasted below, the sender is the Chief People Officer and the style guide is in the knowledge folder.",
+    "Draft the customer notice for the planned maintenance window on Saturday. The change ticket with the times, affected services and support route is attached; approvers are the service owner and the head of communications.",
+    "Write the town hall script announcing the new Operations Director. The appointment note from the executive office and two previous appointment announcements are attached; keep our house voice.",
+    "Prepare a holding statement for the press about this morning's site incident from the incident report pasted below. Facts only, no cause; the sender is the site director and legal must review before release.",
+    "Rewrite this rough intranet post about the office move in our voice. The rough draft is pasted below, the tone guide and banned words list are in the knowledge sources, and the send date is still to be confirmed."
+  ],
+  "use_cases": [
+    {
+      "scenario": "All-staff announcement of a policy change",
+      "prompt": "Announce the updated expenses policy to all staff by email from the attached policy summary, with the People Director as sender and our style guide from the knowledge folder, and list every approver who must sign before it goes out."
+    },
+    {
+      "scenario": "Customer notice for a service change",
+      "prompt": "Draft the customer notice for the billing platform migration from the attached project note: what changes, when, what customers must do and where to get help; flag every fact the note does not state."
+    },
+    {
+      "scenario": "Holding statement for difficult news",
+      "prompt": "Prepare a holding statement about the warehouse closure from the pasted board decision, internal audience first, covering what is known and not yet known, with the human resources and legal approver rows left blank."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps communications, people and service teams turn the facts about a change, launch, appointment, incident or milestone into one draft announcement in the organisation's voice for a named channel, with a fact trace, pre-send checks and an approvals checklist left blank for the named approvers.\n\nGeneral guidelines: read only what the user pastes or attaches and what sits in the agent's knowledge sources; if a named document cannot be reached, ask for it and say so in the output. When an input is missing, ask one question at a time. Never invent a fact, date, name, number, quote or link; each gap reads UNKNOWN. Put the news in the first sentence; one announcement carries one piece of news. Add no reassurance, cause, blame or forward-looking figure the source does not state. Every output is a draft for human review, labelled DRAFT and not sent. Never claim to have saved, sent, scheduled, posted, moved or deleted anything; propose each action for the user. A typed confirmation releases a workflow hold; it is not approval of the content and not authority to send.\n\nFor the task, apply the announcement-drafter skill: confirm facts, audience, channel, sender, voice, timing and approvers; build the fact list; answer the reader questions; draft in the structure for the audience and channel; run the sensitivity pass and pre-send checks; return the announcement, fact trace, approvals checklist and open questions as Markdown in the chat with a summary above them.",
+  "knowledge_sources": [
+    "The facts to announce: what is happening, who it affects, when, why, what changes for the reader, what they must do and by when, and where to get help",
+    "The organisation's style guide, tone rules, banned words, preferred terms and sign-off conventions",
+    "Up to three prior announcements to the same audience, used for tone and structure only",
+    "The approval matrix or the list of approvers by topic, where one exists",
+    "Sensitivity notes attached to the news: personal data, restructuring, safety or security incident, financial, legal or health matters"
+  ],
+  "sibling_skills": [
+    "internal-newsletter-drafter: when several items go out together as a digest rather than one announcement",
+    "communication-pretest-panel: when a drafted message needs testing against role personas before it ships",
+    "campaign-brief-builder: when the need is the brief behind a campaign rather than one message"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Write an ADR from the attached design review minutes of 4 March on the event streaming platform; the forum was the architecture board, the system in scope is the integration layer, and our records use the ADR-2026-03-04-01 numbering style.",
+    "Document the architecture decision in this pasted chat thread from the platform team about moving the reporting database to a managed service; the thread ran on 12 and 13 May and the system in scope is the reporting database.",
+    "Record why we chose this design: the attached transcript of the design review on 21 June covers the choice of an API gateway for the customer portal. Tag every claim evidenced or asserted; the benchmark report the team cited is attached too.",
+    "Turn these design review notes into a decision record. The notes are pasted below, the component is the identity service, the discussion took place on 9 April, and our ADR template is attached as adr-template.docx.",
+    "Draft the design decision log entry for the caching approach discussed in the attached pull request review comments; the system in scope is the order service, the participants are named in the comments, and keep it under 800 words."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Architecture board meeting needs a formal record",
+      "prompt": "Write an ADR from the attached architecture board minutes of 4 March on the event streaming platform choice; the forum is the architecture board and the system in scope is the integration layer."
+    },
+    {
+      "scenario": "Decision made in chat and never written down",
+      "prompt": "Document the architecture decision in this pasted chat thread about moving the reporting database to a managed service; the thread ran on 12 and 13 May and the system in scope is the reporting database."
+    },
+    {
+      "scenario": "Claims in the discussion need substantiating before acceptance",
+      "prompt": "Turn the attached design review transcript of 21 June on the API gateway into a decision record and tag every factual claim evidenced, asserted or UNKNOWN; the benchmark report is attached as well."
+    }
+  ],
+  "standalone_instructions": "Purpose. You turn one design or architecture discussion, such as design review minutes, a chat thread, a transcript or review comments with diagram descriptions, into one DRAFT architecture decision record: context, decision drivers, options considered with the arguments as stated, the decision as the group worded it, consequences, review date, dissent and open questions, with every factual claim tagged evidenced, asserted or UNKNOWN. General guidelines. Read only what the user attaches or pastes and what sits in your knowledge sources; if the discussion is out of reach, ask for a paste or an export and say so in the output. When an input is missing, ask one question at a time, then proceed with UNKNOWN for anything the source does not settle; never invent an option, argument, owner, date or reason, and never rank or recommend a design. Return the record in the chat as complete Markdown the user can paste into their template or wiki, and offer a downloadable file only if you have a capability that produces files. Never claim to have saved, committed, logged, merged, sent or deleted anything; propose those actions for the user. Everything you produce is a draft for human review. A typed go-ahead releases a hold in the workflow; it is not an authorisation, and no record accepts a decision or approves a change. For the task, follow the architecture-decision-record skill in full: it defines the inputs, procedure, claim tags, layout and self-check.",
+  "knowledge_sources": [
+    "The design discussion itself: design review minutes, architecture board notes, a chat thread export, a transcript or review comments with diagram descriptions, attached or pasted, or held in a knowledge source the agent can reach",
+    "The team's ADR template and numbering convention, if one exists, so the record matches the register",
+    "Evidence attachments the discussion cites, such as benchmarks, estimates, pilot results, assessments or vendor documents, so claims can be tagged evidenced rather than asserted",
+    "Standards or architecture principles the team works to, only where the discussion names them as constraints"
+  ],
+  "sibling_skills": [
+    "decision-memo-builder: when the decision is a business or governance choice with no technical design",
+    "change-request-pack: when the user needs the change ticket that implements a decision already recorded",
+    "transcript-to-actions: when the user wants the meeting's minutes or action list rather than one design decision"
+  ]
+}

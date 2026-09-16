@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Pre-fill the attached security questionnaire from the customer using our answer library and last year's completed questionnaire, both in the knowledge folder. Scope is the hosted analytics service, hosting region Europe. Mark every answer Reused, Adapted or Missing with its source and date.",
+    "Take a first pass at the due diligence form pasted below. Our information security policy set, the current certificate and the latest attestation report are attached. Route anything about liability, indemnity or insurance to legal with no draft answer.",
+    "Populate the prospect's third-party risk questionnaire (attached spreadsheet, 180 questions) from the three prior questionnaires in the knowledge sources. Freshness window six months; anything older gets a reconfirm flag. Owners: security for controls, privacy office for data protection, legal for contract terms.",
+    "Which questions in the attached vendor assessment can we answer word for word from the answer library, which need adapting, and which have no source at all? Give me the Missing list grouped by owner so I can chase them before the due date.",
+    "Draft answers for the continuity and disaster recovery section of the attached customer questionnaire using our business continuity plan and the last test summary, both pasted below. Scope is the payroll platform only; everything else stays UNKNOWN."
+  ],
+  "use_cases": [
+    {
+      "scenario": "First pass at a customer's annual security questionnaire",
+      "prompt": "Pre-fill the attached annual security questionnaire from last year's completed version and the current policy set in the knowledge sources, showing every changed answer with the change made and every unsupported yes marked Missing."
+    },
+    {
+      "scenario": "Prospect due diligence with only policies as sources",
+      "prompt": "Take a first pass at the prospect's due diligence form pasted below using only the attached policies and certificate; there are no prior questionnaires, so mark answers Adapted or Missing and list what each owner must provide."
+    },
+    {
+      "scenario": "Separating answerable rows from routed rows",
+      "prompt": "Go through the attached vendor assessment and separate what the security team can answer from the answer library from what must go to legal, insurance or commercial, with no draft answer on the routed rows and a reconfirm flag on anything older than twelve months."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps security and compliance teams take a first pass at a security, privacy, continuity or third-party risk questionnaire from a customer, prospect or regulator, filling it from the organisation's own prior answers, answer library, policies, certificates and reports, each draft answer traced to a source and each gap left for a named owner.\n\nGeneral guidelines: read only what the user attaches or pastes and what sits in the agent's knowledge sources; if the questionnaire or a named source cannot be reached, ask for it and say so. When an input is missing, ask one question at a time. Never invent an answer, certification, control, date or version; a yes with no source is Missing and reads UNKNOWN. Transfer partially and planned as stated. Quote conflicting sources; the owner resolves. Route legal, insurance, pricing and roadmap questions with no draft answer. Keep internal-only text, names and open findings out of every draft. Every output is a DRAFT for human review; nothing is submitted. Never claim to have saved, sent or submitted anything. A typed confirmation releases a workflow hold; it is not approval of any answer.\n\nFor the task, apply the vendor-security-questionnaire-prefill skill: confirm questionnaire, sources, scope, window and owner routing; mark each question Reused, Adapted, Missing or Routed with source, date and scope match; return the pre-filled pack, Missing list by owner and closing report as Markdown in the chat.",
+  "knowledge_sources": [
+    "The incoming questionnaire as received: requester, scope, sections, question references, answer format, attachment requests and due date",
+    "Prior completed questionnaires and the answer library, each with its completion date and the product, entity and region it covered",
+    "Current policies, standards, certificates, attestation reports and audit or test summaries, with dates and scope statements",
+    "Owner routing: who confirms which topic (security controls, privacy, continuity, legal and commercial)"
+  ],
+  "sibling_skills": [
+    "vendor-risk-screening-brief: when the organisation is the customer reviewing a vendor's answers rather than answering as the vendor",
+    "rfp-response-drafter: when the questions are a commercial tender or proposal rather than a security or due diligence questionnaire",
+    "control-evidence-request-pack: when the need is to collect evidence from control owners for an audit rather than to answer a questionnaire"
+  ]
+}

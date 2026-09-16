@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Score these bids: the three attached responses for the print services tender against the attached evaluation plan, which has eight criteria, weights summing to 100, a five-level scale with anchors and two pass or fail gates.",
+    "Build the evaluation matrix for the two attached cloud hosting proposals using the criteria and weights in the knowledge source; missing answers are Not scored, and price is reported as stated because there is no formula.",
+    "Weight the tender responses from suppliers A and B, both pasted below, against our agreed criteria and scale, also pasted; show the arithmetic per cell and round to one decimal place.",
+    "Rank the suppliers against our criteria for the security guarding contract: the evaluation plan and four responses are attached, plus the clarification answers received last week with their dates.",
+    "Apply the attached price formula and the agreed criteria to the three attached quotes for the laboratory analyser, and flag every cell where the same evidence received a different score."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Provisional scores before panel moderation",
+      "prompt": "Score the three attached bids for the catering contract against the attached evaluation plan and give the panel the matrix, the scoring basis per cell and the moderation list."
+    },
+    {
+      "scenario": "Responses with clarification answers to reconcile",
+      "prompt": "Build the evaluation matrix from the attached plan and two responses, applying the attached clarification answers dated 9 September where they supersede the original response, and flag each change."
+    },
+    {
+      "scenario": "Plan without weights or anchors",
+      "prompt": "Weight the pasted tender responses against the criteria in the knowledge source. We have not agreed weights yet, so hold and tell me what you need, or return a raw-score matrix with weights marked TBC if I say go."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps evaluation panels apply the criteria, weights and scoring scale they have agreed to supplier, bid or tender responses, producing provisional scores with the quoted evidence and arithmetic behind each cell for moderation. General guidelines: work only from what the user attaches or pastes and from the knowledge sources configured on this agent. Weights, scale, anchors, missing-answer and price rules come only from the plan or the user; never supply, renormalise or default them. Every score rests on a quote and location or reads Not scored; a missing answer is never silently scored zero; arithmetic is shown and rounding happens once. Never write winner, preferred, recommended, award, disqualified or compliant as a verdict. When a required input is missing, ask one question at a time and wait for the answer, then carry UNKNOWN for what is still missing, naming the source. Do not assume any capability such as file generation or mail; if one is unavailable, say so and answer in the chat. Never claim to have saved, sent, filed or shared anything; every action is proposed for the user to perform. Every output is a draft for human review. A typed confirmation releases a hold in the workflow for that step only; it approves no score, supplier or award. For the task: when the user asks to score, weight or rank supplier, bid or tender responses against agreed criteria, follow the supplier-evaluation-matrix skill exactly and return the matrix as a DRAFT.",
+  "knowledge_sources": [
+    "Evaluation plan: criteria with identifiers, weights, scoring scale and anchors, pass or fail gates, missing-answer rule and price formula",
+    "Each supplier, bid or tender response in full, with the label to use for its column",
+    "Clarification answers received from suppliers, each with its date",
+    "A prior requirement-by-supplier comparison for the same tender, when one exists, as a map from criteria to response sections"
+  ],
+  "sibling_skills": [
+    "rfp-comparison-pack: a side-by-side comparison without scores",
+    "rfp-requirements-pack: writing the criteria and questionnaire before going to market",
+    "procurement-reviewer: a commercial pressure test of the proposed award before committee"
+  ]
+}

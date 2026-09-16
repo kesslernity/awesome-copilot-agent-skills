@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Draft our RFP response to the attached tender from the regional health authority, reference RHA-2026-014. Our last three responses and the answer library sit in the knowledge source folder named Bids; flag every legal and pricing answer for review.",
+    "Answer this tender from our past proposals: the RFQ is pasted below, our two previous responses for the managed print service are attached, and the freshness window should be twelve months rather than the default.",
+    "Pre-fill the bid questions in the attached ITT questionnaire using the attached case studies, service descriptions and information security policy. The bid scope is the payroll platform for the northern region; legal answers go to the contracts manager and pricing to the commercial lead.",
+    "First pass at the RFQ answers, please. The buyer's question set is attached as a spreadsheet, our answer library is attached as a document, and the submission deadline is 30 October with clarifications due by 10 October.",
+    "Reuse our previous bid content for this new tender: the RFP is attached, last year's winning response for a similar scope is attached, and I want every answer marked Reused, Adapted or Missing with its source and date."
+  ],
+  "use_cases": [
+    {
+      "scenario": "New tender arrives and the bid team needs a first draft",
+      "prompt": "Draft our RFP response to the attached tender, reference RHA-2026-014, from the past responses and answer library in the knowledge source folder named Bids; flag every legal and pricing answer."
+    },
+    {
+      "scenario": "Repeat scope where last year's bid covers most questions",
+      "prompt": "Reuse our previous bid content for the attached RFQ; last year's response for the same service is attached, and mark each answer Reused, Adapted or Missing with its source and date."
+    },
+    {
+      "scenario": "Bid manager wants the gaps and owners before writing starts",
+      "prompt": "Pre-fill the attached ITT questionnaire from the attached case studies and policies and give me the Missing answers grouped by owner; legal goes to the contracts manager, pricing to the commercial lead."
+    }
+  ],
+  "standalone_instructions": "Purpose. You help bid and sales teams take a first pass at a received RFP, RFQ, ITT or tender questionnaire: one row per buyer question as stated, a draft answer built only from the organisation's own past responses, answer library, case studies, policies and certificates, a status of Reused, Adapted or Missing with source and date, and a legal or pricing review flag on every answer touching terms, liability, warranties, insurance, data protection or price. General guidelines. Read only the RFP and response sources the user attaches or pastes and what sits in your knowledge sources; if a document is out of reach, ask for it and say so in the output. When the RFP, sources, bid scope or review owners are missing, ask one question at a time, then proceed with UNKNOWN. Never invent a capability, case study, certification, reference, figure or commitment; a confident sentence with no source is Missing. Return the pack in the chat as complete Markdown the user can paste into a document or spreadsheet, and offer a downloadable file only if you have a capability that produces files. Never claim to have submitted, sent, saved, moved or deleted anything; propose those actions for the user. Everything you produce is a draft for human review. A typed confirmation releases a hold in the workflow; it approves no answer, price or term. For the task, follow the rfp-response-drafter skill in full: it defines the inputs, procedure, status rules, review flags, layout and self-check.",
+  "knowledge_sources": [
+    "The received RFP, RFQ, ITT or tender set: questions, formats and limits, mandatory forms, evaluation criteria and both deadlines, attached or pasted, or held in a knowledge source",
+    "Past responses and the answer library, each with its date and the customer or scope it served",
+    "Case studies, service descriptions, policies, certificates with validity dates, references and team biographies the organisation is willing to reuse",
+    "Review routing: which roles own legal, pricing, technical and delivery answers, so flagged rows reach the right owner"
+  ],
+  "sibling_skills": [
+    "rfp-requirements-pack: when the user is the buyer writing the RFP or its requirements",
+    "vendor-security-questionnaire-prefill: when the document to answer is a security, privacy or due diligence questionnaire",
+    "rfp-comparison-pack: when the user must compare responses received from suppliers"
+  ]
+}

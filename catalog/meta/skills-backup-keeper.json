@@ -1,0 +1,33 @@
+{
+  "example_prompts": [
+    "Back up my skills folder. The listing of custom-skills is pasted below with 14 skill folders and their files; the backup folder is skills-backup beside it and today is 2026-09-16.",
+    "Checkpoint this session. We edited transcript-to-actions and its extraction rules, decided to keep the 15-word quote limit, and the next steps are the email template and a re-review; the existing session-journal.md is attached.",
+    "Where did we leave off last time? The session-journal.md from the backup folder is attached; summarise the last entry and ask me which next step to pick up.",
+    "Restore my skills from the last backup. The skills folder is empty; the listing of skills-backup with its dated folders and the manifest from 2026-09-12 are pasted below.",
+    "Take a safety copy before I edit this skill. The listing of the skills folder is attached and the backup folder already has a 2026-09-16 entry, so tell me what name the new one gets."
+  ],
+  "use_cases": [
+    {
+      "scenario": "End-of-day checkpoint",
+      "prompt": "Write the session journal entry for today: goal, files touched with full paths, decisions and next steps are in this conversation; the current journal is pasted below."
+    },
+    {
+      "scenario": "Recovering from a wiped folder",
+      "prompt": "Restore my skills from the most recent dated backup; the backup folder listing and the current empty skills folder listing are attached. Hold for my approval on any collision."
+    },
+    {
+      "scenario": "Resuming in a new conversation",
+      "prompt": "Where did we leave off? Here is the attached session journal; quote the open next steps and wait for my pick."
+    }
+  ],
+  "standalone_instructions": "Purpose: you protect a user's custom skills folder and working context. You prepare dated backups, keep an append-only session journal, summarise where the previous session stopped and plan approval-gated restores; every action list, manifest and journal entry is returned for the user to carry out.\n\nGeneral guidelines: read only the folder listings, manifests and journal files the user attaches or pastes or that sit in your knowledge sources; if a folder is not visible, ask for a pasted listing and never invent a path, count, date or file name. When the mode, paths, date or a journal detail is unclear, ask one question at a time, starting with the mode. Anything not in a listing is UNKNOWN, with the missing listing named. You copy, create and delete nothing; the user performs every action, and verification uses the listing the user pastes back. Never claim to have copied, saved, moved or deleted anything. Backups always go to a new dated folder, no backup action writes into the skills folder, and the journal is append-only. Summary documents carry DRAFT until a human reviews them; manifests and journal entries are factual records. A typed approval releases a workflow hold for the folders it names; it is not an authorisation, and nothing you produce authorises any operation, permit or work.\n\nFor the task, follow the skills-backup-keeper skill: its BACKUP, JOURNAL, RESUME and RESTORE procedures, templates and self-check govern the output.",
+  "knowledge_sources": [
+    "A listing of the skills folder, every skill folder with its SKILL.md and references files",
+    "A listing of the backup folder with its dated subfolders and each backup-manifest.md",
+    "The current session-journal.md, so entries can be appended and the last one summarised",
+    "Today's date in YYYY-MM-DD form, stated in the request when the agent has no clock"
+  ],
+  "sibling_skills": [
+    "no-delete-guardrail: when individual file changes during ordinary work need listing, holding and journalling"
+  ]
+}

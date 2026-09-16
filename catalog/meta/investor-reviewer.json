@@ -1,0 +1,34 @@
+{
+  "example_prompts": [
+    "Run an investor review of the attached platform-funding-case.docx. The decision requested is release of the first tranche; the investment committee meets on 14 October.",
+    "What would an investor say about this? I have pasted our expansion business case below; call it regional-expansion-case and probe the downside case and staging first.",
+    "Pressure-test the capital case: the pitch deck series-growth-pitch.pptx is attached and org-profile.md with our stage and business model is in the knowledge sources.",
+    "Prepare me for the investment committee: review the attached new-product-line-proposal.pdf in character as an Investor archetype and give me the verdict, the terms it would attach and the five questions I will face.",
+    "Review the attached acquisition-case.docx from the capital seat, asking whether the money should be here at all and on what terms; the sponsor wants a fund decision this quarter."
+  ],
+  "use_cases": [
+    {
+      "scenario": "A founder is rehearsing a funding pitch before the real meeting.",
+      "prompt": "Run an investor review of the attached seed-extension-deck.pptx; the meeting with the external funder is on 14 October and the ask is a single tranche."
+    },
+    {
+      "scenario": "An internal sponsor wants capital released for a programme with no staging.",
+      "prompt": "Pressure-test the capital case: the attached programme-funding-request.docx asks for the full amount up front; org-profile.md is in the knowledge sources."
+    },
+    {
+      "scenario": "A business case contains a narrative and no numbers.",
+      "prompt": "What would an investor say about this? The pasted proposal below has no figures at all; call it marketplace-launch-case and tell me what terms the archetype would require."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps the author of a proposal, business case, deck or plan rehearse the capital seat before a funding pitch, investment committee or sponsor meeting. It reviews one artefact at a time and returns a draft review in the chat: a verdict whose conditions read as terms, cited findings, capital-allocation risks, what would change the verdict and five interrogation questions.\n\nGeneral guidelines: read only what the user attaches or pastes and what sits in the configured knowledge sources; never review a document from memory of a similar one. When a required input is missing, ask one question at a time and wait for the answer. Offer a downloadable file only if file generation is enabled; otherwise return complete Markdown that pastes cleanly. Never claim to have saved, sent, moved, filed or deleted anything; every action is proposed for the user to perform. Never invent a figure, a downside case or a staging plan the artefact does not contain; record missing data as UNKNOWN. Every output is a draft for human review and carries the DRAFT label. A typed confirmation from the user releases a workflow hold; it is never a commitment of capital or an approval to fund or start work, and the terms in a ready verdict are what the archetype would require, not a commitment made.\n\nFor the review itself, follow the investor-reviewer skill: confirm the artefact, load its persona, check for an organisation profile and compose the five sections exactly as the skill prescribes.",
+  "knowledge_sources": [
+    "The artefact under review: the proposal, business case, deck, plan or financial summary, attached, pasted or held in a document library the agent can reach.",
+    "An optional org-profile.md shaped as the skill's references/org-profile-template.md, giving business model, stage, size, constraints and sensitivities.",
+    "The financial model or figures behind the artefact: the ask, staging or tranche plan, downside case, unwind or exit costs, so the reviewer can check what the summary omits.",
+    "references/persona.md and references/org-profile-template.md, which ship inside the skill folder and travel with the skill."
+  ],
+  "sibling_skills": [
+    "cfo-reviewer: when the review is internal budget, cost or the finance function's own view.",
+    "cro-reviewer: when the revenue forecast and pipeline are the question."
+  ]
+}

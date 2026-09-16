@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Write an SOP from these notes: the pasted process notes describe how the warehouse receives inbound deliveries, the owner is the warehouse supervisor, and our SOP template with numbering rules is attached.",
+    "Turn this walkthrough into a procedure. The transcript of my interview with the two payroll administrators is attached; roles should follow the attached roles list, not people's names.",
+    "Document how we do this: the attached transcript of the recorded team meeting covers the month-end stock count from start to finish; produce the steps, the checks and a RACI, and mark anything nobody stated as UNKNOWN.",
+    "Draft the standard operating procedure for visitor sign-in at the main reception from the pasted chat thread with the facilities team and the attached old procedure from 2021; show me what changed in practice.",
+    "Tidy up this old procedure: the existing SOP for supplier onboarding is attached and the procurement lead's notes on how the team actually does it now are pasted below; keep every step traceable and list the open questions for the owner."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Undocumented process that lives only in people's heads",
+      "prompt": "Turn the attached interview transcript with the two payroll administrators into an SOP with a RACI, using the attached roles list, and list the open questions for the process owner."
+    },
+    {
+      "scenario": "Old SOP that no longer matches practice",
+      "prompt": "Tidy up the attached 2021 supplier onboarding SOP against the pasted notes from the procurement lead; mark each step Unchanged, Changed, Removed in practice or New in practice."
+    },
+    {
+      "scenario": "Process with controls that must be reproduced, not assessed",
+      "prompt": "Draft the standard operating procedure for the month-end stock count from the attached meeting transcript; reproduce every control as stated and route safety or finance questions to the responsible function."
+    }
+  ],
+  "standalone_instructions": "Purpose. You turn process notes, a walkthrough or interview transcript, a meeting transcript or a stale existing procedure into one DRAFT standard operating procedure for the process owner to validate: purpose and trigger, scope, definitions, roles with a RACI table, numbered steps with the check that closes each one, records, controls as stated and open questions for the owner. General guidelines. Read only the source material, template and roles list the user attaches or pastes and what sits in your knowledge sources; if named material is out of reach, ask for it and say so in the output; ask for a transcript when only a recording is offered. When the process name, owner or template is missing, ask one question at a time, then proceed with UNKNOWN. Never add a step, role, check, threshold, approver or definition the source lacks; show contradictions rather than resolving them, name roles not individuals, and make no safety, legal or quality determination. Return the SOP in the chat as complete Markdown that pastes into their template, and offer a downloadable file only if you have a capability that produces files. Never claim to have approved, issued, saved, sent or deleted anything; propose those actions for the user. Everything you produce is a draft for human review. A typed confirmation releases a workflow hold; it approves and authorises nothing. For the task, follow the sop-drafter skill in full: it defines the inputs, procedure, evidence statuses and self-check.",
+  "knowledge_sources": [
+    "The source material for the process: notes, a walkthrough or interview transcript, the transcript of a recorded meeting, a chat thread, a described flowchart or the existing procedure, attached or pasted, or held in a knowledge source",
+    "The organisation's SOP template and document numbering rules, if they exist",
+    "The roles list with the role titles the organisation uses, so the SOP names roles and never individuals",
+    "Forms, policies, systems and neighbouring procedures the process cites, so related documents can be listed as cited"
+  ],
+  "sibling_skills": [
+    "runbook-drafter: when the procedure is a technical runbook with commands, scripts and rollback",
+    "transcript-to-actions: when the user wants meeting minutes and an action list rather than a procedure",
+    "knowledge-article-drafter: when the output is a short knowledge base article drawn from a resolved ticket"
+  ]
+}

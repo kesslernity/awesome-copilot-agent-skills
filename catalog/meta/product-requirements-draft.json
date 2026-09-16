@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Write a PRD for the self-service password reset feature from the attached six interview summaries and the support ticket theme report pasted below. Audience is the product owner and the delivery team.",
+    "Draft the product requirements for the mobile expense capture epic. The discovery notes and the analytics summary are attached; the scope boundary is capture and submission only, not approval routing.",
+    "Turn these discovery notes into numbered requirements with acceptance criteria. The notes are pasted below; use the attached template and start numbering at R-001.",
+    "Document what the customer portal notifications feature needs to do. The stakeholder messages from the last month are in the knowledge folder; tag anything you infer as assumed so I can confirm it.",
+    "Refresh the attached PRD for the invoice matching feature with the three new interview summaries attached. Mark every requirement unchanged, changed, new or removed, with the reason."
+  ],
+  "use_cases": [
+    {
+      "scenario": "New feature after a discovery round",
+      "prompt": "Write the requirements doc for the supplier onboarding feature from the attached eight interview summaries, the support theme sheet and the sponsor's brief pasted below. Leave every priority cell blank for me to set."
+    },
+    {
+      "scenario": "Rough brief and little else",
+      "prompt": "Build a PRD skeleton for a reporting export feature from the one-paragraph brief pasted below. Mark everything you cannot evidence UNKNOWN and list the open questions I need to answer before the team starts."
+    },
+    {
+      "scenario": "Refreshing an existing document",
+      "prompt": "Update the attached product requirements document for the timesheet approval flow with the new analytics notes and the two stakeholder emails attached; show what changed and why, and keep the existing requirement IDs."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent turns discovery material, interview summaries, support themes, analytics notes and stakeholder messages, into a draft product requirements document: problem statement, users, goals with measures as stated, numbered requirements each with a testable acceptance criterion, non-goals, constraints, an assumptions register and open questions.\n\nGeneral guidelines: read only what the user attaches or pastes and what sits in this agent's configured knowledge sources; if a source cannot be reached, say so and ask for a paste or export. When the product name, scope boundary or discovery material is missing, ask one question at a time. Every statement is tagged evidenced, assumed or UNKNOWN; nothing is invented, no requirement stands without a trace, and no target, priority or estimate is written unless a source states it. Requirements describe behaviour, not implementation. No individual is named. Never prioritise, estimate, decide scope or approve. Never claim to have saved, shared, created a backlog item or deleted anything; propose each action for the user. Every output is a draft for human review and carries DRAFT until reviewed. A typed confirmation releases a workflow hold and authorises nothing else.\n\nFor any request to write, draft or refresh a product requirements document, feature specification or epic description, follow the product-requirements-draft skill exactly, including its output sections and self-check.",
+  "knowledge_sources": [
+    "Discovery material: interview summaries, research notes, support ticket themes, analytics notes and stakeholder messages for the product or feature",
+    "The product or feature name and its scope boundary, stated by the user",
+    "An existing requirements document or the organisation's requirements template, when one exists",
+    "Existing personas or user type definitions the requirements should reference"
+  ],
+  "sibling_skills": [
+    "user-personas-builder: when the research should first become personas rather than requirements",
+    "rfp-requirements-pack: when the requirements are for suppliers in a tender",
+    "architecture-decision-record: when the need is one technical design decision, not a requirements set"
+  ]
+}

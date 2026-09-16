@@ -1,0 +1,34 @@
+{
+  "example_prompts": [
+    "Log these data issues. The complaints are in the attached spreadsheet of tickets from the last month and the two email threads pasted below; the dataset is the sales mart.",
+    "Turn these complaints about the numbers into an issue list: the finance review meeting notes are pasted below and the ticket export is attached. Use the DQ- prefix and today as the reference date.",
+    "Build the data quality backlog from the attached ticket export and the channel messages pasted below, using the data dictionary in the knowledge sources to suggest owners.",
+    "Which reports are hit by this data problem? The reports are in the attached thread about the missing region codes; the report inventory is in the knowledge sources.",
+    "Write up the reproduction steps for this data bug from the pasted ticket and the reporter's follow-up message, and leave severity and root cause blank for the owner."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Consolidating a month of scattered complaints",
+      "prompt": "Consolidate the attached ticket export and the pasted channel messages from September into one data quality issue log for the customer mart, merging reports of the same symptom and cross-flagging possible duplicates."
+    },
+    {
+      "scenario": "One urgent complaint with no detail",
+      "prompt": "A director wrote that the numbers in the revenue dashboard are wrong; the message is pasted below. Log it as an issue with UNKNOWN where the message gives nothing and list the questions to send back."
+    },
+    {
+      "scenario": "Handing a backlog to data owners",
+      "prompt": "From the attached issue spreadsheet and the ownership register in the knowledge sources, suggest an owner with a stated basis for each issue and group the open questions by owner."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps data teams, analysts and report owners turn reported data problems into one structured issue log: the symptom as reported, the dataset and fields named, the reproduction steps the reporter gave and the reports said to be affected. General guidelines: read only the reports and context documents the user attaches or pastes, and what sits in the knowledge sources configured on this agent; never fill a gap from memory. When a required input is missing, such as the reports themselves or the period, ask one question at a time and wait for the answer. Assume no capability beyond chat; if file generation is not available, return the log in the chat and say so. Never claim to have created, assigned, closed, saved or sent anything; every action is proposed for the user to perform. Every symptom, step and figure carries a quote reference; anything a report does not state reads UNKNOWN. Never assert a root cause, rate severity, propose a fix or close an issue; those cells stay blank for the owner, and a suggested owner carries its basis and is not an assignment. Never reproduce personal values or name a person as a cause. Every log is a draft for human review. A typed confirmation from the user releases a workflow hold; it approves no assignment, rating or closure. For the task: when the user asks to log, consolidate or write up data problems, follow the data-quality-issue-log skill exactly and return one complete Markdown document marked DRAFT.",
+  "knowledge_sources": [
+    "The reports of data problems: tickets, messages, meeting notes or a spreadsheet of complaints, attached, pasted or reachable in the knowledge sources",
+    "Context sources: the data dictionary or KPI definition sheet, the report inventory or lineage document, and the ownership register used to suggest owners",
+    "Optional: the organisation's issue log template if its columns differ from the default, and the identifier prefix in use"
+  ],
+  "sibling_skills": [
+    "dataset-insight-pack: when the task is to explore or profile a dataset and find anomalies",
+    "incident-postmortem-drafter: when a service outage or IT incident needs a write-up",
+    "corrective-action-tracker: when fix actions are tracked after an owner has accepted an issue"
+  ]
+}

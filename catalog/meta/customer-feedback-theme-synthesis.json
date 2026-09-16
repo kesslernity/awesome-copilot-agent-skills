@@ -1,0 +1,36 @@
+{
+  "example_prompts": [
+    "Theme this feedback. The export of 340 free-text answers from the September customer survey is attached, with a 1 to 5 satisfaction score per row; break down by plan and region with a minimum group size of 5.",
+    "What are customers saying about the mobile app? The 120 app reviews from August are pasted below; use the default codebook, three quotes per theme, and anonymise everything before quoting.",
+    "Summarise these survey answers for the product team. The onboarding survey export is attached, about 200 records with two free-text questions and a recommend score; no sentiment score, counts and quotes only.",
+    "Analyse these reviews and compare with last quarter. The third-quarter review export and the second-quarter synthesis report are both attached; show theme movement only where the codebooks match and flag every customer claim we have not verified.",
+    "Find the top complaints in these comments. The chat and ticket comments for the billing channel from the last 30 days are attached as a CSV; break down by channel, cap the display at 12 themes and draft follow-up questions for the billing owner."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Quarterly voice of the customer report",
+      "prompt": "Code the 500 free-text answers in the attached quarterly survey export against our codebook from the knowledge sources, break down by product and region with a minimum group of 5, and give me three anonymised quotes per theme cited to record codes."
+    },
+    {
+      "scenario": "Review batch after a release",
+      "prompt": "Analyse the 90 app reviews pasted below from the two weeks after release 4.2; count records per theme and feedback type, show the star ratings as a distribution with n, and list the contradictions where customers take opposite positions."
+    },
+    {
+      "scenario": "Refreshing a prior synthesis",
+      "prompt": "Theme the attached October feedback export and compare with the attached September synthesis; show movement only where the themes map, and turn every thin high-count theme and unverified claim into a follow-up question for its owner."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps product, service and customer experience teams turn a batch of customer feedback into a draft themed report: coded themes with record counts and shares, the feedback type the customer's words evidence, anonymised verbatim quotes cited to record codes, breakdowns by group above a minimum size, contradictions and unverified claims, referred items and the follow-up questions to answer next.\n\nGeneral guidelines: read only what the user pastes or attaches and what sits in the agent's knowledge sources; if an export cannot be reached, ask for a paste and say so in the output. When an input is missing, ask one question at a time, starting with the records and then the scope. Counts are of records supplied, never of customers at large. Produce no sentiment score, mood label or percentage positive; recorded ratings appear only as distributions. Remove every identifier before quoting; verify no claim; judge no person or team. Anything the sources do not state reads UNKNOWN. Every output is a draft for human review. Never claim to have saved, sent, posted, closed or deleted anything; propose each action for the user. A typed confirmation releases a workflow hold; it authorises nothing.\n\nFor the task, apply the customer-feedback-theme-synthesis skill: register and anonymise records, code them, count and break down, select quotes, list contradictions, claims and referrals, draft follow-up questions and return the report as Markdown in the chat.",
+  "knowledge_sources": [
+    "The feedback records: survey exports, review dumps, ticket and chat comments, feedback forms or transcripts, with channel, date and any customer-given rating per record",
+    "The organisation's theme codebook, or agreement to use the skill's default codebook",
+    "Grouping fields and their values: product, plan, channel, region, period or segment, with the minimum group size for any breakdown",
+    "A prior synthesis for the same scope, where theme movement is wanted",
+    "The routes the organisation has named for referred items such as safety, legal, security or complaints about named staff"
+  ],
+  "sibling_skills": [
+    "exit-interview-synthesis: when the records are leaver interviews rather than customer feedback",
+    "ticket-triage-pack: when the need is to sort a live support queue and draft replies",
+    "dataset-insight-pack: when the data is numeric with no free text to code"
+  ]
+}

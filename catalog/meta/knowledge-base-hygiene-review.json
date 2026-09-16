@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Review our knowledge base for duplicates. The listing export of 120 service desk articles with bodies is attached; use today as the review date and the default thresholds, and quote a passage from each file in every duplicate pair.",
+    "Which KB articles are stale? The wiki export is attached, the review date is the first of this month, our threshold for a stale update is 270 days, and the retired systems are the two legacy ticketing tools listed below.",
+    "Find conflicting articles in the attached folder of how-tos. Compare steps, values and contacts for files on the same topic, quote both passages and write a question for the owner; do not decide which one is right.",
+    "Which articles have no owner? The knowledge base listing is attached and the current owner roster is pasted below; flag blank owners and owners not on the roster, and draft one note per owner for me to send.",
+    "Run a hygiene check on these files. The runbook set in the knowledge source folder named Operations Runbooks is in scope, about 60 files; give me one proposed action per file and leave the owner decision column blank."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Quarterly clean-up of a service desk knowledge base",
+      "prompt": "Run the hygiene review on the attached listing export of our service desk articles. Review date is today, thresholds are the defaults, the owner roster is attached. One row per file with signal codes, quoted evidence and a proposed action."
+    },
+    {
+      "scenario": "Sweep for references to retired systems",
+      "prompt": "Review the attached wiki export for references to the three retired systems listed below and for staleness. Quote every mention, propose Update or Retire for each file and let the owner choose."
+    },
+    {
+      "scenario": "Ownership gaps before a team reorganisation",
+      "prompt": "Check the attached knowledge base listing against the attached owner roster. List every file with a blank or unverified owner, then draft one note per current owner covering their files and the proposed actions."
+    }
+  ],
+  "standalone_instructions": "Purpose: you help a knowledge owner review a set of knowledge files or a listing of them and produce a draft hygiene table: duplication, staleness, conflict, ownership and structure signals per file, each with a code and quoted evidence, one proposed action per file for the owners to decide, and one draft note per owner.\n\nGeneral guidelines: read only the files, exports, rosters and retired-item lists the user attaches or pastes and what sits in your knowledge sources; if a named location is out of reach, ask for a paste or export and say so in the output. When an input is missing, ask one question at a time, starting with the knowledge set. Never compute a day count against a guessed date; if no review date is available, ask. Every signal carries a code and a quoted passage; silence is not a signal and missing fields read UNKNOWN. Never judge content: show a conflict with both passages and never resolve it; never call a stale file wrong or a duplicate redundant. Report sensitive content by class and count only. Without a roster, flag only blank owners and leave validity UNKNOWN. Never edit, merge, move, retire, delete or reassign a file, and never claim to have done so; every change is proposed for the owners. All output is a draft for human review. A typed confirmation releases a workflow hold only; it authorises nothing.\n\nFor the task, follow the knowledge-base-hygiene-review skill: its signal codes, action precedence, confidence grades and self-check govern the output.",
+  "knowledge_sources": [
+    "The knowledge set: article or file bodies, or a listing export with identifier, title, owner, last updated, review date, status, category and usage fields",
+    "The current owner roster: the people or roles who may own articles",
+    "The list of retired systems, versions, products, teams or locations no longer in use",
+    "The organisation's thresholds for stale updates, overdue reviews and low use, where they differ from the defaults"
+  ],
+  "sibling_skills": [
+    "sharepoint-review-sweeper: when the need is a review-date sweep of a document library with owner reminders",
+    "knowledge-article-drafter: when one article needs writing or updating from a ticket",
+    "master-document-register-check: when the set is an engineering document register rather than a knowledge base"
+  ]
+}

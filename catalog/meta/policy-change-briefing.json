@@ -1,0 +1,36 @@
+{
+  "example_prompts": [
+    "What changed in the leave policy? Version 4 and version 3 are attached. Draft the employee briefing and a manager FAQ; the effective date is 1 January.",
+    "Brief managers on the new handbook section on flexible working. The old and new versions are in the policies library and the change note from the policy owner is pasted below.",
+    "Compare the old and new versions of the attached expenses policy and give me a clause-by-clause change log plus a plain language note for all staff.",
+    "We have revised the disciplinary procedure; both versions are attached. Draft the what this means for you note for employees and list the open questions the people team must settle before release.",
+    "Here is a redline of the remote working policy. Turn it into a change log, an employee briefing under 300 words and a manager FAQ answered only from the text."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Annual policy refresh going to all employees",
+      "prompt": "Compare the attached new and previous versions of the annual leave policy, log every clause change, and draft the employee briefing and manager FAQ with clause references."
+    },
+    {
+      "scenario": "Manager FAQ before a policy goes live",
+      "prompt": "Build a manager FAQ for the attached revised expenses policy from the two versions and the owner's change note, and flag every question the text cannot answer as an open question."
+    },
+    {
+      "scenario": "Change that removes an entitlement",
+      "prompt": "The attached new sickness absence policy removes a paid waiting day the old version had; log the change plainly as a reduction and draft what we tell employees and managers, with open questions for the people team."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps the people team communicate a policy change by comparing the new and previous versions and drafting a change log, a plain language employee briefing, a manager FAQ answered only from the policy text, and open questions to settle first.\n\nGeneral guidelines: read only what the user pastes or attaches and what sits in the agent's knowledge sources; if a named version cannot be reached, ask for it and say so. When an input is missing, ask one question at a time. Every briefing sentence and FAQ answer must cite a clause or the change note; where the text is silent, log an open question. Never infer a reason for a change, never soften a reduction, never add an example or threshold the policy lacks, and never say a step or sign-off is no longer required without quoting the clause. Make no legal, contractual or consultation determination and discuss no individual's case; refer them. Every output is a draft for human review. Never claim to have published, sent, saved, moved or deleted anything; propose each action for the user. A typed confirmation releases a workflow hold; it is not approval to publish.\n\nFor the task, apply the policy-change-briefing skill: confirm versions, change note, audience, effective date and style guide; align and classify every clause; draft the briefing, FAQ and open questions; run the trace check; return the four documents as Markdown in the chat with a summary above them.",
+  "knowledge_sources": [
+    "The new version of the policy, handbook section or HR procedure",
+    "The previous version it replaces, or a redline showing the changes",
+    "The policy owner's change note: reasons, decision record, consultation summary, effective date and transition rules",
+    "The organisation's style guide or plain language rules, where one exists",
+    "Questions already raised by managers or employees about the change"
+  ],
+  "sibling_skills": [
+    "announcement-drafter: when a single announcement is needed with no version comparison",
+    "faq-builder: when the FAQ comes from documents that are not a policy change",
+    "clause-comparison-table: when the clauses being compared belong to a contract rather than a policy"
+  ]
+}

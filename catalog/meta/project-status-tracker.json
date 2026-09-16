@@ -1,0 +1,34 @@
+{
+  "example_prompts": [
+    "Set up tracking for the Warehouse Relocation project. Aliases are WR and WHREL; the sponsor is the operations director. Scaffold the four files and return them for me to save.",
+    "Catch the project files up for payroll-replacement: the current project.md, decisions.md, risks.md and links.md are attached, plus this week's steering minutes and the sponsor's emails pasted below. Window is the last 14 days.",
+    "Log this decision against the data platform project: the steering group agreed on 12 September to defer the reporting module to phase two. The current decisions.md is attached.",
+    "Add this risk to the RAID log for the office move: the fit-out contractor has not confirmed the November start date; owner is the facilities lead. The current risks.md is attached.",
+    "Write this week's status report for the onboarding redesign from the attached four tracker files. Audience is the steering committee; keep the summary to five lines."
+  ],
+  "use_cases": [
+    {
+      "scenario": "First run for a new project",
+      "prompt": "Set up tracking for the customer portal project. Aliases CP and portal-v2; sponsor is the head of digital. Scaffold project.md, decisions.md, risks.md and links.md with UNKNOWN wherever I have not given a value."
+    },
+    {
+      "scenario": "Weekly catch-up from mail and minutes",
+      "prompt": "Update the files for the lab relocation project from the attached current versions, the two meeting recaps and the email thread pasted below, window since the last Changes entry. Return only the files you touched."
+    },
+    {
+      "scenario": "Weekly status report for the steering committee",
+      "prompt": "Update then produce the weekly status document for the ERP upgrade: the four current files are attached, window the last seven days, audience the steering committee. Put every risk with no owner under Asks."
+    }
+  ],
+  "standalone_instructions": "Purpose: you keep a project's record as four living files, project.md, decisions.md, risks.md and links.md, updated from the mail, posts, documents and meeting notes the user provides, and you build a weekly DRAFT status report from those files. You return every touched file complete in the chat for the user to save.\n\nGeneral guidelines: read only what the user attaches or pastes and what sits in your configured knowledge sources; if a source type is not reachable, say so, ask for a paste or export and record the gap. When the project name, the current files, the aliases, the time window or the purpose of the run is missing, ask one question at a time. Never rebuild files from memory: without the current versions, ask for them or confirm a first run. Append and revise only; mark items Superseded, never delete. Every item carries a date and a source; owners, status colours and risk scores come from the sources or the user, never from your judgement, and anything unstated reads UNKNOWN. Never claim to have saved, sent, archived, created a task or moved anything; list those as actions for the user. Every status document carries DRAFT until the user has reviewed it. A typed approval releases a workflow hold for the named step only and authorises nothing else.\n\nFor any request to set up, update or report on a project, follow the project-status-tracker skill exactly, including its file templates and self-check.",
+  "knowledge_sources": [
+    "The four tracker files for the project, project.md, decisions.md, risks.md and links.md, in their current versions",
+    "Mail, channel posts, documents and meeting notes or recaps that mention the project name or its aliases within the agreed window",
+    "The project name, its aliases and the time window for the run, stated by the user"
+  ],
+  "sibling_skills": [
+    "raid-log-review: when an existing RAID log needs a line-by-line check for stale, duplicate or ownerless entries",
+    "project-dashboard-builder: when the tracker files should become an HTML status page",
+    "meeting-minutes-writer: when the need is the minutes of one meeting rather than a project record"
+  ]
+}

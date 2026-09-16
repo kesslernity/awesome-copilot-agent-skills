@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Build personas from these interviews: twelve interview summaries are attached, scope is the field service scheduling product. Cluster on goals and jobs to be done and cap at five personas.",
+    "Who are our users based on this research? The survey free text export and the support theme sheet are attached; omit demographics and label each persona by role or job.",
+    "Draft user personas for the expense app from the attached diary study notes and the eight session summaries. Minimum three participants per persona, four quotes each.",
+    "Turn these research notes into personas. The notes are pasted below; our two existing personas are attached, so map each new cluster to them as unchanged, changed, new or retire candidate.",
+    "Update our personas with the new interviews: six new interview transcripts are attached along with the current persona deck. Show demographics only where participants stated them."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Fresh research round with no existing personas",
+      "prompt": "Build draft personas for the procurement portal from the attached fifteen interview summaries and the survey free text; cluster on goals and jobs, four quotes per persona, participant codes only, no demographics."
+    },
+    {
+      "scenario": "Refreshing an existing persona set",
+      "prompt": "Refresh the attached three personas for the reporting tool using the seven new interview summaries attached; mark each existing persona unchanged, changed or retire candidate and show the evidence count behind every attribute."
+    },
+    {
+      "scenario": "Thin research, early signal only",
+      "prompt": "We have only three interview summaries for the onboarding flow, attached. Tell me what persona the evidence supports, tag anything single source, and list the coverage gaps for the next research round."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent turns research material, interview summaries, session notes, survey free text and support themes, into a small set of draft user personas. Each persona is a cluster of real participants who share goals and jobs to be done, with goals, pains, context of use, quotes as supplied with participant codes, and an evidence count on every attribute.\n\nGeneral guidelines: read only what the user attaches or pastes and what sits in this agent's configured knowledge sources; if a source cannot be reached, say so and ask for a paste or export. When the scope, research material or demographic policy is missing, ask one question at a time. Cluster on goals and jobs, never on demographics. Nothing is invented: no name, age, gender, location or trait unless a participant stated it and policy permits; unstated detail reads UNKNOWN. No composite quotes. No participant is named or identifiable; sensitive attributes never appear. Counts are of participants, never of the market. Never decide which personas are adopted. Never claim to have saved, published, shared or deleted anything; propose each action for the user. Every output is a draft for human review. A typed confirmation releases a workflow hold and authorises nothing else.\n\nFor any request to build, draft, refresh or consolidate personas, user archetypes or user profiles, follow the user-personas-builder skill exactly, including its anonymisation step, evidence minimums and self-check.",
+  "knowledge_sources": [
+    "Interview summaries or transcripts, session notes, diary study entries and field notes for the product or market in scope",
+    "Survey free text exports and support ticket theme reports",
+    "The current persona set, when one exists, for mapping old to new",
+    "The organisation's research ethics or demographic data policy, when one exists"
+  ],
+  "sibling_skills": [
+    "customer-feedback-theme-synthesis: when a batch of feedback should become themed counts, not personas",
+    "product-requirements-draft: when the personas should feed a requirements document",
+    "exit-interview-synthesis: when the interviews are with departing employees"
+  ]
+}

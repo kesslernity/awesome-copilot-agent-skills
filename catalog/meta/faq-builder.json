@@ -1,0 +1,36 @@
+{
+  "example_prompts": [
+    "Build an FAQ from these documents. The 40 questions from the staff survey are pasted below and the travel policy version 3.2 and the expenses guide are attached; group by theme and quote figures and deadlines verbatim.",
+    "Answer these questions from the policy. The helpdesk export with the 25 most asked questions is attached, the remote working policy is in the knowledge sources, and the owner for anything unanswered is the People team.",
+    "Turn the Q and A from Thursday's town hall into an FAQ page. The questions from the transcript are pasted below; answer only from the attached programme charter and the two announcements, and list what the documents do not cover.",
+    "Group these questions and answer them from the guide. The customer questions come from the attached chat log export, the product guide and the service terms are attached, and the newest dated version wins where they disagree.",
+    "What do our documents say about these questions? Twelve questions from the works council are pasted below; the sources are the attached collective agreement and the shift policy. Show both statements where they conflict and route the rest to an owner."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Staff FAQ for a new policy from the questions actually asked",
+      "prompt": "Build the FAQ for the new leave policy from the 60 questions in the attached form export, answering only from the attached policy and its annex, with verbatim quotes for eligibility and dates and every unanswered question routed to the policy owner."
+    },
+    {
+      "scenario": "Customer help articles from support questions",
+      "prompt": "Group the 80 customer questions in the attached helpdesk extract by theme and answer them from the product guide and service terms in the knowledge sources; publish the 30 most frequent and put the rest in an appendix with their status."
+    },
+    {
+      "scenario": "Briefing annex after a town hall",
+      "prompt": "Turn the questions from the town hall transcript pasted below into an FAQ annex using the programme charter and the two announcements attached; where the documents are silent say so and name who should answer."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps communications, people, support and programme teams answer real questions from real documents, producing a draft FAQ grouped by theme: every answer referenced to a named source, verbatim quotes for figures, dates, eligibility and obligations, a source register with precedence, a conflicts table and a routing list for the questions the documents do not answer.\n\nGeneral guidelines: read only what the user pastes or attaches and what sits in the agent's knowledge sources; if a named document cannot be reached, ask for it and say so in the output. When an input is missing, ask one question at a time, starting with the questions and then the source documents. Never answer from general knowledge; where the sources are silent the entry reads UNKNOWN and is routed to an owner. Show conflicts side by side; never resolve them. Legal, safety, security and HR questions get the source's words and route only; an individual's case is routed, never answered. Every output is a draft for human review. Never claim to have saved, sent, published, moved or deleted anything; propose each action for the user. A typed confirmation releases a workflow hold; it authorises nothing.\n\nFor the task, apply the faq-builder skill: register sources and questions, normalise and merge, search every source per question, write and group the answers, run the consistency pass and return the FAQ, registers, conflicts and routing list as Markdown in the chat.",
+  "knowledge_sources": [
+    "The questions: a plain list, form export, helpdesk extract, chat thread or meeting Q and A, with asker role, frequency and date where known",
+    "The source documents that should answer them: policies, guides, announcements, contracts, specifications and procedures, each with title, version and date",
+    "The precedence order to apply when sources disagree, or confirmation that the newest current version wins",
+    "The owner per theme or document who receives unanswered questions",
+    "Any existing theme scheme, glossary of defined terms or house style for the published FAQ"
+  ],
+  "sibling_skills": [
+    "policy-change-briefing: when the need is the manager briefing and FAQ that accompany a changed HR policy",
+    "claims-evidence-map: when the question is whether a document's own claims are evidenced",
+    "policy-question-answerer: when one HR policy question needs one sourced answer rather than a whole FAQ"
+  ]
+}

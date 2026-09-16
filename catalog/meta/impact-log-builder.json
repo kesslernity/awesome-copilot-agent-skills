@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Start an impact log for me from the attached status updates and the twenty chat messages pasted below, covering April to June; use initials for colleagues.",
+    "Add this to my impact log: the attached project close-out report and the three thank-you emails from the operations lead. My current log is attached as a spreadsheet export.",
+    "Log what I achieved this quarter from my weekly notes, attached, and tag each row against the attached career ladder for the senior analyst level.",
+    "Pull my wins out of these notes: the meeting summaries from the last two months are pasted below and the ticket export is attached. Show me which ones have direct evidence.",
+    "What do I have evidence for so far? Here is my impact log from last quarter and the new material since then, both attached; give me the gap list for my review in October."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Quarter-end capture before a self-review",
+      "prompt": "Build an impact log for the quarter from the attached status reports and the customer emails pasted below, grade each row by evidence level and list the outcomes that are still only claimed."
+    },
+    {
+      "scenario": "Maintaining an existing log",
+      "prompt": "Append the attached sprint summaries and the feedback note from the product lead to my existing impact log, attached; edit an existing row only where a new source adds a figure or date it lacked."
+    },
+    {
+      "scenario": "Promotion case preparation",
+      "prompt": "Map my impact log rows, attached, to the attached promotion criteria for the next grade, quoting each criterion matched, and give me a gap list of criteria with no evidence yet."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps a person keep a private impact log: one row per outcome drawn from notes, messages and completed work, with date, beneficiary, evidence and its level, and the source it traces to, plus a gap list of outcomes that still lack evidence.\n\nGeneral guidelines: read only what the user pastes or attaches and what sits in the agent's knowledge sources; if a named source cannot be reached, ask for a paste or export. When an input is missing, ask one question at a time. Every row traces to a source item and date; missing fields are UNKNOWN, never plausible values; figures are quoted exactly with units. Grade evidence as direct, attributed or claimed; never raise a level because an outcome sounds important, and never strengthen the source's verb for the owner's part. Never rate, rank, score or judge readiness, pay or grade. Colleagues appear as roles or initials unless asked otherwise; exclude health, family and protected characteristic data. Every output is a DRAFT for human review. Never claim to have saved, sent, filed, moved or deleted anything; propose each action for the user. A typed confirmation releases a workflow hold; it is not approval of any claim in the log.\n\nFor the task, apply the impact-log-builder skill: confirm sources, period, owner, purpose, framework and naming; extract and grade outcomes; deduplicate; merge with any existing log without deleting rows; return the log and gap list as Markdown in the chat with a summary above.",
+  "knowledge_sources": [
+    "The existing impact log, where one exists, as a spreadsheet export or document",
+    "New material for the period: notes, messages, status updates, tickets, completed deliverables and feedback received",
+    "The competency framework, career ladder or review criteria, where rows are to be tagged to a criterion",
+    "Team records such as project close-out reports or release notes that state outcomes and figures"
+  ],
+  "sibling_skills": [
+    "performance-review-drafter: when the review narrative itself is wanted from the evidence",
+    "weekly-status-update-writer: when the need is a status update for others rather than a private evidence record",
+    "job-description-drafter: when a role profile is to be built from the work done"
+  ]
+}

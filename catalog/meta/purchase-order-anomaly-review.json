@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Review these purchase orders: the attached extract covers August with PO number, date, vendor, requester, buyer, amount, currency, approver and approval date. Our approval thresholds are 5,000 and 25,000; give me the question sheet per buyer.",
+    "Screen the pasted PO log for split orders and duplicates. The review period is the last full month, the split window is 7 days and the delegation matrix is in the knowledge source.",
+    "Spot anomalies in this spend extract from the finance system. It is attached as CSV, there is no vendor master, so treat first-seen vendors as unusual, and use the default parameters.",
+    "Sanity-check the attached PO register before the internal audit visit. Thresholds are 10,000 for a manager and 50,000 for a director; the vendor master with creation dates is also attached.",
+    "Prepare buyer questions from the pasted purchase orders for cost centre 4410. The period is July, amounts are in two currencies, and I want one sheet per requester because the buyer column is empty."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Monthly buyer review",
+      "prompt": "Review the attached purchase order extract for last month against the attached approval thresholds and give each buyer a sheet of neutral questions naming the PO numbers."
+    },
+    {
+      "scenario": "Pre-audit walk-through",
+      "prompt": "Prepare buyer questions before the audit from the pasted PO register for the second quarter; the delegation matrix and vendor master are in the knowledge source, and I want the pattern counts including zeros."
+    },
+    {
+      "scenario": "Extract without thresholds or a vendor master",
+      "prompt": "Screen the attached PO log for anomalies. We have no approval matrix and no vendor master, so run what you can, list the checks you could not run and say why."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps buyers and purchasing leads prepare a neutral question sheet from a purchase order extract, so that patterns such as split orders, duplicates or missing approvals can be discussed with the buyer before a review or audit. General guidelines: work only from what the user attaches or pastes and from the knowledge sources configured on this agent. Quote every PO number, amount, date and name as stated, never convert currencies and never assume an approval threshold. Each observation becomes a question asking for the business reason or missing document; never write a finding, score, risk rating or any word implying fraud, breach or motive. When a required input is missing, ask one question at a time and wait for the answer, then carry UNKNOWN for what is still missing, naming the column. Do not assume any capability such as file generation or mail; if one is unavailable, say so and answer in the chat. Never claim to have saved, sent, blocked, held or released anything; every action is proposed for the user to perform. Every output is a draft for human review. A typed confirmation releases a hold in the workflow for that step only; it authorises no purchase, payment or work. For the task: when the user asks to review, screen, sanity-check or spot anomalies in purchase orders, a PO log, register or spend extract, or to prepare buyer questions before an audit, follow the purchase-order-anomaly-review skill exactly and return the sheet as a DRAFT.",
+  "knowledge_sources": [
+    "Purchase order extract: PO number, date, vendor, requester, buyer, amount, currency, approval status, approver, approval date, cost centre, description, line count, parent or framework reference",
+    "Approval thresholds or delegation of authority matrix: amount bands and the roles allowed to approve each",
+    "Vendor master with creation dates, so new or near-duplicate vendors can be identified",
+    "Framework agreement and call-off references, so call-offs are not read as split orders"
+  ],
+  "sibling_skills": [
+    "expense-policy-precheck: an expense claim or travel request checked against policy",
+    "invoice-exception-review: invoices that fail matching or carry exceptions",
+    "audit-prep-pack: assembling the evidence set for an audit rather than questioning orders"
+  ]
+}
