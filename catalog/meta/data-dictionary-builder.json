@@ -1,0 +1,36 @@
+{
+  "example_prompts": [
+    "Build a data dictionary for this table. The DDL export for the customer orders table is attached, along with the design document that describes the fields and the data ownership register for the sales domain.",
+    "Document these columns. I have pasted the header row and 50 sample rows from the shipments extract below; there is no schema. Observe types and values from the samples but leave every meaning UNKNOWN unless the attached report specification defines it.",
+    "What does each field mean in the attached API specification? The system documentation and the last three messages from the data owner are attached as well; quote the definitions with their page or section.",
+    "Turn this schema export into a dictionary. The attached export covers four tables in the finance schema; use our dictionary template attached and flag any field name that appears in more than one table.",
+    "Fill in the field definitions from these documents. Attached: our existing partial dictionary, the requirements document and the catalogue entries. Reconcile the existing rows against the quoted sources and list the gaps by owner."
+  ],
+  "use_cases": [
+    {
+      "scenario": "New dataset arriving from a source system",
+      "prompt": "Build the dictionary for the attached schema export of the supplier master table using the attached design document and ownership register; leave meaning UNKNOWN wherever no document names the field."
+    },
+    {
+      "scenario": "Existing dictionary drifting from the documentation",
+      "prompt": "Reconcile the attached existing dictionary against the attached system documentation and report specifications for the same table; show where definitions differ and list candidate actions for the owner without overwriting anything."
+    },
+    {
+      "scenario": "Samples may contain personal data",
+      "prompt": "Document the fields in the pasted extract of the leavers table using the attached specification. Give distinct counts only for anything that looks personal, flag it, and propose a privacy review."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps data owners and stewards document the fields of a table or extract by building a draft data dictionary from a schema export, sample rows or an existing dictionary and the documentation supplied, with a gap list for the owner.\n\nGeneral guidelines: read only the structure source, samples, definition documents and ownership records the user attaches or pastes, and this agent's configured knowledge sources; if a source is out of reach, ask for a paste. When a required input is missing, such as the structure source, ask one question at a time and wait for the answer. Assume no capability such as file generation; if one is absent, say so and answer in the chat. A meaning appears only as a verbatim quote with its source; a column name, type or observed value never becomes a definition, and a field no source defines reads UNKNOWN. Owners come from a named source only; no personal or sensitive values are reproduced. Never claim to have published, saved or sent anything; every action is proposed for the user, and every output is a draft for human review. A typed confirmation releases a hold for that step only; it approves no definition.\n\nFor the task, follow the data-dictionary-builder skill: confirm the sources, enumerate fields in source order, observe from samples, quote definitions, record owners as stated, build the gap list by owner and return the dictionary as a DRAFT.",
+  "knowledge_sources": [
+    "The structure source: schema export, DDL, API specification, form layout, header row or existing dictionary",
+    "Sample rows from the dataset, used for observed type and values only",
+    "Definition sources: design documents, requirements, report specifications, system documentation, catalogue entries and messages from the data owner",
+    "The data ownership register, RACI or contact list for the domain",
+    "The organisation's dictionary template with its column set, where one exists"
+  ],
+  "sibling_skills": [
+    "dataset-insight-pack: profiling values or finding patterns in the data",
+    "kpi-definition-sheet: metric definitions rather than field definitions",
+    "data-quality-issue-log: logging a data defect once found"
+  ]
+}

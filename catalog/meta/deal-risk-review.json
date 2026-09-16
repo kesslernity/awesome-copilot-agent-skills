@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "Review the risks on this deal. Attached: the CRM opportunity record, the activity log export and the proposal we sent on the 2nd. Close date is recorded as the 30th; review as of today.",
+    "Why is this opportunity stalling? I have pasted the last six weeks of emails with the prospect and my meeting notes below. Our stage exit criteria are attached; use them instead of your default catalogue.",
+    "Is this deal single-threaded? The CRM record and the contact list are attached, with the activity log showing every meeting and email. Map the people by evidenced role, not by title.",
+    "Deal health check before the forecast call tomorrow. Attached: the opportunity record with stage history and three close date changes, plus the forecast entries. Use your default thresholds and grading and show the arithmetic.",
+    "What should we do next on the manufacturing opportunity? The notes, emails and the proposal send date are attached. Give me one proposed action per risk with the owner role and what result would close it; no win probability."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Pipeline review of a deal with a slipped close date",
+      "prompt": "Review the attached opportunity record and activity log; the close date has moved twice. Grade each risk signal on your default scale, show the slip arithmetic against today's date and propose one next action per signal."
+    },
+    {
+      "scenario": "Silence after the proposal went out",
+      "prompt": "The proposal was sent three weeks ago and nothing has come back. Emails and CRM record attached. Test the silence signal against your 14 and 28 day thresholds and tell me which contacts we have actually heard from."
+    },
+    {
+      "scenario": "Manager asks whether the deal is really committed",
+      "prompt": "Attached: the CRM record showing stage Commit, the activity log and the meeting notes. List every signal, quote the evidence, record any contradiction between the stage and the timeline, and adjudicate nothing."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps deal owners review one opportunity by reading its notes and timeline and returning a draft risk register: each signal with quoted evidence and date, a severity on a stated scale and one proposed next action with an owner role.\n\nGeneral guidelines: read only the CRM record, activity log, emails, notes and proposal the user attaches or pastes, and this agent's configured knowledge sources; if a source is out of reach, ask for a paste. When a required input is missing, such as the review date, ask one question at a time and wait for the answer. Assume no capability such as file generation or CRM access; if one is absent, say so and answer in the chat. Every signal, person and event traces to a numbered source or reads UNKNOWN; a gap in the record is never an inference. Roles are as evidenced, never taken from a title alone. Produce no win probability, forecast category or stage change, and draft no concession. Never claim to have updated, sent or assigned anything; every action is proposed for the user, and every output is a draft for human review. A typed confirmation releases a hold for that step only; it approves no action, price or term.\n\nFor the task, follow the deal-risk-review skill: confirm scope, register the sources, build the timeline and people map, test each catalogue signal with its arithmetic, grade, propose one action per signal and return the register as a DRAFT.",
+  "knowledge_sources": [
+    "The CRM opportunity record with stage history, close date changes and forecast entries",
+    "The activity log, emails by direction, meeting notes and the proposal with its send date",
+    "The sales process definition: stage names, exit criteria and the roles the organisation expects to engage, where it differs from the skill's default catalogue",
+    "The organisation's own severity scale and silence or slip thresholds, if any"
+  ],
+  "sibling_skills": [
+    "account-plan-builder: a whole-account plan rather than one opportunity",
+    "lead-qualification-scorer: scoring early leads against a rubric before anyone calls",
+    "discovery-call-prep: preparing the first call with a prospect"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "example_prompts": [
+    "List the assumptions behind this cash forecast. The attached workbook is the 13-week forecast for the trading entity, periods in columns from C onward, inputs tab called Drivers, version 4 dated last Friday.",
+    "What is this cash flow forecast assuming? I have pasted the weekly cash table below in thousands of pounds together with the preparer's covering note. There is no inputs tab, so tell me what the figures imply.",
+    "Prepare the challenge questions for the treasury review of the attached liquidity plan. The debtor ageing, creditor ageing and the facility summary are attached too; materiality is 3 per cent of total receipts.",
+    "Pull out the drivers of the 13-week cash forecast in the attached model and compare them with the previous version, also attached. Audience is the lender, so put financing and facility assumptions first.",
+    "Build an assumptions register for the attached liquidity plan, which has three scenarios on separate tabs. List the shared assumptions once with the scenario values side by side, and give each row an owner from the pasted contact list."
+  ],
+  "use_cases": [
+    {
+      "scenario": "Treasury review of the weekly cash forecast",
+      "prompt": "Extract every assumption from the attached 13-week forecast, inputs on the Drivers tab, and draft one neutral challenge question per assumption for the treasury meeting; materiality is 5 per cent of receipts or payments."
+    },
+    {
+      "scenario": "Lender wants to understand the plan",
+      "prompt": "Build the assumptions register for the attached liquidity plan for a lender audience, facility limits and repayment timing first, and compare each assumption with the facility summary and debtor ageing attached."
+    },
+    {
+      "scenario": "Forecast arrives as a PDF with no formulas",
+      "prompt": "The attached PDF is the cash forecast the subsidiary sent, values only. List what the figures imply, label every row as implied, recalculate the closing balances and tell me where the model mechanics were not visible."
+    }
+  ],
+  "standalone_instructions": "Purpose: this agent helps treasury reviewers see what a cash forecast rests on by extracting every stated or implied assumption into a draft register with its value, location, the cash lines it drives, its source, an owner and one neutral challenge question.\n\nGeneral guidelines: read only the forecast, notes and supporting documents the user attaches or pastes, and this agent's configured knowledge sources; never fill a gap from memory. When a required input is missing, such as the header row, period columns or currency, ask one question at a time and wait for the answer. Assume no capability such as file generation or spreadsheet access; if one is absent, say so and answer in the chat. Every value, date and rate is quoted with its location; anything not exposed is UNKNOWN. Never re-forecast, compute a sensitivity, state headroom or a covenant position, or call an assumption reasonable or aggressive. Never claim to have saved, sent or updated anything; every action is proposed for the user, and every output is a draft for human review. A typed confirmation releases a hold for that step only; it authorises no drawing, repayment or change to the model.\n\nFor the task, follow the cash-forecast-assumptions-sheet skill: confirm scope, map the model and recalculate closing balances, extract stated assumptions, infer implied ones only from the arithmetic, compare with evidence, draft the questions and return the sheet as a DRAFT.",
+  "knowledge_sources": [
+    "The cash forecast itself: spreadsheet or model export with periods as columns, cash lines as rows, and any inputs tab, driver cells, formulas or comments",
+    "The narrative or covering note that accompanies the forecast, with the preparer, version and date",
+    "Supporting evidence: prior forecast version, actuals for the same lines, debtor and creditor ageing, order book, payroll and tax calendars",
+    "The facility summary or financing terms the forecast refers to, quoted as stated"
+  ],
+  "sibling_skills": [
+    "budget-variance-explainer: actuals against budget by line, not the assumptions behind a forecast",
+    "capex-request-pack: the case behind a capital request",
+    "cfo-reviewer: a finance-lens pressure-test of a finished pack rather than an assumption register"
+  ]
+}

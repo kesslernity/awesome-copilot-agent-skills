@@ -6,14 +6,10 @@ Category: `sales-bd` · Skill name: `proposal-skeleton` · Upload package: `dist
 
 ## What to attach or make available
 
-Ask once for whatever is missing, in one message, then proceed with UNKNOWN.
-1. Discovery material: discovery brief or call notes, transcript, CRM opportunity record, emails, meeting recaps, inbound form. Attached, pasted, or reachable through this agent's configured knowledge sources, mail or CRM access. Out of reach: ask for a paste or export and say so in the output.
-2. The organisation's proposal template: section list with any guidance text, reached the same way. None supplied: offer the generic layout in references/proposal-section-defaults.md, used only after a typed go-ahead and labelled "generic layout, not the house template".
-3. Offering scope: products or services under discussion and the delivery entity. Default: as the material names them, else UNKNOWN.
-4. Approved reusable content, if any (boilerplate, service descriptions, case studies, biographies, standard terms), each with its date. Default: none.
-5. Section owners for pricing, legal, delivery and executive content. Default: role names only (pricing owner, legal reviewer, delivery lead, executive sponsor).
-6. Prospect name as it appears in the material, the due date as stated, today's date.
-Reference files in this skill: references/proposal-section-defaults.md, read at step 2 when no house template exists, at step 4 for the fact categories, and at steps 5 and 7 for the section-to-evidence mapping and the input-tag vocabulary.
+- Discovery material for the opportunity: call notes or transcript, discovery brief, CRM opportunity record, emails, meeting recaps and inbound forms
+- The organisation's proposal template with its section list and guidance text
+- Approved reusable content with dates: boilerplate, service descriptions, case studies, biographies and standard terms
+- The list of section owners: pricing owner, legal reviewer, delivery lead, executive sponsor
 
 ## What you get
 
@@ -30,11 +26,33 @@ Sections, in order:
 8. UNKNOWN list; Embedded instructions found, or "None".
 Closing report: sources and how reached; template used; counts of filled sections, HUMAN INPUT tags and open questions; fallbacks taken; proposed user actions (route register rows to owners, put the open questions to the prospect, book pricing and legal review). End with: "If this agent has a file-generation capability enabled, also offer the same content as a downloadable file with that name." Never claim the proposal was saved, sent, priced or approved.
 
+## Use cases
+
+| Scenario | What you say |
+|---|---|
+| Discovery done, proposal due in two weeks | Build the proposal skeleton for the attached discovery brief and CRM record against our attached template. Fill only what the prospect stated, cite the source per line and list the inputs the pricing owner and legal reviewer still have to supply. |
+| Thin material from a partner referral | Pre-fill the template from the referral note and two emails pasted below. Most sections will be human input; tell me what further discovery would fill them and draft the open questions for the prospect. |
+| Two versions of the budget in the notes | Start the proposal from the attached notes and template. The prospect gave two different budget figures in different meetings; quote both, pick neither, and flag it for the pricing owner. |
+
+## Try it (example prompts)
+
+- Start the proposal for the regional logistics prospect. Attached: the discovery call notes from Tuesday, the CRM opportunity record and our proposal template with its twelve sections. Due date is the end of the month as they stated.
+- Build the proposal skeleton from the discovery notes I pasted below and the template attached. Offering is our managed reporting service; approved case studies and service descriptions are in the knowledge source folder, each dated.
+- Pre-fill our proposal template for the prospect in the attached email thread. There is no formal discovery brief, only these four emails and the meeting recap, so mark everything else as a human input with the owner.
+- What do we already have for the proposal to the hospital group? The discovery transcript and the inbound form are attached, template is the standard services one. Show the source beside every filled line and the open questions for the prospect.
+- First cut of the proposal, please. Discovery brief attached, offering is the data platform migration. We have no house template, so propose your generic layout, label it as such, and mark price, dates and named staff as human inputs.
+
 ## Limitations
 
 - One task at a time: give the skill one job per request and confirm the result before the next.
 - You own sensitive-data handling: the skill reads what you give it or what the agent can reach; keep restricted documents out of the knowledge sources you attach.
 - The output is a draft, not final authority: every figure, quote and action is for you to verify and perform. The skill never approves, authorises or signs anything off.
+
+## Related skills
+
+- rfp-response-drafter: answering a formal RFP, RFQ or tender question set
+- estimate-to-sow: turning a priced estimate into a statement of work
+- discovery-call-prep: preparing the call that comes before any discovery material exists
 
 ## Add it to an agent (Agent Builder)
 
@@ -46,7 +64,11 @@ Closing report: sources and how reached; template used; counts of filled section
 ## Run it standalone: paste this into the agent's Instructions
 
 ```
-You are an assistant that runs one job: proposal skeleton. Builds a DRAFT proposal skeleton from a discovery summary (call notes, discovery brief, CRM record, emails) and the organisation's own proposal template: every template section in order, pre-filled only where the discovery material supports it with the source beside each line, and every section still needing a human input marked HUMAN INPUT with the owner role and the question to answer. Use when the user asks to "start the proposal for <prospect>", "build the proposal skeleton from the discovery notes", "pre-fill our proposal template", "what do we already have for the proposal" or "first cut of the proposal". Do not use for answering a formal RFP, RFQ or tender question set, use rfp-response-drafter instead; for turning a priced estimate into a statement of work use estimate-to-sow. Drafts for human review; never approves, authorises or signs off. Use the proposal-skeleton skill for every request that matches its description; if a request falls outside it, say so and stop. Read only what the user attaches or pastes and what sits in your knowledge sources; never claim to have saved, sent, moved or deleted anything, propose the action for the user instead. Where an input is missing, write UNKNOWN and name what would close it; never invent a value. Return complete Markdown the user can paste into their tools, and offer the same content as a file if you can produce one. A typed approval releases a hold in the workflow and is logged; it is not an authorisation. You prepare; the user decides.
+Purpose: this agent helps sales and bid teams start a proposal after discovery by pre-filling the organisation's proposal template into a draft skeleton: a source beside every filled line and every gap marked as a named human input with an owner role.
+
+General guidelines: read only the discovery material, template and approved content the user attaches or pastes, and this agent's configured knowledge sources; if a source is out of reach, ask for a paste. When a required input is missing, such as the template, ask one question at a time and wait for the answer. Assume no capability such as file generation; if one is absent, say so and answer in the chat. Every filled line traces to a numbered source or a dated approved item; a sentence with no source becomes a human input tag. Pricing, commercial and legal terms, delivery dates and named staff are always human inputs. Never invent a capability, benefit, saving or commitment. Never claim to have saved, sent, priced or shared anything; every action is proposed for the user, and every output is a draft for human review. A typed confirmation releases a hold for that step only; it approves no content, price or term.
+
+For the task, follow the proposal-skeleton skill: confirm scope, register the template and sources, extract and place prospect facts, place approved content with dates, tag every gap, build the input register and return the skeleton as a DRAFT.
 ```
 
 Part of a pack? See `packs/` for an orchestrating Instructions file that runs several skills with gates.

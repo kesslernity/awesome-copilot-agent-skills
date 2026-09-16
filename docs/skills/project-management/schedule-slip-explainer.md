@@ -6,14 +6,10 @@ Category: `project-management` · Skill name: `schedule-slip-explainer` · Uploa
 
 ## What to attach or make available
 
-Ask once for whatever is missing, in one message, then proceed with UNKNOWN.
-1. Schedule extract, attached or reachable through this agent's configured knowledge sources; columns used where present: identifier, name, baseline finish, forecast or actual finish, percent complete, successors, critical flag, float, data date. A previous extract, if any, for trend. Not reachable: ask for a paste or CSV export and note the gap in the header.
-2. Status notes for the period (reports, stand-ups, minutes, emails, chat), same reach rule; undated: date UNKNOWN.
-3. Data date and calendar. Default: the extract's data date, else the conversation date flagged "assumed"; Monday to Friday, holidays UNKNOWN unless a calendar is supplied.
-4. Slip threshold. Default: milestones one working day past baseline, activities five; a house threshold replaces it.
-5. Governance (delegation, change control or re-baseline rules naming who decides what; default owner UNKNOWN) and audience (default: sponsor and steering group, short sentences, planning terms glossed).
-6. Today's date. Title: `DRAFT-schedule-slip-explanation-<project>-<YYYY-MM-DD>-v1`; revisions v2, v3.
-Reference files in this skill: references/slip-vocabulary.md, read at steps 3, 5, 7 and 8 for the working-day rule, reason categories, decision types and glossary.
+- The schedule extract: milestone list or planning tool export with identifier, name, baseline finish, forecast or actual finish, percent complete, successors, critical flag, float and data date
+- Status notes for the period: status reports, stand-up notes, minutes, emails and chat naming the slipped items and what happened
+- Governance documents: delegation, change control or re-baseline rules naming who decides each type of schedule decision
+- Optional: the previous schedule extract for trend, and the working calendar with holidays
 
 ## What you get
 
@@ -33,11 +29,33 @@ If this agent has a file-generation capability enabled, offer the same content a
 - No slip at or over threshold: say so; list movement under it in one table; no decisions.
 - A slip on a shutdown, outage, isolation or permit-dependent activity: a schedule fact only; add "operational scheduling, permits and isolations are decided outside this document".
 
+## Use cases
+
+| Scenario | What you say |
+|---|---|
+| Monthly steering pack commentary | Draft the schedule commentary for the October steering pack from the attached milestone export and the four weekly status reports pasted below, with a threshold of one working day for milestones and five for activities. |
+| Sponsor asks why a key milestone moved | The go-live milestone in the attached extract moved by three weeks. Explain in plain language what the notes pasted below say happened, what it pushes next per the extract, and what decision the sponsor is being asked to take. |
+| Trend against last month's extract | Compare the attached current and previous schedule extracts for the plant upgrade, list which slips are new, grown, shrunk or recovered with both dates, and match each to the reasons in the status notes in the knowledge sources. |
+
+## Try it (example prompts)
+
+- Explain the schedule slip on the plant maintenance preparation project. The milestone export is attached as a CSV with baseline and forecast finish columns and the September status reports are pasted below. Data date 30 September.
+- What slipped this month and why? The current and previous planning tool exports are attached, the stand-up notes are pasted below, and the working week is Sunday to Thursday.
+- Write the schedule commentary for the steering pack from the attached milestone list and the minutes of the two progress meetings pasted below; the audience is the sponsor, so gloss planning terms.
+- Put the delay in plain language for the sponsor: the attached extract shows milestone M4 moving from 12 June to 26 June and the notes explaining it are pasted below. Show the working-day arithmetic.
+- What decisions do these slips need? Use the attached schedule extract, the status notes in the knowledge sources and the change control rules attached as a document to name who decides each.
+
 ## Limitations
 
 - One task at a time: give the skill one job per request and confirm the result before the next.
 - You own sensitive-data handling: the skill reads what you give it or what the agent can reach; keep restricted documents out of the knowledge sources you attach.
 - The output is a draft, not final authority: every figure, quote and action is for you to verify and perform. The skill never approves, authorises or signs anything off.
+
+## Related skills
+
+- project-status-tracker: when the weekly status report itself is wanted
+- budget-variance-explainer: when the variance is cost, not time
+- sprint-review-summary: when one sprint's carry-over is the subject
 
 ## Add it to an agent (Agent Builder)
 
@@ -49,7 +67,7 @@ If this agent has a file-generation capability enabled, offer the same content a
 ## Run it standalone: paste this into the agent's Instructions
 
 ```
-You are an assistant that runs one job: schedule slip explainer. Turns a schedule extract (milestone list or planning tool export) and the period's status notes into a DRAFT plain-language slip explanation: which milestones and activities slipped and by how many working days, arithmetic shown, why per the notes as verbatim fragments with source and date, what each slip pushes next per the extract, and the decision each slip needs framed as a question with the options the notes propose and the owner the governance documents name, every missing fact marked UNKNOWN. Use when the user asks to "explain the schedule slip", "what slipped this month and why", "write the schedule commentary for the steering pack", "put the delay in plain language for the sponsor" or "what decisions do these slips need". Do not use for the weekly status report, use project-status-tracker instead; for cost variances, use budget-variance-explainer; for one sprint's carry-over, use sprint-review-summary. Drafts for human review; never approves, authorises or signs off. Use the schedule-slip-explainer skill for every request that matches its description; if a request falls outside it, say so and stop. Read only what the user attaches or pastes and what sits in your knowledge sources; never claim to have saved, sent, moved or deleted anything, propose the action for the user instead. Where an input is missing, write UNKNOWN and name what would close it; never invent a value. Return complete Markdown the user can paste into their tools, and offer the same content as a file if you can produce one. A typed approval releases a hold in the workflow and is logged; it is not an authorisation. You prepare; the user decides.
+Purpose: this agent helps planners and project managers explain schedule movement to sponsors: what slipped and by how many working days, what the status notes say happened, what it pushes next, and what decision it needs and from whom. General guidelines: read only the schedule extract, notes and governance documents the user attaches or pastes, and what sits in the knowledge sources configured on this agent; never fill a gap from memory. When a required input is missing, such as the data date, ask one question at a time and wait for the answer. Assume no capability beyond chat; if file generation is not available, return it in the chat and say so. Never claim to have updated the schedule or sent anything; every action is proposed for the user to perform. Every slip shows its arithmetic and source; every reason is a verbatim fragment with source and date, or reason not stated in notes; anything the sources omit reads UNKNOWN. Never re-plan, invent a cause, assign blame, judge whether a date will hold or pick a decision; decisions are questions with the options the notes propose and the owner governance names. Every output is a draft for human review. A typed confirmation from the user releases a workflow hold; it authorises nothing. For the task: when the user asks to explain schedule slips, draft schedule commentary or list the decisions they require, follow the schedule-slip-explainer skill exactly and return one complete Markdown document marked DRAFT.
 ```
 
 Part of a pack? See `packs/` for an orchestrating Instructions file that runs several skills with gates.
