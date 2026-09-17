@@ -51,6 +51,25 @@ A pack is a set of up to eight skills that work together on one job, with the ag
 | [Writing and communication](packs/writing-communication/) | 5 | [bundle](https://github.com/kesslernity/awesome-copilot-agent-skills/raw/main/dist/packs/writing-communication.zip) |
 <!-- packs:end -->
 
+## From the same author
+
+Free, no email needed:
+
+- [Copilot on One Page](https://www.kesslernity.com/copilot-on-one-page?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=free_onepage): a one-page sheet on how to phrase a request to Copilot.
+- [Copilot field guides](https://www.kesslernity.com/guides?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=free_guides): open guides on rollout, governance and cost.
+- [AI at Work](https://newsletter.kesslernity.com/?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=free_newsletter): what changed in Copilot, every other Tuesday.
+- [Copilot Agent Pack, free sample](https://store.kesslernity.com/l/copilot-agent-pack-sample?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=free_agent_sample): one finished Copilot agent to compare with the skills here.
+
+Paid. I am the author and the seller; these are commercial products with their own terms, separate from this repository's licence:
+
+- [Agent Instruction Block Design Guide](https://store.kesslernity.com/l/eyeauo?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_design_guide), $19: twelve patterns for an agent's Instructions field.
+- [Copilot Agent Pack, Vol. 1](https://store.kesslernity.com/l/copilot-agent-pack-vol-1?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_agent_pack), $49: finished agents with their instructions, tests and rollout notes.
+- [Securing Agents in Microsoft 365 Copilot](https://store.kesslernity.com/l/copilotagentsecurity?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_agent_security), $69, or the [team edition](https://store.kesslernity.com/l/copilotagentsecurityteam?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_agent_security_team), $97: a control-by-control verification kit for declarative agents.
+- [Copilot Hardening Baseline](https://store.kesslernity.com/l/copilot-hardening-baseline?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_baseline), $199: 176 tenant settings checks, each mapped to MITRE ATLAS (collection 2026.08) and the CIS Microsoft 365 Foundations Benchmark v7.0.0. Mapped to, not certified by.
+- [M365 Copilot Deployment Kit](https://www.kesslernity.com/kit?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_kit), $97: the rollout kit for the deployment lead.
+
+Prices as listed on 17 September 2026; the store page is authoritative.
+
 ## What a skill is, in plain words
 
 A skill is a folder with one plain text file called `SKILL.md`. The file says what the skill does, when to use it and how to do the job step by step. When you ask the agent something that matches, it reads that file and follows it. You can read the same file on GitHub before you upload anything, which is the point: every skill here is text you can check.
@@ -356,25 +375,6 @@ Click a skill for its page. The zip link downloads the upload package.
 - [FAQ](FAQ.md): licences, the preview, the eight-skill limit, why an upload can fail, whether these work in Copilot Cowork.
 - [Setup guide](docs/SETUP-GUIDE.md): the same three steps with screenshots-level detail, a troubleshooting table, and a section for admins and developers (limits, the Agents Toolkit, governance).
 - [Contributing](CONTRIBUTING.md): how to add a skill.
-
-## From the same author
-
-Free, no email needed:
-
-- [Copilot on One Page](https://www.kesslernity.com/copilot-on-one-page?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=free_onepage): a one-page sheet on how to phrase a request to Copilot.
-- [Copilot field guides](https://www.kesslernity.com/guides?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=free_guides): open guides on rollout, governance and cost.
-- [AI at Work](https://newsletter.kesslernity.com/?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=free_newsletter): what changed in Copilot, every other Tuesday.
-- [Copilot Agent Pack, free sample](https://store.kesslernity.com/l/copilot-agent-pack-sample?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=free_agent_sample): one finished Copilot agent to compare with the skills here.
-
-Paid. I am the author and the seller; these are commercial products with their own terms, separate from this repository's licence:
-
-- [Agent Instruction Block Design Guide](https://store.kesslernity.com/l/eyeauo?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_design_guide), $19: twelve patterns for an agent's Instructions field.
-- [Copilot Agent Pack, Vol. 1](https://store.kesslernity.com/l/copilot-agent-pack-vol-1?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_agent_pack), $49: finished agents with their instructions, tests and rollout notes.
-- [Securing Agents in Microsoft 365 Copilot](https://store.kesslernity.com/l/copilotagentsecurity?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_agent_security), $69, or the [team edition](https://store.kesslernity.com/l/copilotagentsecurityteam?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_agent_security_team), $97: a control-by-control verification kit for declarative agents.
-- [Copilot Hardening Baseline](https://store.kesslernity.com/l/copilot-hardening-baseline?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_baseline), $199: 176 tenant settings checks, each mapped to MITRE ATLAS (collection 2026.08) and the CIS Microsoft 365 Foundations Benchmark v7.0.0. Mapped to, not certified by.
-- [M365 Copilot Deployment Kit](https://www.kesslernity.com/kit?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_kit), $97: the rollout kit for the deployment lead.
-
-Prices as listed on 17 September 2026; the store page is authoritative.
 
 ## Licence
 
