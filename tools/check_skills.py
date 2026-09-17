@@ -53,16 +53,18 @@ def check(skill_dir):
     for p in skill_dir.rglob("*"):
         if p.is_file():
             rel = p.relative_to(skill_dir).as_posix()
-            if p.name != "SKILL.md" and not rel.startswith(("references/", "assets/", "scripts/")):
-                fails.append(f"{skill_dir}: payload may only hold SKILL.md plus references/, assets/ or scripts/ (found {rel}); docs go to docs/skills/")
+            if p.name not in ("SKILL.md", "README.md") and not rel.startswith(("references/", "assets/", "scripts/")):
+                fails.append(f"{skill_dir}: a skill folder may only hold SKILL.md, its README.md (never shipped) and references/, assets/ or scripts/ (found {rel})")
             if p.name.startswith("."): fails.append(f"{skill_dir}: hidden file {rel} (Cowork rejects hidden files; Agent Builder would ship it)")
             if p.suffix.lower() not in ALLOWED and p.name != "SKILL.md": fails.append(f"{skill_dir}: file type not allowed: {p.relative_to(skill_dir)}")
             if len(p.relative_to(skill_dir).parts) > 3: fails.append(f"{skill_dir}: depth over 3: {p.relative_to(skill_dir)}")
             if p.stat().st_size > 25 * 1024 * 1024: fails.append(f"{skill_dir}: file over 25 MB: {p.relative_to(skill_dir)}")
-            if p.suffix.lower() in (".md", ".txt"):
+            if p.suffix.lower() in (".md", ".txt") and p.name not in ("SKILL.md", "README.md"):   # README.md is the human page, never shipped, and carries a download link
                 t = p.read_text(encoding="utf-8", errors="ignore")
                 for needle, why in FORBIDDEN:
-                    if needle in t and p.name != "SKILL.md": fails.append(f"{skill_dir}: forbidden text in {p.relative_to(skill_dir)} ({why})")
+                    if needle in t: fails.append(f"{skill_dir}: forbidden text in {p.relative_to(skill_dir)} ({why})")
+            if p.name == "README.md" and ("—" in p.read_text(encoding="utf-8", errors="ignore") or "–" in p.read_text(encoding="utf-8", errors="ignore")):
+                fails.append(f"{skill_dir}: dash in README.md")
     for ref in re.findall(r"references/[A-Za-z0-9_./-]+\.md", body):
         if not (skill_dir / ref).exists(): fails.append(f"{skill_dir}: references {ref} but the file is missing")
     return fails

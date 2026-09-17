@@ -1,5 +1,7 @@
 # Setup guide: from a skill folder to a working agent
 
+You need a browser and Copilot chat. Nothing to install. Sections 0 to 3 are the whole path for a standard user; sections 4 onwards are for admins and developers.
+
 Everything here follows Microsoft Learn's pages on custom skills in declarative agents (last updated 4 September 2026) plus what a real upload taught us on 16 September 2026. Where the pages are silent, this guide says so.
 
 ## 0. Before you start: are you allowed in?
@@ -10,12 +12,12 @@ Everything here follows Microsoft Learn's pages on custom skills in declarative 
 
 ## 1. Pick what to build: one skill or a pack
 
-- **One skill, standalone.** Good for trying the format. Each skill folder has a `README.md` with an Instructions block you can paste into the agent, example prompts, and the knowledge it expects.
+- **One skill, standalone.** Good for trying the format. Each skill's page (the folder's README) has a download link, an Instructions block you can paste into the agent, example prompts, and the knowledge it expects.
 - **A pack.** An agent carries at most eight skills, so `packs/<pack-name>/` groups up to eight skills around one job, with an `agent-instructions.md` (the orchestrator, under 8,000 characters), `conversation-starters.md`, `skills.txt` (the zips to upload) and a `README.md` with the assembly steps and test prompts. Start with a pack when the job has stages and gates; start with a skill when it is one task.
 
 ## 2. Get the files
 
-Download the repo as a zip from the green **Code** button (or `git clone`). The upload packages are pre-built in `dist/zips/`, one per skill, with `SKILL.md` at the root of the zip, exactly the tree Microsoft's page shows:
+Every skill's page has a download link for its zip, and every pack's page links a bundle with all of its zips. You do not need the whole repository. (Contributors can clone it and rebuild the zips with the tools.) Each zip holds `SKILL.md` at its root, exactly the tree Microsoft's page shows:
 
 ```
 my-skill.zip
@@ -23,7 +25,7 @@ my-skill.zip
 |-- references/         # optional, this repo's companion files
 ```
 
-If you edit a skill, rebuild the zips: `python3 tools/check_skills.py` (needs PyYAML: `pip install pyyaml`). It also asserts every published limit before you ever open Agent Builder.
+Contributors only: after editing a skill, rebuild the zips with `python3 tools/check_skills.py` (needs Python 3 and PyYAML). It also asserts every published limit before you open Agent Builder.
 
 ## 3. Door one: Agent Builder (no code, about ten minutes for a pack)
 
@@ -37,7 +39,7 @@ If you edit a skill, rebuild the zips: `python3 tools/check_skills.py` (needs Py
 
 Agent Builder can also create a skill from a natural-language description ("Add a reusable skill that always follows these steps ..."). That is how Microsoft demonstrates the feature; this repo gives you the finished folders instead, so you can read every line before you trust it.
 
-## 4. Door two: Microsoft 365 Agents Toolkit (for people who build agents as code)
+## 4. For developers: Microsoft 365 Agents Toolkit (agents as code)
 
 1. Set the environment variable `TEAMSFX_AGENT_SKILLS=true` before launching the CLI or Visual Studio Code (restart VS Code if it was open).
 2. Your declarative agent manifest must be version 1.9.
@@ -91,4 +93,4 @@ Keep that form if you edit a description. The checker fails on invalid YAML befo
 
 ## 9. Try it in Copilot Cowork instead
 
-The file shape is the same folder-plus-`SKILL.md`. These skills were rewritten for agents and no longer assume Cowork's built-in skills or OneDrive save paths, so they read correctly there too, but the sibling repository awesome-copilot-cowork-skills is where the Cowork-native versions live and are maintained.
+The file shape is the same folder-plus-`SKILL.md`. This repo rewrote these skills for agents, so they no longer assume Cowork's built-in skills or OneDrive save paths; they still read correctly there too. The sibling repository awesome-copilot-cowork-skills holds and maintains the Cowork-native versions.

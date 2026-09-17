@@ -3,5 +3,6 @@ source/
 batches.json
 NEW-SKILLS.json
 __pycache__/
-catalog/meta-pass-list.json
-catalog/meta-pass-batches.json
+tools/meta-pass-list.json
+tools/meta-pass-batches.json
+dist/all-skills-zips.zip

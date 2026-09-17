@@ -11,7 +11,7 @@ templated from the description), the Agent Builder upload steps, and the zip pat
 import json, pathlib, re, yaml
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SKILLS = ROOT / "skills"; PACKS = ROOT / "packs"
+SKILLS = ROOT / "skills"; PACKS = ROOT / "packs"; META = ROOT / "tools" / "meta"; RAW = "https://github.com/kesslernity/awesome-copilot-agent-skills/raw/main"
 FM = re.compile(r"^---\n(.*?)\n---\n(.*)$", re.S)
 
 def section(body, heading):
@@ -39,7 +39,7 @@ def skill_readme(d, meta, cat):
     knowledge = "\n".join(f"- {k}" for k in ks) if isinstance(ks, list) else (ks or section(body, "Inputs"))
     sibs = meta.get("sibling_skills") or []
     sibs = [str(x) if not isinstance(x, dict) else f"{x.get('name', '')}: {x.get('when', '')}" for x in sibs]
-    lines = [f"# {title}", "", desc, "", f"Category: `{cat}` · Skill name: `{name}` · Upload package: `dist/zips/{name}.zip`", "",
+    lines = [f"# {title}", "", desc, "", f"**[Download the upload package]({RAW}/dist/zips/{name}.zip)** (one zip, ready for Agent Builder) · Category: `{cat}` · Skill name: `{name}`", "",
              "## What to attach or make available", "", knowledge, "", "## What you get", "", section(body, "Output") or "See the Output section of SKILL.md.", ""]
     if examples:
         lines += ["## Use cases", "", "| Scenario | What you say |", "|---|---|"] + [f"| {u.get('scenario', '')} | {u.get('prompt', '')} |" for u in meta.get("use_cases", [])] + ["", "## Try it (example prompts)", ""] + [f"- {e}" for e in examples] + [""]
@@ -48,7 +48,7 @@ def skill_readme(d, meta, cat):
         lines += ["## Related skills", ""] + [f"- {x}" for x in sibs] + [""]
     lines += ["## Add it to an agent (Agent Builder)", "",
               "1. Copilot chat, **Agents & Skills**, **New agent** (or open an existing agent). Frontier enrolment and a Microsoft 365 Copilot licence are required; custom skills are in preview.",
-              f"2. **Configure**, expand **Skills**, **Add**, upload `dist/zips/{name}.zip` (the whole zip, never `SKILL.md` alone). Up to eight skills per agent.",
+              f"2. **Configure**, expand **Skills**, **Add**, upload the zip you downloaded above (the whole zip, never `SKILL.md` alone). Up to eight skills per agent.",
               "3. **Knowledge**: point the agent at a SharePoint library or OneDrive folder holding the documents listed above. Do not upload knowledge files while skills are attached (not supported yet).",
               "4. **Preview**: try one of the example prompts. The description is the trigger, so use its words.", "",
               "## Run it standalone: paste this into the agent's Instructions", "", "```", instr, "```", "",
@@ -58,46 +58,52 @@ def skill_readme(d, meta, cat):
     for r in refs:
         lines.append(f"- `{r.relative_to(d).as_posix()}`: companion file referenced from the skill.")
     lines += ["", "Licence CC BY-SA 4.0. The agent prepares; you decide."]
-    out = ROOT / "docs" / "skills" / cat / f"{name}.md"; out.parent.mkdir(parents=True, exist_ok=True); out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (d / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")   # GitHub renders it when the folder is opened; the zip builder never includes it
     return {"category": cat, "name": name, "title": title, "desc": desc}
 
 def main():
     rows = []
     for f in sorted(SKILLS.rglob("SKILL.md")):
         d = f.parent; cat = d.parent.name
-        mp = ROOT / "catalog" / "meta" / f"{d.name}.json"; meta = json.loads(mp.read_text()) if mp.exists() else {}
+        mp = META / f"{d.name}.json"; meta = json.loads(mp.read_text()) if mp.exists() else {}
         rows.append(skill_readme(d, meta, cat))
     cats = sorted({r["category"] for r in rows})
     # directory
     dir_lines = []
     for c in cats:
         dir_lines.append(f"\n### {c.replace('-', ' ').title()}\n")
-        dir_lines.append("| Skill | What it does |"); dir_lines.append("|---|---|")
+        dir_lines.append("| Skill | What it does | Download |"); dir_lines.append("|---|---|---|")
         for r in [r for r in rows if r["category"] == c]:
             short = r["desc"].split(". ")[0].rstrip(".") + "."
-            dir_lines.append(f"| [`{r['name']}`](skills/{c}/{r['name']}/) | {short} [guide](docs/skills/{c}/{r['name']}.md), [zip](dist/zips/{r['name']}.zip) |")
+            dir_lines.append(f"| [{r['title']}](skills/{c}/{r['name']}/) | {short} | [zip]({RAW}/dist/zips/{r['name']}.zip) |")
     packs = []
     for p in sorted(PACKS.iterdir()):
         if p.is_dir() and (p / "skills.txt").exists():
             n = len([l for l in (p / "skills.txt").read_text().splitlines() if l.strip()])
             first = (p / "README.md").read_text().splitlines()[0].lstrip("# ").replace("Pack: ", "") if (p / "README.md").exists() else p.name
-            packs.append(f"| [`{p.name}`](packs/{p.name}/) | {first} | {n} |")
-    packs_table = "| Pack | Job | Skills |\n|---|---|---|\n" + "\n".join(packs) if packs else "_Packs are being assembled._"
+            packs.append(f"| [{first}](packs/{p.name}/) | {n} | [bundle]({RAW}/dist/packs/{p.name}.zip) |")
+    packs_table = "| Pack | Skills | Download |\n|---|---|---|\n" + "\n".join(packs) if packs else "_Packs are being assembled._"
     readme = ROOT / "README.md"; t = readme.read_text(encoding="utf-8")
-    tpl = ROOT / "README.template.md"
-    if not tpl.exists():
-        tpl.write_text(t, encoding="utf-8")
-    t = tpl.read_text(encoding="utf-8")
-    t = t.replace("{{N_SKILLS}}", str(len(rows))).replace("{{N_CATEGORIES}}", str(len(cats))).replace("{{SKILL_DIRECTORY}}", "\n".join(dir_lines).strip()).replace("{{PACKS_TABLE}}", packs_table)
+    def between(text, key, body):
+        a, b = f"<!-- {key}:start -->", f"<!-- {key}:end -->"
+        i, j = text.index(a) + len(a), text.index(b)
+        return text[:i] + "\n" + body.strip() + "\n" + text[j:]
+    t = between(t, "directory", "\n".join(dir_lines)); t = between(t, "packs", packs_table)
+    t = re.sub(r"\*\*\d+ custom skills", f"**{len(rows)} custom skills", t); t = re.sub(r"across \d+ disciplines", f"across {len(cats)} disciplines", t); t = re.sub(r"badge/skills-\d+-blue", f"badge/skills-{len(rows)}-blue", t)
     readme.write_text(t, encoding="utf-8")
-    # machine-readable catalogue, llms.txt and a Claude Code / atk-import friendly marketplace manifest
-    cat = [{"name": r["name"], "category": r["category"], "title": r["title"], "description": r["desc"], "path": f"skills/{r['category']}/{r['name']}", "zip": f"dist/zips/{r['name']}.zip", "guide": f"docs/skills/{r['category']}/{r['name']}.md", "license": "CC-BY-SA-4.0"} for r in rows]
-    (ROOT / "catalog.json").write_text(json.dumps({"repository": "kesslernity/awesome-copilot-agent-skills", "format": "Agent Skills (SKILL.md, name + description front matter)", "runtime": "Microsoft 365 Copilot declarative agents (preview); the same folders read in Copilot Cowork", "skills": cat}, indent=1), encoding="utf-8")
-    (ROOT / "llms.txt").write_text("# Awesome Copilot Agent Skills\n\n> Custom skills for Microsoft 365 Copilot declarative agents (preview). Each skill is a folder with SKILL.md (name, description, Markdown instructions) and optional references. Drafts for human review only.\n\n" + "\n".join(f"- [{r['name']}](skills/{r['category']}/{r['name']}/SKILL.md): {r['desc'].split('. ')[0]}." for r in rows) + "\n", encoding="utf-8")
-    plugin_dir = ROOT / ".claude-plugin"; plugin_dir.mkdir(exist_ok=True)
-    (plugin_dir / "plugin.json").write_text(json.dumps({"name": "copilot-agent-skills", "description": "Custom skills for Microsoft 365 Copilot declarative agents, readable in Cowork and Claude Code", "version": "0.1.0", "author": {"name": "Kesslernity", "url": "https://www.kesslernity.com"}, "license": "CC-BY-SA-4.0", "keywords": ["microsoft-365-copilot", "agent-skills", "declarative-agents", "cowork"]}, indent=1), encoding="utf-8")
-    (plugin_dir / "marketplace.json").write_text(json.dumps({"$schema": "https://json.schemastore.org/claude-code-marketplace.json", "name": "kesslernity-copilot-agent-skills", "owner": {"name": "Kesslernity", "url": "https://www.kesslernity.com"}, "description": "Skill bundle: custom skills for Microsoft 365 Copilot declarative agents (preview), by discipline", "plugins": [{"name": "copilot-agent-skills", "source": "./", "description": "All skills in this repository as one bundle", "license": "CC-BY-SA-4.0", "category": "productivity", "strict": False, "skills": [f"./skills/{r['category']}/{r['name']}" for r in rows]}]}, indent=1), encoding="utf-8")
-    print(f"{len(rows)} skill guides written to docs/skills/; {len(cats)} categories; {len(packs)} packs; README, catalog.json, llms.txt and .claude-plugin written")
+    (ROOT / "tools" / "catalog.json").write_text(json.dumps({"repository": "kesslernity/awesome-copilot-agent-skills", "skills": [{"name": r["name"], "category": r["category"], "title": r["title"], "description": r["desc"], "path": f"skills/{r['category']}/{r['name']}", "zip": f"dist/zips/{r['name']}.zip"} for r in rows]}, indent=1), encoding="utf-8")
+    # pack bundles: the pack's zips plus its three text files, one download per pack
+    import zipfile
+    (ROOT / "dist" / "packs").mkdir(parents=True, exist_ok=True)
+    for p in sorted(PACKS.iterdir()):
+        if not (p.is_dir() and (p / "skills.txt").exists()): continue
+        with zipfile.ZipFile(ROOT / "dist" / "packs" / f"{p.name}.zip", "w", zipfile.ZIP_DEFLATED) as z:
+            for f in ("agent-instructions.md", "conversation-starters.md", "README.md", "skills.txt"):
+                if (p / f).exists(): z.write(p / f, f)
+            for sname in [l.strip() for l in (p / "skills.txt").read_text().splitlines() if l.strip()]:
+                zp = ROOT / "dist" / "zips" / f"{sname}.zip"
+                if zp.exists(): z.write(zp, f"skills/{sname}.zip")
+    print(f"{len(rows)} skill READMEs written inside their folders; {len(cats)} categories; {len(packs)} packs; README filled, tools/catalog.json and dist/packs/*.zip written")
 
 if __name__ == "__main__":
     main()
