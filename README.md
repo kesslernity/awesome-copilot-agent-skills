@@ -1,5 +1,7 @@
 # Awesome Copilot Agent Skills
 
+**What broke, dated.** On launch day, 17 September 2026, GitHub dropped 738 placeholder tokens across 128 skill files and 15 pack pages, so lines read "as of ." and four descriptions went blank. I fixed it the same day and rebuilt the pages and zips. Every skill here is written to prepare a draft, not to approve.
+
 > **137 custom skills for Microsoft 365 Copilot agents, across 29 disciplines. Pick a skill, download its zip, upload it in Copilot's own Agent Builder screen. Nothing to install, no code.**
 
 [![Licence: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
@@ -383,3 +385,7 @@ Click a skill for its page. The zip link downloads the upload package.
 ## Sibling repositories
 
 [Cowork skills](https://github.com/kesslernity/awesome-copilot-cowork-skills) (the same skill idea as a OneDrive folder drop), [Copilot Chat agents](https://github.com/kesslernity/awesome-copilot-chat-agents), [Copilot Studio agents](https://github.com/kesslernity/awesome-copilot-studio-agents), [Copilot prompts](https://github.com/kesslernity/awesome-microsoft-copilot-prompts).
+
+---
+
+Checked against Microsoft's own pages before publication. Since August 2026, three rival labs' models try to break every listing before I decide what ships. Misses, dated, with fixes: [kesslernity.com/what-broke](https://www.kesslernity.com/what-broke?utm_source=github&utm_medium=readme&utm_campaign=fail_line&utm_content=awesome-copilot-agent-skills)
