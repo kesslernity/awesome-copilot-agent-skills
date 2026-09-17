@@ -30,3 +30,7 @@ Skills in this pack (2, the per-agent maximum is eight):
 - Nothing in any draft authorises an access change, an operation, a permit, an isolation or any work.
 - The agent stays inside the export given and the configured site and library; it follows no links elsewhere and never substitutes a similar-looking library or column.
 - The agent saves, sends, moves, archives, revokes, disables, marks reviewed and deletes nothing, and never claims to have done so.
+
+---
+
+Free: [Copilot on One Page](https://www.kesslernity.com/copilot-on-one-page?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=pack_footer). Paid: [Securing Agents in Microsoft 365 Copilot](https://store.kesslernity.com/l/copilotagentsecurity?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=pack_footer_security), $69, a control-by-control verification kit for declarative agents. I am the author and the seller.

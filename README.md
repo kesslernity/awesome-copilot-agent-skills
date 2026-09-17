@@ -357,10 +357,29 @@ Click a skill for its page. The zip link downloads the upload package.
 - [Setup guide](docs/SETUP-GUIDE.md): the same three steps with screenshots-level detail, a troubleshooting table, and a section for admins and developers (limits, the Agents Toolkit, governance).
 - [Contributing](CONTRIBUTING.md): how to add a skill.
 
+## From the same author
+
+Free, no email needed:
+
+- [Copilot on One Page](https://www.kesslernity.com/copilot-on-one-page?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=free_onepage): a one-page sheet on how to phrase a request to Copilot.
+- [Copilot field guides](https://www.kesslernity.com/guides?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=free_guides): open guides on rollout, governance and cost.
+- [AI at Work](https://newsletter.kesslernity.com/?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=free_newsletter): what changed in Copilot, every other Tuesday.
+- [Copilot Agent Pack, free sample](https://store.kesslernity.com/l/copilot-agent-pack-sample?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=free_agent_sample): one finished Copilot agent to compare with the skills here.
+
+Paid. I am the author and the seller; these are commercial products with their own terms, separate from this repository's licence:
+
+- [Agent Instruction Block Design Guide](https://store.kesslernity.com/l/eyeauo?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_design_guide), $19: twelve patterns for an agent's Instructions field.
+- [Copilot Agent Pack, Vol. 1](https://store.kesslernity.com/l/copilot-agent-pack-vol-1?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_agent_pack), $49: finished agents with their instructions, tests and rollout notes.
+- [Securing Agents in Microsoft 365 Copilot](https://store.kesslernity.com/l/copilotagentsecurity?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_agent_security), $69, or the [team edition](https://store.kesslernity.com/l/copilotagentsecurityteam?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_agent_security_team), $97: a control-by-control verification kit for declarative agents.
+- [Copilot Hardening Baseline](https://store.kesslernity.com/l/copilot-hardening-baseline?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_baseline), $199: 176 tenant settings checks, each mapped to MITRE ATLAS (collection 2026.08) and the CIS Microsoft 365 Foundations Benchmark v7.0.0. Mapped to, not certified by.
+- [M365 Copilot Deployment Kit](https://www.kesslernity.com/kit?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=paid_kit), $97: the rollout kit for the deployment lead.
+
+Prices as listed on 17 September 2026; the store page is authoritative.
+
 ## Licence
 
 [CC BY-SA 4.0](LICENSE). Use, adapt and share, with attribution, under the same licence. These are demonstration and educational material: test every skill in your own environment and keep a person between its output and any decision.
 
-## More from Kesslernity
+## Sibling repositories
 
-Optional reading, not needed to use anything here: [Copilot on One Page](https://www.kesslernity.com/copilot-on-one-page?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=footer), a free one-page sheet on phrasing prompts, and the [free Copilot field guides](https://www.kesslernity.com/guides?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=footer). Sibling repositories: [Cowork skills](https://github.com/kesslernity/awesome-copilot-cowork-skills), [Copilot Chat agents](https://github.com/kesslernity/awesome-copilot-chat-agents), [Copilot Studio agents](https://github.com/kesslernity/awesome-copilot-studio-agents), [Copilot prompts](https://github.com/kesslernity/awesome-microsoft-copilot-prompts).
+[Cowork skills](https://github.com/kesslernity/awesome-copilot-cowork-skills) (the same skill idea as a OneDrive folder drop), [Copilot Chat agents](https://github.com/kesslernity/awesome-copilot-chat-agents), [Copilot Studio agents](https://github.com/kesslernity/awesome-copilot-studio-agents), [Copilot prompts](https://github.com/kesslernity/awesome-microsoft-copilot-prompts).

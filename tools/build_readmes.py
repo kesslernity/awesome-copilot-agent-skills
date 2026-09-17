@@ -57,7 +57,7 @@ def skill_readme(d, meta, cat):
     refs = sorted(p for p in d.rglob("*") if p.is_file() and p.name != "SKILL.md")
     for r in refs:
         lines.append(f"- `{r.relative_to(d).as_posix()}`: companion file referenced from the skill.")
-    lines += ["", "Licence CC BY-SA 4.0. The agent prepares; you decide."]
+    lines += ["", "Licence CC BY-SA 4.0. The agent prepares; you decide.", "", f"Free: [Copilot on One Page](https://www.kesslernity.com/copilot-on-one-page?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=skill_footer), a one-page sheet on how to phrase a request to Copilot. Paid: [Agent Instruction Block Design Guide](https://store.kesslernity.com/l/eyeauo?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=skill_footer_guide), $19, twelve patterns for an agent's Instructions field. I am the author and the seller."]
     (d / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")   # GitHub renders it when the folder is opened; the zip builder never includes it
     return {"category": cat, "name": name, "title": title, "desc": desc}
 

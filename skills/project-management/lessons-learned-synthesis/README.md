@@ -79,6 +79,9 @@ Part of a pack? See `packs/` for an orchestrating Instructions file that runs se
 ## Files
 
 - `SKILL.md`: the skill (front matter plus instructions, under 20,000 characters).
+- `README.md`: companion file referenced from the skill.
 - `references/theme-codebook.md`: companion file referenced from the skill.
 
 Licence CC BY-SA 4.0. The agent prepares; you decide.
+
+Free: [Copilot on One Page](https://www.kesslernity.com/copilot-on-one-page?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=skill_footer), a one-page sheet on how to phrase a request to Copilot. Paid: [Agent Instruction Block Design Guide](https://store.kesslernity.com/l/eyeauo?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=skill_footer_guide), $19, twelve patterns for an agent's Instructions field. I am the author and the seller.
