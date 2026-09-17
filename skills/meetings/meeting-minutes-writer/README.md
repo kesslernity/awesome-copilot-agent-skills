@@ -13,7 +13,7 @@ Turns one meeting transcript, recording recap or set of raw notes into concise D
 
 ## What you get
 
-The document minutes-<YYYY-MM-DD>-<meeting-slug>, in this order:
+The document minutes-`<YYYY-MM-DD>`-`<meeting-slug>`, in this order:
 - Header: Title | Date | Start to end | Location or online | Chair | Minute taker | Recording | Distribution | Marking (as given or none) | Status: DRAFT.
 - Attendance: Name | Role or organisation | Status (present, apologies, absent, UNKNOWN) | Note.
 - Agenda and discussion: Item | Agenda item | Summary | Outcome (decided, action raised, open, deferred, information only, not discussed).

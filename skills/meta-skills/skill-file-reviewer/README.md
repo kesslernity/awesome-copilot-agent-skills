@@ -13,7 +13,7 @@ Reviews one SKILL.md for a declarative agent custom skill against the format rul
 
 ## What you get
 
-One complete Markdown document in the chat. Title `DRAFT-skill-review-<skill-name>-<YYYY-MM-DD>-v1`; revisions v2, v3. First line: "DRAFT review of <file> against <rule set>, generated <date>. Findings are apparent states read from the text; whether the skill ships is decided by its owner. The file has not been changed."
+One complete Markdown document in the chat. Title `DRAFT-skill-review-<skill-name>-<YYYY-MM-DD>-v1`; revisions v2, v3. First line: "DRAFT review of `<file>` against `<rule set>`, generated `<date>`. Findings are apparent states read from the text; whether the skill ships is decided by its owner. The file has not been changed."
 
 Sections in order:
 1. File read: File | Folder name | Front matter chars | Body chars | Description chars | Count method | Headings found | References listed | References verified | Rule set applied.

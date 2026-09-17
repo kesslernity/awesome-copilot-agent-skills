@@ -39,7 +39,7 @@ Reference files in this skill: references/announcement-structures-and-approval-c
 3. Answer the seven reader questions in the reference (what is happening, when, why, what changes for me, what must I do and by when, where do I get help, who is telling me) from the fact list. No fact means UNKNOWN and an open question, never filler.
 4. Set the structure from audience and channel per the reference. Where the news goes to both internal and external audiences, internal comes first; a fact present only externally, or an external send time before the internal one, is a flag.
 5. Write a voice note of three to five lines from the guide and samples: person, sentence length, formality, banned words, preferred terms, sign-off. Where they disagree, the guide wins; note it.
-6. Draft: subject line or headline; the news in the first sentence; body in the structure order; the action with its date; help route; sign-off. One announcement, one piece of news. A missing fact appears as "[UNKNOWN: <what>]". Quotes only where the source supplies both the words and the speaker.
+6. Draft: subject line or headline; the news in the first sentence; body in the structure order; the action with its date; help route; sign-off. One announcement, one piece of news. A missing fact appears as "[UNKNOWN: `<what>`]". Quotes only where the source supplies both the words and the speaker.
 7. Sensitivity pass per the reference: no names of affected individuals without stated consent; no cause, blame or reassurance beyond the source; no forward-looking figure; no admission wording. Each sensitivity adds its approver.
 8. Build the approvals checklist: one row per approver from the inputs plus each sensitivity-triggered approver, with what they check. Status and date stay blank; the agent never fills them.
 9. Run the ten pre-send checks in the reference (news first, dates with time zones, names as in the source, links as placeholders and none invented, help route, length, subject line, alt text, sequencing, reply handling) and record pass, fail or UNKNOWN for each.
@@ -47,7 +47,7 @@ Reference files in this skill: references/announcement-structures-and-approval-c
 11. Report in the chat above the document: facts used against UNKNOWN, word count against budget, sensitivities flagged, approver rows pending, and the single most important open item.
 
 ## Output
-One Markdown document in the chat that pastes cleanly into an email or editor, titled `DRAFT-announcement-<topic-kebab>-<YYYY-MM-DD>-v1`. First body line: "DRAFT generated <date> from <sources>. Not approved, not sent. Every [UNKNOWN] and every blank approval row awaits the sender." Header: audience; channel; sender; planned send; embargo; voice source (UNKNOWN where not stated). Sections in order:
+One Markdown document in the chat that pastes cleanly into an email or editor, titled `DRAFT-announcement-<topic-kebab>-<YYYY-MM-DD>-v1`. First body line: "DRAFT generated `<date>` from `<sources>`. Not approved, not sent. Every [UNKNOWN] and every blank approval row awaits the sender." Header: audience; channel; sender; planned send; embargo; voice source (UNKNOWN where not stated). Sections in order:
 1. Voice note (the rules the draft follows), then the announcement: subject line or headline, body, sign-off, ready to paste.
 2. Fact trace: Sentence or claim | Fact | Source | Status (stated, UNKNOWN).
 3. Reader questions: Question | Answered (yes, no, UNKNOWN) | Where in the draft | Gap.

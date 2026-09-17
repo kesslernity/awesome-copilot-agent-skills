@@ -15,7 +15,7 @@ Turns corrective and preventive actions from NCRs, audit reports, action forms, 
 
 One complete Markdown document in the chat that pastes cleanly into a spreadsheet or word processor. Title: `DRAFT-corrective-action-tracker-<scope>-<YYYY-MM-DD>-v1`; revisions are v2, v3, never replacing an earlier one.
 
-First body line: "DRAFT corrective action tracker for <scope>, status date <date>, sources dated <earliest> to <latest>, thresholds <values>, date order <format>. Owners, dates and statuses as stated in the sources; flags are questions, not findings of fault. No action has been closed, verified, reassigned or re-dated by this document."
+First body line: "DRAFT corrective action tracker for `<scope>`, status date `<date>`, sources dated `<earliest>` to `<latest>`, thresholds `<values>`, date order `<format>`. Owners, dates and statuses as stated in the sources; flags are questions, not findings of fault. No action has been closed, verified, reassigned or re-dated by this document."
 
 Sections, in order:
 1. Sources read: Source | Type | Date | Actions extracted.

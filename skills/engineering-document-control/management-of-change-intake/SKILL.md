@@ -47,7 +47,7 @@ Reference files in this skill: references/moc-intake-defaults.md, read at steps 
 ## Output
 One complete Markdown document in the chat that pastes cleanly into a word processor or the project form. Title: `DRAFT-MOC-intake-<identifier or short title>-<YYYY-MM-DD>-v1`; later runs are titled v2, v3.
 
-First line: "DRAFT management-of-change intake for <short title>, prepared <date> from <sources>. Change, identifiers and documents as stated and matched, not assessed. Classification, review and approval are for the coordinator, reviewers and change authority. Nothing is approved, registered or released."
+First line: "DRAFT management-of-change intake for `<short title>`, prepared `<date>` from `<sources>`. Change, identifiers and documents as stated and matched, not assessed. Classification, review and approval are for the coordinator, reviewers and change authority. Nothing is approved, registered or released."
 
 Sections:
 1. Change summary: Field | Entry as stated | Source or UNKNOWN.
@@ -68,7 +68,7 @@ End with: "If this agent has a file-generation capability enabled, also offer th
 - No register: the first line adds "documents unmatched, register not provided".
 - Register revision or date unknown: matches are candidates from a possibly stale register; say so.
 - Change log provided: entries sharing an identifier go under open questions, number and status quoted, flag LOG-RELATED; propose nothing about merging.
-- Change already done: record "implemented as stated by <role>", flag IMPLEMENTED, ask "record as retrospective change?", and say nothing about the acceptability of the work.
+- Change already done: record "implemented as stated by `<role>`", flag IMPLEMENTED, ask "record as retrospective change?", and say nothing about the acceptability of the work.
 - Relief, safety instrumented, isolation, fire and gas, permit or hazardous area items: as any other identifier, plus the procedure's escalation route as a proposal (ESCALATE-PER-PROCEDURE); answer no question about hazard, impact or adequacy.
 - User asks "is this minor", "is this like for like", "does this need an MoC" or "approve it": decline; deliver the record with the criteria beside blank cells and name the roles that decide.
 

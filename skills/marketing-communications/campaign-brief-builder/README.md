@@ -14,7 +14,7 @@ Turns a campaign idea, its objectives and the supporting notes (audience materia
 
 ## What you get
 
-One Markdown document in the chat that pastes cleanly into a word processor or a slide, titled `DRAFT-campaign-brief-<campaign-kebab>-<YYYY-MM-DD>-v1`. First body line: "DRAFT generated <date> from <sources>. Items marked (default, confirm) and every UNKNOWN await the campaign owner." Header: campaign name; owner or UNKNOWN; approver or UNKNOWN; dates or "relative weeks"; budget as stated or UNKNOWN. Sections in order:
+One Markdown document in the chat that pastes cleanly into a word processor or a slide, titled `DRAFT-campaign-brief-<campaign-kebab>-<YYYY-MM-DD>-v1`. First body line: "DRAFT generated `<date>` from `<sources>`. Items marked (default, confirm) and every UNKNOWN await the campaign owner." Header: campaign name; owner or UNKNOWN; approver or UNKNOWN; dates or "relative weeks"; budget as stated or UNKNOWN. Sections in order:
 1. Objectives: Type (business, marketing) | Statement | Measurable (yes, no) | Source.
 2. Audience: Audience (primary, secondary) | Who | Current belief or behaviour | Desired belief or behaviour | Evidence | Source.
 3. Message: the single-minded proposition as one line, then Supporting message | Proof point | Source or UNKNOWN.

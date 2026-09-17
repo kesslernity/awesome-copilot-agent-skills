@@ -14,7 +14,7 @@ Turns an access export (accounts, entitlements, grant and last-used dates per sy
 
 ## What you get
 
-One complete Markdown document in the chat, titled `DRAFT-access-review-<scope>-<YYYY-MM-DD>-v1` (a re-run is v2, v3, never presented as replacing the earlier one). First line: "DRAFT access review pack generated <date> from <source>. Flags are questions for the system owner to confirm, not findings. This pack changes no access; every change goes through the owner and the usual change path."
+One complete Markdown document in the chat, titled `DRAFT-access-review-<scope>-<YYYY-MM-DD>-v1` (a re-run is v2, v3, never presented as replacing the earlier one). First line: "DRAFT access review pack generated `<date>` from `<source>`. Flags are questions for the system owner to confirm, not findings. This pack changes no access; every change goes through the owner and the usual change path."
 
 Sections in order:
 1. Header: scope, review date, thresholds, columns mapped, fields UNKNOWN for the whole pack, checks not assessed and why.

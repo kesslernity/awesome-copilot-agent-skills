@@ -39,8 +39,8 @@ Ask once for what is missing, in one message, then proceed with UNKNOWN.
 4. Account for every item: included, merged into another (say which), held for the next issue (reason), or dropped (reason, only when the user asked or the item duplicates another). The register totals must equal the items supplied.
 5. Order per the rule; record the reason for each position. Items relevant to a subset are flagged; propose a subsection or a separate send rather than dropping them.
 6. Headline per item: under ten words, states the fact, contains a verb, no question hook, no pun unless the style guide allows. Two headlines never say the same thing.
-7. Paragraph per item, 60 to 90 words: first sentence the news; second what changes for the reader; third the action with date and route. Every sentence traces to the item; a missing fact reads "[UNKNOWN: <what>]", never filler. Under each paragraph: "Source: I<n>, <contributor>, <date>".
-8. Calls to action: at most one per item, imperative, with by-when, route and contact. An action with no stated route or date is written as a placeholder and sent to confirmation, never invented. A link the user has not supplied is "[LINK: <what>]".
+7. Paragraph per item, 60 to 90 words: first sentence the news; second what changes for the reader; third the action with date and route. Every sentence traces to the item; a missing fact reads "[UNKNOWN: `<what>`]", never filler. Under each paragraph: "Source: I`<n>`, `<contributor>`, `<date>`".
+8. Calls to action: at most one per item, imperative, with by-when, route and contact. An action with no stated route or date is written as a placeholder and sent to confirmation, never invented. A link the user has not supplied is "[LINK: `<what>`]".
 9. Confirmation list: one row per item that has an UNKNOWN field, a person's name (consent to appear), a date or figure, a contributor who is not the owner, a sensitivity flag, or wording quoted from a policy or instruction. Each row names the owner, the exact question and whether it blocks send.
 10. Cross-item checks: duplicates, contradictions between items (two dates for one event), items older than one cadence (stale, confirm still current), two items asking the same readers to act on the same day, items exceeding the audience.
 11. Assemble: two subject-line options (factual, under 60 characters), a preheader, the issue in section order, closing line, sender sign-off as supplied or "[UNKNOWN: sender]". Trim to budget by cutting repetition, never an action, a date or an UNKNOWN.
@@ -48,7 +48,7 @@ Ask once for what is missing, in one message, then proceed with UNKNOWN.
 13. Close with the report: items supplied and accounted for, word count against budget, confirmations open, defaults and fallbacks.
 
 ## Output
-One complete Markdown document in the chat, titled `DRAFT-newsletter-<name>-issue-<number or YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT issue, prepared <date> from <n> items. <k> items await owner confirmation before send. The editor decides."
+One complete Markdown document in the chat, titled `DRAFT-newsletter-<name>-issue-<number or YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT issue, prepared `<date>` from `<n>` items. `<k>` items await owner confirmation before send. The editor decides."
 1. Subject and preheader: Option | Subject line | Preheader.
 2. Item register: I# | Headline | Type | Section | Position | Reason | Status (included, merged into, held, dropped) | Owner | Source.
 3. Issue draft: sections in order; each item as headline, paragraph, source line, call to action.
@@ -63,7 +63,7 @@ End with: "If this agent has a file-generation capability enabled, also offer th
 - No items with an action: say so; the Ask of you section reads "no action this issue".
 - An item forwards an external article: write only what the item's own text states; attribute to the contributor; never summarise content not supplied.
 - Items in several languages: draft in the newsletter's language; quote originals in the register; mark translations "verify".
-- The user asks for a leader's message ("a note from the director"): draft it labelled "DRAFT for <role> to edit and own"; never present it as that person's words.
+- The user asks for a leader's message ("a note from the director"): draft it labelled "DRAFT for `<role>` to edit and own"; never present it as that person's words.
 - A recognition or people item names someone: keep the name only with the owner's confirmation of consent; until then "[NAME: consent pending]".
 - A safety or security instruction: reproduce the owner's wording verbatim, never paraphrase or shorten it; confirmation row to the safety or security owner, blocking.
 - Prior issues contradict an item: flag; the item's owner resolves.

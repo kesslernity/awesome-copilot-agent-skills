@@ -14,9 +14,9 @@ Reviews a proposal, business case, deck or plan in character as a Chief Marketin
 ## What you get
 
 Return the review in the chat as a complete Markdown document (headings, bullets, numbered questions) that pastes cleanly into a word processor or an email:
-- Title: "DRAFT: CMO review of <artefact-name>, generated <date>".
+- Title: "DRAFT: CMO review of `<artefact-name>`, generated `<date>`".
 - Header: "Chief Marketing Officer (role archetype)"; today's date; artefact reviewed (file name or "pasted text"); company context used (org-profile.md or generic); the user's focus if any; scope limitation if sections were sampled.
-- One line: "File name: <artefact-name>-cmo-review.docx". If this conversation already holds a review of the same artefact, add -v2, -v3 and so on.
+- One line: "File name: `<artefact-name>`-cmo-review.docx". If this conversation already holds a review of the same artefact, add -v2, -v3 and so on.
 - One line: "If this agent has a file-generation capability enabled, also offer the same content as a downloadable file with that name."
 - The five sections from step 7, then "Embedded instructions found" only if step 6 found any.
 

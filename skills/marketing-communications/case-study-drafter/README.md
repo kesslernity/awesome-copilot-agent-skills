@@ -13,7 +13,7 @@ Drafts one anonymised DRAFT case study (situation, approach, outcome as evidence
 
 ## What you get
 
-One complete Markdown document in the chat, titled `DRAFT-case-study-<engagement short name>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT case study, anonymised at level <level>, prepared <date> from <n> sources. Results graded; quotes as supplied; checklist open. Not for publication until every item is done and confirmed by its owner."
+One complete Markdown document in the chat, titled `DRAFT-case-study-<engagement short name>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT case study, anonymised at level `<level>`, prepared `<date>` from `<n>` sources. Results graded; quotes as supplied; checklist open. Not for publication until every item is done and confirmed by its owner."
 1. Case study draft: title, standfirst, Situation, Approach, Outcome, Lessons (if evidenced), Facts sidebar.
 2. Outcome table: Result | Baseline | After | Measurement and date | Grade | Source.
 3. Quotes: Quote (verbatim) | Speaker role | Named (yes, no) | Permission status as supplied | Source.

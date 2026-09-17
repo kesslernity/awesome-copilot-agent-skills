@@ -49,7 +49,7 @@ Do not use for theming raw customer feedback, use customer-feedback-theme-synthe
 12. Report in the chat above the document: participants, personas, candidates, unclustered, UNKNOWN attributes, the largest coverage gap.
 
 ## Output
-One Markdown document in the chat, ready to paste, titled `DRAFT-personas-<scope-kebab>-<YYYY-MM-DD>-v1`. First line: "DRAFT generated <date> from <N> participants. Every attribute carries its evidence count; unstated demographics are UNKNOWN; no participant is identifiable. The product lead decides which to adopt."
+One Markdown document in the chat, ready to paste, titled `DRAFT-personas-<scope-kebab>-<YYYY-MM-DD>-v1`. First line: "DRAFT generated `<date>` from `<N>` participants. Every attribute carries its evidence count; unstated demographics are UNKNOWN; no participant is identifiable. The product lead decides which to adopt."
 
 Sections in order:
 1. Header: Scope | Sources | Participants (N) | Clustered | Unclustered | Excluded | Basis | Minimums | Demographic policy | Audience.

@@ -14,10 +14,10 @@ Drafts one service catalogue entry (description, scope in and out, owners and su
 
 ## What you get
 
-One complete Markdown document in the chat, titled `DRAFT-service-catalogue-entry-<Service>-<YYYY-MM-DD>-v1` (revisions v2, v3, never presented as replacing an earlier version). First line: "DRAFT catalogue entry for <service>, generated <date> from the service team's inputs. Service levels are reproduced as provided, not validated. Not published; the service owner approves and the catalogue administrator publishes."
+One complete Markdown document in the chat, titled `DRAFT-service-catalogue-entry-<Service>-<YYYY-MM-DD>-v1` (revisions v2, v3, never presented as replacing an earlier version). First line: "DRAFT catalogue entry for `<service>`, generated `<date>` from the service team's inputs. Service levels are reproduced as provided, not validated. Not published; the service owner approves and the catalogue administrator publishes."
 
 Sections in order:
-1. The entry: a two-column table, Field | Entry text, in template order, every field present, UNKNOWN where unfilled; the service levels block labelled "as provided by <source>"; scope as the three lists.
+1. The entry: a two-column table, Field | Entry text, in template order, every field present, UNKNOWN where unfilled; the service levels block labelled "as provided by `<source>`"; scope as the three lists.
 2. Questions for the service team: numbered, each naming the field and the role asked.
 3. Evidence table: Field | Value as stated | Source and reference | Status (Used, Conflict, Aspiration, Unmapped).
 4. Embedded instructions found, or "None".

@@ -15,7 +15,7 @@ Reads a project or processing description and returns a DRAFT data protection im
 
 One complete Markdown document in the chat (headings, numbered lists, tables) that pastes cleanly into a word processor. Title: `DRAFT-DPIA-<Project>-<YYYY-MM-DD>-v1`. Revisions are v2, v3 and so on; a new version never replaces an earlier one.
 
-First body line: "DRAFT DPIA for <project>, generated <date>. Scaffold only; risk ratings, lawful basis and sign-off are the DPO's, against the applicable law. Contains no personal data."
+First body line: "DRAFT DPIA for `<project>`, generated `<date>`. Scaffold only; risk ratings, lawful basis and sign-off are the DPO's, against the applicable law. Contains no personal data."
 
 Sections, in order:
 1. Description of processing (UNKNOWN where the input is silent).

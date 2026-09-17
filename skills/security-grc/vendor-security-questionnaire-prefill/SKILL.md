@@ -54,7 +54,7 @@ Do not use for screening a vendor's own questionnaire answers or due diligence p
 ## Output
 One complete Markdown document in the chat that pastes cleanly into a spreadsheet or word processor. Title: `DRAFT-questionnaire-prefill-<Customer>-<YYYY-MM-DD>-v1`; revisions are v2, v3 and so on.
 
-First body line: "DRAFT pre-filled security questionnaire for <customer>, scope <product or service>, generated <date>. Draft answers only; each row needs its named owner's confirmation before release. Nothing has been sent or attached."
+First body line: "DRAFT pre-filled security questionnaire for `<customer>`, scope `<product or service>`, generated `<date>`. Draft answers only; each row needs its named owner's confirmation before release. Nothing has been sent or attached."
 
 Sections, in order:
 1. Questionnaire summary: Requester | Scope | Entity | Region | Format | Question count | Due date.

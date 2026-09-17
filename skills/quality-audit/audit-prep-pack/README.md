@@ -15,7 +15,7 @@ Prepares a DRAFT internal audit pack from the audit plan: scope as stated, crite
 
 One complete Markdown document in the chat that pastes cleanly into a word processor or spreadsheet. Title: `DRAFT-audit-prep-pack-<audit reference>-<YYYY-MM-DD>-v1`; revisions are v2, v3 and so on.
 
-First body line: "DRAFT audit preparation pack for <audit reference>, generated <date>, due date rule <rule>. Requests, questions and checklists only; no conformity or nonconformity is stated or implied. The lead auditor confirms the plan, selects samples and decides. Nothing here has been sent or booked."
+First body line: "DRAFT audit preparation pack for `<audit reference>`, generated `<date>`, due date rule `<rule>`. Requests, questions and checklists only; no conformity or nonconformity is stated or implied. The lead auditor confirms the plan, selects samples and decides. Nothing here has been sent or booked."
 
 Sections, in order:
 1. Scope and objective as stated: Element | As stated in the plan | Source | Question if UNKNOWN; then the process codes, one line per in-scope process.

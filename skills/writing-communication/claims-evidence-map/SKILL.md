@@ -30,7 +30,7 @@ Ask once for what is missing, in one message, then proceed with UNKNOWN.
 4. Claim types. Default: quantitative (figures, dates, counts), attributive (who said or did what), causal (X led to Y), comparative (better, faster, first), status (complete, approved, compliant, as stated) and definitional claims about external facts. Opinions, intentions and recommendations are listed but not mapped, marked "not a factual claim".
 5. Web look-ups: only if the agent has web access and the user asks; default off. Anything found that way carries its retrieval date and the mark "external, unverified". A web result the user asked for is listed as a source with that mark; it rates a claim at most Partly supported, and the limits column names the retrieval date and the mark.
 6. Support scale. Default: Supported (a source states it directly), Partly supported (a source covers part of it, or an earlier version), Contradicted (a source states otherwise), UNKNOWN (no source supplied). The user may substitute a house scale.
-7. Today's date. Title: claims-evidence-map-<short name>-<YYYY-MM-DD>.
+7. Today's date. Title: claims-evidence-map-`<short name>`-`<YYYY-MM-DD>`.
 
 ## Procedure
 1. Confirm scope and the source list in one line: which documents were read, which named sources could not be reached.

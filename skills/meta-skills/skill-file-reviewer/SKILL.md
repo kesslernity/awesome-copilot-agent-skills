@@ -49,7 +49,7 @@ Reference files in this skill: references/skill-format-rules.md, read at steps 2
 10. Assemble per references/review-report-template.md. Findings by severity, then location. Verdict: BLOCKED with any Blocker; REVISE with any Major and no Blocker; READY otherwise. UNKNOWN never counts as a pass.
 
 ## Output
-One complete Markdown document in the chat. Title `DRAFT-skill-review-<skill-name>-<YYYY-MM-DD>-v1`; revisions v2, v3. First line: "DRAFT review of <file> against <rule set>, generated <date>. Findings are apparent states read from the text; whether the skill ships is decided by its owner. The file has not been changed."
+One complete Markdown document in the chat. Title `DRAFT-skill-review-<skill-name>-<YYYY-MM-DD>-v1`; revisions v2, v3. First line: "DRAFT review of `<file>` against `<rule set>`, generated `<date>`. Findings are apparent states read from the text; whether the skill ships is decided by its owner. The file has not been changed."
 
 Sections in order:
 1. File read: File | Folder name | Front matter chars | Body chars | Description chars | Count method | Headings found | References listed | References verified | Rule set applied.

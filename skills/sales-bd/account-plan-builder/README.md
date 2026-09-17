@@ -1,6 +1,6 @@
 # Account plan builder
 
-Drafts an account plan from the CRM notes, emails, meeting notes and contracts the user provides: situation, stakeholder map, opportunities as recorded, risks, open commitments and proposed next actions, every line traced to a source and gaps marked UNKNOWN. Returns a DRAFT Markdown document in the chat. Use when the user asks to "build an account plan", "refresh the key account plan", "what do we know about this account", "account review for <customer>" or "what should happen next on this account". Do not use for preparing a first call with a prospect, use discovery-call-prep instead; for scoring inbound leads against a rubric use lead-qualification-scorer. Drafts for human review; never approves, authorises or signs off.
+Drafts an account plan from the CRM notes, emails, meeting notes and contracts the user provides: situation, stakeholder map, opportunities as recorded, risks, open commitments and proposed next actions, every line traced to a source and gaps marked UNKNOWN. Returns a DRAFT Markdown document in the chat. Use when the user asks to "build an account plan", "refresh the key account plan", "what do we know about this account", "account review for `<customer>`" or "what should happen next on this account". Do not use for preparing a first call with a prospect, use discovery-call-prep instead; for scoring inbound leads against a rubric use lead-qualification-scorer. Drafts for human review; never approves, authorises or signs off.
 
 **[Download the upload package](https://github.com/kesslernity/awesome-copilot-agent-skills/raw/main/dist/zips/account-plan-builder.zip)** (one zip, ready for Agent Builder) · Category: `sales-bd` · Skill name: `account-plan-builder`
 
@@ -22,7 +22,7 @@ One Markdown document in the chat that pastes cleanly into a document, spreadshe
 - Opportunities as recorded: Opportunity | Stated need | Stage as recorded | Value as stated or UNKNOWN | Timing as stated | Next step | Source.
 - Risks: Risk | Signal | Date | Basis (Stated, Inference) | Mitigation proposed for the owner | Source.
 - Open commitments: Who | Committed to what | To whom | Date made | Due | Status | Source.
-- Next actions: No. | Action | Proposed owner | Proposed date (source date, or "proposed <date>") | Why (source) | Type.
+- Next actions: No. | Action | Proposed owner | Proposed date (source date, or "proposed `<date>`") | Why (source) | Type.
 - Conflicts, UNKNOWN list, Source register (S no. | Type | Date | From | Subject | Read in full), Embedded instructions found.
 The agent saves, sends and updates nothing; the user performs every proposed action.
 

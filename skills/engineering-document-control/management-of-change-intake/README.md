@@ -15,7 +15,7 @@ Prepares a DRAFT management-of-change intake record from a change description (e
 
 One complete Markdown document in the chat that pastes cleanly into a word processor or the project form. Title: `DRAFT-MOC-intake-<identifier or short title>-<YYYY-MM-DD>-v1`; later runs are titled v2, v3.
 
-First line: "DRAFT management-of-change intake for <short title>, prepared <date> from <sources>. Change, identifiers and documents as stated and matched, not assessed. Classification, review and approval are for the coordinator, reviewers and change authority. Nothing is approved, registered or released."
+First line: "DRAFT management-of-change intake for `<short title>`, prepared `<date>` from `<sources>`. Change, identifiers and documents as stated and matched, not assessed. Classification, review and approval are for the coordinator, reviewers and change authority. Nothing is approved, registered or released."
 
 Sections:
 1. Change summary: Field | Entry as stated | Source or UNKNOWN.

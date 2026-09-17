@@ -1,6 +1,6 @@
 # Deal risk review
 
-Reviews one deal's notes and timeline (CRM opportunity record, activity log, emails, meeting notes, forecast entries) for risk signals such as a single contact thread, no identified budget owner, slipped or missing dates, silence after a proposal, an undefined decision process or a competitor named late, and returns a DRAFT risk register: each signal with the quoted evidence and its date, a severity on a stated scale, and one proposed next action with an owner role for the user to decide on. Use when the user asks to "review the risks on this deal", "why is this opportunity stalling", "is this deal single-threaded", "deal health check before the forecast call" or "what should we do next on <opportunity>". Do not use for a whole-account plan, use account-plan-builder instead; for scoring early leads against a rubric use lead-qualification-scorer. Drafts for human review; never approves, authorises or signs off.
+Reviews one deal's notes and timeline (CRM opportunity record, activity log, emails, meeting notes, forecast entries) for risk signals such as a single contact thread, no identified budget owner, slipped or missing dates, silence after a proposal, an undefined decision process or a competitor named late, and returns a DRAFT risk register: each signal with the quoted evidence and its date, a severity on a stated scale, and one proposed next action with an owner role for the user to decide on. Use when the user asks to "review the risks on this deal", "why is this opportunity stalling", "is this deal single-threaded", "deal health check before the forecast call" or "what should we do next on `<opportunity>`". Do not use for a whole-account plan, use account-plan-builder instead; for scoring early leads against a rubric use lead-qualification-scorer. Drafts for human review; never approves, authorises or signs off.
 
 **[Download the upload package](https://github.com/kesslernity/awesome-copilot-agent-skills/raw/main/dist/zips/deal-risk-review.zip)** (one zip, ready for Agent Builder) · Category: `sales-bd` · Skill name: `deal-risk-review`
 
@@ -13,7 +13,7 @@ Reviews one deal's notes and timeline (CRM opportunity record, activity log, ema
 
 ## What you get
 
-One complete Markdown document in the chat that pastes cleanly into a deal review note or an email. Title: `DRAFT-deal-risk-review-<Opportunity>-<YYYY-MM-DD>-v1`; revisions v2, v3. First body line: "DRAFT deal risk review for <opportunity>, prepared <date> from <n> sources (<first> to <last>). Signals are as evidenced in the record; grades and next actions are proposals. No stage, forecast or commitment has been changed."
+One complete Markdown document in the chat that pastes cleanly into a deal review note or an email. Title: `DRAFT-deal-risk-review-<Opportunity>-<YYYY-MM-DD>-v1`; revisions v2, v3. First body line: "DRAFT deal risk review for `<opportunity>`, prepared `<date>` from `<n>` sources (`<first>` to `<last>`). Signals are as evidenced in the record; grades and next actions are proposals. No stage, forecast or commitment has been changed."
 
 Sections, in order:
 1. Header: Opportunity | Prospect | Deal owner | Stage as recorded | Close date as recorded | Close date changes (count) | Last inbound contact (date, days elapsed) | Review date | Catalogue and thresholds in use.

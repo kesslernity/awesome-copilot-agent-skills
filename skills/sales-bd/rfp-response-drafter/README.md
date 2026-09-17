@@ -13,7 +13,7 @@ Drafts answers to the questions in a received RFP, RFQ or tender from the organi
 
 ## What you get
 
-One complete Markdown document in the chat that pastes cleanly into a word processor or spreadsheet. Title: `DRAFT-rfp-response-<Issuer>-<Reference>-<YYYY-MM-DD>-v1`; revisions v2, v3. First body line: "DRAFT RFP response pack for <issuer>, reference <ref>, generated <date> from <n> sources. Every row needs its owner's confirmation; every flagged row needs legal or pricing review. Nothing has been submitted."
+One complete Markdown document in the chat that pastes cleanly into a word processor or spreadsheet. Title: `DRAFT-rfp-response-<Issuer>-<Reference>-<YYYY-MM-DD>-v1`; revisions v2, v3. First body line: "DRAFT RFP response pack for `<issuer>`, reference `<ref>`, generated `<date>` from `<n>` sources. Every row needs its owner's confirmation; every flagged row needs legal or pricing review. Nothing has been submitted."
 
 Sections, in order:
 1. Opportunity summary: Issuer | Reference | Scope | Contract type | Submission deadline | Clarification deadline | Format and limits | Question count.

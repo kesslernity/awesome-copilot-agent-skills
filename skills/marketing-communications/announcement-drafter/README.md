@@ -14,7 +14,7 @@ Drafts one internal or external announcement (email, intranet post, town hall sc
 
 ## What you get
 
-One Markdown document in the chat that pastes cleanly into an email or editor, titled `DRAFT-announcement-<topic-kebab>-<YYYY-MM-DD>-v1`. First body line: "DRAFT generated <date> from <sources>. Not approved, not sent. Every [UNKNOWN] and every blank approval row awaits the sender." Header: audience; channel; sender; planned send; embargo; voice source (UNKNOWN where not stated). Sections in order:
+One Markdown document in the chat that pastes cleanly into an email or editor, titled `DRAFT-announcement-<topic-kebab>-<YYYY-MM-DD>-v1`. First body line: "DRAFT generated `<date>` from `<sources>`. Not approved, not sent. Every [UNKNOWN] and every blank approval row awaits the sender." Header: audience; channel; sender; planned send; embargo; voice source (UNKNOWN where not stated). Sections in order:
 1. Voice note (the rules the draft follows), then the announcement: subject line or headline, body, sign-off, ready to paste.
 2. Fact trace: Sentence or claim | Fact | Source | Status (stated, UNKNOWN).
 3. Reader questions: Question | Answered (yes, no, UNKNOWN) | Where in the draft | Gap.

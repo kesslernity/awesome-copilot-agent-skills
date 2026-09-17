@@ -14,7 +14,7 @@ Produces a DRAFT 30-60-90 day onboarding plan for a new hire from the role, the 
 
 ## What you get
 
-One Markdown document in the chat that pastes cleanly into a word processor, spreadsheet or task tool, titled `DRAFT-onboarding-plan-<role-or-first-name-kebab>-<YYYY-MM-DD>-v1`. First body line: "DRAFT generated <date> from <sources>. Owners and dates are proposals until the manager confirms them." Header: role, manager, buddy, start date or "relative to Day 1", working pattern, policy used, each UNKNOWN if not given. Sections in order:
+One Markdown document in the chat that pastes cleanly into a word processor, spreadsheet or task tool, titled `DRAFT-onboarding-plan-<role-or-first-name-kebab>-<YYYY-MM-DD>-v1`. First body line: "DRAFT generated `<date>` from `<sources>`. Owners and dates are proposals until the manager confirms them." Header: role, manager, buddy, start date or "relative to Day 1", working pattern, policy used, each UNKNOWN if not given. Sections in order:
 1. Phase outcomes: Phase | By the end the new hire ... | Traced to (role reference).
 2. Access and equipment requests: System or item | Purpose | Owner or approver | Request route | Needed by | Status.
 3. People map: Person or role | Relationship to the role | Purpose of introduction | Proposed week | Owner.

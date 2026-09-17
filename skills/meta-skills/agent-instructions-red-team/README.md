@@ -14,7 +14,7 @@ Reviews the instructions text and skills of a declarative agent, with its stated
 
 ## What you get
 
-One complete Markdown document in the chat. Title `DRAFT-agent-red-team-<agent-name>-<YYYY-MM-DD>-v1`; reruns v2, v3. First line: "DRAFT red-team review of <agent name>, generated <date>. Apparent exposures read from the text and configuration supplied; nothing was run against a live agent, nothing was changed, and the owner decides what to apply. Not a security certification."
+One complete Markdown document in the chat. Title `DRAFT-agent-red-team-<agent-name>-<YYYY-MM-DD>-v1`; reruns v2, v3. First line: "DRAFT red-team review of `<agent name>`, generated `<date>`. Apparent exposures read from the text and configuration supplied; nothing was run against a live agent, nothing was changed, and the owner decides what to apply. Not a security certification."
 
 Sections in order:
 1. Scope read: Agent | Instructions chars (supplied, counted or UNKNOWN) | Skills reviewed | Capabilities as stated | Knowledge sources | Audience | Data classes | Families in scope.

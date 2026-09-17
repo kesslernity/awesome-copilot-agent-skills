@@ -14,7 +14,7 @@ Builds a DRAFT month-end, quarter-end or year-end close checklist and status tab
 
 ## What you get
 
-One complete Markdown document in the chat, headed by the title, first line "DRAFT close status as of <date time>. Done restates dated evidence quoted in the table; nothing here confirms completion or judges a balance acceptable." Sections in order:
+One complete Markdown document in the chat, headed by the title, first line "DRAFT close status as of `<date time>`. Done restates dated evidence quoted in the table; nothing here confirms completion or judges a balance acceptable." Sections in order:
 - Scope: Period | As-of | Working day convention | Sources read (dates) | Sources not reached.
 - Working day map: WD | Date | Note.
 - Close status table: ID | Task | Area | Owner | Reviewer | Due WD | Due date | Predecessors | Status | Timing | Evidence or note | Source.

@@ -12,7 +12,7 @@ Turns reported data problems (messages, tickets, meeting notes, a spreadsheet of
 
 ## What you get
 
-One complete Markdown document in the chat, pasteable into a spreadsheet, tracker or document, titled `DRAFT-data-quality-issue-log-<log name>-<YYYY-MM-DD>-v1` (revisions v2, v3 with a one-line note of what changed). First line: "DRAFT data quality issue log for <log name>, <n> reports dated <earliest> to <latest>, generated <date>. Symptoms, steps and affected reports as reported; owners are suggestions with a basis; severity, cause, status and fix are blank for the owner. Nothing is assigned, rated, resolved or closed."
+One complete Markdown document in the chat, pasteable into a spreadsheet, tracker or document, titled `DRAFT-data-quality-issue-log-<log name>-<YYYY-MM-DD>-v1` (revisions v2, v3 with a one-line note of what changed). First line: "DRAFT data quality issue log for `<log name>`, `<n>` reports dated `<earliest>` to `<latest>`, generated `<date>`. Symptoms, steps and affected reports as reported; owners are suggestions with a basis; severity, cause, status and fix are blank for the owner. Nothing is assigned, rated, resolved or closed."
 
 Sections in order:
 1. Sources read: Source | Type | Span | Reports extracted | Reached (yes, no).

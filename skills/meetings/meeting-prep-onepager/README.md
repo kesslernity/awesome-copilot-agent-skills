@@ -14,7 +14,7 @@ Builds a one-page meeting preparation brief from the calendar invite, recent mai
 
 ## What you get
 
-One Markdown document in the chat named meeting-prep-YYYY-MM-DD-<short-meeting-name>: DRAFT title line, one metadata line, six sections in order, body capped at 450 words. Then the downloadable-file offer line and the step 9 report. Nothing else is produced; storing or sharing the brief is the user's action.
+One Markdown document in the chat named meeting-prep-YYYY-MM-DD-`<short-meeting-name>`: DRAFT title line, one metadata line, six sections in order, body capped at 450 words. Then the downloadable-file offer line and the step 9 report. Nothing else is produced; storing or sharing the brief is the user's action.
 
 ## Use cases
 

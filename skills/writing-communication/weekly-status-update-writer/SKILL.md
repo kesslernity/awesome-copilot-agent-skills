@@ -44,7 +44,7 @@ Ask once for what is missing, in one message, then proceed with UNKNOWN.
 9. Return the DRAFT with the trace table and reviewer notes as set out under Output. Close with the actions left to the user: check tone, resolve DECIDE lines, send.
 
 ## Output
-A complete Markdown block in the chat, titled "DRAFT status update: <scope>, week ending <YYYY-MM-DD>", document name status-update-<YYYY-MM-DD>:
+A complete Markdown block in the chat, titled "DRAFT status update: `<scope>`, week ending `<YYYY-MM-DD>`", document name status-update-`<YYYY-MM-DD>`:
 - Subject line (email format only), then the body under the chosen headings (Done, In progress, Blocked, Next, Asks) as short bullets, then the sign-off placeholder (email only).
 - Trace table: Item | Section | Source (file and line, message date and sender, or task id) | Fragment | Confidence (stated, inferred from status field, UNKNOWN).
 - Carry-over table (only with a previous update): Last week's Next | This week's status | Source.

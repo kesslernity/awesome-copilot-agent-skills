@@ -13,7 +13,7 @@ Produces a DRAFT product requirements document from the discovery notes, intervi
 
 ## What you get
 
-One Markdown document in the chat, ready to paste, titled `DRAFT-PRD-<product-kebab>-<YYYY-MM-DD>-v1`. First line: "DRAFT generated <date> from <N> sources. Every statement is tagged evidenced, assumed or UNKNOWN. Priorities and scope are the product owner's to set. Not approved."
+One Markdown document in the chat, ready to paste, titled `DRAFT-PRD-<product-kebab>-<YYYY-MM-DD>-v1`. First line: "DRAFT generated `<date>` from `<N>` sources. Every statement is tagged evidenced, assumed or UNKNOWN. Priorities and scope are the product owner's to set. Not approved."
 
 Sections in order:
 1. Header: Product or feature | Scope boundary | Sources (N) | Priority scale | Audience | Reference date.

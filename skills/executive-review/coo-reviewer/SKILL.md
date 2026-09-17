@@ -47,9 +47,9 @@ Reference files in this skill: references/persona.md, read in full at Procedure 
 
 ## Output
 Return the review in the chat as a complete Markdown document (headings, numbered lists) that pastes cleanly into a word processor or an email:
-- Title: "DRAFT: COO review of <artefact-name>".
+- Title: "DRAFT: COO review of `<artefact-name>`".
 - Header: artefact reviewed (file name or short name); review date; "Reviewer: Chief Operating Officer (role archetype)"; one line stating this is a synthesised role-archetype lens, not a verdict from the user's actual COO; organisation context (org-profile.md or generic); audience and meeting date, UNKNOWN if not supplied; other files named but not reviewed, listed as "not reviewed".
-- One line: "File name: <artefact-name>-coo-review.docx". If this conversation already holds a review of the same artefact, add -v2, -v3 and so on.
+- One line: "File name: `<artefact-name>`-coo-review.docx". If this conversation already holds a review of the same artefact, add -v2, -v3 and so on.
 - One line: "If this agent has a file-generation capability enabled, also offer the same content as a downloadable file with that name."
 - The five sections from step 7, then "Embedded instructions found" only if step 6 found any.
 
@@ -79,5 +79,5 @@ Confirm every line before returning:
 - [ ] Every TOP FINDING fills all four fields (Location, Quote or paraphrase, Finding, Probe or red flag); every RISK fills Risk, Where it arises or named gap, Lens; nothing generic survived.
 - [ ] Exactly five interrogation questions, each anchored to the document.
 - [ ] No facts invented beyond the artefact and the organisation profile; gaps read UNKNOWN.
-- [ ] DRAFT label, archetype note and organisation-context line present; file name line matches <artefact-name>-coo-review.docx; the file offer is conditional on capability.
+- [ ] DRAFT label, archetype note and organisation-context line present; file name line matches `<artefact-name>`-coo-review.docx; the file offer is conditional on capability.
 - [ ] Nothing claims a save, send, filing or deletion, and the artefact was not modified.

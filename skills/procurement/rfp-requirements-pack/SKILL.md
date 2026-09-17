@@ -47,7 +47,7 @@ Reference files in this skill: `references/requirement-writing-guide.md`, read b
 11. Report in the chat, above the document: counts of requirements by type and priority, gates, criteria, questions, `[TBC]` items, and the single most important open item.
 
 ## Output
-One Markdown document in the chat that pastes cleanly into a word processor or spreadsheet, titled `DRAFT-rfp-requirements-<Category>-<YYYY-MM-DD>-v1`. First body line: "DRAFT requirements pack for <category>, generated <date> from <need source>. For business owner and procurement review; not an issued document." Header: need source, constraints source, standards used or "none provided", priority scheme, scale, weights given or `[TBC]`. Sections, in order:
+One Markdown document in the chat that pastes cleanly into a word processor or spreadsheet, titled `DRAFT-rfp-requirements-<Category>-<YYYY-MM-DD>-v1`. First body line: "DRAFT requirements pack for `<category>`, generated `<date>` from `<need source>`. For business owner and procurement review; not an issued document." Header: need source, constraints source, standards used or "none provided", priority scheme, scale, weights given or `[TBC]`. Sections, in order:
 
 1. Need trace: ID | Need or constraint as stated | Source | Type (outcome, user, volume, constraint) | Covered by (requirement ID, gate ID, or "Not covered: confirm").
 2. Functional requirements: ID | Requirement | Priority | Traces to | Acceptance evidence | Open question.

@@ -13,7 +13,7 @@ Prepares a change request pack (description and justification, scope, schedule, 
 
 ## What you get
 
-One complete Markdown document in the chat, titled `DRAFT-change-request-<identifier or short title>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT change request pack for <change>, generated <date> from <sources>. Risk, change type and test results are reproduced as stated, not assessed. Not submitted; the engineer submits, the change authority approves."
+One complete Markdown document in the chat, titled `DRAFT-change-request-<identifier or short title>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT change request pack for `<change>`, generated `<date>` from `<sources>`. Risk, change type and test results are reproduced as stated, not assessed. Not submitted; the engineer submits, the change authority approves."
 
 Sections in order:
 1. Change summary: Field | Entry | Source | Status, in template order, every field present, UNKNOWN where unfilled.

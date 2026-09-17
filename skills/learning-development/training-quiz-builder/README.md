@@ -13,7 +13,7 @@ Builds a DRAFT quiz from the training content the user supplies (slide deck, man
 
 ## What you get
 
-One complete Markdown document in the chat, pasteable into a document or import sheet, titled `DRAFT-training-quiz-<module title>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT quiz of <n> questions generated <date> from <sources>. Every answer traces to a quoted passage; pass mark, use and publication are the owner's decisions. Nothing here certifies, authorises or signs off competence."
+One complete Markdown document in the chat, pasteable into a document or import sheet, titled `DRAFT-training-quiz-<module title>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT quiz of `<n>` questions generated `<date>` from `<sources>`. Every answer traces to a quoted passage; pass mark, use and publication are the owner's decisions. Nothing here certifies, authorises or signs off competence."
 
 Sections in order:
 1. Quiz summary: Field | Value (sources, sections, statements, questions by type and difficulty, coverage, conflicts, UNKNOWNs).

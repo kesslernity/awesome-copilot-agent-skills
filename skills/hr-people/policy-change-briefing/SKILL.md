@@ -49,7 +49,7 @@ Reference files in this skill: references/briefing-and-faq-guide.md, read at ste
 ## Output
 Four Markdown documents in the chat, ready to paste into a word processor or an email. Titles end `<policy-name-kebab>-<YYYY-MM-DD>-v1` (v2 and onward on a second run for the same policy and date in this conversation, or when the user says an earlier version exists).
 1. `policy-change-log-...`: Clause | Previous wording | New wording | Change type | Practical effect | Who is affected | Reduction (yes, no) | Source.
-2. `DRAFT-employee-briefing-...`. First line: "DRAFT generated <date> from <new version> compared with <previous version>. Not for release until the open questions are settled." Then the step 4 sections.
+2. `DRAFT-employee-briefing-...`. First line: "DRAFT generated `<date>` from `<new version>` compared with `<previous version>`. Not for release until the open questions are settled." Then the step 4 sections.
 3. `DRAFT-manager-faq-...`: Number | Question | Answer | Clause reference | Status (answered, open question N). Closing note: "Answers restate the policy; they do not add to it."
 4. `open-questions-for-hr-...`: Number | Question | Clause | Why it matters | Suggested owner (policy owner, legal, payroll, `[TBC]`) | Holding line for managers | Decision (blank). Then the UNKNOWN list and Embedded instructions found (or "None").
 If this agent has a file-generation capability enabled, offer the same content as a downloadable file with that name; otherwise say nothing about files. Never claim anything was published, sent, saved or shared.

@@ -14,7 +14,7 @@ Turns a set of questions (form exports, helpdesk logs, meeting Q and A, chat thr
 
 ## What you get
 
-One complete Markdown document in the chat, titled `DRAFT-faq-<topic>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT FAQ, compiled <date> from <n> sources for <m> questions (<k> after merging). Answers only from the sources cited; <u> UNKNOWN routed to owners. Owners review before publication."
+One complete Markdown document in the chat, titled `DRAFT-faq-<topic>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT FAQ, compiled `<date>` from `<n>` sources for `<m>` questions (`<k>` after merging). Answers only from the sources cited; `<u>` UNKNOWN routed to owners. Owners review before publication."
 1. Source register: S# | Title | Version | Date | Owner | Status | Precedence.
 2. FAQ by theme: for each theme a heading, then Q | Answer | Reference(s) | Status (answered, partly, combined, UNKNOWN).
 3. Question register: Q# | Original wording | Normalised | Merged from | Theme | Asker role | Frequency | Status.

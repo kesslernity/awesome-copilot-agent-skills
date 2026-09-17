@@ -14,7 +14,7 @@ Proposes the instrumentation and control content a P&ID adds to an accepted PFD 
 
 ## What you get
 
-One complete Markdown document in the chat, with tables, that pastes cleanly into a spreadsheet or word processor. Title: "Instrumentation and control proposals, <document number> rev <revision>, DRAFT". Start with the job header: project, document number, revision, status, mode analysis-only, current step, last gate passed (G2, name as typed).
+One complete Markdown document in the chat, with tables, that pastes cleanly into a spreadsheet or word processor. Title: "Instrumentation and control proposals, `<document number>` rev `<revision>`, DRAFT". Start with the job header: project, document number, revision, status, mode analysis-only, current step, last gate passed (G2, name as typed).
 
 Tables, in order:
 - Instruments shown on PFD: Tag as written | On | Function as drawn | Location | In instrument index (yes, no, UNKNOWN).

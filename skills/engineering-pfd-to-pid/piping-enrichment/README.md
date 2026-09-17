@@ -14,10 +14,10 @@ Proposes the piping content a P&ID adds to an accepted PFD process model: line i
 
 ## What you get
 
-One complete Markdown document in the chat, with tables that paste cleanly into a spreadsheet. Title: "Piping enrichment proposals, <document number> rev <revision>, DRAFT". Start with the job header (project, document number, revision, status, mode analysis-only, current step, last gate passed).
+One complete Markdown document in the chat, with tables that paste cleanly into a spreadsheet. Title: "Piping enrichment proposals, `<document number>` rev `<revision>`, DRAFT". Start with the job header (project, document number, revision, status, mode analysis-only, current step, last gate passed).
 
 Tables, in order:
-- Line inventory: Proposed line | From | To | PFD stream or "ancillary, not a PFD stream" | Continuity (same sheet, off-page connector to <reference>, UNKNOWN) | Reason, with the quoted requirement for ancillary lines.
+- Line inventory: Proposed line | From | To | PFD stream or "ancillary, not a PFD stream" | Continuity (same sheet, off-page connector to `<reference>`, UNKNOWN) | Reason, with the quoted requirement for ancillary lines.
 - Line identification proposals: Line | Element | Proposed value or UNKNOWN | Source document and revision | Rule reference as printed in the source.
 - Connections at equipment: Equipment tag | Nozzle or connection | Nozzle in schedule (yes, UNKNOWN) | Items per quoted clause | Source, revision and clause | Status (per standard, confirm) or UNKNOWN.
 - Specification break questions: Line pair | Class A | Class B | Question | Location.

@@ -15,7 +15,7 @@ Reads a risk register together with meeting notes and incident reports and retur
 
 One complete Markdown document in the chat that pastes cleanly into a word processor or spreadsheet. Title: `DRAFT-risk-register-update-<Register>-<YYYY-MM-DD>-v1`; revisions are v2, v3 and so on.
 
-First body line: "DRAFT risk register update for <register>, sources dated <earliest> to <latest>, generated <date>. Proposed edits and candidates only; ratings, additions, closures and acceptance are the owners' decisions. This pack changes nothing in the register."
+First body line: "DRAFT risk register update for `<register>`, sources dated `<earliest>` to `<latest>`, generated `<date>`. Proposed edits and candidates only; ratings, additions, closures and acceptance are the owners' decisions. This pack changes nothing in the register."
 
 Sections, in order:
 1. Sources read: Source | Type | Date | Statements extracted.

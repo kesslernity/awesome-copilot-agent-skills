@@ -1,6 +1,6 @@
 # Proposal skeleton
 
-Builds a DRAFT proposal skeleton from a discovery summary (call notes, discovery brief, CRM record, emails) and the organisation's own proposal template: every template section in order, pre-filled only where the discovery material supports it with the source beside each line, and every section still needing a human input marked HUMAN INPUT with the owner role and the question to answer. Use when the user asks to "start the proposal for <prospect>", "build the proposal skeleton from the discovery notes", "pre-fill our proposal template", "what do we already have for the proposal" or "first cut of the proposal". Do not use for answering a formal RFP, RFQ or tender question set, use rfp-response-drafter instead; for turning a priced estimate into a statement of work use estimate-to-sow. Drafts for human review; never approves, authorises or signs off.
+Builds a DRAFT proposal skeleton from a discovery summary (call notes, discovery brief, CRM record, emails) and the organisation's own proposal template: every template section in order, pre-filled only where the discovery material supports it with the source beside each line, and every section still needing a human input marked HUMAN INPUT with the owner role and the question to answer. Use when the user asks to "start the proposal for `<prospect>`", "build the proposal skeleton from the discovery notes", "pre-fill our proposal template", "what do we already have for the proposal" or "first cut of the proposal". Do not use for answering a formal RFP, RFQ or tender question set, use rfp-response-drafter instead; for turning a priced estimate into a statement of work use estimate-to-sow. Drafts for human review; never approves, authorises or signs off.
 
 **[Download the upload package](https://github.com/kesslernity/awesome-copilot-agent-skills/raw/main/dist/zips/proposal-skeleton.zip)** (one zip, ready for Agent Builder) · Category: `sales-bd` · Skill name: `proposal-skeleton`
 
@@ -13,7 +13,7 @@ Builds a DRAFT proposal skeleton from a discovery summary (call notes, discovery
 
 ## What you get
 
-One complete Markdown document in the chat that pastes cleanly into the house template or a word processor. Title: `DRAFT-proposal-skeleton-<Prospect>-<YYYY-MM-DD>-v1`; revisions v2, v3. First body line: "DRAFT proposal skeleton for <prospect>, generated <date> from <n> discovery sources and <m> approved content items against <template name>. Filled lines cite their source; every other line is a named human input. Nothing has been priced, committed or sent."
+One complete Markdown document in the chat that pastes cleanly into the house template or a word processor. Title: `DRAFT-proposal-skeleton-<Prospect>-<YYYY-MM-DD>-v1`; revisions v2, v3. First body line: "DRAFT proposal skeleton for `<prospect>`, generated `<date>` from `<n>` discovery sources and `<m>` approved content items against `<template name>`. Filled lines cite their source; every other line is a named human input. Nothing has been priced, committed or sent."
 
 Sections, in order:
 1. Header: Prospect | Offering | Template used | Due date as stated | Discovery sources | Approved content items | Sections total | Sections with content | HUMAN INPUT count.

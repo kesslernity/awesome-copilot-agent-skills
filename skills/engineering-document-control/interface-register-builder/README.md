@@ -15,7 +15,7 @@ Builds a DRAFT interface register between disciplines or parties from meeting no
 
 One complete Markdown document in the chat that pastes cleanly into a spreadsheet or word processor. Title: `DRAFT-interface-register-<project or package>-<YYYY-MM-DD>-v1`; later runs are titled v2, v3.
 
-First line: "DRAFT interface register for <project or package>, register date <date>, built from <sources>. Parties, information, dates and status copied as minuted or from the register, not agreed. Nothing is closed, assigned or committed by this document."
+First line: "DRAFT interface register for `<project or package>`, register date `<date>`, built from `<sources>`. Parties, information, dates and status copied as minuted or from the register, not agreed. Nothing is closed, assigned or committed by this document."
 
 Sections:
 1. Source summary: Source | Date | Items read | Candidates found | Parties named.

@@ -13,7 +13,7 @@ Scores inbound leads against the qualification rubric the user supplies (criteri
 
 ## What you get
 
-One complete Markdown document in the chat that pastes cleanly into a spreadsheet, a CRM note or an email. Title: `DRAFT-lead-scores-<Batch>-<YYYY-MM-DD>-v1` (batch defaults to the source channel); revisions v2, v3. First body line: "DRAFT lead qualification scores for <batch>, <n> leads, generated <date> against <rubric name and date>. UNKNOWN is not zero; the sales owner decides every next step. Nothing has been sent, routed or updated in any system."
+One complete Markdown document in the chat that pastes cleanly into a spreadsheet, a CRM note or an email. Title: `DRAFT-lead-scores-<Batch>-<YYYY-MM-DD>-v1` (batch defaults to the source channel); revisions v2, v3. First body line: "DRAFT lead qualification scores for `<batch>`, `<n>` leads, generated `<date>` against `<rubric name and date>`. UNKNOWN is not zero; the sales owner decides every next step. Nothing has been sent, routed or updated in any system."
 
 Sections, in order:
 1. Rubric as applied: Criterion | Question form | Scale and anchors | Weight | Disqualifier (yes, no) | Answerable from lead data (yes, no) | Scored (yes, no).

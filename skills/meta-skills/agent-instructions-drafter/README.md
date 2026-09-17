@@ -13,10 +13,10 @@ Drafts the instructions field of a declarative agent that orchestrates a set of 
 
 ## What you get
 
-One complete Markdown document in the chat; the instructions text sits in one fenced block. Title `DRAFT-agent-instructions-<agent-name>-<YYYY-MM-DD>-v1`; revisions v2, v3. First line: "DRAFT instructions for <agent name>, generated <date>: <N> characters (counted or estimated) against a cap of <cap>. Drafted from the descriptions supplied; the owner decides what is pasted. Nothing has been configured or published."
+One complete Markdown document in the chat; the instructions text sits in one fenced block. Title `DRAFT-agent-instructions-<agent-name>-<YYYY-MM-DD>-v1`; revisions v2, v3. First line: "DRAFT instructions for `<agent name>`, generated `<date>`: `<N>` characters (counted or estimated) against a cap of `<cap>`. Drafted from the descriptions supplied; the owner decides what is pasted. Nothing has been configured or published."
 
 Sections in order:
-1. Instructions text, fenced, then "Character count: <N> of <cap>, counted" or ", estimated, not counted."
+1. Instructions text, fenced, then "Character count: `<N>` of `<cap>`, counted" or ", estimated, not counted."
 2. Skill inventory: Skill | Produces | From | Trigger phrases used | Negative scope | Sequence hint | Source.
 3. Routing table: User says or situation | Skill fired | Phrase matched | Skills not fired and why.
 4. Gates: Gate ID | Position | Shown before the hold | Release words | Authorises (always "nothing").

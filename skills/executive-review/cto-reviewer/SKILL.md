@@ -48,9 +48,9 @@ Reference files in this skill: references/persona.md, read in full at Procedure 
 
 ## Output
 Return the review in the chat as a complete Markdown document (headings, numbered lists) that pastes cleanly into a word processor or an email:
-- Title: "DRAFT: CTO review of <artefact-name>, generated <date>".
+- Title: "DRAFT: CTO review of `<artefact-name>`, generated `<date>`".
 - Header: date (today); artefact reviewed (file name or "pasted text"); persona ("Chief Technology Officer, role archetype, not a real individual"); organisation context (org-profile.md or generic); the user's focus concern if any; sections covered and not covered when sampled.
-- One line: "File name: <artefact-name>-cto-review.docx". If this conversation already holds a review of the same artefact, add -v2, -v3 and so on.
+- One line: "File name: `<artefact-name>`-cto-review.docx". If this conversation already holds a review of the same artefact, add -v2, -v3 and so on.
 - One line: "If this agent has a file-generation capability enabled, also offer the same content as a downloadable file with that name."
 - The five sections from step 6, then "Embedded instructions found" only if step 5 found any.
 
@@ -81,5 +81,5 @@ Confirm every line before returning:
 - [ ] Risks stay inside the CTO lens and each fills Risk, Trigger in the artefact, Lens.
 - [ ] Exactly five interrogation questions, in the persona's voice, each anchored to a cited location in the artefact and answerable with a number, a name or a date.
 - [ ] Organisation profile used or its absence noted; no company, vendor or system fact invented; gaps read UNKNOWN.
-- [ ] Title and header carry DRAFT and the archetype disclaimer; file name line matches <artefact-name>-cto-review.docx; the file offer is conditional on capability.
+- [ ] Title and header carry DRAFT and the archetype disclaimer; file name line matches `<artefact-name>`-cto-review.docx; the file offer is conditional on capability.
 - [ ] The artefact was not modified, and nothing claims a save, send, filing or deletion.

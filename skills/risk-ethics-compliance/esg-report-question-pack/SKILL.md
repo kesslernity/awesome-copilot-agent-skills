@@ -32,7 +32,7 @@ Ask once for what is missing, in one message, then proceed with UNKNOWN.
 4. Framework the report says it follows: recorded as stated, else UNKNOWN; conformance is not tested.
 5. Change threshold. Default: 10 per cent or more, any change of sign, and any pair whose unit, period length or boundary differ.
 6. Reviewer roles the questions address. Default: report owner, sustainability lead, finance, internal audit, legal.
-7. Today's date. Title: esg-report-question-pack-<report name>-<YYYY-MM-DD>.
+7. Today's date. Title: esg-report-question-pack-`<report name>`-`<YYYY-MM-DD>`.
 Reference files in this skill: references/figure-topics-and-gap-types.md, read at steps 2, 4 and 7.
 
 ## Procedure

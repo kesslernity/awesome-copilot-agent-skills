@@ -15,7 +15,7 @@ Checks a master document register extract for gaps and returns a DRAFT question 
 
 One complete Markdown document in the chat that pastes cleanly into a spreadsheet or word processor. Title: `DRAFT-mdr-check-<register>-<YYYY-MM-DD>-v1`; later runs are titled v2, v3, so the user can tell them apart.
 
-First line: "DRAFT register check for <register>, check date <date>, convention and scheme <procedure or inferred>, thresholds <values>, scope <all rows or filter>. Questions for document control, not findings of fault. The register is unchanged."
+First line: "DRAFT register check for `<register>`, check date `<date>`, convention and scheme `<procedure or inferred>`, thresholds `<values>`, scope `<all rows or filter>`. Questions for document control, not findings of fault. The register is unchanged."
 
 Sections:
 1. Extract summary: Rows | Disciplines | Status values found | Revision codes found | Planned date range | Rows with no finding | Rows by test code.

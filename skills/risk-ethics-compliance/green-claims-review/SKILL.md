@@ -32,7 +32,7 @@ Ask once for what is missing, in one message, then proceed with UNKNOWN.
 4. Scope: whole text, named sections, or the claims the user lists. Default: whole text.
 5. Claim families, types and observation types: defaults in the reference file, or a house list.
 6. Markets and channels the text will run in. Default: UNKNOWN, flagged.
-7. Today's date. Title: green-claims-review-<short name>-<YYYY-MM-DD>.
+7. Today's date. Title: green-claims-review-`<short name>`-`<YYYY-MM-DD>`.
 Reference files in this skill: references/claim-families-and-observation-types.md, read at steps 2 and 5.
 
 ## Procedure

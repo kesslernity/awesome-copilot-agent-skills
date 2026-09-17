@@ -13,7 +13,7 @@ Reviews a RAID log (risks, assumptions, issues, dependencies) line by line and r
 
 ## What you get
 
-One complete Markdown document in the chat that pastes cleanly into a spreadsheet or word processor. Title `DRAFT-raid-log-review-<Log>-<YYYY-MM-DD>-v1`; v1 unless the user states the number of the last version, then the next number; the agent stores and overwrites nothing. First line: "DRAFT RAID log review for <log>, review date <date>, thresholds <values>, roster <provided or not>. Proposed updates only; ratings, closures, merges and owner changes are the project manager's decisions. The log has not been changed."
+One complete Markdown document in the chat that pastes cleanly into a spreadsheet or word processor. Title `DRAFT-raid-log-review-<Log>-<YYYY-MM-DD>-v1`; v1 unless the user states the number of the last version, then the next number; the agent stores and overwrites nothing. First line: "DRAFT RAID log review for `<log>`, review date `<date>`, thresholds `<values>`, roster `<provided or not>`. Proposed updates only; ratings, closures, merges and owner changes are the project manager's decisions. The log has not been changed."
 
 Sections, in order:
 1. Log summary, one column per finding code in the reference's order: Type | Rows | Open | Closed or Superseded | Current | Overdue | Stale | Date UNKNOWN | Confirmation due | Ownerless | Owner to confirm | Duplicate candidates | Incomplete | Misfiled | Moved.

@@ -47,7 +47,7 @@ Do not use for profiling values or finding patterns in the data, use dataset-ins
 11. Assemble the Output, then the closing report.
 
 ## Output
-One complete Markdown document in the chat, pasteable into a spreadsheet or document, titled `DRAFT-data-dictionary-<dataset>-<YYYY-MM-DD>-v1` (revisions v2, v3 with a one-line note of what changed). First line: "DRAFT data dictionary for <dataset>, built from <sources>, generated <date>. Meanings are quoted from the sources named; fields with no source definition read UNKNOWN. Nothing here is an approved definition, a master record or a lineage statement; the data owner decides."
+One complete Markdown document in the chat, pasteable into a spreadsheet or document, titled `DRAFT-data-dictionary-<dataset>-<YYYY-MM-DD>-v1` (revisions v2, v3 with a one-line note of what changed). First line: "DRAFT data dictionary for `<dataset>`, built from `<sources>`, generated `<date>`. Meanings are quoted from the sources named; fields with no source definition read UNKNOWN. Nothing here is an approved definition, a master record or a lineage statement; the data owner decides."
 
 Sections in order:
 1. Sources read: Source | Type | Date | Fields or rows covered | Reached (yes, no).

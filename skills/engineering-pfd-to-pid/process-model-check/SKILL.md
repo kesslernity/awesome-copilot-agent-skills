@@ -41,7 +41,7 @@ Do not use for extraction from the drawing, use pfd-intake-and-extraction instea
 12. Assemble the output below and stop at gate G2.
 
 ## Output
-One complete Markdown document in the chat, with tables, that pastes cleanly into a spreadsheet or a word processor. Title: "Process model check, <document number> rev <revision>, DRAFT". Start with the job header: project, document number, revision, status, mode analysis-only, current step, last gate passed (G1, with the name as typed).
+One complete Markdown document in the chat, with tables, that pastes cleanly into a spreadsheet or a word processor. Title: "Process model check, `<document number>` rev `<revision>`, DRAFT". Start with the job header: project, document number, revision, status, mode analysis-only, current step, last gate passed (G1, with the name as typed).
 
 Tables, in order:
 - Process model findings: Item | Check (connectivity, numbering, duty text, phase and service, package scope, boundary, operating case, reconciliation) | Result (presence, absence, agreement, break, conflict, UNKNOWN) | Locations | Sources compared, with revisions.

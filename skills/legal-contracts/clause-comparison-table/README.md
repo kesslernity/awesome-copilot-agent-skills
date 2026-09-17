@@ -16,7 +16,7 @@ Compares one clause (liability, termination, confidentiality or any other) acros
 One complete Markdown document in the chat, pasting cleanly into a spreadsheet, word processor or email. Title and DRAFT line as in step 10, then:
 1. Scope: Label | Document | Type (signed, draft, template, version) | Date as printed | Governing law as stated | Clause locator(s) | Baseline (yes, no).
 2. Verbatim text: Label | Clause reference(s) | Clause text as stated | Defined terms relied on (term, definition, reference) | Status (Read, Verify against source, Not located: verify).
-3. Element comparison: Element | Baseline value | <Label B> value | <Label C> value | ... Differing cells in bold; identical cells read "Same". More than five documents: repeat the table in blocks of four labels plus the baseline column.
+3. Element comparison: Element | Baseline value | `<Label B>` value | `<Label C>` value | ... Differing cells in bold; identical cells read "Same". More than five documents: repeat the table in blocks of four labels plus the baseline column.
 4. Differences: Element | Document | Value (decisive words quoted) | Comparison with baseline (Different, Silent here, Silent in baseline) | Category | Description. One row per non-baseline cell that is not Same, so a row where B differs on threshold and C differs on party gets two entries.
 5. Version change sequence (version mode only): Version | Element | Previous value | New value | Category | Source of change or UNKNOWN.
 6. Questions for counsel: No. | Question | Documents concerned | Element | What the difference changes (factual, one line).

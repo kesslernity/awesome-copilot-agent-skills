@@ -14,7 +14,7 @@ Synthesises exit interview notes or leaver survey responses into a DRAFT themed 
 
 ## What you get
 
-One Markdown document in the chat, ready to paste into a word processor or a spreadsheet, titled `DRAFT-exit-interview-synthesis-<scope-kebab>-<YYYY-MM-DD>-v1` (v2 and onward on a second run for the same scope and date in this conversation, or when the user says an earlier version exists). First line: "DRAFT generated <date> from <N> anonymised records. Counts are of records interviewed, not of all leavers. No individual is identified." Header: scope, N, coverage or UNKNOWN, codebook, minimum group size, audience. Sections, in order:
+One Markdown document in the chat, ready to paste into a word processor or a spreadsheet, titled `DRAFT-exit-interview-synthesis-<scope-kebab>-<YYYY-MM-DD>-v1` (v2 and onward on a second run for the same scope and date in this conversation, or when the user says an earlier version exists). First line: "DRAFT generated `<date>` from `<N>` anonymised records. Counts are of records interviewed, not of all leavers. No individual is identified." Header: scope, N, coverage or UNKNOWN, codebook, minimum group size, audience. Sections, in order:
 1. Summary: at most five lines, each a count.
 2. Themes: Theme | Definition | Records (n) | Share of N | Primary reason (n or UNKNOWN) | Polarity mix | Change vs prior (n or not available).
 3. Scaled items (where present): Item | Scale point | Records (n) | Share of N. Displayed only where every shown cell meets the minimum group size.

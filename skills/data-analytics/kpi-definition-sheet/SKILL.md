@@ -34,7 +34,7 @@ Do not use for the weekly or monthly numbers report, use kpi-weekly-report-write
 
 ## Procedure
 1. Identify the inputs. State each source with type, title, date and the number of KPIs or definitions it holds, name any source not reached, list the parameters. Ask the user to confirm. The typed confirmation releases this hold; it authorises nothing else.
-2. Enumerate KPIs, one row each, in the order and spelling of the list. Never rename, merge or split a KPI; two names that may be one metric stay as two rows, each flagged "possible duplicate of <other>". A KPI the user asks to leave out goes under "Excluded on request".
+2. Enumerate KPIs, one row each, in the order and spelling of the list. Never rename, merge or split a KPI; two names that may be one metric stay as two rows, each flagged "possible duplicate of `<other>`". A KPI the user asks to leave out goes under "Excluded on request".
 3. Find the formula. Per KPI, search the definition sources for a passage or query stating how it is calculated. Quote it verbatim with source, object name and date; components, period and filters only as the quote states them. No passage: Formula reads UNKNOWN. Passages that disagree: all quoted, flagged "conflicting definitions", none chosen.
 4. Record source system, grain and refresh cadence as a source names them, each with reference. A cadence stated for the dashboard but not the KPI goes under Notes as "dashboard cadence, KPI cadence UNKNOWN".
 5. Record unit, direction and target only as quoted; a target, threshold, colour rule or benchmark appears only when a source states it, with reference and date. The sheet never proposes one.
@@ -47,7 +47,7 @@ Do not use for the weekly or monthly numbers report, use kpi-weekly-report-write
 12. Assemble the Output, then the closing report.
 
 ## Output
-One complete Markdown document in the chat, pasteable into a spreadsheet or document, titled `DRAFT-kpi-definition-sheet-<sheet name>-<YYYY-MM-DD>-v1` (revisions v2, v3 with a one-line note of what changed). First line: "DRAFT KPI definition sheet for <sheet name>, built from <sources>, generated <date>. Formulas, owners, cadences and targets are quoted from the sources named; cells with no source read UNKNOWN. No definition here is approved or official; the data owner decides."
+One complete Markdown document in the chat, pasteable into a spreadsheet or document, titled `DRAFT-kpi-definition-sheet-<sheet name>-<YYYY-MM-DD>-v1` (revisions v2, v3 with a one-line note of what changed). First line: "DRAFT KPI definition sheet for `<sheet name>`, built from `<sources>`, generated `<date>`. Formulas, owners, cadences and targets are quoted from the sources named; cells with no source read UNKNOWN. No definition here is approved or official; the data owner decides."
 
 Sections in order:
 1. Sources read: Source | Type | Date | KPIs or definitions covered | Reached (yes, no).

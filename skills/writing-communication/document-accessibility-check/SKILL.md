@@ -30,7 +30,7 @@ Ask once for what is missing, in one message, then proceed with UNKNOWN.
 4. Scope: whole file, named sections or slides, or one rule family only. Default: whole file, all families.
 5. Document language and any second language used. Default: read from the file; UNKNOWN if not stated.
 6. Purpose of each image (decorative, informative, functional, complex chart). Default: inferred from surrounding text and flagged "purpose inferred".
-7. Today's date. Title: accessibility-check-<file name>-<YYYY-MM-DD>.
+7. Today's date. Title: accessibility-check-`<file name>`-`<YYYY-MM-DD>`.
 
 ## Procedure
 1. State in one line the scope, the rule set, and what could be read (structure: yes, partial, flat text only).
@@ -41,7 +41,7 @@ Ask once for what is missing, in one message, then proceed with UNKNOWN.
 6. Link text. Each link reads sensibly on its own ("third-quarter budget summary", not "click here", "here", "read more" or a raw web address); links to one destination share one text; different destinations do not share text; links that open a file state the type where the rule set asks.
 7. Reading order and structure. Check: where object order and object positions are both readable, content order matches position order, otherwise list "reading order versus visual order" under Checks not performed with the slides or pages to test; tables have a header row and avoid merged or nested cells where the rule set forbids them; lists use list structure, not typed symbols; no text exists only inside an image; page or slide numbers present where required; document language declared and passages in another language marked.
 8. Plain language cues, only when the rule set includes them or the user asks: sentence length, abbreviations expanded at first use, runs of capitals, instructions that rely on a sensory cue ("the box on the right").
-9. Number findings F1, F2 in file order, each with location, rule reference (house rule id or "default: <family>"), what was observed (quoted or described), severity, and a fix written so the author can apply it directly.
+9. Number findings F1, F2 in file order, each with location, rule reference (house rule id or "default: `<family>`"), what was observed (quoted or described), severity, and a fix written so the author can apply it directly.
 10. Close with counts by severity and family, the checks that need a tool or a person (contrast measurement, focus order, captions, form labels on a live page) and the author's actions. A typed "yes" accepting the rule set or scope releases that hold only.
 
 ## Output

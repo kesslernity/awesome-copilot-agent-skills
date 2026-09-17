@@ -51,7 +51,7 @@ Reference files in this skill: references/renewal-terms-and-urgency.md, read bef
 10. Assemble under the title and close with the report and the user's actions: save the radar, send each owner their list, diarise deadlines, verify each against the signed contract, record decisions by R-ID.
 
 ## Output
-One complete Markdown document in the chat, headed by the title, first line "DRAFT renewal radar for <scope>, as of <date>, horizon <n> days. Computed from the list as stated; confirm every date against the signed contract before serving notice. Nothing here renews, terminates, notifies or recommends." Sections in order:
+One complete Markdown document in the chat, headed by the title, first line "DRAFT renewal radar for `<scope>`, as of `<date>`, horizon `<n>` days. Computed from the list as stated; confirm every date against the signed contract before serving notice. Nothing here renews, terminates, notifies or recommends." Sections in order:
 - Scope: Source | As-of date | Horizon | Rows read, active, excluded, beyond horizon (next three deadlines) | Date format | Column map | Bands | Lead time | Optional inputs | Blanks per key column.
 - Radar: R-ID | Contract ref | Counterparty | Title | Owner | Renewal type | End date | Notice period | Notice deadline (arithmetic) | Days remaining | Band | Decision needed (options) | Decision-by | Signals | Source row.
 - Owner action lists, one per owner, then Unassigned: R-ID | Contract | Decision question | Decision-by | Notice deadline.

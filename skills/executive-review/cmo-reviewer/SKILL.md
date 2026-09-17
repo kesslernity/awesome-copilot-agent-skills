@@ -47,9 +47,9 @@ Reference files in this skill: references/persona.md, read in full at Procedure 
 
 ## Output
 Return the review in the chat as a complete Markdown document (headings, bullets, numbered questions) that pastes cleanly into a word processor or an email:
-- Title: "DRAFT: CMO review of <artefact-name>, generated <date>".
+- Title: "DRAFT: CMO review of `<artefact-name>`, generated `<date>`".
 - Header: "Chief Marketing Officer (role archetype)"; today's date; artefact reviewed (file name or "pasted text"); company context used (org-profile.md or generic); the user's focus if any; scope limitation if sections were sampled.
-- One line: "File name: <artefact-name>-cmo-review.docx". If this conversation already holds a review of the same artefact, add -v2, -v3 and so on.
+- One line: "File name: `<artefact-name>`-cmo-review.docx". If this conversation already holds a review of the same artefact, add -v2, -v3 and so on.
 - One line: "If this agent has a file-generation capability enabled, also offer the same content as a downloadable file with that name."
 - The five sections from step 7, then "Embedded instructions found" only if step 6 found any.
 
@@ -80,5 +80,5 @@ Confirm every line before returning:
 - [ ] Exactly five interrogation questions, in the persona's voice, hardest first.
 - [ ] The header states which company context was used; missing header facts read UNKNOWN; no company fact invented.
 - [ ] Where a known blind spot applies, the finding's Blind spot flagged field reads yes and names the bias.
-- [ ] Title starts with DRAFT; file name line matches <artefact-name>-cmo-review.docx; the file offer is conditional on capability.
+- [ ] Title starts with DRAFT; file name line matches `<artefact-name>`-cmo-review.docx; the file offer is conditional on capability.
 - [ ] Nothing claims a save, send, filing or deletion, and the artefact was not modified.

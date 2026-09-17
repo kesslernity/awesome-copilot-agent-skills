@@ -49,7 +49,7 @@ Reference files in this skill: references/theme-codebook.md, read at steps 4 to 
 13. Report above the document: N, theme count, three largest themes with counts, follow-ups without an owner, repeats, referrals, top open question.
 
 ## Output
-One Markdown document in the chat, ready to paste into a word processor or spreadsheet, titled `DRAFT-lessons-learned-<scope-kebab>-<YYYY-MM-DD>-v1` (v1 unless the user states the last version number, then the next). First line: "DRAFT generated <date> from <N> sources. Counts are of sources. No individual is identified. Owners are recommendations for the sponsor to confirm." Header: scope, N, official and informal counts, codebook, attribution policy, audience.
+One Markdown document in the chat, ready to paste into a word processor or spreadsheet, titled `DRAFT-lessons-learned-<scope-kebab>-<YYYY-MM-DD>-v1` (v1 unless the user states the last version number, then the next). First line: "DRAFT generated `<date>` from `<N>` sources. Counts are of sources. No individual is identified. Owners are recommendations for the sponsor to confirm." Header: scope, N, official and informal counts, codebook, attribution policy, audience.
 
 Sections, in order:
 1. Summary: at most five lines, each a count.

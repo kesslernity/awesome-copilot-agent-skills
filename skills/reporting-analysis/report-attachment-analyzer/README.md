@@ -15,7 +15,7 @@ Prepares the trend update for a recurring emailed report: identifies report emai
 
 Return in the chat, in this order, as complete Markdown that pastes cleanly into a spreadsheet, a word processor or a text file:
 1. "Rows to append to trends.xlsx, sheet Trends": the header row and only the new rows.
-2. The summary document, title "DRAFT: <Report name> trend summary to <latest period>", then one line "File name: summary-YYYY-MM-DD.docx", then one line "If this agent has a file-generation capability enabled, also offer the same content as a downloadable file with that name."
+2. The summary document, title "DRAFT: `<Report name>` trend summary to `<latest period>`", then one line "File name: summary-YYYY-MM-DD.docx", then one line "If this agent has a file-generation capability enabled, also offer the same content as a downloadable file with that name."
 3. "Rows to append to processed-log.md": header `| Received | Sender | Subject | Attachment | Period | Status | Processed on |` and the new rows. Period lists every period extracted from that message, semicolon-separated. Status is one of: appended, appended-no-dedupe, duplicate-skipped, revised-appended, unreadable, data-gap.
 4. "Actions for you", numbered: append the Trends rows; save the dated summary; replace summary-latest.docx only if you said yes; append the log rows; file the dated attachment copies under attachments/.
 5. On a first run or a config change: the completed config block to save.

@@ -46,7 +46,7 @@ Reference files in this skill: references/question-and-anchor-guide.md, read at 
 10. Report in the chat, above the document: competency count, question count, whether the time plan fits, items not assessed, and the single most important open item.
 
 ## Output
-One Markdown document in the chat that pastes cleanly into a word processor or a spreadsheet, titled `DRAFT-interview-scorecard-<role-title-kebab>-<YYYY-MM-DD>-v1`. First body line: "DRAFT generated <date> from <job description source>. For panel preparation only; not a record of any candidate." Header: job description used; framework or "derived from the job description only"; format; scale. Sections in order:
+One Markdown document in the chat that pastes cleanly into a word processor or a spreadsheet, titled `DRAFT-interview-scorecard-<role-title-kebab>-<YYYY-MM-DD>-v1`. First body line: "DRAFT generated `<date>` from `<job description source>`. For panel preparation only; not a record of any candidate." Header: job description used; framework or "derived from the job description only"; format; scale. Sections in order:
 1. Competency map: Competency | Definition | Type | Job description source | Assessed at (stage, interviewer) | Other method | Weight.
 2. Per competency: Questions, Number | Role (primary, reserve, optional) | Question | Follow-up probes | Look for; Anchors, Level | Label | Observable behaviours.
 3. Blank scoring sheet: Competency | Evidence notes | Rating | Interviewer | Stage.

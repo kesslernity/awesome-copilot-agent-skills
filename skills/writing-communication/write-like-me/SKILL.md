@@ -55,13 +55,13 @@ Reference files in this skill: references/voice-profile-template.md, read in BUI
 4. Check the draft against the Self-check and revise once.
 5. Return the artefact in the chat:
    - Email: the line "DRAFT, for your review before sending.", then subject and body as text the user pastes into a message they open themselves. Never claim it sits in any drafts folder.
-   - Document: a complete Markdown document titled DRAFT-<topic>-YYYY-MM-DD.md with DRAFT on the title line, followed by the downloadable file line.
+   - Document: a complete Markdown document titled DRAFT-`<topic>`-YYYY-MM-DD.md with DRAFT on the title line, followed by the downloadable file line.
 6. Close by reporting what was drafted, that the user sends or saves it, and the profile build date; if over 90 days old, suggest a rebuild.
 
 ## Output
 - BUILD: voice-profile.md, complete Markdown per references/voice-profile-template.md with the metadata block, plus the keep and delete instructions.
 - DRAFT, email: the DRAFT line, then subject and body text for the user to paste and send.
-- DRAFT, document: DRAFT-<topic>-YYYY-MM-DD.md with DRAFT on the title line.
+- DRAFT, document: DRAFT-`<topic>`-YYYY-MM-DD.md with DRAFT on the title line.
 - One closing line offering a downloadable file where the agent has that capability, and a closing report naming the profile build date.
 
 ## Fallbacks and edge cases

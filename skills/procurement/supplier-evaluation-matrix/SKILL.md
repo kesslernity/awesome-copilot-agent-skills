@@ -47,7 +47,7 @@ Reference files in this skill: `references/scoring-basis-guide.md`, read before 
 11. Report in the chat, above the document: counts of suppliers, criteria, cells scored, cells Not scored, gate items not evidenced, calibration flags, and the single most important moderation item.
 
 ## Output
-One Markdown document in the chat that pastes cleanly into a spreadsheet or word processor, titled `DRAFT-supplier-evaluation-matrix-<Category>-<YYYY-MM-DD>-v1`. First body line: "DRAFT provisional scores for <category>, generated <date>. For panel moderation only; not the panel's scores, not a recommendation, not an award." Header: plan source, weight total, scale, missing-answer rule, price rule, responses read with format, clarification answers used. Sections, in order:
+One Markdown document in the chat that pastes cleanly into a spreadsheet or word processor, titled `DRAFT-supplier-evaluation-matrix-<Category>-<YYYY-MM-DD>-v1`. First body line: "DRAFT provisional scores for `<category>`, generated `<date>`. For panel moderation only; not the panel's scores, not a recommendation, not an award." Header: plan source, weight total, scale, missing-answer rule, price rule, responses read with format, clarification answers used. Sections, in order:
 
 1. Criteria used: ID | Criterion | Weight | Scale max | Anchor source | Gate or scored.
 2. Gate check: Gate | Supplier A | Supplier B | and so on; each cell "Evidenced (location)", "Not evidenced" or UNKNOWN.

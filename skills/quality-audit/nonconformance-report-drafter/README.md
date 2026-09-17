@@ -15,7 +15,7 @@ Drafts a nonconformance report from inspection notes, test results and the gover
 
 One complete Markdown document in the chat that pastes cleanly into a word processor or the NCR form. Title: `DRAFT-NCR-<item identifier>-<YYYY-MM-DD>-v1`; revisions are v2, v3, never replacing an earlier one.
 
-First body line: "DRAFT nonconformance report for <item>, generated <date> from <sources>. Observations and quoted requirements only. Classification, disposition and closure are for the quality lead. No hold has been placed and no product has been accepted or rejected by this document."
+First body line: "DRAFT nonconformance report for `<item>`, generated `<date>` from `<sources>`. Observations and quoted requirements only. Classification, disposition and closure are for the quality lead. No hold has been placed and no product has been accepted or rejected by this document."
 
 Sections, in order:
 1. Item identification: Field | Value as stated | Source or UNKNOWN.

@@ -16,7 +16,7 @@ Drafts a document transmittal (header, one line per document with revision and p
 
 One complete Markdown document in the chat that pastes cleanly into a word processor, a spreadsheet or an email. Title: `DRAFT-transmittal-<project>-<recipient>-<YYYY-MM-DD>-v1`; later runs are titled v2, v3, so the user can tell them apart.
 
-First line: "DRAFT transmittal to <recipient>, prepared <date> from <list> and <template>. Number UNKNOWN until document control assigns it. Not issued, not sent, not acknowledged. Purpose of issue and revisions copied as stated, not decided."
+First line: "DRAFT transmittal to `<recipient>`, prepared `<date>` from `<list>` and `<template>`. Number UNKNOWN until document control assigns it. Not issued, not sent, not acknowledged. Purpose of issue and revisions copied as stated, not decided."
 
 Sections:
 1. Header, in template order, every field present: Field | Entry | Source | Status (Used, UNKNOWN, Conflict).

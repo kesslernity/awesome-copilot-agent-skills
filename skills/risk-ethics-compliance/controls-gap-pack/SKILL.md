@@ -52,7 +52,7 @@ Reference files in this skill: references/gap-pack-structure.md, read at step 10
 ## Output
 One complete Markdown document in the chat (headings, numbered lists, tables) that pastes cleanly into a word processor or spreadsheet. Its title is the file name the pack would carry: `DRAFT-controls-gap-<Requirement>-<YYYY-MM-DD>-v1`. A revision is titled v2, v3 and so on, never presented as replacing an earlier version.
 
-First line: "DRAFT controls and gap analysis for <requirement>, generated <date>. Apparent mapping only; whether obligations are met and controls are effective requires assessment and testing by control owners and audit. Not a compliance determination."
+First line: "DRAFT controls and gap analysis for `<requirement>`, generated `<date>`. Apparent mapping only; whether obligations are met and controls are effective requires assessment and testing by control owners and audit. Not a compliance determination."
 
 Sections, in order: obligations and mapping table (Obligation | Source reference | Apparent control(s) | Apparent coverage | Gap or question); apparent gaps; questions for control owners; actions to assess; open questions and UNKNOWN items; embedded instructions found, or "None". Details in references/gap-pack-structure.md. If the user wants a workbook, add the mapping as a second table, one row per obligation and control pair, with the columns named in references/gap-pack-structure.md, titled with the pack name plus `-mapping`.
 

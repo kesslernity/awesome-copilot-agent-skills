@@ -14,7 +14,7 @@ Synthesises training survey responses and manager notes into a DRAFT training ne
 
 ## What you get
 
-One complete Markdown document in the chat, pasteable into a document or sheet, titled `DRAFT-training-needs-<scope kebab>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT training needs synthesis generated <date> from <N> survey records and <M> manager notes (<sources>, <period>). Counts are of records, not the workforce; no individual is identified or rated; needs are signals, not verdicts."
+One complete Markdown document in the chat, pasteable into a document or sheet, titled `DRAFT-training-needs-<scope kebab>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT training needs synthesis generated `<date>` from `<N>` survey records and `<M>` manager notes (`<sources>`, `<period>`). Counts are of records, not the workforce; no individual is identified or rated; needs are signals, not verdicts."
 
 Sections in order:
 1. Summary: Field | Value (survey records N, manager records M, roles covered, roles under-represented, three largest needs, disagreements, gaps). Largest means the highest total of n and m across roles meeting the minimum, ties in codebook order; it orders needs, never roles.

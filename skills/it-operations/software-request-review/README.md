@@ -15,7 +15,7 @@ Reviews one employee software request (tool, purpose, users, data handled, cost,
 
 One complete Markdown document in the chat that pastes cleanly into a ticket, an email or a document. Title: `DRAFT-software-request-review-<tool>-<YYYY-MM-DD>-v1`; later runs v2, v3.
 
-First line: "DRAFT review of the request for <tool> by <role, department>, reviewed <date> against <list, dated> and <policies>. Suggestion for the reviewer, not a decision. Nothing has been approved, procured or installed."
+First line: "DRAFT review of the request for `<tool>` by `<role, department>`, reviewed `<date>` against `<list, dated>` and `<policies>`. Suggestion for the reviewer, not a decision. Nothing has been approved, procured or installed."
 
 Sections:
 1. Request as stated: Field | Value as stated | Source reference.

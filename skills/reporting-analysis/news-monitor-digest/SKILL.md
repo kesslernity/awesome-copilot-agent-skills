@@ -17,7 +17,7 @@ Replace a manual review of a long list of blogs and news sites with one repeatab
 
 ## When to use
 - "Run my news digest" or "do my news sweep".
-- "What happened in <product or industry> news this week? Make me a digest."
+- "What happened in `<product or industry>` news this week? Make me a digest."
 - "Draft me my daily news flash."
 - "Monitor my sources and tell me what matters for my role."
 

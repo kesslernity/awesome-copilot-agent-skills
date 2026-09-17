@@ -35,7 +35,7 @@ Reference files in this skill: references/triage-defaults.md, read at steps 3 to
 
 ## Procedure
 1. Identify the inputs. State each source with span and ticket count, the lists and rules in use, and any source not reached. Ask the user to confirm. The typed confirmation releases this hold; it authorises nothing else.
-2. Normalise. One record per ticket ID; a thread is one ticket with its message count. Duplicates (same customer, same issue, in period) become one pack row with "also received: <IDs>"; the helpdesk records are untouched. No-ask items (auto-replies, thanks, spam) go to "No action needed" with the reason. Nothing is dropped silently.
+2. Normalise. One record per ticket ID; a thread is one ticket with its message count. Duplicates (same customer, same issue, in period) become one pack row with "also received: `<IDs>`"; the helpdesk records are untouched. No-ask items (auto-replies, thanks, spam) go to "No action needed" with the reason. Nothing is dropped silently.
 3. Extract the reference's field list per ticket, each as stated or UNKNOWN, with a source reference (ticket ID and message or line). Quote the ask, error text, stated impact and deadline verbatim; sentiment words are evidence only.
 4. Grade urgency on evidence, never on tone, capitals, seniority or a threat to leave, with the reference's four grades: U1 service stated unusable, or security, data exposure or safety reported; U2 work stated blocked, or a deadline with a stated consequence; U3 workaround, date without consequence, or third or later contact; U4 none of these. "Urgent" without stated impact stays U4, quoted as "urgency asserted, not evidenced". Supplied organisation rules replace these and are named.
 5. Propose a category from the list on the ticket's own words. Two fit: list both, mark "category: choose". None fits: "other" with the words that led there. Never invent one.
@@ -47,7 +47,7 @@ Reference files in this skill: references/triage-defaults.md, read at steps 3 to
 11. Assemble the Output, then the closing report.
 
 ## Output
-One complete Markdown document in the chat, pasteable into a document, spreadsheet or helpdesk, titled `DRAFT-ticket-triage-pack-<period or batch>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT triage of <n> tickets received <period>, generated <date> from <sources>. Urgency graded on stated evidence; owners and next actions are suggestions; replies are drafts. Nothing is assigned, routed, sent, refunded, closed or authorised; the support lead and the handler decide."
+One complete Markdown document in the chat, pasteable into a document, spreadsheet or helpdesk, titled `DRAFT-ticket-triage-pack-<period or batch>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT triage of `<n>` tickets received `<period>`, generated `<date>` from `<sources>`. Urgency graded on stated evidence; owners and next actions are suggestions; replies are drafts. Nothing is assigned, routed, sent, refunded, closed or authorised; the support lead and the handler decide."
 
 Sections in order:
 1. Batch summary: Field | Value (sources, tickets read, merged, no-action, counts per grade and category, drafts, flags, patterns).

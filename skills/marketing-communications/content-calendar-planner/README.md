@@ -14,7 +14,7 @@ Builds a DRAFT content calendar for a stated period from the themes, channels, c
 
 ## What you get
 
-One Markdown document in the chat that pastes cleanly into a spreadsheet, task tool or document, titled `DRAFT-content-calendar-<YYYY-MM-DD>-to-<YYYY-MM-DD>-v1`. First body line: "DRAFT generated <date> from <sources>. Every status is a plan state; nothing is scheduled or published until the owner does it." Header: period; each channel with its rule; themes with target shares; status vocabulary; owners or UNKNOWN. Sections in order:
+One Markdown document in the chat that pastes cleanly into a spreadsheet, task tool or document, titled `DRAFT-content-calendar-<YYYY-MM-DD>-to-<YYYY-MM-DD>-v1`. First body line: "DRAFT generated `<date>` from `<sources>`. Every status is a plan state; nothing is scheduled or published until the owner does it." Header: period; each channel with its rule; themes with target shares; status vocabulary; owners or UNKNOWN. Sections in order:
 1. Date frame, one row per ISO week: ISO week | Date range | Working days | Quiet days | Fixed dates (name and kind).
 2. Calendar, one table per ISO week, empty weeks included: Date | Weekday | Channel | Theme | Format | Working title | Owner | Status | Source | Notes.
 3. Cadence check: Channel | Rule | Budget for period (arithmetic) | Planned | Existing | Open slots | Flags.

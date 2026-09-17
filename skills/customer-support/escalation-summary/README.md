@@ -13,7 +13,7 @@ Turns one long support ticket thread (helpdesk history, email chain, chat transc
 
 ## What you get
 
-One complete Markdown document in the chat, pasteable into a document, ticket note or message, titled `DRAFT-escalation-summary-<TicketID>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT escalation summary for ticket <ID>, prepared <date> from <n> messages (<first> to <last>). Facts as stated with message references; no diagnosis, no root cause, no commitment to the customer. The receiving team decides."
+One complete Markdown document in the chat, pasteable into a document, ticket note or message, titled `DRAFT-escalation-summary-<TicketID>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT escalation summary for ticket `<ID>`, prepared `<date>` from `<n>` messages (`<first>` to `<last>`). Facts as stated with message references; no diagnosis, no root cause, no commitment to the customer. The receiving team decides."
 
 Sections in order, per the reference template:
 1. Header: Ticket | Customer or account | Channel | Opened | Last customer contact | Status as stated | Escalating handler | Proposed receiving team | Urgency evidence (quoted) | Flags.

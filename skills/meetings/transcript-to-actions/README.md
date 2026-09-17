@@ -13,7 +13,7 @@ Turns one meeting transcript or recap into a DRAFT action-items document (decisi
 
 ## What you get
 
-- The action-items document actions-<YYYY-MM-DD>-<meeting-slug>: title and first line carry DRAFT; sections Decisions, Action items (owner, action, due, source quote, task status), Open questions, Handover log. Always produced, complete, in the chat.
+- The action-items document actions-`<YYYY-MM-DD>`-`<meeting-slug>`: title and first line carry DRAFT; sections Decisions, Action items (owner, action, due, source quote, task status), Open questions, Handover log. Always produced, complete, in the chat.
 - A task list table for the chosen destination, with the step 4 columns, one row per action item with a named owner. Produced unless the user chose document only.
 - One follow-up email draft per named owner with items, subject prefixed DRAFT, in the chat. Never sent.
 - A closing report listing what the user still has to do. Nothing is saved, created or sent by the agent.

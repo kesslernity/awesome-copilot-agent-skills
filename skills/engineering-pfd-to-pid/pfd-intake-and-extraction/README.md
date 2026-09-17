@@ -13,7 +13,7 @@ Reads a process flow diagram (image, PDF or native export) with its job header a
 
 ## What you get
 
-One complete Markdown document in the chat, with tables, that pastes cleanly into a spreadsheet or a word processor. Title: "PFD extraction register, <document number> rev <revision>, DRAFT". Start with the job header: project, document number, revision, status, mode analysis-only, current step, last gate passed (none).
+One complete Markdown document in the chat, with tables, that pastes cleanly into a spreadsheet or a word processor. Title: "PFD extraction register, `<document number>` rev `<revision>`, DRAFT". Start with the job header: project, document number, revision, status, mode analysis-only, current step, last gate passed (none).
 
 Tables, in order:
 - Equipment register: Tag as written | Type as drawn | Service or label | Sheet and zone | Printed text (quoted) | Legibility | Source.

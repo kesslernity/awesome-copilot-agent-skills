@@ -13,7 +13,7 @@ Turns plain-language requests (emails, chat messages, form submissions, meeting 
 
 ## What you get
 
-One complete Markdown document in the chat, titled `DRAFT-request-intake-<period or batch>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT intake records and triage for <n> requests received <period>, generated <date> from <sources>. Urgency is graded on evidence stated in each request, not assessed; owners are suggestions. Nothing here is assigned, approved or authorised; the operations lead decides."
+One complete Markdown document in the chat, titled `DRAFT-request-intake-<period or batch>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT intake records and triage for `<n>` requests received `<period>`, generated `<date>` from `<sources>`. Urgency is graded on evidence stated in each request, not assessed; owners are suggestions. Nothing here is assigned, approved or authorised; the operations lead decides."
 
 Sections in order:
 1. Batch summary: Field | Value (sources, items read, requests found, duplicates merged, no-request items, counts per urgency grade and per category, records with missing information, flags raised).

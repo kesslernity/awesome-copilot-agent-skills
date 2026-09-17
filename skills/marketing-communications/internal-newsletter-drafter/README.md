@@ -14,7 +14,7 @@ Drafts one issue of an internal newsletter from the items the user provides (not
 
 ## What you get
 
-One complete Markdown document in the chat, titled `DRAFT-newsletter-<name>-issue-<number or YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT issue, prepared <date> from <n> items. <k> items await owner confirmation before send. The editor decides."
+One complete Markdown document in the chat, titled `DRAFT-newsletter-<name>-issue-<number or YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT issue, prepared `<date>` from `<n>` items. `<k>` items await owner confirmation before send. The editor decides."
 1. Subject and preheader: Option | Subject line | Preheader.
 2. Item register: I# | Headline | Type | Section | Position | Reason | Status (included, merged into, held, dropped) | Owner | Source.
 3. Issue draft: sections in order; each item as headline, paragraph, source line, call to action.

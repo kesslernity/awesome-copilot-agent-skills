@@ -59,7 +59,7 @@ Each artefact carries its title, then the one-line downloadable file offer. Say 
 ## Fallbacks and edge cases
 - No project folder or no tracker files. Say plainly that no tracker was found for `<project>`. Offer two options: (a) the user runs the project-status-tracker skill first, or (b) pasted-summary mode: the user pastes a status summary, the agent parses it into the same five sections, and any section not covered renders "No data provided". The agent creates no folder; the user does.
 - Some files missing. Build anyway; render each missing section as "No data in tracker" rather than omitting it, so snapshots keep one layout.
-- A file exists but cannot be read. Name it, continue with the rest, and mark the affected section "Source file unreadable: <filename>".
+- A file exists but cannot be read. Name it, continue with the rest, and mark the affected section "Source file unreadable: `<filename>`".
 - risks.md carries Likelihood and Impact cells rather than one severity word. Severity is the Impact cell, per references/content-mapping.md; never combine the two cells into a score the tracker did not state.
 - More than 10 risks or 10 decisions. Show the top 10 (risks by severity, decisions by recency) and fill that section's count line, such as "Showing 10 of 14 risks; full list in risks.md" or "Showing 10 of 12 decisions; full list in decisions.md".
 - No status colour anywhere. Propose Amber or Green per references/content-mapping.md and ask. Do not generate until the user confirms.

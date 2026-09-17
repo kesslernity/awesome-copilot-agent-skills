@@ -14,7 +14,7 @@ Builds one DRAFT message house for a product, service, programme or initiative f
 
 ## What you get
 
-One Markdown document in the chat that pastes cleanly into a slide or document, titled `DRAFT-message-house-<subject-kebab>-<YYYY-MM-DD>-v1`. First body line: "DRAFT generated <date> from <sources>. Every UNSOURCED flag and UNKNOWN awaits the messaging owner." Header: subject; audience; alternative; proof standard; freshness limit; sources read (UNKNOWN where not stated). Sections in order:
+One Markdown document in the chat that pastes cleanly into a slide or document, titled `DRAFT-message-house-<subject-kebab>-<YYYY-MM-DD>-v1`. First body line: "DRAFT generated `<date>` from `<sources>`. Every UNSOURCED flag and UNKNOWN awaits the messaging owner." Header: subject; audience; alternative; proof standard; freshness limit; sources read (UNKNOWN where not stated). Sections in order:
 1. House at a glance: umbrella; pillar headlines; proof count by grade per pillar (for example 2A 1B 1D).
 2. Umbrella: Statement | Words | Pillars supporting | Alternates | Flags.
 3. Pillars: Number | Headline | Message | Why this audience cares | Source | Proof by grade | Flag.

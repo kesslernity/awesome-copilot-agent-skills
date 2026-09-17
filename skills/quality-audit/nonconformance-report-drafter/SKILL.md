@@ -48,7 +48,7 @@ Reference files in this skill: references/ncr-structure.md, read at steps 4, 7 a
 ## Output
 One complete Markdown document in the chat that pastes cleanly into a word processor or the NCR form. Title: `DRAFT-NCR-<item identifier>-<YYYY-MM-DD>-v1`; revisions are v2, v3, never replacing an earlier one.
 
-First body line: "DRAFT nonconformance report for <item>, generated <date> from <sources>. Observations and quoted requirements only. Classification, disposition and closure are for the quality lead. No hold has been placed and no product has been accepted or rejected by this document."
+First body line: "DRAFT nonconformance report for `<item>`, generated `<date>` from `<sources>`. Observations and quoted requirements only. Classification, disposition and closure are for the quality lead. No hold has been placed and no product has been accepted or rejected by this document."
 
 Sections, in order:
 1. Item identification: Field | Value as stated | Source or UNKNOWN.
@@ -68,7 +68,7 @@ Closing report: sources read; counts of evidence items, requirements quoted and 
 ## Fallbacks and edge cases
 - Notes without measurements: visual observations only; Departure reads "visual, see evidence"; measurements requested under open questions.
 - Governing document not provided: Requirement UNKNOWN with the document named; the first line adds "requirement unverified".
-- Notes contain a proposed cause: it goes under open questions as "hypothesis stated by <role>".
+- Notes contain a proposed cause: it goes under open questions as "hypothesis stated by `<role>`".
 - Safety-related item as the documents state (pressure boundary, lifting, structural, electrical): add the escalation the procedure requires as a proposal; the report still decides nothing.
 - Conflicting readings or two revisions of the specification: show both, mark Conflict, quote neither until the user confirms which governs.
 - User asks "is this major or minor", "can we use it" or "close it": decline, show the criteria side by side, route to the quality lead.

@@ -13,7 +13,7 @@ Turns an engineer's notes, a ticket history or a chat thread into a draft step-b
 
 ## What you get
 
-One complete Markdown document in the chat, titled `DRAFT-runbook-<system>-<short title>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT runbook for <procedure>, generated <date> from <sources>. Not validated; no step has been executed by the agent. The team validates in non-production and the owner approves before use."
+One complete Markdown document in the chat, titled `DRAFT-runbook-<system>-<short title>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT runbook for `<procedure>`, generated `<date>` from `<sources>`. Not validated; no step has been executed by the agent. The team validates in non-production and the owner approves before use."
 
 Sections in order:
 1. Header: Field | Value (title, system, environments, audience, owner, trigger, duration as stated or UNKNOWN, last validated: never).

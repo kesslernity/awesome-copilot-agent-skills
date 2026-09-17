@@ -40,7 +40,7 @@ Do not use for supplier-facing requirements in a tender, use rfp-requirements-pa
 4. Write the problem statement: who is affected, what they cannot do or what it costs them, and the consequence, each clause with its evidence (n of N). Where sources disagree, write both, marked "owner to reconcile". No market, revenue or volume figure unless a source states it.
 5. List users: each user type the sources name, with its sources and role as stated; reference existing personas by label. Never invent a segment or need.
 6. Set goals: each with its measure and target exactly as stated; a goal without a measure reads "measure UNKNOWN"; a target nobody supplied is never written.
-7. Convert needs and requests into requirements: one behaviour each, "A <user type> can ..." or "The product shall ...", never implementation. Each traces to at least one statement; a gap-filling requirement appears only on request, tagged assumed with its reasoning. Group by capability area; record dependencies.
+7. Convert needs and requests into requirements: one behaviour each, "A `<user type>` can ..." or "The product shall ...", never implementation. Each traces to at least one statement; a gap-filling requirement appears only on request, tagged assumed with its reasoning. Group by capability area; record dependencies.
 8. Write acceptance criteria: at least one per requirement, Given, When, Then or checklist form, observable and testable. Data values only where sources give them; a missing number reads "[UNKNOWN: threshold]". No criterion describes how to build.
 9. List non-goals: what the sources exclude or defer, each with its code; a deferral this agent proposes is tagged "proposed, confirm". Every extracted request ends as a requirement, a non-goal or an open question; none is dropped.
 10. Build the assumptions register: every assumed tag, where used, why needed, what would confirm it, who would know (a role from the sources, else UNKNOWN). Record constraints, dependencies and risks as quoted; risks only where a source raises one, unrated.
@@ -50,7 +50,7 @@ Do not use for supplier-facing requirements in a tender, use rfp-requirements-pa
 14. Report in the chat above the document: sources, requirements by tag, open questions, and the assumption most in need of confirmation.
 
 ## Output
-One Markdown document in the chat, ready to paste, titled `DRAFT-PRD-<product-kebab>-<YYYY-MM-DD>-v1`. First line: "DRAFT generated <date> from <N> sources. Every statement is tagged evidenced, assumed or UNKNOWN. Priorities and scope are the product owner's to set. Not approved."
+One Markdown document in the chat, ready to paste, titled `DRAFT-PRD-<product-kebab>-<YYYY-MM-DD>-v1`. First line: "DRAFT generated `<date>` from `<N>` sources. Every statement is tagged evidenced, assumed or UNKNOWN. Priorities and scope are the product owner's to set. Not approved."
 
 Sections in order:
 1. Header: Product or feature | Scope boundary | Sources (N) | Priority scale | Audience | Reference date.

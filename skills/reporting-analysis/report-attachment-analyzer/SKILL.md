@@ -40,7 +40,7 @@ Reference files in this skill: references/report-config.md, read when no active 
 5. No new messages: say so, name the sender, pattern and window searched, and stop. Offer a regenerated summary from the existing data.
 6. For each new message, oldest first:
    a. Identify the report attachment. Several attachments: apply the configured file name pattern; still ambiguous: ask.
-   b. Audit copy: propose the user keeps attachments/YYYY-MM-DD-<original-filename>, dated by received date. Never claim a copy exists.
+   b. Audit copy: propose the user keeps attachments/YYYY-MM-DD-`<original-filename>`, dated by received date. Never claim a copy exists.
    c. Extract the metrics. xlsx or csv: the configured sheet and metric columns. PDF: the table the config describes. Row rule: take every row whose period value falls inside the window used in step 4 and is not yet in Trends; if the config names a single period, that row only. A row whose period is already in Trends is skipped when its values match the existing row and treated as a resend under step 7 when they differ. Unreadable format: ask the user to paste the relevant table.
    d. Reporting period from the configured period field; with no usable date, the received date, noted in the report.
    e. Metric missing or unreadable: cell blank, data gap recorded. Never estimate or fill a value.
@@ -55,7 +55,7 @@ Reference files in this skill: references/report-config.md, read when no active 
 ## Output
 Return in the chat, in this order, as complete Markdown that pastes cleanly into a spreadsheet, a word processor or a text file:
 1. "Rows to append to trends.xlsx, sheet Trends": the header row and only the new rows.
-2. The summary document, title "DRAFT: <Report name> trend summary to <latest period>", then one line "File name: summary-YYYY-MM-DD.docx", then one line "If this agent has a file-generation capability enabled, also offer the same content as a downloadable file with that name."
+2. The summary document, title "DRAFT: `<Report name>` trend summary to `<latest period>`", then one line "File name: summary-YYYY-MM-DD.docx", then one line "If this agent has a file-generation capability enabled, also offer the same content as a downloadable file with that name."
 3. "Rows to append to processed-log.md": header `| Received | Sender | Subject | Attachment | Period | Status | Processed on |` and the new rows. Period lists every period extracted from that message, semicolon-separated. Status is one of: appended, appended-no-dedupe, duplicate-skipped, revised-appended, unreadable, data-gap.
 4. "Actions for you", numbered: append the Trends rows; save the dated summary; replace summary-latest.docx only if you said yes; append the log rows; file the dated attachment copies under attachments/.
 5. On a first run or a config change: the completed config block to save.

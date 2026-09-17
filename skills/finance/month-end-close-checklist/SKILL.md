@@ -47,7 +47,7 @@ Reference files in this skill: references/close-task-families.md, read at Proced
 10. Assemble under the title and close with the report: sources read with dates, sources not reached, counts by status and timing, open items mapped and unmapped, UNKNOWN fields, and the actions left to the user (save, circulate, update the tracker, chase owners).
 
 ## Output
-One complete Markdown document in the chat, headed by the title, first line "DRAFT close status as of <date time>. Done restates dated evidence quoted in the table; nothing here confirms completion or judges a balance acceptable." Sections in order:
+One complete Markdown document in the chat, headed by the title, first line "DRAFT close status as of `<date time>`. Done restates dated evidence quoted in the table; nothing here confirms completion or judges a balance acceptable." Sections in order:
 - Scope: Period | As-of | Working day convention | Sources read (dates) | Sources not reached.
 - Working day map: WD | Date | Note.
 - Close status table: ID | Task | Area | Owner | Reviewer | Due WD | Due date | Predecessors | Status | Timing | Evidence or note | Source.

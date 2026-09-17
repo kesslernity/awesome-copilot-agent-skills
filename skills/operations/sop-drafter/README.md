@@ -13,7 +13,7 @@ Turns process notes, a walkthrough or interview transcript, a transcript of a me
 
 ## What you get
 
-One complete Markdown document in the chat, titled `DRAFT-SOP-<process short name>-<YYYY-MM-DD>-v0.1` (revisions v0.2, v0.3). First line: "DRAFT standard operating procedure for <process>, generated <date> from <sources>. Not validated, not approved, not issued; every gap reads UNKNOWN. The process owner validates; document control approves and issues."
+One complete Markdown document in the chat, titled `DRAFT-SOP-<process short name>-<YYYY-MM-DD>-v0.1` (revisions v0.2, v0.3). First line: "DRAFT standard operating procedure for `<process>`, generated `<date>` from `<sources>`. Not validated, not approved, not issued; every gap reads UNKNOWN. The process owner validates; document control approves and issues."
 
 Sections in order:
 1. Document control: Field | Value (document number, title, owner, version v0.1, status DRAFT, effective and review dates blank, prepared from, approval pending).

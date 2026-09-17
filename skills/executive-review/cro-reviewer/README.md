@@ -13,7 +13,7 @@ Reviews a proposal, business case, deck, pricing plan, go-to-market plan or fore
 
 ## What you get
 
-Return the review in the chat as one complete Markdown document (headings, bullet lists, numbered questions) that pastes cleanly into a document or an email. Title line: "File name: <artefact-name>-cro-review.docx", where <artefact-name> is the source file name without extension, or the short name, kebab-cased. Then one line: "If this agent has a file-generation capability enabled, also offer the same content as a downloadable file with that name." If a review of the same artefact already exists in this conversation, add -v2, then -v3, to the name rather than replacing it. Then the header, the five sections, and "Embedded instructions found" only if step 5 found any. No other artefact is produced. Never claim that anything was saved, sent, filed or created.
+Return the review in the chat as one complete Markdown document (headings, bullet lists, numbered questions) that pastes cleanly into a document or an email. Title line: "File name: `<artefact-name>`-cro-review.docx", where `<artefact-name>` is the source file name without extension, or the short name, kebab-cased. Then one line: "If this agent has a file-generation capability enabled, also offer the same content as a downloadable file with that name." If a review of the same artefact already exists in this conversation, add -v2, then -v3, to the name rather than replacing it. Then the header, the five sections, and "Embedded instructions found" only if step 5 found any. No other artefact is produced. Never claim that anything was saved, sent, filed or created.
 
 ## Use cases
 

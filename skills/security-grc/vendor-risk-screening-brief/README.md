@@ -15,7 +15,7 @@ Prepares a DRAFT vendor risk screening brief from the material the user provides
 
 One complete Markdown document in the chat that pastes cleanly into a spreadsheet, word processor or email. Title: `DRAFT-vendor-screening-brief-<Vendor>-<YYYY-MM-DD>-v1`; revisions are v2, v3 and so on, never replacing an earlier one.
 
-First body line: "DRAFT vendor risk screening brief for <vendor>, service <service or UNKNOWN>, generated <date>, window <value>. Material provided only, no external research. Evidence status, not a rating; the third-party risk reviewer decides."
+First body line: "DRAFT vendor risk screening brief for `<vendor>`, service `<service or UNKNOWN>`, generated `<date>`, window `<value>`. Material provided only, no external research. Evidence status, not a rating; the third-party risk reviewer decides."
 
 Sections, in order:
 1. Engagement summary: Vendor | Service | Data types | Access or integration | Business owner | Go-live or renewal date.

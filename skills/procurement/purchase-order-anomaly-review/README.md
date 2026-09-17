@@ -13,7 +13,7 @@ Reads a purchase order extract (spreadsheet, CSV or pasted table) and returns a 
 
 ## What you get
 
-One complete Markdown document in the chat, headed by the title, first line "DRAFT anomaly questions for <scope>, period <period>, generated <date>. Questions for the buyer, not findings. Nothing here is a conclusion about any order." Sections in order:
+One complete Markdown document in the chat, headed by the title, first line "DRAFT anomaly questions for `<scope>`, period `<period>`, generated `<date>`. Questions for the buyer, not findings. Nothing here is a conclusion about any order." Sections in order:
 - Scope: Source | Period | Rows in and outside period | Currencies | Column map | Parameters in force | Thresholds supplied | Vendor master supplied.
 - Extract profile: Column | Populated rows | Blank rows | Notes.
 - Pattern summary: Pattern | Parameter used | Observations | Questions.

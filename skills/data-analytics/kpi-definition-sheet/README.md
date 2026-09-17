@@ -13,7 +13,7 @@ Turns a list of KPIs or metrics into a DRAFT definition sheet: one row per KPI w
 
 ## What you get
 
-One complete Markdown document in the chat, pasteable into a spreadsheet or document, titled `DRAFT-kpi-definition-sheet-<sheet name>-<YYYY-MM-DD>-v1` (revisions v2, v3 with a one-line note of what changed). First line: "DRAFT KPI definition sheet for <sheet name>, built from <sources>, generated <date>. Formulas, owners, cadences and targets are quoted from the sources named; cells with no source read UNKNOWN. No definition here is approved or official; the data owner decides."
+One complete Markdown document in the chat, pasteable into a spreadsheet or document, titled `DRAFT-kpi-definition-sheet-<sheet name>-<YYYY-MM-DD>-v1` (revisions v2, v3 with a one-line note of what changed). First line: "DRAFT KPI definition sheet for `<sheet name>`, built from `<sources>`, generated `<date>`. Formulas, owners, cadences and targets are quoted from the sources named; cells with no source read UNKNOWN. No definition here is approved or official; the data owner decides."
 
 Sections in order:
 1. Sources read: Source | Type | Date | KPIs or definitions covered | Reached (yes, no).

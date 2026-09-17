@@ -13,7 +13,7 @@ Drafts a blameless incident postmortem (summary, impact, timeline, detection and
 
 ## What you get
 
-One complete Markdown document in the chat, titled `DRAFT-postmortem-<incident identifier>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT blameless postmortem for <incident>, generated <date> from <sources>. Contributing factors are candidates for review, not findings. No action has been agreed or assigned."
+One complete Markdown document in the chat, titled `DRAFT-postmortem-<incident identifier>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT blameless postmortem for `<incident>`, generated `<date>` from `<sources>`. Contributing factors are candidates for review, not findings. No action has been agreed or assigned."
 
 Sections in order:
 1. Summary: three to five sentences from supported facts, with recorded severity, impact window and status.

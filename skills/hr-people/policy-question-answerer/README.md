@@ -13,7 +13,7 @@ Answers an employee's or manager's HR policy question strictly from the policy d
 
 ## What you get
 
-One Markdown document in the chat, ready to paste into an email, titled `DRAFT-policy-answer-<topic-kebab>-<YYYY-MM-DD>-v1` (v2 when the user says a v1 already exists for the same topic and date). First line: "DRAFT generated <date> from <documents read, with versions>. Restates the policy text; it does not add to it. Confirm with <role> before acting on it." Sections, in order:
+One Markdown document in the chat, ready to paste into an email, titled `DRAFT-policy-answer-<topic-kebab>-<YYYY-MM-DD>-v1` (v2 when the user says a v1 already exists for the same topic and date). First line: "DRAFT generated `<date>` from `<documents read, with versions>`. Restates the policy text; it does not add to it. Confirm with `<role>` before acting on it." Sections, in order:
 1. Question: as asked, and as reframed where step 1 reframed it.
 2. Answer: outcome label (ANSWERED, PARTIAL, UNKNOWN, CONFLICT), then the answer under 250 words, every sentence carrying its clause reference or UNKNOWN.
 3. Clauses relied on: Number | Document and version | Clause reference | Quoted text | Establishes (entitlement, condition, exception, process step, deadline, approval route, definition) | Applies to (as the scope clause states).

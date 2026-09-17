@@ -48,7 +48,7 @@ Reference files in this skill: references/identifier-categories.md, read at step
 ## Output
 One complete Markdown document in the chat. Title: `DRAFT-deidentified-<source>-<YYYY-MM-DD>-v1` (source title or "pasted-text"; conversation date or UNKNOWN); reruns are v2, v3 and so on.
 
-First line: "DRAFT redaction pass on <source>, prepared <date>, scheme <scheme>, release purpose <purpose or UNKNOWN>. Proposals only: every row needs a human decision before any release. Not anonymised, not cleared, not released. The redaction table holds the original values and must not travel with the draft."
+First line: "DRAFT redaction pass on `<source>`, prepared `<date>`, scheme `<scheme>`, release purpose `<purpose or UNKNOWN>`. Proposals only: every row needs a human decision before any release. Not anonymised, not cleared, not released. The redaction table holds the original values and must not travel with the draft."
 
 Sections:
 1. Redacted draft, complete.

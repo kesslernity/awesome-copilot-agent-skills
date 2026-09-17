@@ -13,7 +13,7 @@ Triages a batch of customer support tickets (helpdesk export, shared mailbox, ch
 
 ## What you get
 
-One complete Markdown document in the chat, pasteable into a document, spreadsheet or helpdesk, titled `DRAFT-ticket-triage-pack-<period or batch>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT triage of <n> tickets received <period>, generated <date> from <sources>. Urgency graded on stated evidence; owners and next actions are suggestions; replies are drafts. Nothing is assigned, routed, sent, refunded, closed or authorised; the support lead and the handler decide."
+One complete Markdown document in the chat, pasteable into a document, spreadsheet or helpdesk, titled `DRAFT-ticket-triage-pack-<period or batch>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT triage of `<n>` tickets received `<period>`, generated `<date>` from `<sources>`. Urgency graded on stated evidence; owners and next actions are suggestions; replies are drafts. Nothing is assigned, routed, sent, refunded, closed or authorised; the support lead and the handler decide."
 
 Sections in order:
 1. Batch summary: Field | Value (sources, tickets read, merged, no-action, counts per grade and category, drafts, flags, patterns).

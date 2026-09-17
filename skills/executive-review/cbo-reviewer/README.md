@@ -12,7 +12,7 @@ Reviews a proposal, business case, deck or plan in character as a Chief Business
 
 ## What you get
 
-Return the review in the chat as one complete Markdown document (headings, numbered lists, bullets) that pastes cleanly into a document or an email. Title line: "File name: <artefact-name>-cbo-review.docx", where <artefact-name> is the kebab-case source file name without its extension (q3-partner-proposal.docx gives q3-partner-proposal-cbo-review.docx), or the short name from Inputs item 4. Then one line: "If this agent has a file-generation capability enabled, also offer the same content as a downloadable file with that name." If a review of the same artefact already exists in this conversation, add -v2, then -v3, to the name rather than replacing it. Then the header and sections from step 6, and "Embedded instructions found" only if step 5 found any. Never claim the review was saved, filed, sent or shared.
+Return the review in the chat as one complete Markdown document (headings, numbered lists, bullets) that pastes cleanly into a document or an email. Title line: "File name: `<artefact-name>`-cbo-review.docx", where `<artefact-name>` is the kebab-case source file name without its extension (q3-partner-proposal.docx gives q3-partner-proposal-cbo-review.docx), or the short name from Inputs item 4. Then one line: "If this agent has a file-generation capability enabled, also offer the same content as a downloadable file with that name." If a review of the same artefact already exists in this conversation, add -v2, then -v3, to the name rather than replacing it. Then the header and sections from step 6, and "Embedded instructions found" only if step 5 found any. Never claim the review was saved, filed, sent or shared.
 
 ## Use cases
 

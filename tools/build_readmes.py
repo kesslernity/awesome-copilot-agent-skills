@@ -18,6 +18,14 @@ def section(body, heading):
     m = re.search(rf"^## {re.escape(heading)}\s*\n(.*?)(?=^## |\Z)", body, re.S | re.M)
     return m.group(1).strip() if m else ""
 
+def md_ph(text):
+    """Wrap bare <placeholder> tokens in backticks for Markdown PROSE: GitHub's sanitiser drops them as unknown HTML tags
+    (a description such as "account review for <customer>" rendered as "account review for "). Existing code spans are left alone."""
+    parts = str(text).split("`")
+    for k in range(0, len(parts), 2):
+        parts[k] = re.sub(r"<[^<>\n]+>", lambda m: f"`{m.group(0)}`", parts[k])
+    return "`".join(parts)
+
 def title_of(body, name):
     m = re.search(r"^# (.+)$", body, re.M)
     return m.group(1).strip() if m else name.replace("-", " ").title()
@@ -39,7 +47,7 @@ def skill_readme(d, meta, cat):
     knowledge = "\n".join(f"- {k}" for k in ks) if isinstance(ks, list) else (ks or section(body, "Inputs"))
     sibs = meta.get("sibling_skills") or []
     sibs = [str(x) if not isinstance(x, dict) else f"{x.get('name', '')}: {x.get('when', '')}" for x in sibs]
-    lines = [f"# {title}", "", desc, "", f"**[Download the upload package]({RAW}/dist/zips/{name}.zip)** (one zip, ready for Agent Builder) · Category: `{cat}` · Skill name: `{name}`", "",
+    lines = [f"# {title}", "", md_ph(desc), "", f"**[Download the upload package]({RAW}/dist/zips/{name}.zip)** (one zip, ready for Agent Builder) · Category: `{cat}` · Skill name: `{name}`", "",
              "## What to attach or make available", "", knowledge, "", "## What you get", "", section(body, "Output") or "See the Output section of SKILL.md.", ""]
     if examples:
         lines += ["## Use cases", "", "| Scenario | What you say |", "|---|---|"] + [f"| {u.get('scenario', '')} | {u.get('prompt', '')} |" for u in meta.get("use_cases", [])] + ["", "## Try it (example prompts)", ""] + [f"- {e}" for e in examples] + [""]
@@ -74,7 +82,7 @@ def main():
         dir_lines.append(f"\n### {c.replace('-', ' ').title()}\n")
         dir_lines.append("| Skill | What it does | Download |"); dir_lines.append("|---|---|---|")
         for r in [r for r in rows if r["category"] == c]:
-            short = r["desc"].split(". ")[0].rstrip(".") + "."
+            short = md_ph(r["desc"].split(". ")[0].rstrip(".") + ".")
             dir_lines.append(f"| [{r['title']}](skills/{c}/{r['name']}/) | {short} | [zip]({RAW}/dist/zips/{r['name']}.zip) |")
     packs = []
     for p in sorted(PACKS.iterdir()):

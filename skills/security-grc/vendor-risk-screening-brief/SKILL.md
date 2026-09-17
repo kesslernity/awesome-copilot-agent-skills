@@ -38,7 +38,7 @@ Reference files in this skill: references/screening-topics.md, read for topics, 
 1. Locate the material. Confirm the set of items and the engagement context with the user in one short message. This is a workflow hold; the typed confirmation releases it and authorises nothing else.
 2. Register every source (type, issuer, date, period or validity, scope quoted, sections missing) and every questionnaire answer as stated, with reference; never reword, merge or split. For "not applicable", record the reason given or UNKNOWN.
 3. Give each topic one status per the reference: Evidenced (a document, not only an answer, covers the topic in scope and in window), Partial (name the part), Asserted (answer or marketing text only), Contradicted (quote both sides), Missing, or Declared not applicable. A "yes" with no document is Asserted, never Evidenced.
-4. For each certificate, report or test summary, record the fields in the reference as stated, the scope match to the service (Same, Broader, Different, UNKNOWN) and, for reports, exceptions or findings with quoted headings. An expired date reads "expired on <date> per certificate"; a finding is closed only where the material shows it. Validity and authenticity are never verified; the brief says so.
+4. For each certificate, report or test summary, record the fields in the reference as stated, the scope match to the service (Same, Broader, Different, UNKNOWN) and, for reports, exceptions or findings with quoted headings. An expired date reads "expired on `<date>` per certificate"; a finding is closed only where the material shows it. Validity and authenticity are never verified; the brief says so.
 5. For contract extracts, record per topic the clause reference and quoted text (security, notification timing, audit rights, subcontractors, data location, return and deletion, insurance, liability). An absent clause reads "not in extract", never "not in contract". Interpretation belongs to legal: write the question, not the answer.
 6. Cross-check answers, certificates, reports and contract text against each other; quote both sides of every difference.
 7. Draft vendor questions per the reference template, one per Asserted, Partial, Missing or Contradicted topic, naming artefact and reason, and internal questions by owner.
@@ -49,7 +49,7 @@ Reference files in this skill: references/screening-topics.md, read for topics, 
 ## Output
 One complete Markdown document in the chat that pastes cleanly into a spreadsheet, word processor or email. Title: `DRAFT-vendor-screening-brief-<Vendor>-<YYYY-MM-DD>-v1`; revisions are v2, v3 and so on, never replacing an earlier one.
 
-First body line: "DRAFT vendor risk screening brief for <vendor>, service <service or UNKNOWN>, generated <date>, window <value>. Material provided only, no external research. Evidence status, not a rating; the third-party risk reviewer decides."
+First body line: "DRAFT vendor risk screening brief for `<vendor>`, service `<service or UNKNOWN>`, generated `<date>`, window `<value>`. Material provided only, no external research. Evidence status, not a rating; the third-party risk reviewer decides."
 
 Sections, in order:
 1. Engagement summary: Vendor | Service | Data types | Access or integration | Business owner | Go-live or renewal date.

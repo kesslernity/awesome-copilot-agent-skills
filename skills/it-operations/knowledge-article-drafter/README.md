@@ -15,7 +15,7 @@ Drafts one knowledge article or known-error article from a resolved incident or 
 
 One complete Markdown document in the chat that pastes cleanly into the knowledge tool. Title: `DRAFT-KB-<short title>-<YYYY-MM-DD>-v0.1`; revisions v0.2, v0.3.
 
-First line: "DRAFT <article type> article drafted <date> from <ticket reference and sources>. Not reviewed, not tested, not published. Cause as the resolver stated it; every gap reads UNKNOWN. The owner reviews and publishes."
+First line: "DRAFT `<article type>` article drafted `<date>` from `<ticket reference and sources>`. Not reviewed, not tested, not published. Cause as the resolver stated it; every gap reads UNKNOWN. The owner reviews and publishes."
 
 Sections:
 1. Article metadata: Field | Proposed value | Basis (title, type, audience, visibility, category, service, owner, review date, sources, status DRAFT).

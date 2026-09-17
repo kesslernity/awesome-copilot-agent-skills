@@ -14,7 +14,7 @@ Builds a DRAFT course outline from a training need and an audience description: 
 
 ## What you get
 
-One complete Markdown document in the chat, pasteable into a document or sheet, titled `DRAFT-course-outline-<outline title kebab>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT course outline generated <date> from <need source> and <n> content sources for <audience as stated>. Objectives, durations and assessments are proposals; pass marks, qualification and release are the owner's decisions; nothing here certifies or authorises competence."
+One complete Markdown document in the chat, pasteable into a document or sheet, titled `DRAFT-course-outline-<outline title kebab>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT course outline generated `<date>` from `<need source>` and `<n>` content sources for `<audience as stated>`. Objectives, durations and assessments are proposals; pass marks, qualification and release are the owner's decisions; nothing here certifies or authorises competence."
 
 Sections in order:
 1. Summary: Field | Value (need, audience, delivery mode, duration and basis, counts, coverage by status, UNKNOWNs, DECIDE items).

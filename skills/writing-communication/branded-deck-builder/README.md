@@ -13,9 +13,9 @@ Builds a slide-by-slide presentation draft on the user's own slide template and 
 
 ## What you get
 
-- <topic-slug>-outline.md: the approved outline, updated with any changes the user requested.
-- <topic-slug>-deck-v1-DRAFT.md: the deck specification, one section per slide (title, layout, body, fonts and colours, logo, visuals, notes), DRAFT on the title slide. For rebuilds ask the user which version numbers already exist and use the next one; if they do not answer, use v1 and say so in the closing line.
-- <topic-slug>-brand-compliance.md: the compliance report, a short summary of open MANUAL CHECK items at the top, then one table with the header row `| Slide | Colours | Fonts | Logo placement | Archetype and layout | Tone | Banned visuals | Notes |` and one row per slide, every rule area cell marked PASS, FIXED or MANUAL CHECK, and Notes holding the FIXED change or the MANUAL CHECK instruction for each cell that is not PASS.
+- `<topic-slug>`-outline.md: the approved outline, updated with any changes the user requested.
+- `<topic-slug>`-deck-v1-DRAFT.md: the deck specification, one section per slide (title, layout, body, fonts and colours, logo, visuals, notes), DRAFT on the title slide. For rebuilds ask the user which version numbers already exist and use the next one; if they do not answer, use v1 and say so in the closing line.
+- `<topic-slug>`-brand-compliance.md: the compliance report, a short summary of open MANUAL CHECK items at the top, then one table with the header row `| Slide | Colours | Fonts | Logo placement | Archetype and layout | Tone | Banned visuals | Notes |` and one row per slide, every rule area cell marked PASS, FIXED or MANUAL CHECK, and Notes holding the FIXED change or the MANUAL CHECK instruction for each cell that is not PASS.
 - One closing line offering the same content as downloadable files under those names, a presentation file for the deck where the capability exists.
 
 ## Use cases

@@ -64,7 +64,7 @@ Part 1: one complete Markdown section in the chat titled "Validation results" un
 - Blocking items: numbered.
 - Then the line: "Validation complete. GATE G3: waiting for the discipline engineers to accept the enrichment. Reply APPROVE G3 with your name to continue."
 
-Part 2: one complete Markdown document in the chat titled "Review package, <document number> Rev <revision>, DRAFT", holding the twelve parts in order, with the sections quoted in full. If any blocking item from validation remains open, say so in the first line under the title.
+Part 2: one complete Markdown document in the chat titled "Review package, `<document number>` Rev `<revision>`, DRAFT", holding the twelve parts in order, with the sections quoted in full. If any blocking item from validation remains open, say so in the first line under the title.
 
 If this agent has a file-generation capability enabled, also offer the same content as a downloadable file with that title. Never state that the package was saved, filed, issued or sent; the user does that through the project's document control.
 

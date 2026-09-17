@@ -47,7 +47,7 @@ Ask once for whatever is missing, in one message, then proceed with UNKNOWN.
 11. Assemble, trim, close. Cut repetition, never an UNKNOWN, a not-delivered row or a question. Over budget: keep the tables, move item-level quotes to an appendix, say so in the first line. Closing report: sources, counts, defaults, fallbacks, and the user's proposed actions (confirm classification, share, update the board, book the retrospective).
 
 ## Output
-One complete Markdown document in the chat, pasteable into a document or message. First line: "DRAFT sprint review summary for <sprint>, prepared <date> from <sources>. Facts as stated with references; no judgement, no re-estimation, no fault. The team and product owner decide."
+One complete Markdown document in the chat, pasteable into a document or message. First line: "DRAFT sprint review summary for `<sprint>`, prepared `<date>` from `<sources>`. Facts as stated with references; no judgement, no re-estimation, no fault. The team and product owner decide."
 Sections in order:
 1. Header: Sprint | Team | Start | End | Goal (quoted) | Goal status as stated | Done state used | Sources read | Items in export | Commitment baseline.
 2. Delivered: ID | Title | Type | Points | State at end | Closed date | Ref.

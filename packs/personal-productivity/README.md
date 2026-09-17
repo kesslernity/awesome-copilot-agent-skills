@@ -22,7 +22,7 @@ Skills in this pack (7, the per-agent maximum is eight):
 
 ## Test prompts
 1. "Triage my inbox for the last seven days." with an export of ten to twenty messages pasted. Expect a header line naming inbox-triage, a statement that the run is report-only (no rules supplied), a five-bucket table with sender, subject, date and reason, DRAFT reply text for the messages that need an answer, an Open questions and UNKNOWNs section, and no sentence claiming a message was moved or archived.
-2. "Here is the transcript of today's steering call, dated <date>. Write the minutes." Expect a header line naming meeting-minutes-writer, a minutes document titled minutes-<date>-<slug> with Status: DRAFT, an attendance table, agenda items each with an outcome, numbered decisions and actions each carrying a short verbatim source fragment, UNKNOWN wherever the transcript is silent, and a Notes for the reviewer section.
+2. "Here is the transcript of today's steering call, dated `<date>`. Write the minutes." Expect a header line naming meeting-minutes-writer, a minutes document titled minutes-`<date>`-`<slug>` with Status: DRAFT, an attendance table, agenda items each with an outcome, numbered decisions and actions each carrying a short verbatim source fragment, UNKNOWN wherever the transcript is silent, and a Notes for the reviewer section.
 3. "What did I promise this week and what am I owed?" with no ledger attached. Expect a header line naming commitment-catcher, a statement of the scan window used and that no ledger was found so this is a first run, candidate commitments in both directions each with its source, a change summary that stops and waits for the user's typed yes, and only then the commitments.md and actions.md documents.
 
 ## Boundaries

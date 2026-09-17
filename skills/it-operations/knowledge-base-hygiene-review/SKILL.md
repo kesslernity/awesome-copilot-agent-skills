@@ -48,7 +48,7 @@ Do not use for review-date sweeps of a document library with owner reminders, us
 ## Output
 One complete Markdown document in the chat that pastes cleanly into a spreadsheet or a document. Title: `DRAFT-kb-hygiene-review-<set name>-<YYYY-MM-DD>-v1`; later runs v2, v3.
 
-First line: "DRAFT hygiene review of <set name>, <count> files, review date <date>, thresholds <values>, roster and retired list <provided or not>, scope <all or filter>. Proposals for the owners, not findings of fault. No file has been changed."
+First line: "DRAFT hygiene review of `<set name>`, `<count>` files, review date `<date>`, thresholds `<values>`, roster and retired list `<provided or not>`, scope `<all or filter>`. Proposals for the owners, not findings of fault. No file has been changed."
 
 Sections:
 1. Set summary: Files | Metadata only | Fields present | Checks skipped | Owners | Categories | Files with no signal | Files by signal code.

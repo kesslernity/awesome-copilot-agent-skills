@@ -37,7 +37,7 @@ Reference files in this skill: references/register-tests.md, read at steps 3 to 
 Test codes, evidence and addressees: references/register-tests.md.
 1. Locate the extract and sources; state title, date and row count. If several match, ask which. Confirm extract, check date, convention, scheme, thresholds and scope in one short message: a workflow hold that the typed confirmation releases and that authorises nothing else.
 2. Register every row as stated, without rewording; a row with no number gets its row number as a temporary reference, marked as such. Use the extract's own column names, status values and revision codes; state any inferred pattern with the count of matching rows.
-3. Numbering (NUM-FORMAT, NUM-DUP, NUM-DISC, NUM-GAP): parse each number against the convention or inferred pattern, quoting number and expected pattern; compare the discipline or type code inside the number with the column; ask of skipped numbers "is <number> intentionally unused?". Never propose a corrected number.
+3. Numbering (NUM-FORMAT, NUM-DUP, NUM-DISC, NUM-GAP): parse each number against the convention or inferred pattern, quoting number and expected pattern; compare the discipline or type code inside the number with the column; ask of skipped numbers "is `<number>` intentionally unused?". Never propose a corrected number.
 4. Revisions (REV-MISSING, REV-SEQ, REV-BACK, REV-REPEAT, REV-STATUS, REV-FUTURE): check presence on issued rows, sequence and direction against history or a previous extract, one date per revision, family against status under the scheme, and no date after the check date. Quote both values every time.
 5. Schedule (SCH-OVERDUE, SCH-DUE-SOON, SCH-SLIP, SCH-STATUS-LAG, SCH-NO-ACTUAL, STALE), for rows not yet issued at their final purpose: compare planned, forecast and actual with the check date and each other, with the day count, and actual-date presence with status; test each purpose column and name it. No readable planned date, or an ambiguous day and month order, is UNKNOWN, never overdue or guessed.
 6. Completeness (CMP-FIELD): required fields by status per the reference; name every missing field.
@@ -49,7 +49,7 @@ Test codes, evidence and addressees: references/register-tests.md.
 ## Output
 One complete Markdown document in the chat that pastes cleanly into a spreadsheet or word processor. Title: `DRAFT-mdr-check-<register>-<YYYY-MM-DD>-v1`; later runs are titled v2, v3, so the user can tell them apart.
 
-First line: "DRAFT register check for <register>, check date <date>, convention and scheme <procedure or inferred>, thresholds <values>, scope <all rows or filter>. Questions for document control, not findings of fault. The register is unchanged."
+First line: "DRAFT register check for `<register>`, check date `<date>`, convention and scheme `<procedure or inferred>`, thresholds `<values>`, scope `<all rows or filter>`. Questions for document control, not findings of fault. The register is unchanged."
 
 Sections:
 1. Extract summary: Rows | Disciplines | Status values found | Revision codes found | Planned date range | Rows with no finding | Rows by test code.

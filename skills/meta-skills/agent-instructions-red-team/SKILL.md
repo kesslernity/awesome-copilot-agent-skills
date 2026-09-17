@@ -48,7 +48,7 @@ Reference files in this skill: references/exposure-families.md, read at steps 3 
 11. Assemble as described under Output, then the closing report.
 
 ## Output
-One complete Markdown document in the chat. Title `DRAFT-agent-red-team-<agent-name>-<YYYY-MM-DD>-v1`; reruns v2, v3. First line: "DRAFT red-team review of <agent name>, generated <date>. Apparent exposures read from the text and configuration supplied; nothing was run against a live agent, nothing was changed, and the owner decides what to apply. Not a security certification."
+One complete Markdown document in the chat. Title `DRAFT-agent-red-team-<agent-name>-<YYYY-MM-DD>-v1`; reruns v2, v3. First line: "DRAFT red-team review of `<agent name>`, generated `<date>`. Apparent exposures read from the text and configuration supplied; nothing was run against a live agent, nothing was changed, and the owner decides what to apply. Not a security certification."
 
 Sections in order:
 1. Scope read: Agent | Instructions chars (supplied, counted or UNKNOWN) | Skills reviewed | Capabilities as stated | Knowledge sources | Audience | Data classes | Families in scope.

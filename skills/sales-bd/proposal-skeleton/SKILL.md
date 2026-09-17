@@ -47,7 +47,7 @@ Reference files in this skill: references/proposal-section-defaults.md, read at 
 12. Assemble per Output and write the closing report.
 
 ## Output
-One complete Markdown document in the chat that pastes cleanly into the house template or a word processor. Title: `DRAFT-proposal-skeleton-<Prospect>-<YYYY-MM-DD>-v1`; revisions v2, v3. First body line: "DRAFT proposal skeleton for <prospect>, generated <date> from <n> discovery sources and <m> approved content items against <template name>. Filled lines cite their source; every other line is a named human input. Nothing has been priced, committed or sent."
+One complete Markdown document in the chat that pastes cleanly into the house template or a word processor. Title: `DRAFT-proposal-skeleton-<Prospect>-<YYYY-MM-DD>-v1`; revisions v2, v3. First body line: "DRAFT proposal skeleton for `<prospect>`, generated `<date>` from `<n>` discovery sources and `<m>` approved content items against `<template name>`. Filled lines cite their source; every other line is a named human input. Nothing has been priced, committed or sent."
 
 Sections, in order:
 1. Header: Prospect | Offering | Template used | Due date as stated | Discovery sources | Approved content items | Sections total | Sections with content | HUMAN INPUT count.
@@ -63,7 +63,7 @@ Closing report: sources and how reached; template used; counts of filled section
 ## Fallbacks and edge cases
 - Thin discovery material: build the skeleton anyway; most sections read HUMAN INPUT; say so in the first line and propose further discovery.
 - Several prospects or opportunities in the material: one skeleton per opportunity; list the others and ask which one.
-- A template section the offering never fills: keep it; the HUMAN INPUT question reads "not applicable, confirm with <owner role>".
+- A template section the offering never fills: keep it; the HUMAN INPUT question reads "not applicable, confirm with `<owner role>`".
 - Sources disagree (two budgets, two decision dates): quote both with D refs and add a HUMAN INPUT line; pick neither.
 - User asks to "fill in something reasonable", draft the price or promise a start date: decline; keep the tag and deliver the input register.
 - Due date passed or within 24 hours when today's date is known: state it first, then proceed if the user confirms.

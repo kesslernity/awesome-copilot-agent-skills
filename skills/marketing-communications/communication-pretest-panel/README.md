@@ -13,7 +13,7 @@ Pre-tests one message (email, announcement, intranet post, town hall script, cus
 
 ## What you get
 
-One complete Markdown document in the chat, titled `DRAFT-pretest-panel-<message short name>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT pre-test panel, simulated from <n> persona briefs supplied by the user on <date>. Not audience research. The sender decides."
+One complete Markdown document in the chat, titled `DRAFT-pretest-panel-<message short name>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT pre-test panel, simulated from `<n>` persona briefs supplied by the user on `<date>`. Not audience research. The sender decides."
 1. Message map: Ref | Passage (first words) | Function | Facts stated.
 2. Persona briefs: Persona | Role | Cares about | Knows already | Stake | History | Tone expected | Confidence.
 3. First reactions: Persona | Reaction | Trigger passage | Next step likely.

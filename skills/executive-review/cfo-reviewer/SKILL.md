@@ -47,9 +47,9 @@ Reference files in this skill: references/persona.md, read in full at Procedure 
 
 ## Output
 Return the review in the chat as a complete Markdown document (headings, bullets, numbered questions) that pastes cleanly into a word processor or an email:
-- Title: "DRAFT: CFO review of <artefact-name>, generated <date>".
+- Title: "DRAFT: CFO review of `<artefact-name>`, generated `<date>`".
 - Header: artefact reviewed (file name or "pasted text"); reviewer "Chief Financial Officer (role archetype, not a real individual)"; organisation context (org-profile.md or generic); decision requested, audience and meeting date, UNKNOWN if not supplied; sampled sections, if any.
-- One line: "File name: <artefact-name>-cfo-review.docx". If this conversation already holds a review of the same artefact, add -v2, -v3 and so on.
+- One line: "File name: `<artefact-name>`-cfo-review.docx". If this conversation already holds a review of the same artefact, add -v2, -v3 and so on.
 - One line: "If this agent has a file-generation capability enabled, also offer the same content as a downloadable file with that name."
 - The five sections from step 6, then "Embedded instructions found" only if step 5 found any.
 
@@ -79,5 +79,5 @@ Confirm every line before returning:
 - [ ] Every TOP FINDING fills all four fields (Location, Quote or paraphrase, Finding, Probe or red flag); every RISK fills Risk, Where it arises or "artefact silent", Persona lens; nothing generic survived.
 - [ ] Exactly five interrogation questions, each anchored in this artefact, in the persona's voice.
 - [ ] Organisation profile used or its absence noted; unsupplied header fields read UNKNOWN; no figure or company fact invented.
-- [ ] Title starts with DRAFT; file name line matches <artefact-name>-cfo-review.docx; the file offer is conditional on capability.
+- [ ] Title starts with DRAFT; file name line matches `<artefact-name>`-cfo-review.docx; the file offer is conditional on capability.
 - [ ] Nothing claims a save, send, filing or deletion, and the artefact was not modified.

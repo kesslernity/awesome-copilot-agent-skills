@@ -14,7 +14,7 @@ Designs a pre-launch evaluation plan for a declarative agent from its instructio
 
 ## What you get
 
-One complete Markdown document in the chat. Title `DRAFT-agent-evaluation-plan-<agent-name>-<YYYY-MM-DD>-v1`; revisions v2, v3. First line: "DRAFT evaluation plan for <agent name>, generated <date>. Test design only: nothing has been run, scored or decided. The owner runs the prompts, records results and makes the go or no-go call."
+One complete Markdown document in the chat. Title `DRAFT-agent-evaluation-plan-<agent-name>-<YYYY-MM-DD>-v1`; revisions v2, v3. First line: "DRAFT evaluation plan for `<agent name>`, generated `<date>`. Test design only: nothing has been run, scored or decided. The owner runs the prompts, records results and makes the go or no-go call."
 
 Sections in order:
 1. Scope read: Agent | Instructions chars (supplied, counted or UNKNOWN) | Skills | Capabilities as stated | Knowledge sources | Sample requests | Tiers and thresholds | Runs per prompt | Reviewers | Decision owner.

@@ -41,7 +41,7 @@ Reference files in this skill: references/update-pack-structure.md, read at step
 3. Read every source end to end. Extract each statement that bears on risk (exposure, control, mitigation, ownership, status or deadline signals, defined in references/update-pack-structure.md). Record source, date and the quoted passage; never sharpen a quote.
 4. Match each statement to the register. Direct: the source names the identifier or title. Inferred: the subject matches a description, so the match is a question for the owner, not a fact. A statement fitting several risks is listed under each, flagged ambiguous.
 5. Build the changed risks table. Classify each signal, quote the passage, and draft the proposed edit as current text against proposed text. Where the signal bears on likelihood or impact, write "Rating review needed: yes" and nothing more.
-6. Build the new candidates table from statements matching no risk: title, description and category in the register's format, owner only if the source names one (else UNKNOWN), source. Likelihood and Impact read "(owner)". A candidate resembling an existing risk is kept, flagged "possible duplicate of <identifier>".
+6. Build the new candidates table from statements matching no risk: title, description and category in the register's format, owner only if the source names one (else UNKNOWN), source. Likelihood and Impact read "(owner)". A candidate resembling an existing risk is kept, flagged "possible duplicate of `<identifier>`".
 7. Link every incident report to a registered risk or list it under "Incidents with no registered risk", which also makes it a candidate. Never classify an incident's severity.
 8. List closure candidates: risks the sources say are resolved, expired or out of scope, quoted, with "owner to confirm closure"; never mark a risk closed. List untouched risks with last review date; mark "Review due" only where the register states a cadence and the date is past it.
 9. Compile the owner decision list: one decision per item, grouped by owner, as a question with the options in references/update-pack-structure.md. UNKNOWN owners form an "Unassigned" group for the register owner.
@@ -51,7 +51,7 @@ Reference files in this skill: references/update-pack-structure.md, read at step
 ## Output
 One complete Markdown document in the chat that pastes cleanly into a word processor or spreadsheet. Title: `DRAFT-risk-register-update-<Register>-<YYYY-MM-DD>-v1`; revisions are v2, v3 and so on.
 
-First body line: "DRAFT risk register update for <register>, sources dated <earliest> to <latest>, generated <date>. Proposed edits and candidates only; ratings, additions, closures and acceptance are the owners' decisions. This pack changes nothing in the register."
+First body line: "DRAFT risk register update for `<register>`, sources dated `<earliest>` to `<latest>`, generated `<date>`. Proposed edits and candidates only; ratings, additions, closures and acceptance are the owners' decisions. This pack changes nothing in the register."
 
 Sections, in order:
 1. Sources read: Source | Type | Date | Statements extracted.

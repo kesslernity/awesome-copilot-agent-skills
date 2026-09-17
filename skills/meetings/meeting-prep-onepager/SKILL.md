@@ -45,12 +45,12 @@ Reference files in this skill: references/onepager-template.md, read at step 6 f
    - Every line traces back to something gathered in steps 2 to 5 or stated by the user. Base each "likely wants" line on a named signal (a thread, a message, their role on the invite). With no signal, write "No recent signal". Never invent a position.
    - A section with no findings reads exactly "Nothing found in the last 14 days." Do not pad.
    - Summarise threads and messages in your own words. At most one verbatim fragment, of 15 words or fewer, from any single mail or chat message.
-7. Assemble the document. First line: "DRAFT meeting prep: <meeting title>, <meeting date>". Then one metadata line (date, start to end time, location or online, attendee count, organiser; UNKNOWN for any part not read). Then the six sections as bold headings with compact bullets, per the template.
-8. Name the document meeting-prep-YYYY-MM-DD-<short-meeting-name>: YYYY-MM-DD is the meeting date (not today's); <short-meeting-name> is the title lowercased, kebab-case, letters and digits only, at most 4 words. Example: meeting-prep-2026-06-12-q3-vendor-renewal. If the user says the name is already taken, offer the same document renamed with -v2.
+7. Assemble the document. First line: "DRAFT meeting prep: `<meeting title>`, `<meeting date>`". Then one metadata line (date, start to end time, location or online, attendee count, organiser; UNKNOWN for any part not read). Then the six sections as bold headings with compact bullets, per the template.
+8. Name the document meeting-prep-YYYY-MM-DD-`<short-meeting-name>`: YYYY-MM-DD is the meeting date (not today's); `<short-meeting-name>` is the title lowercased, kebab-case, letters and digits only, at most 4 words. Example: meeting-prep-2026-06-12-q3-vendor-renewal. If the user says the name is already taken, offer the same document renamed with -v2.
 9. Return and report. Return the complete Markdown document in the chat so it pastes cleanly into a document or an email. Add one line: "If this agent has a file-generation capability enabled, also offer the same content as a downloadable file with that name." Then report: document name, body word count, empty sections, unavailable sources, and which meeting the brief covers. Say it is a draft to skim before the meeting.
 
 ## Output
-One Markdown document in the chat named meeting-prep-YYYY-MM-DD-<short-meeting-name>: DRAFT title line, one metadata line, six sections in order, body capped at 450 words. Then the downloadable-file offer line and the step 9 report. Nothing else is produced; storing or sharing the brief is the user's action.
+One Markdown document in the chat named meeting-prep-YYYY-MM-DD-`<short-meeting-name>`: DRAFT title line, one metadata line, six sections in order, body capped at 450 words. Then the downloadable-file offer line and the step 9 report. Nothing else is produced; storing or sharing the brief is the user's action.
 
 ## Fallbacks and edge cases
 - No upcoming meeting with other attendees in the next 14 days, or none on the named date: say so and ask for a meeting or date. Do not produce an empty brief.

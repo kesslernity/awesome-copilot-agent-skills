@@ -15,7 +15,7 @@ Builds a personal voice profile from roughly 90 days of the user's own sent mess
 
 - BUILD: voice-profile.md, complete Markdown per references/voice-profile-template.md with the metadata block, plus the keep and delete instructions.
 - DRAFT, email: the DRAFT line, then subject and body text for the user to paste and send.
-- DRAFT, document: DRAFT-<topic>-YYYY-MM-DD.md with DRAFT on the title line.
+- DRAFT, document: DRAFT-`<topic>`-YYYY-MM-DD.md with DRAFT on the title line.
 - One closing line offering a downloadable file where the agent has that capability, and a closing report naming the profile build date.
 
 ## Use cases

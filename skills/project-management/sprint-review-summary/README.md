@@ -13,7 +13,7 @@ Summarises one sprint from the board export, sprint report and review or stand-u
 
 ## What you get
 
-One complete Markdown document in the chat, pasteable into a document or message. First line: "DRAFT sprint review summary for <sprint>, prepared <date> from <sources>. Facts as stated with references; no judgement, no re-estimation, no fault. The team and product owner decide."
+One complete Markdown document in the chat, pasteable into a document or message. First line: "DRAFT sprint review summary for `<sprint>`, prepared `<date>` from `<sources>`. Facts as stated with references; no judgement, no re-estimation, no fault. The team and product owner decide."
 Sections in order:
 1. Header: Sprint | Team | Start | End | Goal (quoted) | Goal status as stated | Done state used | Sources read | Items in export | Commitment baseline.
 2. Delivered: ID | Title | Type | Points | State at end | Closed date | Ref.

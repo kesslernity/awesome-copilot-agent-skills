@@ -15,7 +15,7 @@ Turns a control list and an audit scope into draft evidence requests grouped by 
 
 One complete Markdown document in the chat that pastes cleanly into a word processor, spreadsheet or email. Title: `DRAFT-evidence-requests-<Audit>-<YYYY-MM-DD>-v1`; revisions are v2, v3 and so on.
 
-First body line: "DRAFT evidence requests for <audit>, period <start> to <end>, generated <date>. Requests and examples only; whether evidence is sufficient and whether a control operated is decided by the auditor. Nothing here has been sent."
+First body line: "DRAFT evidence requests for `<audit>`, period `<start>` to `<end>`, generated `<date>`. Requests and examples only; whether evidence is sufficient and whether a control operated is decided by the auditor. Nothing here has been sent."
 
 Sections, in order:
 1. Scope summary: framework, period, in-scope items, fieldwork start, evidence deadline, due date rule applied; UNKNOWN where unstated.

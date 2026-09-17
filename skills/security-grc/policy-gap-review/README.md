@@ -15,7 +15,7 @@ Compares one policy against one requirement set (standard, regulation, contract 
 
 One complete Markdown document in the chat that pastes cleanly into a word processor or spreadsheet. Title: `DRAFT-policy-gap-review-<Policy>-vs-<Requirement>-<YYYY-MM-DD>-v1`; revisions are v2, v3 and so on.
 
-First body line: "DRAFT gap review of <policy, version> against <requirement set, edition>, generated <date>. Apparent match states and questions only; whether the policy meets the requirement is decided by the policy owner. Neither document has been changed."
+First body line: "DRAFT gap review of `<policy, version>` against `<requirement set, edition>`, generated `<date>`. Apparent match states and questions only; whether the policy meets the requirement is decided by the policy owner. Neither document has been changed."
 
 Sections, in order:
 1. Sources read: Document | Role | Version or edition | Date | Owner as stated | Scope statement | Clauses read.

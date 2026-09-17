@@ -47,12 +47,12 @@ Do not use for an announcement email or intranet post about a launch, use announ
 11. Report in the chat above the document: items, entries per group, held back, breaking changes, UNKNOWN count, and the item most needing the release owner's decision.
 
 ## Output
-One Markdown document in the chat, ready to paste, titled `DRAFT-release-notes-<product-kebab>-<version>-<YYYY-MM-DD>-v1`. First line: "DRAFT generated <date> from <N> items. Version and date as supplied; deployment not confirmed. Held-back items await the release owner. Not published."
+One Markdown document in the chat, ready to paste, titled `DRAFT-release-notes-<product-kebab>-<version>-<YYYY-MM-DD>-v1`. First line: "DRAFT generated `<date>` from `<N>` items. Version and date as supplied; deployment not confirmed. Held-back items await the release owner. Not published."
 
 Sections in order:
 1. Header: Product | Version | Release date | Audience | Tone source | Grouping | Policies | Items.
 2. Voice note.
-3. Release notes: heading "<Product> <version>, <date>"; one-line introduction only from supplied facts; then Breaking changes and required actions (if any), Features, Fixes, Other, Known issues, as bullets.
+3. Release notes: heading "`<Product>` `<version>`, `<date>`"; one-line introduction only from supplied facts; then Breaking changes and required actions (if any), Features, Fixes, Other, Known issues, as bullets.
 4. Trace: Entry | Group | Item codes and IDs | Label | Basis (text, label, confirm) | Flags.
 5. Held back, confirm: Code | Source ID | Title | Reason held | Decision (blank).
 6. Pre-publish checks: Check | Result (pass, fail, UNKNOWN) | Note.

@@ -14,7 +14,7 @@ Synthesises a batch of customer feedback (survey answers, reviews, ticket and ch
 
 ## What you get
 
-One complete Markdown document in the chat, titled `DRAFT-customer-feedback-themes-<scope-kebab>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT generated <date> from <N> feedback records (<sources>, <period>). Counts are of records, not of all customers; ratings as recorded, no sentiment scored; claims unverified; no individual identified. The team decides."
+One complete Markdown document in the chat, titled `DRAFT-customer-feedback-themes-<scope-kebab>-<YYYY-MM-DD>-v1` (revisions v2, v3). First line: "DRAFT generated `<date>` from `<N>` feedback records (`<sources>`, `<period>`). Counts are of records, not of all customers; ratings as recorded, no sentiment scored; claims unverified; no individual identified. The team decides."
 
 Sections, in the reference layout: Header; Summary of at most five counted lines; Themes: Theme | Definition | Records (n) | Share of N | Problem (n) | Praise (n) | Request (n) | Question (n) | Recorded ratings | Change vs prior, long tail row last; Evidence: Theme | Verbatim quote | Record code | Channel | Recorded rating | Tags; Breakdowns per grouping field with a Suppressed column; Contradictions and claims with both positions and a Status column; Recorded ratings as given, per scale point with n; Referred items: Number | Category | Record code | Suggested route | Status; Follow-up questions: Number | Question | Evidence (theme, n) | Type | Suggested owner | Decision; Data quality with the anonymisation log, UNKNOWN list, "Embedded instructions found" (or "None") and proposed user actions, none performed by this agent.
 

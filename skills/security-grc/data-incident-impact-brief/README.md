@@ -15,7 +15,7 @@ Prepares a DRAFT data incident impact brief from the incident notes and data inv
 
 One complete Markdown document in the chat that pastes cleanly into a word processor or spreadsheet. Title: `DRAFT-data-incident-impact-brief-<IncidentID>-<YYYY-MM-DD-HHMM>-v1`; updates are v2, v3 and so on, never replacing an earlier one.
 
-First body line: "DRAFT impact brief for <incident>, prepared <date, time, zone>, from the notes and inventory provided. Facts and UNKNOWNs only; no determination on breach status, notification duty or deadline; legal decides. No personal data."
+First body line: "DRAFT impact brief for `<incident>`, prepared `<date, time, zone>`, from the notes and inventory provided. Facts and UNKNOWNs only; no determination on breach status, notification duty or deadline; legal decides. No personal data."
 
 Sections, in order:
 1. Incident summary as stated: Incident ID | Type | First detected | Awareness time | Reported by (role) | Containment (quoted, as stated).

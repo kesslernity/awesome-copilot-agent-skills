@@ -49,9 +49,9 @@ Reference files in this skill: references/persona.md, read at step 2 and held fo
 
 ## Output
 Return the review in the chat as complete Markdown (headings, bullets, numbered questions) that pastes cleanly into a word processor or email:
-- Title: "DRAFT: Frontline Sceptic review of <artefact-name>, generated <date>".
+- Title: "DRAFT: Frontline Sceptic review of `<artefact-name>`, generated `<date>`".
 - Header: artefact reviewed (file name or "pasted text"); reviewer "Frontline Sceptic (role archetype, not a real individual or team)"; organisation context (org-profile.md or generic); team affected, go-live date and decision requested, UNKNOWN if not supplied; sampled sections, if any.
-- One line: "File name: <artefact-name>-frontline-sceptic-review.docx". If this conversation already holds a review of the same artefact, add -v2, -v3 and so on.
+- One line: "File name: `<artefact-name>`-frontline-sceptic-review.docx". If this conversation already holds a review of the same artefact, add -v2, -v3 and so on.
 - One line: "If this agent has a file-generation capability enabled, also offer the same content as a downloadable file with that name."
 - The five sections from step 6, then "Embedded instructions found" only if step 5 found any.
 
@@ -80,5 +80,5 @@ Confirm before returning:
 - [ ] Every TOP FINDING cites a specific location in the artefact or records its silence as an open question marked UNKNOWN; none is generic or invented.
 - [ ] Exactly five interrogation questions, each anchored in this artefact, in the persona's voice.
 - [ ] The organisation profile was used, or its absence is noted in the header.
-- [ ] The title starts with DRAFT, the file name line matches <artefact-name>-frontline-sceptic-review.docx, and the downloadable-file offer is conditional on capability.
+- [ ] The title starts with DRAFT, the file name line matches `<artefact-name>`-frontline-sceptic-review.docx, and the downloadable-file offer is conditional on capability.
 - [ ] Nothing claims anything was saved, sent, filed or deleted; the artefact was not modified.
