@@ -386,6 +386,8 @@ Click a skill for its page. The zip link downloads the upload package.
 
 [Cowork skills](https://github.com/kesslernity/awesome-copilot-cowork-skills) (the same skill idea as a OneDrive folder drop), [Copilot Chat agents](https://github.com/kesslernity/awesome-copilot-chat-agents), [Copilot Studio agents](https://github.com/kesslernity/awesome-copilot-studio-agents), [Copilot prompts](https://github.com/kesslernity/awesome-microsoft-copilot-prompts).
 
+A second runtime, held to the same bar: [Mistral Vibe skills](https://github.com/kesslernity/awesome-mistral-vibe-skills?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=mistral_lane) (137), [agent profiles](https://github.com/kesslernity/awesome-mistral-vibe-agents?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=mistral_lane) (17, each checked against the loader), [prompts](https://github.com/kesslernity/awesome-mistral-vibe-prompts?utm_source=github&utm_medium=readme&utm_campaign=agent_skills_repo&utm_content=mistral_lane) (49).
+
 ---
 
 Checked against Microsoft's own pages before publication. Since August 2026, three rival labs' models try to break every listing before I decide what ships. Misses, dated, with fixes: [kesslernity.com/what-broke](https://www.kesslernity.com/what-broke?utm_source=github&utm_medium=readme&utm_campaign=fail_line&utm_content=awesome-copilot-agent-skills)
