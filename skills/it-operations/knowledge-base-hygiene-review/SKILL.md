@@ -2,18 +2,16 @@
 name: knowledge-base-hygiene-review
 description: >-
   Reviews a set of knowledge files or a knowledge base listing and returns a draft hygiene table,
-  one row per file: duplication signals with the matching file and overlap grade, staleness
-  signals (review date past, update beyond threshold, retired systems mentioned), conflicts
-  between files on the same topic with both passages quoted, missing or unverified owners, and
-  one proposed action per file (Keep, Update, Merge into, Retire, Assign owner, Confirm with
-  owner) for the knowledge owner to decide, plus one draft note per owner. Never edits, merges,
-  moves or deletes a file. Use when the user asks to "review our knowledge base for duplicates",
-  "which KB articles are stale", "find conflicting articles", "which articles have no owner" or
-  "run a hygiene check on these files". Do not use for review-date sweeps of a document library
-  with owner reminders, use sharepoint-review-sweeper instead; for writing one article, use
-  knowledge-article-drafter. Drafts for human review; never approves, authorises or signs off.
+  one row per file: duplication signals with the matching file, staleness signals, conflicts between
+  files on the same topic with both passages quoted, missing or unverified owners, and one proposed
+  action per file (Keep, Update, Merge into, Retire, Assign owner, Confirm with owner) for the owner
+  to decide. Never edits, merges, moves or deletes a file. Use when the user asks to "review our
+  knowledge base for duplicates", "which KB articles are stale", "find conflicting articles", "which
+  articles have no owner" or "run a hygiene check on these files". Do not use for review-date sweeps
+  of a document library with owner reminders, use sharepoint-review-sweeper instead; for writing one
+  article, use knowledge-article-drafter. Drafts for human review; never approves, authorises or
+  signs off.
 ---
-
 # Knowledge base hygiene review
 
 ## Purpose

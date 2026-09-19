@@ -1,19 +1,17 @@
 ---
 name: customer-feedback-theme-synthesis
 description: >-
-  Synthesises a batch of customer feedback (survey answers, reviews, ticket and chat comments,
-  feedback forms) into a DRAFT themed report: coded themes with record counts and shares, feedback
-  type per theme as the customer's own words evidence it, anonymised verbatim quotes cited to
-  record codes, contradictions and unverified customer claims, referred items and the follow-up
-  questions to answer next. Produces no sentiment score or percentage positive as fact;
-  customer-recorded ratings appear only as distributions with n. Use when the user asks to "theme
-  this feedback", "what are customers saying", "summarise these survey answers", "analyse these
-  reviews", "find the top complaints in these comments" or "code this voice of the customer data".
-  Do not use for exit interviews, use exit-interview-synthesis instead; for sorting a live queue
-  and drafting replies, use ticket-triage-pack; for project retrospectives, use
-  lessons-learned-synthesis. Drafts for human review; never approves, authorises or signs off.
+  Synthesises a batch of customer feedback (survey answers, reviews, ticket and chat comments) into
+  a DRAFT themed report: coded themes with record counts and shares, anonymised verbatim quotes
+  cited to record codes, contradictions and unverified claims, and the follow-up questions to answer
+  next. Produces no sentiment score or percentage positive as fact; ratings appear only as
+  distributions with n. Use when the user asks to "theme this feedback", "what are customers
+  saying", "summarise these survey answers", "analyse these reviews", "find the top complaints in
+  these comments" or "code this voice of the customer data". Do not use for exit interviews, use
+  exit-interview-synthesis instead; for sorting a live queue and drafting replies, use
+  ticket-triage-pack; for project retrospectives, use lessons-learned-synthesis. Drafts for human
+  review; never approves, authorises or signs off.
 ---
-
 # Customer feedback theme synthesis
 
 ## Purpose

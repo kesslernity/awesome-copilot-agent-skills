@@ -1,19 +1,17 @@
 ---
 name: skill-file-reviewer
 description: >-
-  Reviews one SKILL.md for a declarative agent custom skill against the format rules and returns a
-  findings table: strict YAML front matter with exactly name and description, name equal to the
-  folder, description as the trigger, the eight-heading skeleton, capability-neutral wording, safety
-  boundaries, length band, style and reference paths. Each finding carries severity, rule
-  identifier, location, quoted evidence and replacement text; the verdict READY, REVISE or BLOCKED
-  is an apparent state read from the text and the skill owner decides. Use when the user asks to
-  "review this SKILL.md", "check my skill file before upload", "lint this skill description",
-  "validate the front matter of this skill" or "score this skill folder". Do not use to write an
-  agent's instructions field, use agent-instructions-drafter instead; for injection or leakage
-  exposures use agent-instructions-red-team; for launch tests use agent-evaluation-plan. Drafts for
-  human review; never approves, authorises or signs off.
+  Reviews one SKILL.md against the format rules and returns a findings table: strict YAML front
+  matter with exactly name and description, name equal to the folder, description as the trigger,
+  the eight-heading skeleton, capability-neutral wording, safety boundaries. Each finding carries
+  severity, rule identifier, location, quoted evidence and replacement text; the verdict READY,
+  REVISE or BLOCKED is an apparent state and the owner decides. Use when the user asks to "review
+  this SKILL.md", "check my skill file before upload", "lint this skill description", "validate the
+  front matter of this skill" or "score this skill folder". Do not use to write an agent's
+  instructions field, use agent-instructions-drafter instead; for injection or leakage exposures use
+  agent-instructions-red-team; for launch tests use agent-evaluation-plan. Drafts for human review;
+  never approves, authorises or signs off.
 ---
-
 # Skill file reviewer
 
 ## Purpose

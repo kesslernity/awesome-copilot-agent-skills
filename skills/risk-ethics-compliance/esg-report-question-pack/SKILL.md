@@ -1,19 +1,17 @@
 ---
 name: esg-report-question-pack
 description: >-
-  Turns one or more sustainability or ESG reports the user provides into a DRAFT question pack
-  for reviewers: every quantitative disclosure as stated with unit, period, boundary and page
-  reference, year-over-year changes computed only from the stated figures with the arithmetic
-  shown, targets with stated and computed progress, restatements and inconsistencies between
-  reports, gaps (missing units, baselines, boundaries, methods, non-reconciling totals) and
-  specific questions to the report owner. No assurance, accuracy or conformance verdict. Use
-  when the user asks to "prepare review questions on our sustainability report", "what changed
-  year on year in this ESG report", "check the figures in this report before it goes to the
-  board", "find the gaps in this ESG disclosure" or "build a question pack for the report
-  owner". Do not use for reviewing marketing text against environmental-claim rules, use
-  green-claims-review instead. Drafts for human review; never approves, authorises or signs off.
+  Turns sustainability or ESG reports the user provides into a DRAFT question pack for reviewers:
+  every quantitative disclosure as stated with unit, period, boundary and page, year-over-year
+  changes computed only from the stated figures with the arithmetic shown, targets with stated and
+  computed progress, restatements and inconsistencies, gaps and specific questions to the report
+  owner. No assurance, accuracy or conformance verdict. Use when the user asks to "prepare review
+  questions on our sustainability report", "what changed year on year in this ESG report", "check
+  the figures in this report before it goes to the board", "find the gaps in this ESG disclosure" or
+  "build a question pack for the report owner". Do not use for reviewing marketing text against
+  environmental-claim rules, use green-claims-review instead. Drafts for human review; never
+  approves, authorises or signs off.
 ---
-
 # ESG report question pack
 
 ## Purpose
