@@ -72,6 +72,10 @@ Paid. I am the author and the seller; these are commercial products with their o
 
 Prices as listed on 17 September 2026; the store page is authoritative.
 
+## Works in Excel and PowerPoint too
+
+Copilot in Excel and Copilot in PowerPoint take custom skills in the same `SKILL.md` format, outside any agent: personal skills uploaded in the Copilot pane or kept in a OneDrive Skills folder, and organization skills an admin deploys from the Microsoft 365 admin center. Twenty four app-native skills, twelve for each app, with personal zips, an organisation manifest template and pages for running the same files in Claude, ChatGPT, GitHub Copilot, Gemini CLI and Mistral Vibe, are in [awesome-copilot-office-skills](https://github.com/kesslernity/awesome-copilot-office-skills).
+
 ## What a skill is, in plain words
 
 A skill is a folder with one plain text file called `SKILL.md`. The file says what the skill does, when to use it and how to do the job step by step. When you ask the agent something that matches, it reads that file and follows it. You can read the same file on GitHub before you upload anything, which is the point: every skill here is text you can check.
