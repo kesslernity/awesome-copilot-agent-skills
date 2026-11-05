@@ -1,13 +1,15 @@
 # Awesome Copilot Agent Skills
 
-**What broke, dated.** On launch day, 17 September 2026, GitHub dropped 738 placeholder tokens across 128 skill files and 15 pack pages, so lines read "as of ." and four descriptions went blank. I fixed it the same day and rebuilt the pages and zips. Every skill here is written to prepare a draft, not to approve.
-
 > **137 custom skills for Microsoft 365 Copilot agents, across 29 disciplines. Pick a skill, download its zip, upload it in Copilot's own Agent Builder screen. Nothing to install, no code.**
 
 [![Licence: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![Skills](https://img.shields.io/badge/skills-137-blue)](skills/)
 
 **Before you start.** Custom skills for declarative agents (the agents you set up in Agent Builder by describing their job, without code) are a preview feature. Microsoft Learn (pages dated 4 September 2026): "Custom skills in declarative agents are in preview for organizations that are part of the Microsoft Frontier Preview." You need a Microsoft 365 Copilot licence and your organisation must be in the Frontier program. If **Agents & Skills** does not appear in your Copilot chat, ask your admin to check three things: your Microsoft 365 Copilot licence, your Frontier access, and the agent settings for your account.
+
+**Not in the Frontier program?** Then Agent Builder is closed to you, but custom skills are not. The same `SKILL.md` folder shape runs in [Copilot Cowork](https://github.com/kesslernity/awesome-copilot-cowork-skills), which needs no preview access, and [Copilot in Excel and PowerPoint](https://github.com/kesslernity/awesome-copilot-office-skills) read the same format in their own pane. The files here are written for declarative agents specifically, so start from those repositories rather than porting these by hand. Thirty seven of the skills below began as Cowork skills; the originals are still maintained there.
+
+**What broke, dated.** On launch day, 17 September 2026, GitHub dropped 738 placeholder tokens across 128 skill files and 15 pack pages, so lines read "as of ." and four descriptions went blank. I fixed it the same day and rebuilt the pages and zips. Every skill here is written to prepare a draft, not to approve.
 
 ---
 
